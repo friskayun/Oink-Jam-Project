@@ -20,11 +20,6 @@ func _ready():
 	timer.wait_time = 0.05
 
 func _input(event):
-	## Just for testing / must delete later
-	if event.is_action_pressed("interact") and !active_dialogue:
-		start_dialogue("first_encounter")
-		#start_dialogue("item_description")
-	
 	if event.is_action_pressed("advance_dialogue") and active_dialogue:
 		show_next_line()
 	
@@ -89,10 +84,14 @@ func reset_print_anim():
 
 
 func start_dialogue(id: String):
+	if active_dialogue:
+		return
+	
 	line_index = 0
 	dialogue_id = id
 	curr_dialogue = dialogues[dialogue_id]
 	active_dialogue = true
+	Global.freeze_input = true
 	show_next_line()
 	show_dialogue_panel()
 
@@ -116,4 +115,5 @@ func show_next_line():
 
 func end_dialogue():
 	active_dialogue = false
+	Global.freeze_input = false
 	hide_dialogue_panel()

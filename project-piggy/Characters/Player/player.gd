@@ -4,6 +4,10 @@ class_name Player
 const SPEED = 300
 
 func _process(_delta):
+	if Global.freeze_input:
+		velocity = Vector2.ZERO
+		return
+	
 	var dir = Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")
 	
 	velocity = dir * SPEED

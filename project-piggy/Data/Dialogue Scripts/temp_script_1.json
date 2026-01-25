@@ -7,10 +7,22 @@
 		]
 	},
 	
-	"item_description": {
+	"second_encounter": {
+		"lines": [
+			{"speaker": "Name1", "text": "Howdy!"}
+		]
+	},
+	
+	"item_description_1": {
 		"lines": [
 			{"text": "A black box."},
 			{"speaker": "Player", "text": "I wonder how that box got here."},
+		]
+	},
+	
+	"item_description_2": {
+		"lines": [
+			{"text": "A black box."},
 		]
 	}
 }

@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6yui6ubp7sq"]
+
+[ext_resource type="Texture2D" uid="uid://0tji66tdy6tv" path="res://icon.svg" id="1_6xdwp"]
+[ext_resource type="Script" uid="uid://d2i5cytnnaeha" path="res://Characters/Player/player.gd" id="1_j341n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j341n"]
+radius = 58.694122
+
+[sub_resource type="Animation" id="Animation_j341n"]
+resource_name = "walk_up"
+
+[sub_resource type="Animation" id="Animation_cue0d"]
+resource_name = "walk_dow"
+
+[sub_resource type="Animation" id="Animation_bqsbk"]
+resource_name = "walk_left"
+
+[sub_resource type="Animation" id="Animation_xf5fp"]
+resource_name = "walk_right"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_osktb"]
+_data = {
+&"walk_down": SubResource("Animation_cue0d"),
+&"walk_left": SubResource("Animation_bqsbk"),
+&"walk_right": SubResource("Animation_xf5fp"),
+&"walk_up": SubResource("Animation_j341n")
+}
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_cue0d"]
+graph_offset = Vector2(0, -7)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_j341n")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_6xdwp")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_j341n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_osktb")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_cue0d")
+advance_expression_base_node = NodePath("../AnimationPlayer")

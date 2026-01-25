@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ufw6qwg3dcs"]
+[gd_scene load_steps=3 format=3 uid="uid://ufw6qwg3dcs"]
 
 [ext_resource type="Script" uid="uid://d0scimstdvdyw" path="res://UI/Dialogue System/dialogue_system.gd" id="1_jsqu7"]
+[ext_resource type="Texture2D" uid="uid://0tji66tdy6tv" path="res://icon.svg" id="2_fdqpb"]
 
 [node name="Dialogue System" type="Control"]
 layout_mode = 3
@@ -10,6 +11,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jsqu7")
+
+[node name="LeftSprite" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -512.0
+offset_right = 128.0
+grow_vertical = 0
+texture = ExtResource("2_fdqpb")
+
+[node name="RightSprite" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -512.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_fdqpb")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(650, 150)
@@ -47,6 +73,12 @@ text = "Name Here"
 
 [node name="TextLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 size_flags_vertical = 3
-text = "Prompt Here"
+text = "Prompt Here Prompt Here Prompt Here Prompt Here Prompt Here Prompt Here Prompt Here Prompt Here "
+autowrap_mode = 2
+
+[node name="PrintTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="PrintTimer" to="." method="_on_print_timer_timeout"]

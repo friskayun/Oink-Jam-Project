@@ -5,5 +5,12 @@
 			{"speaker": "Player", "text": "Prompt Dialogue 2"},
 			{"speaker": "Name1", "text": "Prompt Dialogue 3"}
 		]
+	},
+	
+	"item_description": {
+		"lines": [
+			{"text": "A black box."},
+			{"speaker": "Player", "text": "I wonder how that box got here."},
+		]
 	}
 }

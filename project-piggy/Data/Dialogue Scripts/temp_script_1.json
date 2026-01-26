@@ -16,13 +16,41 @@
 	"item_description_1": {
 		"lines": [
 			{"text": "A black box."},
-			{"speaker": "Player", "text": "I wonder how that box got here."},
+			{"speaker": "Player", "text": "I wonder how that box got here."}
 		]
 	},
 	
 	"item_description_2": {
 		"lines": [
 			{"text": "A black box."},
+		]
+	},
+	
+	"choice_event": {
+		"line": "Exit",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	},
+	
+	"exit_door_1": {
+		"lines":[
+			{"speaker": "Player", "text": "An exit door! I can escape and save my life!"}
+		]
+	},
+	
+	"exit_door_yes": {
+		"lines":[
+			{"text": "Penny returned to the group and headed home after the tour."},
+			{"text": "Poppy was never seen again after that day."}
+		]
+	},
+	
+	"exit_door_no": {
+		"lines":[
+			{"speaker": "Player", "text": "No! I need to be brave… I need to save my friend and then we can escape together!"},
+			{"speaker": "Player", "text": "But first, I need to figure out where she is."}
 		]
 	}
 }

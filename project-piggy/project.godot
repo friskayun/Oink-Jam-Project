@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 DataManager="*res://Data/data_manager.gd"
 InteractionManager="*res://Prefabs/interaction_manager.tscn"
 Global="*res://Data/global.gd"
+DialogueManager="*res://Data/dialogue_manager.gd"
 
 [input]
 
@@ -66,3 +67,7 @@ skip_dialogue={
 
 2d_physics/layer_1="World"
 2d_physics/layer_2="Player"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

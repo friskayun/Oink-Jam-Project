@@ -24,5 +24,13 @@
 		"lines": [
 			{"text": "A black box."},
 		]
+	},
+	
+	"exit_door": {
+		"lines": [
+			{"speaker": "Player", "text": "An exit door! I can escape and save my life"},
+			{"speaker": "Player", "text": "No! I need to be brave… I need to save my friend and then we can escape together!"},
+			{"speaker": "Player", "text": "But first, I need to figure out where she is!"}
+		]
 	}
 }

@@ -1,0 +1,41 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dlnvr10pdnuph"]
+
+[ext_resource type="Texture2D" uid="uid://cm8xk6ra76tad" path="res://Assets/Prototype assets/tiles/tileset_png.png" id="1_8pyut"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_82tt5"]
+texture = ExtResource("1_8pyut")
+texture_region_size = Vector2i(64, 64)
+1:1/size_in_atlas = Vector2i(2, 2)
+1:1/0 = 0
+4:1/size_in_atlas = Vector2i(2, 2)
+4:1/0 = 0
+7:1/size_in_atlas = Vector2i(2, 2)
+7:1/0 = 0
+10:1/size_in_atlas = Vector2i(2, 2)
+10:1/0 = 0
+13:1/size_in_atlas = Vector2i(2, 2)
+13:1/0 = 0
+16:1/size_in_atlas = Vector2i(2, 2)
+16:1/0 = 0
+19:1/size_in_atlas = Vector2i(2, 2)
+19:1/0 = 0
+1:4/size_in_atlas = Vector2i(2, 2)
+1:4/0 = 0
+4:4/size_in_atlas = Vector2i(2, 2)
+4:4/0 = 0
+7:4/size_in_atlas = Vector2i(2, 1)
+7:4/0 = 0
+10:4/size_in_atlas = Vector2i(2, 1)
+10:4/0 = 0
+13:5/size_in_atlas = Vector2i(2, 1)
+13:5/0 = 0
+16:4/size_in_atlas = Vector2i(2, 2)
+16:4/0 = 0
+19:4/size_in_atlas = Vector2i(2, 2)
+19:4/0 = 0
+1:7/size_in_atlas = Vector2i(2, 2)
+1:7/0 = 0
+
+[resource]
+tile_size = Vector2i(128, 128)
+sources/15 = SubResource("TileSetAtlasSource_82tt5")

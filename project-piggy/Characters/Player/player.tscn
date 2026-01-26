@@ -1,13 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://c6yui6ubp7sq"]
 
-[ext_resource type="Texture2D" uid="uid://0tji66tdy6tv" path="res://icon.svg" id="1_6xdwp"]
 [ext_resource type="Script" uid="uid://d2i5cytnnaeha" path="res://Characters/Player/player.gd" id="1_j341n"]
+[ext_resource type="Texture2D" uid="uid://dxgyr5yijmq6w" path="res://Assets/Prototype assets/Hana Caraka - Base Character [sample]/idle.png" id="2_j341n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j341n"]
-radius = 58.694122
-
-[sub_resource type="Animation" id="Animation_j341n"]
-resource_name = "walk_up"
+radius = 15.0
 
 [sub_resource type="Animation" id="Animation_cue0d"]
 resource_name = "walk_dow"
@@ -17,6 +14,9 @@ resource_name = "walk_left"
 
 [sub_resource type="Animation" id="Animation_xf5fp"]
 resource_name = "walk_right"
+
+[sub_resource type="Animation" id="Animation_j341n"]
+resource_name = "walk_up"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_osktb"]
 _data = {
@@ -33,9 +33,15 @@ graph_offset = Vector2(0, -7)
 script = ExtResource("1_j341n")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_6xdwp")
+position = Vector2(1, 0)
+scale = Vector2(3, 3)
+texture = ExtResource("2_j341n")
+hframes = 4
+vframes = 3
+frame = 5
 
 [node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
 shape = SubResource("CircleShape2D_j341n")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

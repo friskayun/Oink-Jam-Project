@@ -1,15 +1,19 @@
-[gd_scene load_steps=7 format=4 uid="uid://60ufjqkncklt"]
+[gd_scene load_steps=8 format=4 uid="uid://ux02m37odly6"]
 
 [ext_resource type="TileSet" uid="uid://dlnvr10pdnuph" path="res://Prefabs/prototyle_tiles.tres" id="1_e1v2r"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_a2m15"]
 [ext_resource type="Script" uid="uid://bsnxynp51xb3b" path="res://Objects/exit_door.gd" id="3_pqada"]
 [ext_resource type="PackedScene" uid="uid://c57wlulahu4d4" path="res://Prefabs/interact_area.tscn" id="4_e1v2r"]
 [ext_resource type="PackedScene" uid="uid://ufw6qwg3dcs" path="res://UI/Dialogue System/dialogue_system.tscn" id="5_8r82h"]
+[ext_resource type="PackedScene" uid="uid://duit8flwqn84i" path="res://UI/Dialogue System/choice_panel.tscn" id="6_pqada"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pqada"]
 size = Vector2(63, 93)
 
 [node name="Storage Closet Room" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(345, 35)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(0.25, 0.25)
@@ -31,5 +35,4 @@ shape = SubResource("RectangleShape2D_pqada")
 
 [node name="Dialogue System" parent="CanvasLayer" instance=ExtResource("5_8r82h")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(345, 35)
+[node name="ChoicePanel" parent="CanvasLayer" instance=ExtResource("6_pqada")]

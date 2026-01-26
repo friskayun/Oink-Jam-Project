@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c57wlulahu4d4" path="res://Prefabs/interact_area.tscn" id="3_iiax0"]
 [ext_resource type="Script" uid="uid://bg8rcx8gv3u6" path="res://Objects/test_item_2.gd" id="5_0o6b5"]
 [ext_resource type="PackedScene" uid="uid://ufw6qwg3dcs" path="res://UI/Dialogue System/dialogue_system.tscn" id="5_a1kmd"]
-[ext_resource type="PackedScene" uid="uid://b7pg5u7halnf" path="res://UI/Dialogue System/choice_panel.tscn" id="7_mymy5"]
+[ext_resource type="PackedScene" uid="uid://duit8flwqn84i" path="res://UI/Dialogue System/choice_panel.tscn" id="7_mymy5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i33sl"]
 radius = 156.05127
@@ -20,7 +20,6 @@ radius = 131.06105
 
 [node name="Player" parent="." instance=ExtResource("1_g63el")]
 position = Vector2(363, 42)
-collision_layer = 2
 
 [node name="TestItem1" type="Sprite2D" parent="."]
 position = Vector2(-384, -161)

@@ -24,5 +24,13 @@
 		"lines": [
 			{"text": "A black box."},
 		]
+	},
+	
+	"choice_event": {
+		"line": "Exit",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
 	}
 }

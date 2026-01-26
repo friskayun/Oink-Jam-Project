@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 DataManager="*res://Data/data_manager.gd"
 InteractionManager="*res://Prefabs/interaction_manager.tscn"
 Global="*res://Data/global.gd"
+DialogueManager="*res://Data/dialogue_manager.gd"
 
 [input]
 

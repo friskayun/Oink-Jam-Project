@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://diyntio4siccb"]
+[gd_scene load_steps=0 format=3 uid="uid://diyntio4siccb"]
 
 [node name="Button" type="Button"]
 custom_minimum_size = Vector2(224, 64)

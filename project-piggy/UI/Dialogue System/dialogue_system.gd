@@ -2,7 +2,7 @@ extends Control
 
 @onready var timer = $PrintTimer
 
-var dialogues: Dictionary = {}
+#var dialogues: Dictionary = {}
 
 var dialogue_id: String = ""
 var curr_dialogue
@@ -15,7 +15,7 @@ var printing_prompt: bool = false
 
 
 func _ready():
-	dialogues = DataManager.read_script_data()
+	#dialogues = DataManager.read_script_data()
 	hide_dialogue_panel()
 	timer.wait_time = 0.05
 
@@ -89,7 +89,7 @@ func start_dialogue(id: String):
 	
 	line_index = 0
 	dialogue_id = id
-	curr_dialogue = dialogues[dialogue_id]
+	curr_dialogue = DialogueManager.dialogues[dialogue_id]
 	active_dialogue = true
 	Global.freeze_input = true
 	show_next_line()

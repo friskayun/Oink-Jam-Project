@@ -1,0 +1,511 @@
+[gd_scene load_steps=12 format=4 uid="uid://ddk6h743ug5vl"]
+
+[ext_resource type="Script" uid="uid://c46o51vwtyfce" path="res://Scenes/Intro Scenes/intro_final_scene.gd" id="1_7cas6"]
+[ext_resource type="TileSet" uid="uid://dlnvr10pdnuph" path="res://Prefabs/prototyle_tiles.tres" id="2_pm02t"]
+[ext_resource type="PackedScene" uid="uid://dht13kpyrwf4i" path="res://Characters/npc.tscn" id="3_rrrg1"]
+[ext_resource type="PackedScene" uid="uid://ufw6qwg3dcs" path="res://UI/Dialogue System/dialogue_system.tscn" id="4_ie5kc"]
+[ext_resource type="PackedScene" uid="uid://duit8flwqn84i" path="res://UI/Dialogue System/choice_panel.tscn" id="5_7jr30"]
+
+[sub_resource type="Animation" id="Animation_bb7kw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPCs/Penny:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-254, 201)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NPCs/NPC2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-174, 192)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NPCs/NPC3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-211, 226)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NPCs/NPC4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-164, 250)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NPCs/NPC5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-130, 217)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NPCs/NPC6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, 225)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_m2017"]
+resource_name = "class_walk_out"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPCs/Penny:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(214, 201), Vector2(85, 201)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NPCs/NPC2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(294, 192), Vector2(636, 192)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NPCs/NPC3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(257, 226), Vector2(599, 226)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NPCs/NPC4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(304, 250), Vector2(646, 250)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NPCs/NPC5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(338, 217), Vector2(452, 217)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NPCs/NPC6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(445, 225), Vector2(787, 225)]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("NPCs/NPC5")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.25),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["left"],
+"method": &"look"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("NPCs/Penny")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["right"],
+"method": &"look"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("NPCs/NPC6")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["right"],
+"method": &"look"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_e0yb1"]
+resource_name = "end_walk_out"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPCs/Penny:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(85, 201), Vector2(-187, 201)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NPCs/NPC5:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(452, 217), Vector2(700, 217)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NPCs/Penny")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["left"],
+"method": &"look"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NPCs/NPC5")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["right"],
+"method": &"look"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_s4t5d"]
+resource_name = "penny_look_around"
+length = 1.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPCs/Penny")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": ["right"],
+"method": &"look"
+}, {
+"args": ["left"],
+"method": &"look"
+}, {
+"args": ["right"],
+"method": &"look"
+}, {
+"args": ["left"],
+"method": &"look"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_yvmnm"]
+resource_name = "walk_in"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPCs/Penny:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.5, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-254, 201), Vector2(214, 201)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NPCs/NPC2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-174, 192), Vector2(294, 192)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NPCs/NPC3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.5, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-211, 226), Vector2(257, 226)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NPCs/NPC4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-164, 250), Vector2(304, 250)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NPCs/NPC5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.5, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-130, 217), Vector2(338, 217)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NPCs/NPC6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.5, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-23, 225), Vector2(445, 225)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("NPCs/NPC6")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["left"],
+"method": &"look"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s4t5d"]
+_data = {
+&"RESET": SubResource("Animation_bb7kw"),
+&"class_walk_out": SubResource("Animation_m2017"),
+&"end_walk_out": SubResource("Animation_e0yb1"),
+&"penny_look_around": SubResource("Animation_s4t5d"),
+&"walk_in": SubResource("Animation_yvmnm")
+}
+
+[node name="Intro Final Scene" type="Node2D"]
+script = ExtResource("1_7cas6")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(0.25, 0.25)
+tile_map_data = PackedByteArray("AAAAAAAADwANAAEAAAAAAAEADwANAAEAAAAAAAIADwANAAEAAAAAAAMADwANAAEAAAAAAAQADwAEAAEAAAAAAAUADwAEAAEAAAAAAAYADwAEAAEAAAAAAAcADwAEAAEAAAAAAAgADwAEAAEAAAAAAAkADwAEAAEAAAAAAAoADwAEAAEAAAABAAAADwANAAEAAAABAAEADwANAAEAAAABAAIADwANAAEAAAABAAMADwANAAEAAAABAAQADwAEAAEAAAABAAUADwAEAAEAAAABAAYADwAEAAEAAAABAAcADwAEAAEAAAABAAgADwAEAAEAAAABAAkADwAEAAEAAAABAAoADwAEAAEAAAACAAAADwANAAEAAAACAAEADwANAAEAAAACAAIADwANAAEAAAACAAMADwANAAEAAAACAAQADwAEAAEAAAACAAUADwAEAAEAAAACAAYADwAEAAEAAAACAAcADwAEAAEAAAACAAgADwAEAAEAAAACAAkADwAEAAEAAAACAAoADwAEAAEAAAADAAAADwANAAEAAAADAAEADwANAAEAAAADAAIADwANAAEAAAADAAMADwANAAEAAAADAAQADwAEAAEAAAADAAUADwAEAAEAAAADAAYADwAEAAEAAAADAAcADwAEAAEAAAADAAgADwAQAAEAAAADAAkADwAQAAEAAAADAAoADwAEAAEAAAAEAAAADwANAAEAAAAEAAEADwANAAEAAAAEAAIADwANAAEAAAAEAAMADwANAAEAAAAEAAQADwAEAAEAAAAEAAUADwAEAAEAAAAEAAYADwAEAAEAAAAEAAcADwAEAAEAAAAEAAgADwAEAAEAAAAEAAkADwAQAAEAAAAEAAoADwAQAAEAAAAFAAAADwANAAEAAAAFAAEADwANAAEAAAAFAAIADwANAAEAAAAFAAMADwANAAEAAAAFAAQADwAEAAEAAAAFAAUADwAEAAEAAAAFAAYADwAEAAEAAAAFAAcADwAEAAEAAAAFAAgADwAEAAEAAAAFAAkADwAQAAEAAAAFAAoADwAQAAEAAAAGAAAADwANAAEAAAAGAAEADwANAAEAAAAGAAIADwANAAEAAAAGAAMADwANAAEAAAAGAAQADwAQAAEAAAAGAAUADwAQAAEAAAAGAAYADwAEAAEAAAAGAAcADwAEAAEAAAAGAAgADwAEAAEAAAAGAAkADwAEAAEAAAAGAAoADwAQAAEAAAAHAAAADwANAAEAAAAHAAEADwANAAEAAAAHAAIADwANAAEAAAAHAAMADwANAAEAAAAHAAQADwAQAAEAAAAHAAUADwAQAAEAAAAHAAYADwAEAAEAAAAHAAcADwAEAAEAAAAHAAgADwAEAAEAAAAHAAkADwAEAAEAAAAHAAoADwAEAAEAAAAIAAAADwANAAEAAAAIAAEADwANAAEAAAAIAAIADwANAAEAAAAIAAMADwANAAEAAAAIAAQADwAEAAEAAAAIAAUADwAEAAEAAAAIAAYADwAEAAEAAAAIAAcADwAEAAEAAAAIAAgADwAEAAEAAAAIAAkADwAEAAEAAAAIAAoADwAEAAEAAAAJAAAADwAHAAEAAAAJAAEADwAHAAEAAAAJAAIADwAHAAEAAAAJAAMADwAHAAEAAAAJAAQADwAHAAEAAAAJAAUADwAHAAEAAAAJAAYADwAEAAEAAAAJAAcADwAEAAEAAAAJAAgADwAEAAEAAAAJAAkADwAQAAEAAAAJAAoADwAQAAEAAAAKAAAADwAHAAEAAAAKAAEADwAHAAEAAAAKAAIADwAHAAEAAAAKAAMADwAHAAEAAAAKAAQADwAHAAEAAAAKAAUADwAHAAEAAAAKAAYADwAEAAEAAAAKAAcADwAEAAEAAAAKAAgADwAEAAEAAAAKAAkADwAQAAEAAAAKAAoADwAQAAEAAAALAAAADwANAAEAAAALAAEADwANAAEAAAALAAIADwANAAEAAAALAAMADwAHAAEAAAALAAQADwAHAAEAAAALAAUADwAHAAEAAAALAAYADwAEAAEAAAALAAcADwAEAAEAAAALAAgADwAEAAEAAAALAAkADwAEAAEAAAALAAoADwAEAAEAAAAMAAAADwAHAAEAAAAMAAEADwAHAAEAAAAMAAIADwAHAAEAAAAMAAMADwAHAAEAAAAMAAQADwAHAAEAAAAMAAUADwAHAAEAAAAMAAYADwAEAAEAAAAMAAcADwAEAAEAAAAMAAgADwAEAAEAAAAMAAkADwAEAAEAAAAMAAoADwAEAAEAAAANAAAADwAHAAEAAAANAAEADwAHAAEAAAANAAIADwAHAAEAAAANAAMADwAHAAEAAAANAAQADwAHAAEAAAANAAUADwAHAAEAAAANAAYADwAEAAEAAAANAAcADwAEAAEAAAANAAgADwAEAAEAAAANAAkADwAEAAEAAAANAAoADwAEAAEAAAAOAAAADwANAAEAAAAOAAEADwANAAEAAAAOAAIADwANAAEAAAAOAAMADwANAAEAAAAOAAQADwAHAAEAAAAOAAUADwAEAAEAAAAOAAYADwAEAAEAAAAOAAcADwAEAAEAAAAOAAgADwAEAAEAAAAOAAkADwAEAAEAAAAOAAoADwAQAAEAAAAPAAAADwANAAEAAAAPAAEADwANAAEAAAAPAAIADwANAAEAAAAPAAMADwANAAEAAAAPAAQADwAHAAEAAAAPAAUADwAEAAEAAAAPAAYADwAEAAEAAAAPAAcADwAEAAEAAAAPAAgADwAEAAEAAAAPAAkADwAQAAEAAAAPAAoADwAQAAEAAAAQAAAADwANAAEAAAAQAAEADwANAAEAAAAQAAIADwANAAEAAAAQAAMADwAHAAEAAAAQAAQADwAHAAEAAAAQAAUADwAHAAEAAAAQAAYADwAEAAEAAAAQAAcADwAEAAEAAAAQAAgADwAEAAEAAAAQAAkADwAEAAEAAAAQAAoADwAEAAEAAAARAAAADwANAAEAAAARAAEADwANAAEAAAARAAIADwANAAEAAAARAAMADwAHAAEAAAARAAQADwAHAAEAAAARAAUADwAHAAEAAAARAAYADwAEAAEAAAARAAcADwAEAAEAAAARAAgADwAEAAEAAAARAAkADwAEAAEAAAARAAoADwAEAAEAAAASAAAADwANAAEAAAASAAEADwAHAAEAAAASAAIADwAHAAEAAAASAAMADwAHAAEAAAASAAQADwAHAAEAAAASAAUADwAHAAEAAAASAAYADwAEAAEAAAASAAcADwAEAAEAAAASAAgADwAEAAEAAAASAAkADwAEAAEAAAASAAoADwAEAAEAAAATAAAADwANAAEAAAATAAEADwAHAAEAAAATAAIADwAHAAEAAAATAAMADwAHAAEAAAATAAQADwAHAAEAAAATAAUADwAHAAEAAAATAAYADwAEAAEAAAATAAcADwAEAAEAAAATAAgADwAEAAEAAAATAAkADwAEAAEAAAATAAoADwAEAAEAAAAUAAMADwAHAAEAAAAUAAQADwAHAAEAAAAUAAUADwAHAAEAAAAUAAEADwAHAAEAAAAUAAIADwAHAAEAAAAMAP//DwAHAAEAAAANAP//DwAHAAEAAAAJAP//DwAHAAEAAAAKAP//DwAHAAEAAAA=")
+tile_set = ExtResource("2_pm02t")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(2, 2)
+
+[node name="NPCs" type="Node2D" parent="."]
+
+[node name="Penny" parent="NPCs" instance=ExtResource("3_rrrg1")]
+position = Vector2(-254, 201)
+color = Color(1, 1, 1, 1)
+
+[node name="NPC2" parent="NPCs" instance=ExtResource("3_rrrg1")]
+position = Vector2(-174, 192)
+color = Color(0.64732856, 0.6550935, 0.6667413, 1)
+
+[node name="NPC3" parent="NPCs" instance=ExtResource("3_rrrg1")]
+position = Vector2(-211, 226)
+color = Color(0.82174283, 0.54449826, 0.4236418, 1)
+
+[node name="NPC4" parent="NPCs" instance=ExtResource("3_rrrg1")]
+position = Vector2(-164, 250)
+color = Color(0.9519965, 0.88091606, 0.17694831, 1)
+
+[node name="NPC5" parent="NPCs" instance=ExtResource("3_rrrg1")]
+position = Vector2(-130, 217)
+color = Color(0.69441754, 0.78431696, 0.93810236, 1)
+
+[node name="NPC6" parent="NPCs" instance=ExtResource("3_rrrg1")]
+position = Vector2(-23, 225)
+color = Color(0.49492753, 0.86908585, 0.7021452, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Dialogue System" parent="CanvasLayer" instance=ExtResource("4_ie5kc")]
+
+[node name="ChoicePanel" parent="CanvasLayer" instance=ExtResource("5_7jr30")]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_s4t5d")
+}

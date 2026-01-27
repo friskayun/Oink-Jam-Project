@@ -1,0 +1,114 @@
+{
+	"intro_bus_1": {
+		"lines": [
+			{"speaker": "Mr. Horns", "text": "Okay class settle down, settle down! We have almost arrived at our field trip destination!"},
+			{"speaker": "Mr. Horns", "text": "Can anyone guess where we are going?"},
+			{"speaker": "Wendy", "text": "An amusement park!"},
+			{"speaker": "Mr. Horns", "text": "Nope, more informational!"},
+			{"speaker": "Ryan", "text": "The Science Museum!"},
+			{"speaker": "Mr. Horns", "text": "More hands on!"},
+			{"speaker": "Ollie", "text": "Pile of dirt?!"},
+			{"speaker": "Mr. Horns", "text": "No Ollie, we have that at school! Fine I will tell you…"},
+			{"speaker": "Mr. Horns", "text": "We are going to..."},
+			{"speaker": "Mr. Horns", "text": "A Corn Canning Factory!"}
+		]
+	},
+	
+	"intro_bus_2": {
+		"lines": [
+			{"text": "..."},
+			{"speaker": "Wendy", "text": "You have GOT to be kidding."},
+			{"speaker": "Ryan", "text": "Boring."},
+			{"speaker": "Ollie", "text": "Dude, a pile of dirt is better than this."}
+		]
+	},
+	
+	"intro_bus_3": {
+		"lines": [
+			{"speaker": "Penny", "text": "I bet we will learn a whole bunch! Thank you Mr. Horns!"},
+			{"speaker": "Wendy", "text": "Of course you would like something so boring."},
+			{"speaker": "Mr. Horns", "text": "Now Penny is right, the trip will be very informational about the work place."},
+			{"speaker": "Mr. Horns", "text": "Plus we will get to see some very cool machinery in action!"},
+			{"speaker": "Ryan", "text": "(Sign)..."},
+			{"speaker": "Ryan", "text": "I guess robots are cool."},
+			{"speaker": "Mr. Horns", "text": "Yes they are! Plus they are giving us free corn t-shirts."}
+		]
+	},
+	
+	"intro_bus_4": {
+		"lines": [
+			{"text": "FREE! FREE! FREE!"}
+		]
+	},
+	
+	"intro_bus_5": {
+		"lines": [
+			{"speaker": "Poppy", "text": "I don’t think you are boring."},
+			{"speaker": "Penny", "text": "Haha thanks Poppy, but it's okay if I am boring. I am happy as I am."},
+			{"speaker": "Poppy", "text": "Well, I am excited for the field trip, who knows what is in store!"}
+		]
+	},
+	
+	
+	
+	"intro_factory_1": {
+		"lines": [
+			{"speaker": "Tour Guide", "text": "Uh hi, welcome to Corny Cans Canned Corn."},
+			{"speaker": "Tour Guide", "text": "We will be giving you a tour of the facility."},
+			{"speaker": "Tour Guide", "text": "Yeah, Uh... follow me."},
+			{"speaker": "Mr. Horns", "text": "Alright kids, listen carefully to the worker, he is going to teach you all about how a factory works! Bestow your knowledge to us!"},
+			{"speaker": "Tour Guide", "text": "Uh... right... I guess we can start where we wash the corn."},
+			{"speaker": "Wendy", "text": "Well, When do we get the free shirts?"},
+			{"speaker": "Ryan", "text": "Where are the robots with guns on them?"},
+			{"speaker": "Ollie", "text": "I just ate some corn I found on the ground. Is that okay?"}
+		]
+	},
+	
+	"intro_factory_2": {
+		"lines": [
+			{"speaker": "Tour Guide", "text": "..."}
+		]
+	},
+	
+	"intro_factory_3": {
+		"lines": [
+			{"speaker": "Penny", "text": "Why do you wash the corn Mr. Worker?"},
+			{"speaker": "Mr. Horns", "text": "Great question Penny!"},
+			{"speaker": "Tour Guide", "text": "Because it’s dirty if not."},
+			{"speaker": "Penny", "text": "..."},
+			{"speaker": "Penny", "text": "Oh."},
+			{"speaker": "Tour Guide", "text": "Follow me so we can look at things… I guess."}
+		]
+	},
+	
+	
+	
+	"intro_missing_1": {
+		"lines": [
+			{"speaker": "Tour Guide", "text": "Blah, blah, blah... Uh... Blah, blah..."},
+			{"speaker": "Penny", "text": "I don’t think the tour guide likes giving tours, Poppy."}
+		]
+	},
+	
+	"intro_missing_2": {
+		"lines": [
+			{"speaker": "Penny", "text": "Poppy?"}
+		]
+	},
+	
+	"intro_missing_3": {
+		"lines": [
+			{"speaker": "Penny", "text": "I have to go find her! She must have gotten lost on her way to the bathroom or something."},
+			{"speaker": "Penny", "text": "She gets scared when she is alone!"}
+		]
+	},
+	
+	"intro_missing_4": {
+		"lines": [
+			{"speaker": "Mr. Horns", "text": "Penny, please come join the rest of the group!"},
+			{"speaker": "Penny", "text": "Mr. Horns I just need to go to the bathroom. I will be right back!"},
+			{"speaker": "Mr. Horns", "text": "Okay, just come right back after!"},
+			{"speaker": "Penny", "text": "Yes, sir!"},
+		]
+	}
+}

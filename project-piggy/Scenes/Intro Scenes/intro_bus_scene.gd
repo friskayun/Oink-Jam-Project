@@ -22,7 +22,7 @@ func intro_dialogue_1():
 	await get_tree().create_timer(2).timeout
 	
 	## Poppy raises her hand
-	$NPCs/Poppy.jump_anim()
+	$NPCs/Penny.jump_anim()
 	
 	DialogueManager.show_dialogue_panel.emit("intro_bus_3")
 	await DialogueManager.dialogue_ended
@@ -34,7 +34,7 @@ func intro_dialogue_1():
 	await DialogueManager.dialogue_ended
 	await get_tree().create_timer(2).timeout
 	
-	## Penny turns to poppy
+	## Poppy turns to Penny
 	$NPCs/NPC.look("up")
 	DialogueManager.show_dialogue_panel.emit("intro_bus_5")
 	await DialogueManager.dialogue_ended

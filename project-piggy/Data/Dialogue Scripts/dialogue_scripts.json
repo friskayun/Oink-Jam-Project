@@ -47,5 +47,37 @@
 			{"speaker": "Penny", "text": "Haha thanks Poppy, but it's okay if I am boring. I am happy as I am."},
 			{"speaker": "Poppy", "text": "Well, I am excited for the field trip, who knows what is in store!"}
 		]
+	},
+	
+	
+	
+	"intro_factory_1": {
+		"lines": [
+			{"speaker": "Tour Guide", "text": "Uh hi, welcome to Corny Cans Canned Corn."},
+			{"speaker": "Tour Guide", "text": "We will be giving you a tour of the facility."},
+			{"speaker": "Tour Guide", "text": "Yeah, Uh... follow me."},
+			{"speaker": "Mr. Horns", "text": "Alright kids, listen carefully to the worker, he is going to teach you all about how a factory works! Bestow your knowledge to us!"},
+			{"speaker": "Tour Guide", "text": "Uh... right... I guess we can start where we wash the corn."},
+			{"speaker": "Wendy", "text": "Well, When do we get the free shirts?"},
+			{"speaker": "Ryan", "text": "Where are the robots with guns on them?"},
+			{"speaker": "Ollie", "text": "I just ate some corn I found on the ground. Is that okay?"}
+		]
+	},
+	
+	"intro_factory_2": {
+		"lines": [
+			{"speaker": "Tour Guide", "text": "..."},
+		]
+	},
+	
+	"intro_factory_3": {
+		"lines": [
+			{"speaker": "Penny", "text": "Why do you wash the corn Mr. Worker?"},
+			{"speaker": "Mr. Horns", "text": "Great question Penny!"},
+			{"speaker": "Tour Guide", "text": "Because it’s dirty if not."},
+			{"speaker": "Penny", "text": "..."},
+			{"speaker": "Penny", "text": "Oh."},
+			{"speaker": "Tour Guide", "text": "Follow me so we can look at things… I guess."},
+		]
 	}
 }

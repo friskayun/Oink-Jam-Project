@@ -1,0 +1,445 @@
+[gd_scene load_steps=12 format=4 uid="uid://c88ycdbor046x"]
+
+[ext_resource type="TileSet" uid="uid://dlnvr10pdnuph" path="res://Prefabs/prototyle_tiles.tres" id="1_f52p0"]
+[ext_resource type="Script" uid="uid://78wr14r167x2" path="res://Scenes/Intro Scenes/intro_factory_scene.gd" id="1_g700k"]
+[ext_resource type="PackedScene" uid="uid://dht13kpyrwf4i" path="res://Characters/npc.tscn" id="2_16dey"]
+[ext_resource type="PackedScene" uid="uid://ufw6qwg3dcs" path="res://UI/Dialogue System/dialogue_system.tscn" id="3_g700k"]
+[ext_resource type="PackedScene" uid="uid://duit8flwqn84i" path="res://UI/Dialogue System/choice_panel.tscn" id="4_d4rtk"]
+
+[sub_resource type="Animation" id="Animation_g700k"]
+resource_name = "fade_in"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_d4rtk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NPCs/Penny:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-215, 203)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NPCs/NPC:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-216, 250)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NPCs/NPC2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-141, 200)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NPCs/NPC3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-122, 240)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("NPCs/NPC4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-152, 275)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("NPCs/NPC5:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-55, 233)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("NPCs/NPC6:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(488, 225)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("NPCs/NPC6:flip")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_2dfjw"]
+resource_name = "fade_ouy"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="Animation" id="Animation_2jxmh"]
+resource_name = "walk_in"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPCs/Penny:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-200, 196), Vector2(146, 196)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NPCs/NPC:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-201, 243), Vector2(145, 243)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NPCs/NPC2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-126, 193), Vector2(220, 193)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NPCs/NPC3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-107, 233), Vector2(239, 233)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NPCs/NPC4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-137, 268), Vector2(209, 268)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NPCs/NPC5:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, 226), Vector2(306, 226)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("NPCs/NPC6:flip")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_r1o4k"]
+resource_name = "walk_out"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPCs/NPC6:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(488, 225), Vector2(701, 225)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NPCs/NPC6:flip")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NPCs/Penny:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(146, 196), Vector2(611, 196)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NPCs/NPC:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(145, 243), Vector2(610, 243)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NPCs/NPC2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(220, 193), Vector2(685, 193)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NPCs/NPC3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(239, 233), Vector2(704, 233)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("NPCs/NPC4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(209, 268), Vector2(674, 268)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("NPCs/NPC5:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(306, 226), Vector2(771, 226)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2dfjw"]
+_data = {
+&"RESET": SubResource("Animation_d4rtk"),
+&"fade_in": SubResource("Animation_g700k"),
+&"fade_out": SubResource("Animation_2dfjw"),
+&"walk_in": SubResource("Animation_2jxmh"),
+&"walk_out": SubResource("Animation_r1o4k")
+}
+
+[node name="Intro Factory Scene" type="Node2D"]
+script = ExtResource("1_g700k")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(0.25, 0.25)
+tile_map_data = PackedByteArray("AAAAAAAADwANAAEAAAAAAAEADwANAAEAAAAAAAIADwANAAEAAAAAAAMADwANAAEAAAAAAAQADwAEAAEAAAAAAAUADwAEAAEAAAAAAAYADwAEAAEAAAAAAAcADwAEAAEAAAAAAAgADwAEAAEAAAAAAAkADwAEAAEAAAAAAAoADwAEAAEAAAABAAAADwANAAEAAAABAAEADwANAAEAAAABAAIADwANAAEAAAABAAMADwANAAEAAAABAAQADwAEAAEAAAABAAUADwAEAAEAAAABAAYADwAEAAEAAAABAAcADwAEAAEAAAABAAgADwAEAAEAAAABAAkADwAEAAEAAAABAAoADwAEAAEAAAACAAAADwANAAEAAAACAAEADwANAAEAAAACAAIADwANAAEAAAACAAMADwANAAEAAAACAAQADwAEAAEAAAACAAUADwAEAAEAAAACAAYADwAEAAEAAAACAAcADwAEAAEAAAACAAgADwAEAAEAAAACAAkADwAEAAEAAAACAAoADwAEAAEAAAADAAAADwANAAEAAAADAAEADwANAAEAAAADAAIADwANAAEAAAADAAMADwANAAEAAAADAAQADwAEAAEAAAADAAUADwAEAAEAAAADAAYADwAEAAEAAAADAAcADwAEAAEAAAADAAgADwAEAAEAAAADAAkADwAEAAEAAAADAAoADwAEAAEAAAAEAAAADwANAAEAAAAEAAEADwANAAEAAAAEAAIADwANAAEAAAAEAAMADwANAAEAAAAEAAQADwAEAAEAAAAEAAUADwAEAAEAAAAEAAYADwAEAAEAAAAEAAcADwAEAAEAAAAEAAgADwAEAAEAAAAEAAkADwAEAAEAAAAEAAoADwAEAAEAAAAFAAAADwANAAEAAAAFAAEADwANAAEAAAAFAAIADwANAAEAAAAFAAMADwANAAEAAAAFAAQADwAEAAEAAAAFAAUADwAEAAEAAAAFAAYADwAEAAEAAAAFAAcADwAEAAEAAAAFAAgADwAEAAEAAAAFAAkADwAEAAEAAAAFAAoADwAEAAEAAAAGAAAADwANAAEAAAAGAAEADwANAAEAAAAGAAIADwANAAEAAAAGAAMADwANAAEAAAAGAAQADwAEAAEAAAAGAAUADwAEAAEAAAAGAAYADwAEAAEAAAAGAAcADwAEAAEAAAAGAAgADwAEAAEAAAAGAAkADwAEAAEAAAAGAAoADwAEAAEAAAAHAAAADwANAAEAAAAHAAEADwANAAEAAAAHAAIADwANAAEAAAAHAAMADwANAAEAAAAHAAQADwAEAAEAAAAHAAUADwAEAAEAAAAHAAYADwAEAAEAAAAHAAcADwAEAAEAAAAHAAgADwAEAAEAAAAHAAkADwAEAAEAAAAHAAoADwAEAAEAAAAIAAAADwANAAEAAAAIAAEADwANAAEAAAAIAAIADwANAAEAAAAIAAMADwANAAEAAAAIAAQADwAEAAEAAAAIAAUADwAEAAEAAAAIAAYADwAEAAEAAAAIAAcADwAEAAEAAAAIAAgADwAEAAEAAAAIAAkADwAEAAEAAAAIAAoADwAEAAEAAAAJAAAADwANAAEAAAAJAAEADwANAAEAAAAJAAIADwANAAEAAAAJAAMADwANAAEAAAAJAAQADwAEAAEAAAAJAAUADwAEAAEAAAAJAAYADwAEAAEAAAAJAAcADwAEAAEAAAAJAAgADwAEAAEAAAAJAAkADwAEAAEAAAAJAAoADwAEAAEAAAAKAAAADwANAAEAAAAKAAEADwANAAEAAAAKAAIADwANAAEAAAAKAAMADwANAAEAAAAKAAQADwAEAAEAAAAKAAUADwAEAAEAAAAKAAYADwAEAAEAAAAKAAcADwAEAAEAAAAKAAgADwAEAAEAAAAKAAkADwAEAAEAAAAKAAoADwAEAAEAAAALAAAADwANAAEAAAALAAEADwANAAEAAAALAAIADwANAAEAAAALAAMADwANAAEAAAALAAQADwAEAAEAAAALAAUADwAEAAEAAAALAAYADwAEAAEAAAALAAcADwAEAAEAAAALAAgADwAEAAEAAAALAAkADwAEAAEAAAALAAoADwAEAAEAAAAMAAAADwANAAEAAAAMAAEADwANAAEAAAAMAAIADwANAAEAAAAMAAMADwANAAEAAAAMAAQADwAEAAEAAAAMAAUADwAEAAEAAAAMAAYADwAEAAEAAAAMAAcADwAEAAEAAAAMAAgADwAEAAEAAAAMAAkADwAEAAEAAAAMAAoADwAEAAEAAAANAAAADwAHAAEAAAANAAEADwAHAAEAAAANAAIADwAHAAEAAAANAAMADwAHAAEAAAANAAQADwAHAAEAAAANAAUADwAHAAEAAAANAAYADwAEAAEAAAANAAcADwAEAAEAAAANAAgADwAEAAEAAAANAAkADwAEAAEAAAANAAoADwAEAAEAAAAOAAAADwAHAAEAAAAOAAEADwAHAAEAAAAOAAIADwAHAAEAAAAOAAMADwAHAAEAAAAOAAQADwAHAAEAAAAOAAUADwAHAAEAAAAOAAYADwAEAAEAAAAOAAcADwAEAAEAAAAOAAgADwAEAAEAAAAOAAkADwAEAAEAAAAOAAoADwAEAAEAAAAPAAAADwAHAAEAAAAPAAEADwAHAAEAAAAPAAIADwAHAAEAAAAPAAMADwAHAAEAAAAPAAQADwAHAAEAAAAPAAUADwAHAAEAAAAPAAYADwAEAAEAAAAPAAcADwAEAAEAAAAPAAgADwAEAAEAAAAPAAkADwAEAAEAAAAPAAoADwAEAAEAAAAQAAAADwAHAAEAAAAQAAEADwAHAAEAAAAQAAIADwAHAAEAAAAQAAMADwAHAAEAAAAQAAQADwAHAAEAAAAQAAUADwAHAAEAAAAQAAYADwAEAAEAAAAQAAcADwAEAAEAAAAQAAgADwAEAAEAAAAQAAkADwAEAAEAAAAQAAoADwAEAAEAAAARAAAADwANAAEAAAARAAEADwANAAEAAAARAAIADwANAAEAAAARAAMADwAHAAEAAAARAAQADwAHAAEAAAARAAUADwAEAAEAAAARAAYADwAEAAEAAAARAAcADwAEAAEAAAARAAgADwAEAAEAAAARAAkADwAEAAEAAAARAAoADwAEAAEAAAASAAAADwANAAEAAAASAAEADwANAAEAAAASAAIADwANAAEAAAASAAMADwAHAAEAAAASAAQADwAHAAEAAAASAAUADwAEAAEAAAASAAYADwAEAAEAAAASAAcADwAEAAEAAAASAAgADwAEAAEAAAASAAkADwAEAAEAAAASAAoADwAEAAEAAAATAAAADwANAAEAAAATAAEADwANAAEAAAATAAIADwANAAEAAAATAAMADwAHAAEAAAATAAQADwAHAAEAAAATAAUADwAEAAEAAAATAAYADwAEAAEAAAATAAcADwAEAAEAAAATAAgADwAEAAEAAAATAAkADwAEAAEAAAATAAoADwAEAAEAAAAUAAAADwANAAEAAAAUAAEADwANAAEAAAAUAAIADwANAAEAAAAUAAMADwAHAAEAAAAUAAQADwAHAAEAAAAUAAUADwAEAAEAAAAUAAYADwAEAAEAAAAUAAcADwAEAAEAAAAUAAgADwAEAAEAAAAUAAkADwAEAAEAAAAUAAoADwAEAAEAAAAVAAAADwANAAEAAAAVAAEADwAHAAEAAAAVAAIADwAHAAEAAAAVAAMADwAHAAEAAAAVAAQADwAHAAEAAAAVAAUADwAHAAEAAAAVAAYADwAHAAEAAAAVAAcADwAEAAEAAAAVAAgADwAEAAEAAAAVAAkADwAEAAEAAAAVAAoADwAEAAEAAAAWAAAADwANAAEAAAAWAAEADwAHAAEAAAAWAAIADwAHAAEAAAAWAAMADwAHAAEAAAAWAAQADwAHAAEAAAAWAAUADwAHAAEAAAAWAAYADwAHAAEAAAAWAAcADwAEAAEAAAAWAAgADwAEAAEAAAAWAAkADwAEAAEAAAAWAAoADwAEAAEAAAA=")
+tile_set = ExtResource("1_f52p0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(2, 2)
+
+[node name="NPCs" type="Node2D" parent="."]
+
+[node name="Penny" parent="NPCs" instance=ExtResource("2_16dey")]
+position = Vector2(-215, 203)
+color = Color(1, 1, 1, 1)
+
+[node name="NPC" parent="NPCs" instance=ExtResource("2_16dey")]
+position = Vector2(-216, 250)
+color = Color(0.9144212, 0.63710123, 0.68475014, 1)
+
+[node name="NPC2" parent="NPCs" instance=ExtResource("2_16dey")]
+position = Vector2(-141, 200)
+color = Color(0.64732856, 0.6550935, 0.6667413, 1)
+
+[node name="NPC3" parent="NPCs" instance=ExtResource("2_16dey")]
+position = Vector2(-122, 240)
+color = Color(0.82174283, 0.54449826, 0.4236418, 1)
+
+[node name="NPC4" parent="NPCs" instance=ExtResource("2_16dey")]
+position = Vector2(-152, 275)
+color = Color(0.9519965, 0.88091606, 0.17694831, 1)
+
+[node name="NPC5" parent="NPCs" instance=ExtResource("2_16dey")]
+position = Vector2(-55, 233)
+color = Color(0.69441754, 0.78431696, 0.93810236, 1)
+
+[node name="NPC6" parent="NPCs" instance=ExtResource("2_16dey")]
+position = Vector2(488, 225)
+color = Color(0.49492753, 0.86908585, 0.7021452, 1)
+flip = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Dialogue System" parent="CanvasLayer" instance=ExtResource("3_g700k")]
+
+[node name="ChoicePanel" parent="CanvasLayer" instance=ExtResource("4_d4rtk")]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_2dfjw")
+}

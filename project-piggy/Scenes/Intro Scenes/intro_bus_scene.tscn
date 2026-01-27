@@ -193,7 +193,7 @@ zoom = Vector2(2, 2)
 
 [node name="NPCs" type="Node2D" parent="."]
 
-[node name="Poppy" parent="NPCs" instance=ExtResource("3_oen64")]
+[node name="Penny" parent="NPCs" instance=ExtResource("3_oen64")]
 position = Vector2(240, 68)
 color = Color(1, 1, 1, 1)
 

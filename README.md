@@ -7,6 +7,34 @@ Team members: ***Vanessinha, Grilhado, Camryn, Friska***
 
 ## Dev-Log               
 
+
+### v0.03 - Intro Scenes and Dialogue Improvements - 28 Jan 2026
+---
+Added:
+- Intro scenes with simple animation setup
+- Intro dialogue scripts
+- Character VN Resources
+- Prototype Resources and Sprites
+- Animation and sprite changing
+
+Improvements:
+- Code refining
+- char printing animation different wait time
+- "advance dialogue"
+
+<br>
+
+### v0.02 - Choices and Storage Scene - 27 Jan 2026
+---
+Added:
+- prototype assets
+- choice panel
+- dialogue manager
+- storage closed scene
+- exit door with choices and outcome
+
+<br>
+
 ### v0.01 - Base Project Setup - 26 Jan 2026
 ---
 - set up repository

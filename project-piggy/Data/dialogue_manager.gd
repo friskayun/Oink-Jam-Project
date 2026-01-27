@@ -4,7 +4,7 @@ const VNCR_PATH = "res://Data/Resources/VNC_resources/"
 
 
 var dialogues: Dictionary = {}
-var vn_characters = []
+var vn_characters: Dictionary = {}
 
 @warning_ignore("unused_signal")
 signal show_choice_panel(id: String)
@@ -21,13 +21,8 @@ func _ready():
 
 func load_data():
 	dialogues = DataManager.read_script_data()
-	vn_characters = DataManager.fetch_resources(VNCR_PATH)
+	for c in DataManager.fetch_resources(VNCR_PATH):
+		vn_characters[c.character_name] = c
 
 func get_vnc_resource(_character_name: String) -> VisualNovelCharacter:
-	var res = vn_characters.find_custom(func(c): return c.character_name == _character_name)
-	if res != -1:
-		print("Found resource for \"" + _character_name + "\".")
-		return vn_characters[res]
-	else:
-		print("Resouce for \"" + _character_name + "\" not found.")
-		return null
+	return vn_characters.get(_character_name)

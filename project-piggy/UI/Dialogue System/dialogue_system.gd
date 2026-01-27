@@ -1,6 +1,10 @@
 extends Control
 
-const WAIT_TIME = 0.03
+const CHAR_WAIT_TIME = 0.03
+const BLANK_WAIT_TIME = 0.04
+const COMMA_WAIT_TIME = 0.10
+const PERIOD_WAIT_TIME = 0.15
+const EXCLAM_WAIT_TIME = 0.2
 
 @onready var timer = $PrintTimer
 @onready var anim_player = $AnimationPlayer
@@ -19,7 +23,7 @@ var printing_prompt: bool = false
 func _ready():
 	DialogueManager.connect("show_dialogue_panel", start_dialogue)
 	hide_dialogue_panel()
-	timer.wait_time = WAIT_TIME
+	timer.wait_time = CHAR_WAIT_TIME
 
 func _input(event):
 	if event.is_action_pressed("advance_dialogue") and active_dialogue:
@@ -33,7 +37,6 @@ func _input(event):
 
 func _on_print_timer_timeout():
 	animate_dialogue_line()
-
 
 
 #region UI functions
@@ -93,10 +96,26 @@ func change_panel_contents(text: String, speaker: String  = ""):
 	animate_dialogue_line()
 
 func animate_dialogue_line():
-	char_index += 1
 	%TextLabel.visible_characters = char_index
-	if char_index > %TextLabel.text.length():
+	if char_index > %TextLabel.text.length() - 1:
 		reset_print_anim()
+		return
+	
+	char_wait_time(%TextLabel.text[char_index])
+	char_index += 1
+
+func char_wait_time(c: String):
+	match c:
+		".":
+			timer.wait_time = PERIOD_WAIT_TIME
+		",":
+			timer.wait_time = COMMA_WAIT_TIME
+		"!", "?":
+			timer.wait_time = EXCLAM_WAIT_TIME
+		" ":
+			timer.wait_time = BLANK_WAIT_TIME
+		_:
+			timer.wait_time = CHAR_WAIT_TIME
 
 func reset_print_anim():
 	timer.stop()

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=3 format=3 uid="uid://dh56rjlhjdvnh"]
+
+[ext_resource type="Script" uid="uid://2a3tu1mode3v" path="res://Data/Resources/VNCharacter.gd" id="1_br5vw"]
+[ext_resource type="Texture2D" uid="uid://dncxfolrt87sw" path="res://Assets/Prototype assets/VNSprites/body1 2.png" id="2_5i7gr"]
+
+[resource]
+script = ExtResource("1_br5vw")
+character_name = "Ollie"
+vn_sprite = ExtResource("2_5i7gr")
+color = Color(0.8235294, 0.54509807, 0.42352942, 1)
+metadata/_custom_type_script = "uid://2a3tu1mode3v"

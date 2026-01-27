@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=3 format=3 uid="uid://dgr2sihp2af0v"]
+
+[ext_resource type="Script" uid="uid://2a3tu1mode3v" path="res://Data/Resources/VNCharacter.gd" id="1_4l68j"]
+[ext_resource type="Texture2D" uid="uid://b0iyinwd05rwp" path="res://Assets/Prototype assets/VNSprites/body1 4.png" id="2_cdoek"]
+
+[resource]
+script = ExtResource("1_4l68j")
+character_name = "Penny"
+vn_sprite = ExtResource("2_cdoek")
+color = Color(0.9137255, 0.63529414, 0.6862745, 1)
+metadata/_custom_type_script = "uid://2a3tu1mode3v"

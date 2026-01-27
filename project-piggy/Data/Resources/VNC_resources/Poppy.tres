@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=3 format=3 uid="uid://c3sitvwmdojgl"]
+
+[ext_resource type="Script" uid="uid://2a3tu1mode3v" path="res://Data/Resources/VNCharacter.gd" id="1_xqrmd"]
+[ext_resource type="Texture2D" uid="uid://cv10wei64fchg" path="res://Assets/Prototype assets/VNSprites/body1 19.png" id="2_rlqvu"]
+
+[resource]
+script = ExtResource("1_xqrmd")
+character_name = "Poppy"
+vn_sprite = ExtResource("2_rlqvu")
+color = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://2a3tu1mode3v"

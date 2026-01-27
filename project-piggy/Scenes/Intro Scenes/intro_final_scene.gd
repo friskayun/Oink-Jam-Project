@@ -2,8 +2,12 @@ extends Node2D
 
 @onready var anim_player = $AnimationPlayer
 
+signal cutscene_ended
+
 func _ready():
-	intro_cutscene()
+	cutscene_ended.connect(_change_next_scene)
+	print("opening: intro_final_scene")
+	call_deferred("intro_cutscene")
 
 func intro_cutscene():
 	
@@ -36,3 +40,9 @@ func intro_cutscene():
 	# walk out + fade out
 	anim_player.play("end_walk_out")
 	await get_tree().create_timer(1.5).timeout
+	
+	cutscene_ended.emit()
+
+func _change_next_scene():
+	print("changig scene...")
+	pass

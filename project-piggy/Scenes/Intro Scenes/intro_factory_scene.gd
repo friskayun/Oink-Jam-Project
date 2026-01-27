@@ -1,10 +1,15 @@
 extends Node2D
 
+const IntroFinalScene = "res://Scenes/Intro Scenes/intro_final_scene.tscn"
+
 @onready var anim_player = $AnimationPlayer
 
+signal cutscene_ended
 
 func _ready():
-	intro_cutscene()
+	cutscene_ended.connect(_change_next_scene)
+	print("opening: intro_factory_scene")
+	call_deferred("intro_cutscene")
 
 func intro_cutscene():
 	
@@ -35,3 +40,9 @@ func intro_cutscene():
 	await anim_player.animation_finished
 	anim_player.play("fade_out")
 	await anim_player.animation_finished
+	
+	cutscene_ended.emit()
+
+func _change_next_scene():
+	print("changig scene...")
+	get_tree().call_deferred("change_scene_to_file", IntroFinalScene)

@@ -23,7 +23,10 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("advance_dialogue") and active_dialogue:
-		show_next_line()
+		if !printing_prompt:
+			show_next_line()
+		elif printing_prompt:
+			reset_print_anim()
 	
 	if event.is_action_pressed("skip_dialogue") and active_dialogue:
 		end_dialogue()
@@ -71,7 +74,6 @@ func change_panel_contents(text: String, speaker: String  = ""):
 	else:
 		%NameLabel.show()
 		%NameLabel.text = speaker
-		
 		
 		if curr_speaker and curr_speaker.character_name == speaker:
 			pass

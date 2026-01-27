@@ -1,6 +1,10 @@
 extends Node
 
+const VNCR_PATH = "res://Data/Resources/VNC_resources/"
+
+
 var dialogues: Dictionary = {}
+var vn_characters: Dictionary = {}
 
 @warning_ignore("unused_signal")
 signal show_choice_panel(id: String)
@@ -13,4 +17,12 @@ signal dialogue_ended
 var _on_choice: Callable
 
 func _ready():
+	load_data()
+
+func load_data():
 	dialogues = DataManager.read_script_data()
+	for c in DataManager.fetch_resources(VNCR_PATH):
+		vn_characters[c.character_name] = c
+
+func get_vnc_resource(_character_name: String) -> VisualNovelCharacter:
+	return vn_characters.get(_character_name)

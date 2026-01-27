@@ -1,32 +1,42 @@
 extends Control
 
+const CHAR_WAIT_TIME = 0.03
+const BLANK_WAIT_TIME = 0.04
+const COMMA_WAIT_TIME = 0.10
+const PERIOD_WAIT_TIME = 0.15
+const EXCLAM_WAIT_TIME = 0.2
+
 @onready var timer = $PrintTimer
+@onready var anim_player = $AnimationPlayer
 
 var dialogue_id: String = ""
 var curr_dialogue
 var line_index: int = 0
 var char_index: int = 0
+var last_speaker: String = ""
+var curr_speaker: VisualNovelCharacter = null
 
 var active_dialogue: bool = false
 var printing_prompt: bool = false
 
 
-
 func _ready():
 	DialogueManager.connect("show_dialogue_panel", start_dialogue)
 	hide_dialogue_panel()
-	timer.wait_time = 0.05
+	timer.wait_time = CHAR_WAIT_TIME
 
 func _input(event):
 	if event.is_action_pressed("advance_dialogue") and active_dialogue:
-		show_next_line()
+		if !printing_prompt:
+			show_next_line()
+		elif printing_prompt:
+			reset_print_anim()
 	
 	if event.is_action_pressed("skip_dialogue") and active_dialogue:
 		end_dialogue()
 
 func _on_print_timer_timeout():
 	animate_dialogue_line()
-
 
 
 #region UI functions
@@ -38,10 +48,20 @@ func hide_dialogue_panel():
 	hide()
 
 func show_left_character():
+	if last_speaker != curr_speaker.character_name:
+		anim_player.play("show_left_sprite")
+		%LeftSprite.texture = curr_speaker.vn_sprite
+		%RightSprite.self_modulate = curr_speaker.color
+	
 	%LeftSprite.show()
 	%RightSprite.hide()
 
 func show_right_character():
+	if last_speaker != curr_speaker.character_name:
+		anim_player.play("show_right_sprite")
+		%RightSprite.texture = curr_speaker.vn_sprite
+		%RightSprite.self_modulate = curr_speaker.color
+
 	%LeftSprite.hide()
 	%RightSprite.show()
 
@@ -57,8 +77,17 @@ func change_panel_contents(text: String, speaker: String  = ""):
 	else:
 		%NameLabel.show()
 		%NameLabel.text = speaker
+		
+		if curr_speaker and curr_speaker.character_name == speaker:
+			pass
+		else:
+			curr_speaker = DialogueManager.get_vnc_resource(speaker)
+		
 		@warning_ignore("standalone_ternary")
-		show_left_character() if speaker == "Player" else show_right_character()
+		show_left_character() if speaker == "Penny" else show_right_character()
+		
+		if last_speaker != speaker:
+			last_speaker = speaker
 	
 	# prompt set up
 	%TextLabel.text = text
@@ -67,10 +96,26 @@ func change_panel_contents(text: String, speaker: String  = ""):
 	animate_dialogue_line()
 
 func animate_dialogue_line():
-	char_index += 1
 	%TextLabel.visible_characters = char_index
-	if char_index > %TextLabel.text.length():
+	if char_index > %TextLabel.text.length() - 1:
 		reset_print_anim()
+		return
+	
+	char_wait_time(%TextLabel.text[char_index])
+	char_index += 1
+
+func char_wait_time(c: String):
+	match c:
+		".":
+			timer.wait_time = PERIOD_WAIT_TIME
+		",":
+			timer.wait_time = COMMA_WAIT_TIME
+		"!", "?":
+			timer.wait_time = EXCLAM_WAIT_TIME
+		" ":
+			timer.wait_time = BLANK_WAIT_TIME
+		_:
+			timer.wait_time = CHAR_WAIT_TIME
 
 func reset_print_anim():
 	timer.stop()
@@ -98,7 +143,7 @@ func show_next_line():
 		reset_print_anim()
 	
 	if curr_dialogue["lines"].size() > line_index:
-		print("showing next line...")
+		#print("showing next line...")
 		var line = curr_dialogue["lines"][line_index]
 		
 		if line.has("speaker"):
@@ -108,7 +153,7 @@ func show_next_line():
 		
 		line_index += 1
 	else:
-		print("ending...")
+		#print("ending...")
 		end_dialogue()
 
 func end_dialogue():

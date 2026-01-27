@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_ewtju")
-character_name = "Teacher"
+character_name = "Mr. Horns"
 vn_sprite = ExtResource("2_gi8qg")
+color = Color(0.69411767, 0.78431374, 0.9372549, 1)
 metadata/_custom_type_script = "uid://2a3tu1mode3v"

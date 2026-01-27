@@ -1,7 +1,121 @@
-[gd_scene load_steps=3 format=3 uid="uid://ufw6qwg3dcs"]
+[gd_scene load_steps=7 format=3 uid="uid://ufw6qwg3dcs"]
 
 [ext_resource type="Script" uid="uid://d0scimstdvdyw" path="res://UI/Dialogue System/dialogue_system.gd" id="1_jsqu7"]
-[ext_resource type="Texture2D" uid="uid://0tji66tdy6tv" path="res://icon.svg" id="2_fdqpb"]
+[ext_resource type="Texture2D" uid="uid://dncxfolrt87sw" path="res://Assets/Prototype assets/VNSprites/body1 2.png" id="2_fdqpb"]
+
+[sub_resource type="Animation" id="Animation_guiua"]
+resource_name = "show_left_sprite"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-407, 72), Vector2(-107, 72)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.19607843), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1mqkp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-407, 72)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RightSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1057, 70)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightSprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.19607843)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LeftSprite:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.19607843)]
+}
+
+[sub_resource type="Animation" id="Animation_li07r"]
+resource_name = "show_right_sprite"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RightSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1057, 70), Vector2(757, 70)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RightSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.19607843), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_li07r"]
+_data = {
+&"RESET": SubResource("Animation_1mqkp"),
+&"show_left_sprite": SubResource("Animation_guiua"),
+&"show_right_sprite": SubResource("Animation_li07r")
+}
 
 [node name="Dialogue System" type="Control"]
 layout_mode = 3
@@ -14,28 +128,35 @@ script = ExtResource("1_jsqu7")
 
 [node name="LeftSprite" type="TextureRect" parent="."]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.19607843)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -512.0
-offset_right = 128.0
+offset_left = -407.0
+offset_top = -576.0
+offset_right = -151.0
+offset_bottom = -288.0
 grow_vertical = 0
+scale = Vector2(2, 2)
 texture = ExtResource("2_fdqpb")
 
 [node name="RightSprite" type="TextureRect" parent="."]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.19607843)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -128.0
-offset_top = -512.0
+offset_left = -95.0
+offset_top = -578.0
+offset_right = 161.00098
+offset_bottom = -290.0
 grow_horizontal = 0
 grow_vertical = 0
-texture = ExtResource("2_fdqpb")
+scale = Vector2(2, 2)
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(650, 150)
@@ -80,5 +201,10 @@ text = "Prompt Here Prompt Here Prompt Here Prompt Here Prompt Here Prompt Here 
 autowrap_mode = 2
 
 [node name="PrintTimer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_li07r")
+}
 
 [connection signal="timeout" from="PrintTimer" to="." method="_on_print_timer_timeout"]

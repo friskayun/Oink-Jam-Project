@@ -12,3 +12,19 @@ func read_script_data():
 	
 	var data = JSON.parse_string(file_content)
 	return data
+
+func fetch_resources(folder_path: String) -> Array:
+	var array = []
+	
+	var dir = DirAccess.open(folder_path)
+	if dir == null:
+		print("[Error] Could't open directory.")
+		return array
+	
+	for file in dir.get_files():
+		if file.ends_with(".tres"):
+			var res = load(folder_path + file)
+			if res:
+				array.append(res)
+	
+	return array

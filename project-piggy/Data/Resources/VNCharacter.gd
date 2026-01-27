@@ -3,3 +3,4 @@ class_name VisualNovelCharacter
 
 @export var character_name: String = ""
 @export var vn_sprite: Texture = null
+@export var color: Color

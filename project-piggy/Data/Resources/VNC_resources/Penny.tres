@@ -7,4 +7,5 @@
 script = ExtResource("1_4l68j")
 character_name = "Penny"
 vn_sprite = ExtResource("2_cdoek")
+color = Color(0.9137255, 0.63529414, 0.6862745, 1)
 metadata/_custom_type_script = "uid://2a3tu1mode3v"

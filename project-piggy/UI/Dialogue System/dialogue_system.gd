@@ -1,5 +1,7 @@
 extends Control
 
+const WAIT_TIME = 0.03
+
 @onready var timer = $PrintTimer
 
 var dialogue_id: String = ""
@@ -15,7 +17,7 @@ var printing_prompt: bool = false
 func _ready():
 	DialogueManager.connect("show_dialogue_panel", start_dialogue)
 	hide_dialogue_panel()
-	timer.wait_time = 0.05
+	timer.wait_time = WAIT_TIME
 
 func _input(event):
 	if event.is_action_pressed("advance_dialogue") and active_dialogue:
@@ -58,7 +60,7 @@ func change_panel_contents(text: String, speaker: String  = ""):
 		%NameLabel.show()
 		%NameLabel.text = speaker
 		@warning_ignore("standalone_ternary")
-		show_left_character() if speaker == "Player" else show_right_character()
+		show_left_character() if speaker == "Penny" else show_right_character()
 	
 	# prompt set up
 	%TextLabel.text = text
@@ -98,7 +100,7 @@ func show_next_line():
 		reset_print_anim()
 	
 	if curr_dialogue["lines"].size() > line_index:
-		print("showing next line...")
+		#print("showing next line...")
 		var line = curr_dialogue["lines"][line_index]
 		
 		if line.has("speaker"):
@@ -108,7 +110,7 @@ func show_next_line():
 		
 		line_index += 1
 	else:
-		print("ending...")
+		#print("ending...")
 		end_dialogue()
 
 func end_dialogue():

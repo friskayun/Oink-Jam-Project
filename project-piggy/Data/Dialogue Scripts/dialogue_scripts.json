@@ -1,0 +1,51 @@
+{
+	"intro_bus_1": {
+		"lines": [
+			{"speaker": "Mr. Horns", "text": "Okay class settle down, settle down! We have almost arrived at our field trip destination!"},
+			{"speaker": "Mr. Horns", "text": "Can anyone guess where we are going?"},
+			{"speaker": "Wendy", "text": "An amusement park!"},
+			{"speaker": "Mr. Horns", "text": "Nope, more informational!"},
+			{"speaker": "Ryan", "text": "The Science Museum!"},
+			{"speaker": "Mr. Horns", "text": "More hands on!"},
+			{"speaker": "Ollie", "text": "Pile of dirt?!"},
+			{"speaker": "Mr. Horns", "text": "No Ollie, we have that at school! Fine I will tell you…"},
+			{"speaker": "Mr. Horns", "text": "We are going to..."},
+			{"speaker": "Mr. Horns", "text": "A Corn Canning Factory!"}
+		]
+	},
+	
+	"intro_bus_2": {
+		"lines": [
+			{"text": "..."},
+			{"speaker": "Wendy", "text": "You have GOT to be kidding."},
+			{"speaker": "Ryan", "text": "Boring."},
+			{"speaker": "Ollie", "text": "Dude, a pile of dirt is better than this."}
+		]
+	},
+	
+	"intro_bus_3": {
+		"lines": [
+			{"speaker": "Penny", "text": "I bet we will learn a whole bunch! Thank you Mr. Horns!"},
+			{"speaker": "Wendy", "text": "Of course you would like something so boring."},
+			{"speaker": "Mr. Horns", "text": "Now Penny is right, the trip will be very informational about the work place."},
+			{"speaker": "Mr. Horns", "text": "Plus we will get to see some very cool machinery in action!"},
+			{"speaker": "Ryan", "text": "(Sign)..."},
+			{"speaker": "Ryan", "text": "I guess robots are cool."},
+			{"speaker": "Mr. Horns", "text": "Yes they are! Plus they are giving us free corn t-shirts."}
+		]
+	},
+	
+	"intro_bus_4": {
+		"lines": [
+			{"text": "FREE! FREE! FREE!"}
+		]
+	},
+	
+	"intro_bus_5": {
+		"lines": [
+			{"speaker": "Poppy", "text": "I don’t think you are boring."},
+			{"speaker": "Penny", "text": "Haha thanks Poppy, but it's okay if I am boring. I am happy as I am."},
+			{"speaker": "Poppy", "text": "Well, I am excited for the field trip, who knows what is in store!"}
+		]
+	}
+}

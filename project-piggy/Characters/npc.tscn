@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dht13kpyrwf4i"]
+
+[ext_resource type="Script" uid="uid://pj3lcsvd4c1q" path="res://Characters/npc.gd" id="1_32lk6"]
+[ext_resource type="Texture2D" uid="uid://dxgyr5yijmq6w" path="res://Assets/Prototype assets/Hana Caraka - Base Character [sample]/idle.png" id="1_64dcp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_32lk6"]
+radius = 15.0
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_6ybb6"]
+
+[node name="NPC" type="CharacterBody2D"]
+script = ExtResource("1_32lk6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_64dcp")
+hframes = 4
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_32lk6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_6ybb6")
+anim_player = NodePath("../AnimationPlayer")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=3 format=3 uid="uid://cbwkodjektpky"]
+
+[ext_resource type="Script" uid="uid://2a3tu1mode3v" path="res://Data/Resources/VNCharacter.gd" id="1_ewtju"]
+[ext_resource type="Texture2D" uid="uid://ds6c8680ufnu8" path="res://Assets/Prototype assets/VNSprites/body1 35.png" id="2_gi8qg"]
+
+[resource]
+script = ExtResource("1_ewtju")
+character_name = "Teacher"
+vn_sprite = ExtResource("2_gi8qg")
+metadata/_custom_type_script = "uid://2a3tu1mode3v"

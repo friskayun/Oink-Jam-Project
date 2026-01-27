@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=3 format=3 uid="uid://c1ph1f7ybkhru"]
+
+[ext_resource type="Script" uid="uid://2a3tu1mode3v" path="res://Data/Resources/VNCharacter.gd" id="1_kam0i"]
+[ext_resource type="Texture2D" uid="uid://bwi1w77mr8uuk" path="res://Assets/Prototype assets/VNSprites/body1 3.png" id="2_3nvf5"]
+
+[resource]
+script = ExtResource("1_kam0i")
+character_name = "Tour Guide"
+vn_sprite = ExtResource("2_3nvf5")
+metadata/_custom_type_script = "uid://2a3tu1mode3v"

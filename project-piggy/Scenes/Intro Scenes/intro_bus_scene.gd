@@ -3,9 +3,9 @@ extends Node2D
 @onready var anim_player = $AnimationPlayer
 
 func _ready():
-	intro_dialogue_1()
+	intro_cutscene()
 
-func intro_dialogue_1():
+func intro_cutscene():
 	anim_player.play("fade_in")
 	await  anim_player.animation_finished
 	anim_player.play("everyone_jump")

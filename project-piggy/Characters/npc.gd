@@ -21,10 +21,10 @@ func look(dir: String):
 	match dir:
 		"left":
 			sprite.frame = 0
-			sprite.flip_h = false
+			sprite.flip_h = true
 		"right":
 			sprite.frame = 0
-			sprite.flip_h = true
+			sprite.flip_h = false
 		"up":
 			sprite.frame = 8
 		"down":

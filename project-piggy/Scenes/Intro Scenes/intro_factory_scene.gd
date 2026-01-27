@@ -4,9 +4,9 @@ extends Node2D
 
 
 func _ready():
-	intro_dialogue_2()
+	intro_cutscene()
 
-func intro_dialogue_2():
+func intro_cutscene():
 	
 	## fade in + students walk in
 	anim_player.play("fade_in")

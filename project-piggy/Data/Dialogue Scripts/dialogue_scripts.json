@@ -66,7 +66,7 @@
 	
 	"intro_factory_2": {
 		"lines": [
-			{"speaker": "Tour Guide", "text": "..."},
+			{"speaker": "Tour Guide", "text": "..."}
 		]
 	},
 	
@@ -77,7 +77,38 @@
 			{"speaker": "Tour Guide", "text": "Because it’s dirty if not."},
 			{"speaker": "Penny", "text": "..."},
 			{"speaker": "Penny", "text": "Oh."},
-			{"speaker": "Tour Guide", "text": "Follow me so we can look at things… I guess."},
+			{"speaker": "Tour Guide", "text": "Follow me so we can look at things… I guess."}
+		]
+	},
+	
+	
+	
+	"intro_missing_1": {
+		"lines": [
+			{"speaker": "Tour Guide", "text": "Blah, blah, blah... Uh... Blah, blah..."},
+			{"speaker": "Penny", "text": "I don’t think the tour guide likes giving tours, Poppy."}
+		]
+	},
+	
+	"intro_missing_2": {
+		"lines": [
+			{"speaker": "Penny", "text": "Poppy?"}
+		]
+	},
+	
+	"intro_missing_3": {
+		"lines": [
+			{"speaker": "Penny", "text": "I have to go find her! She must have gotten lost on her way to the bathroom or something."},
+			{"speaker": "Penny", "text": "She gets scared when she is alone!"}
+		]
+	},
+	
+	"intro_missing_4": {
+		"lines": [
+			{"speaker": "Mr. Horns", "text": "Penny, please come join the rest of the group!"},
+			{"speaker": "Penny", "text": "Mr. Horns I just need to go to the bathroom. I will be right back!"},
+			{"speaker": "Mr. Horns", "text": "Okay, just come right back after!"},
+			{"speaker": "Penny", "text": "Yes, sir!"},
 		]
 	}
 }

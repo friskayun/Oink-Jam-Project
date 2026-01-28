@@ -1,16 +1,19 @@
-[gd_scene load_steps=8 format=4 uid="uid://ux02m37odly6"]
+[gd_scene load_steps=10 format=4 uid="uid://ux02m37odly6"]
 
+[ext_resource type="Script" uid="uid://jlwjn2u8hip3" path="res://Prefabs/level.gd" id="1_8r82h"]
 [ext_resource type="TileSet" uid="uid://dlnvr10pdnuph" path="res://Prefabs/prototyle_tiles.tres" id="1_e1v2r"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_a2m15"]
 [ext_resource type="Script" uid="uid://bsnxynp51xb3b" path="res://Objects/exit_door.gd" id="3_pqada"]
 [ext_resource type="PackedScene" uid="uid://c57wlulahu4d4" path="res://Prefabs/interact_area.tscn" id="4_e1v2r"]
 [ext_resource type="PackedScene" uid="uid://ufw6qwg3dcs" path="res://UI/Dialogue System/dialogue_system.tscn" id="5_8r82h"]
 [ext_resource type="PackedScene" uid="uid://duit8flwqn84i" path="res://UI/Dialogue System/choice_panel.tscn" id="6_pqada"]
+[ext_resource type="PackedScene" uid="uid://dgfvddl5tq6wl" path="res://Prefabs/door.tscn" id="7_138vt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pqada"]
 size = Vector2(63, 93)
 
 [node name="Storage Closet Room" type="Node2D"]
+script = ExtResource("1_8r82h")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(345, 35)
@@ -36,3 +39,16 @@ shape = SubResource("RectangleShape2D_pqada")
 [node name="Dialogue System" parent="CanvasLayer" instance=ExtResource("5_8r82h")]
 
 [node name="ChoicePanel" parent="CanvasLayer" instance=ExtResource("6_pqada")]
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="Door_W" parent="Doors" instance=ExtResource("7_138vt")]
+position = Vector2(19, 80)
+destination_level_tag = "test_scene"
+destination_door_tag = "E"
+direction_spawn = "right"
+
+[node name="Spawn" parent="Doors/Door_W" index="1"]
+position = Vector2(64, 0)
+
+[editable path="Doors/Door_W"]

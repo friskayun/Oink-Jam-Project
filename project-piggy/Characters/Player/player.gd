@@ -19,7 +19,5 @@ func _process(_delta):
 
 @warning_ignore("unused_parameter")
 func _on_spawn(_position: Vector2, direction: String):
-	print(global_position)
 	global_position = _position
-	print(global_position)
 	#anim sprite to dir

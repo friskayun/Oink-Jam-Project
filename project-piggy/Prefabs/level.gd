@@ -7,7 +7,6 @@ func _ready():
 	if NavigationManager.spawn_door_tag != null:
 		on_level_spawn(NavigationManager.spawn_door_tag)
 
-
 func on_level_spawn(destination_tag: String):
 	var door_path = DOOR_NODE_PATH + destination_tag
 	var door = get_node(door_path) as Door

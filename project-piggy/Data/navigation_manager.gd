@@ -10,6 +10,7 @@ const INTRO_FINAL_SCENE = preload("res://Scenes/Intro Scenes/intro_final_scene.t
 	## Level scenes
 const HALLWAY_CORN_FACTORY = preload("res://Scenes/Game Scenes/hallway_corn_factory.tscn")
 const HALLWAY_HAM_FACTORY = preload("res://Scenes/Game Scenes/hallway_ham_factory.tscn")
+const WORK_AREA_ROOM = preload("res://Scenes/Game Scenes/work_area_room.tscn")
 const STORAGE_CLOSET_ROOM = preload("res://Scenes/Game Scenes/storage_closet_room.tscn")
 const LOCKERS_ROOM = preload("res://Scenes/Game Scenes/lockers_room.tscn")
 const SECURITY_ROOM = preload("res://Scenes/Game Scenes/security_room.tscn")
@@ -61,6 +62,8 @@ func get_scene(scene_tag):
 			return HALLWAY_CORN_FACTORY
 		"hallway_ham_factory":
 			return HALLWAY_HAM_FACTORY
+		"work_area_room":
+			return WORK_AREA_ROOM
 		"storage_scene":
 			return STORAGE_CLOSET_ROOM
 		"lockers_room":

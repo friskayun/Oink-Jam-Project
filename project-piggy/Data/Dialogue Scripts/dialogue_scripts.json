@@ -50,7 +50,6 @@
 	},
 	
 	
-	
 	"intro_factory_1": {
 		"lines": [
 			{"speaker": "Tour Guide", "text": "Uh hi, welcome to Corny Cans Canned Corn."},
@@ -80,7 +79,6 @@
 			{"speaker": "Tour Guide", "text": "Follow me so we can look at things… I guess."}
 		]
 	},
-	
 	
 	
 	"intro_missing_1": {
@@ -113,14 +111,23 @@
 	},
 	
 	
+	
+	
 	"hallway_corn_factory": {
 		"lines": [
 			{"speaker": "Poppy", "text": "HEEELP!!!"},
 			{"speaker": "Penny", "text": "Poppy?"},
-			{"speaker": "Penny", "text": "I just heard Poppy yell for help!! I think it came from the end of the hall! I need to get to her!"}
+			{"speaker": "Penny", "text": "I think it came from the end of the hall! I need to get to her!"}
 		]
 	},
 	
+	"hallway_ham_factory_visit": {
+		"lines": [
+			{"speaker": "Penny", "text": "What in the world is this place?"},
+			{"speaker": "Poppy", "text": "Let me go!!"},
+			{"speaker": "Penny", "text": "Poppy!!"}
+		]
+	},
 	
 	
 	

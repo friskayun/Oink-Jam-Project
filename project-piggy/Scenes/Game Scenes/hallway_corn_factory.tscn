@@ -77,7 +77,7 @@ position = Vector2(-53, 0)
 position = Vector2(192, 65)
 script = ExtResource("5_teodi")
 destination_level_tag = "hallway_ham_factory"
-destination_door_tag = "W"
+destination_door_tag = "HCF"
 direction_spawn = "up"
 
 [node name="Spawn" type="Marker2D" parent="Doors/Door_Red"]
@@ -90,7 +90,5 @@ position = Vector2(0, 15)
 shape = SubResource("RectangleShape2D_q7e1d")
 
 [node name="Level UI Elements" parent="." instance=ExtResource("2_hq7vo")]
-
-[connection signal="body_entered" from="Objects/EventTriggerArea/Area2D" to="Objects/EventTriggerArea" method="_on_area_2d_body_entered"]
 
 [editable path="Doors/Door_Spawn"]

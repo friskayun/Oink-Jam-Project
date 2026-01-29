@@ -110,5 +110,23 @@
 			{"speaker": "Mr. Horns", "text": "Okay, just come right back after!"},
 			{"speaker": "Penny", "text": "Yes, sir!"},
 		]
+	},
+	
+	
+	"hallway_corn_factory": {
+		"lines": [
+			{"speaker": "Poppy", "text": "HEEELP!!!"},
+			{"speaker": "Penny", "text": "Poppy?"},
+			{"speaker": "Penny", "text": "I just heard Poppy yell for help!! I think it came from the end of the hall! I need to get to her!"}
+		]
+	},
+	
+	
+	
+	
+	"door_locked": {
+		"lines": [
+			{"text": "It's locked."}
+		]
 	}
 }

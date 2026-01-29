@@ -6,7 +6,6 @@ const NEXT_SCENE = "intro_final_scene"
 
 
 func _ready():
-	print("opening: intro_factory_scene")
 	call_deferred("intro_cutscene")
 
 func intro_cutscene():

@@ -151,6 +151,29 @@
 	},
 	
 	
+	
+	"storage_hide_1": {
+		"lines": [
+			{"speaker": "Penny", "text": "I need to hide!"}
+		]
+	},
+	
+	"storage_hide_2": {
+		"lines": [
+			{"speaker": "Worker", "text": "Little piggie? Where did you go..."},
+			{"speaker": "Worker", "text": "Eh, at least we got the other one..."}
+		]
+	},
+	
+	"storage_hide_3": {
+		"lines": [
+			{"speaker": "Penny", "text": "This is horrible! How could they make a canned ham factory under the corn factory?"},
+			{"speaker": "Penny", "text": "I need to get out of here but... but Poppy!"}
+		]
+	},
+	
+	
+	
 	"door_locked": {
 		"lines": [
 			{"text": "It's locked."}

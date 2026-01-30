@@ -1,0 +1,17 @@
+{
+	"exit_door_choice": {
+		"line": "Exit",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	},
+	
+	"vent_storage_choice": {
+		"line": "Use Vent",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	},
+}

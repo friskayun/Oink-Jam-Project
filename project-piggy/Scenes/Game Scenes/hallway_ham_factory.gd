@@ -15,6 +15,11 @@ func level_state():
 		unlock_storage_door(false)
 	elif Global.curr_state == Global.GAME_STATE.FIRST_CHASE:
 		unlock_storage_door(true)
+		%Door_WA.first_visit = false
+	else:
+		unlock_storage_door(true)
+		%Door_WA.first_visit = false
+		unlock_security_door(true)
 
 
 func first_visit():
@@ -30,3 +35,6 @@ func first_visit():
 func unlock_storage_door(unlock: bool):
 	%StorageLocked.disable = unlock
 	$Doors/Door_Storage.is_active = unlock
+
+func unlock_security_door(unlock: bool):
+	pass

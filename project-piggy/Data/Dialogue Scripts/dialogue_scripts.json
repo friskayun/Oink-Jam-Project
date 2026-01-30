@@ -144,10 +144,48 @@
 		]
 	},
 	
+	"work_area_after_visit": {
+		"lines": [
+			{"speaker": "Penny", "text": "There is no way I'm going back there!"}
+		]
+	},
+	
 	
 	"door_locked": {
 		"lines": [
 			{"text": "It's locked."}
+		]
+	},
+	
+	"exit_door_event": {
+		"lines":[
+			{"speaker": "Penny", "text": "An exit door! I can escape and save my life!"}
+		]
+	},
+	
+	"exit_door_yes": {
+		"lines":[
+			{"text": "Penny returned to the group and headed home after the tour."},
+			{"text": "Poppy was never seen again after that day."}
+		]
+	},
+	
+	"exit_door_no": {
+		"lines":[
+			{"speaker": "Penny", "text": "No! I need to be brave… I need to save my friend and then we can escape together!"},
+			{"speaker": "Penny", "text": "But first, I need to figure out where she is."}
+		]
+	},
+	
+	"vent_storage_locked": {
+		"lines":[
+			{"text": "I'm not able to use it at the moment."}
+		]
+	},
+	
+	"locker_storage": {
+		"lines":[
+			{"text": "An empty locker."}
 		]
 	}
 }

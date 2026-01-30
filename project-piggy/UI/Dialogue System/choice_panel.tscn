@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://duit8flwqn84i"]
 
-[ext_resource type="Script" path="res://UI/Dialogue System/choice_panel.gd" id="1_ydqfx"]
+[ext_resource type="Script" uid="uid://b3q56c2kfr4nk" path="res://UI/Dialogue System/choice_panel.gd" id="1_ydqfx"]
 [ext_resource type="PackedScene" uid="uid://b10rkn60a0bq" path="res://UI/Dialogue System/choice_button.tscn" id="2_qmcda"]
 
 [node name="ChoicePanel" type="Control"]

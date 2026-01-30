@@ -20,6 +20,8 @@ DataManager="*res://Data/data_manager.gd"
 InteractionManager="*res://Prefabs/interaction_manager.tscn"
 Global="*res://Data/global.gd"
 DialogueManager="*res://Data/dialogue_manager.gd"
+NavigationManager="*res://Data/navigation_manager.gd"
+TransitionScene="*res://UI/transition_scene.tscn"
 
 [input]
 

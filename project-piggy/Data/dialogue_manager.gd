@@ -26,3 +26,7 @@ func load_data():
 
 func get_vnc_resource(_character_name: String) -> VisualNovelCharacter:
 	return vn_characters.get(_character_name)
+
+
+func play_dialogue(dialogue_id: String):
+	show_dialogue_panel.emit(dialogue_id)

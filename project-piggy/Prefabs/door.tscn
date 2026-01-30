@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgfvddl5tq6wl"]
+
+[ext_resource type="Script" uid="uid://cxow40ffk7ur2" path="res://Prefabs/door.gd" id="1_uqoeb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gd6iu"]
+size = Vector2(37, 37)
+
+[node name="Door" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_uqoeb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gd6iu")
+
+[node name="Spawn" type="Marker2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

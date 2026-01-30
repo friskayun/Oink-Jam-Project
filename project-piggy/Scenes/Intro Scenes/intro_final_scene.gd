@@ -1,12 +1,11 @@
 extends Node2D
 
+const NEXT_SCENE = "hallway_corn_factory"
+
 @onready var anim_player = $AnimationPlayer
 
-signal cutscene_ended
 
 func _ready():
-	cutscene_ended.connect(_change_next_scene)
-	print("opening: intro_final_scene")
 	call_deferred("intro_cutscene")
 
 func intro_cutscene():
@@ -37,12 +36,8 @@ func intro_cutscene():
 	DialogueManager.show_dialogue_panel.emit("intro_missing_4")
 	await DialogueManager.dialogue_ended
 	
-	# walk out + fade out
+	## walk out + fade out
 	anim_player.play("end_walk_out")
-	await get_tree().create_timer(1.5).timeout
 	
-	cutscene_ended.emit()
-
-func _change_next_scene():
-	print("changig scene...")
-	pass
+	## change scene
+	NavigationManager.go_to_level(NEXT_SCENE, "Spawn")

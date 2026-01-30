@@ -112,14 +112,21 @@
 	
 	
 	
+	"hallway_corn_factory_1": {
+		"lines": [
+			{"speaker": "Penny", "text": "I can't find the bathrooms at all."},
+			{"speaker": "Penny", "text": "That's the only area I haven't checked, It should be here."}
+		]
+	},
 	
-	"hallway_corn_factory": {
+	"hallway_corn_factory_event": {
 		"lines": [
 			{"speaker": "Poppy", "text": "HEEELP!!!"},
 			{"speaker": "Penny", "text": "Poppy?"},
 			{"speaker": "Penny", "text": "I think it came from the end of the hall! I need to get to her!"}
 		]
 	},
+	
 	
 	"hallway_ham_factory_visit": {
 		"lines": [
@@ -129,6 +136,13 @@
 		]
 	},
 	
+	
+	"work_area_visit": {
+		"lines": [
+			{"speaker": "Worker", "text": "Well, well, well what do we have here? Another piggie?"},
+			{"speaker": "Penny", "text": "Eep!!!"}
+		]
+	},
 	
 	
 	"door_locked": {

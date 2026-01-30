@@ -1,20 +1,53 @@
-[gd_scene load_steps=12 format=4 uid="uid://dqft7788efm1m"]
+[gd_scene load_steps=13 format=4 uid="uid://dqft7788efm1m"]
 
 [ext_resource type="Script" uid="uid://bn6glynwkb01x" path="res://Scenes/Game Scenes/hallway_ham_factory.gd" id="1_4dhsu"]
 [ext_resource type="TileSet" uid="uid://dlnvr10pdnuph" path="res://Prefabs/prototyle_tiles.tres" id="1_j41bo"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_5yb8y"]
 [ext_resource type="PackedScene" uid="uid://b87g3llg7qgy2" path="res://Prefabs/level_ui_elements.tscn" id="2_6v0tv"]
-[ext_resource type="Script" uid="uid://d1bew1ojh1abm" path="res://Objects/event_trigger_area.gd" id="4_0yh3n"]
 [ext_resource type="PackedScene" uid="uid://dgfvddl5tq6wl" path="res://Prefabs/door.tscn" id="4_2dddl"]
 [ext_resource type="PackedScene" uid="uid://c2tsaym5min71" path="res://Objects/locked_door.tscn" id="4_7atpu"]
 [ext_resource type="Script" uid="uid://dbdskdnva4m50" path="res://Objects/red_door.gd" id="7_4frcv"]
 [ext_resource type="PackedScene" uid="uid://c57wlulahu4d4" path="res://Prefabs/interact_area.tscn" id="8_wnbm1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7atpu"]
-size = Vector2(78, 288.25)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mue6r"]
 size = Vector2(207, 52)
+
+[sub_resource type="Animation" id="Animation_4frcv"]
+resource_name = "first_visit_camera"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(387, -97), Vector2(1204, -97)]
+}
+
+[sub_resource type="Animation" id="Animation_wnbm1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mue6r"]
+_data = {
+&"RESET": SubResource("Animation_wnbm1"),
+&"first_visit_camera": SubResource("Animation_4frcv")
+}
 
 [node name="Hallway Ham Factory" type="Node2D"]
 script = ExtResource("1_4dhsu")
@@ -41,7 +74,8 @@ position = Vector2(-305, -61)
 [node name="Locked door3" parent="Objects/Locked Doors" instance=ExtResource("4_7atpu")]
 position = Vector2(495, -61)
 
-[node name="Locked door4" parent="Objects/Locked Doors" instance=ExtResource("4_7atpu")]
+[node name="StorageLocked" parent="Objects/Locked Doors" instance=ExtResource("4_7atpu")]
+unique_name_in_owner = true
 position = Vector2(1518, 103)
 
 [node name="Locked door5" parent="Objects/Locked Doors" instance=ExtResource("4_7atpu")]
@@ -52,18 +86,6 @@ position = Vector2(934, -365)
 
 [node name="Locked door2" parent="Objects/Locked Doors" instance=ExtResource("4_7atpu")]
 position = Vector2(-852, 69)
-
-[node name="EventFirstVisit" type="Node2D" parent="Objects"]
-position = Vector2(328, 157)
-script = ExtResource("4_0yh3n")
-dialogue_key = "hallway_ham_factory_visit"
-
-[node name="Area2D" type="Area2D" parent="Objects/EventFirstVisit"]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/EventFirstVisit/Area2D"]
-shape = SubResource("RectangleShape2D_7atpu")
 
 [node name="Doors" type="Node" parent="."]
 
@@ -76,10 +98,21 @@ direction_spawn = "down"
 [node name="Spawn" parent="Doors/Door_HCF" index="1"]
 position = Vector2(0, -67)
 
+[node name="Door_Storage" parent="Doors" instance=ExtResource("4_2dddl")]
+position = Vector2(1522, 145)
+destination_level_tag = "storage_scene"
+destination_door_tag = "W"
+direction_spawn = "right"
+is_active = false
+
+[node name="Spawn" parent="Doors/Door_Storage" index="1"]
+position = Vector2(-64, 0)
+
 [node name="Door_WA" type="Node2D" parent="Doors"]
 position = Vector2(1151, -779)
 script = ExtResource("7_4frcv")
 destination_level_tag = "work_area_room"
+destination_door_tag = "Hallway"
 direction_spawn = "up"
 
 [node name="Spawn" type="Marker2D" parent="Doors/Door_WA"]
@@ -91,6 +124,12 @@ position = Vector2(0, 76)
 position = Vector2(0, 15)
 shape = SubResource("RectangleShape2D_mue6r")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mue6r")
+}
+
 [node name="Level UI Elements" parent="." instance=ExtResource("2_6v0tv")]
 
 [editable path="Doors/Door_HCF"]
+[editable path="Doors/Door_Storage"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://cbgd0k8ywo8j1"]
 
 [ext_resource type="TileSet" uid="uid://dlnvr10pdnuph" path="res://Prefabs/prototyle_tiles.tres" id="1_7utjt"]
-[ext_resource type="Script" uid="uid://jlwjn2u8hip3" path="res://Prefabs/level.gd" id="1_vm8aj"]
+[ext_resource type="Script" uid="uid://bxwi24otqj2v4" path="res://Scenes/Game Scenes/hallway_corn_factory.gd" id="1_vm8aj"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_aterv"]
 [ext_resource type="PackedScene" uid="uid://b87g3llg7qgy2" path="res://Prefabs/level_ui_elements.tscn" id="2_hq7vo"]
 [ext_resource type="PackedScene" uid="uid://c2tsaym5min71" path="res://Objects/locked_door.tscn" id="3_pvjn6"]
@@ -55,6 +55,7 @@ position = Vector2(2257, 410)
 [node name="EventTriggerArea" type="Node2D" parent="Objects"]
 position = Vector2(913, 268)
 script = ExtResource("4_dnnuv")
+dialogue_key = "hallway_corn_factory_event"
 
 [node name="Area2D" type="Area2D" parent="Objects/EventTriggerArea"]
 collision_layer = 0

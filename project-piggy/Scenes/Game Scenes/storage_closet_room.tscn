@@ -37,8 +37,8 @@ shape = SubResource("RectangleShape2D_pqada")
 
 [node name="Door_W" parent="Doors" instance=ExtResource("7_138vt")]
 position = Vector2(19, 80)
-destination_level_tag = "test_scene"
-destination_door_tag = "E"
+destination_level_tag = "hallway_ham_factory"
+destination_door_tag = "Storage"
 direction_spawn = "right"
 
 [node name="Spawn" parent="Doors/Door_W" index="1"]

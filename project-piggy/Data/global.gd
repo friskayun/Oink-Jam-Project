@@ -4,7 +4,7 @@ var freeze_input: bool = false
 
 var in_cutscene: bool = false
 
-var curr_state: GAME_STATE = GAME_STATE.LOOKING_FOR_POPPY
+var curr_state: GAME_STATE = GAME_STATE.EXPLORE_SECURITY
 
 enum GAME_STATE {
 	LOOKING_FOR_POPPY,

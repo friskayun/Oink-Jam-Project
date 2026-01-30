@@ -174,11 +174,14 @@
 	
 	
 	
+	
+	
 	"door_locked": {
 		"lines": [
 			{"text": "It's locked."}
 		]
 	},
+	
 	
 	"exit_door_event": {
 		"lines":[
@@ -200,9 +203,16 @@
 		]
 	},
 	
+	
 	"vent_storage_locked": {
 		"lines":[
 			{"text": "I'm not able to use it at the moment."}
+		]
+	},
+	
+	"vent_security_locked": {
+		"lines":[
+			{"text": "It's too high, I can't climb it."}
 		]
 	},
 	
@@ -210,5 +220,18 @@
 		"lines":[
 			{"text": "An empty locker."}
 		]
-	}
+	},
+	
+	"pc": {
+		"lines":[
+			{"text": "Security screens."},
+			{"text": "One of the cameras show Poppy locked in a cage."}
+		]
+	},
+	
+	"shelf_security": {
+		"lines":[
+			{"text": "An empty shelf."}
+		]
+	},
 }

@@ -68,7 +68,8 @@ zoom = Vector2(1.5, 1.5)
 
 [node name="Locked Doors" type="Node" parent="Objects"]
 
-[node name="Locked door" parent="Objects/Locked Doors" instance=ExtResource("4_7atpu")]
+[node name="SecurityLocked" parent="Objects/Locked Doors" instance=ExtResource("4_7atpu")]
+unique_name_in_owner = true
 position = Vector2(-305, -61)
 
 [node name="Locked door3" parent="Objects/Locked Doors" instance=ExtResource("4_7atpu")]
@@ -108,6 +109,15 @@ is_active = false
 [node name="Spawn" parent="Doors/Door_Storage" index="1"]
 position = Vector2(-64, 0)
 
+[node name="Door_Security" parent="Doors" instance=ExtResource("4_2dddl")]
+position = Vector2(-305, 0)
+destination_level_tag = "security_room"
+destination_door_tag = "Hallway"
+direction_spawn = "up"
+
+[node name="Spawn" parent="Doors/Door_Security" index="1"]
+position = Vector2(0, 64)
+
 [node name="Door_WA" type="Node2D" parent="Doors"]
 unique_name_in_owner = true
 position = Vector2(1151, -779)
@@ -134,3 +144,4 @@ libraries = {
 
 [editable path="Doors/Door_HCF"]
 [editable path="Doors/Door_Storage"]
+[editable path="Doors/Door_Security"]

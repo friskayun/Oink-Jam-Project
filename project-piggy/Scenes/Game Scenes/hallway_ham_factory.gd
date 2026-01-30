@@ -11,14 +11,17 @@ func _ready():
 
 func level_state():
 	if Global.curr_state == Global.GAME_STATE.LOOKING_FOR_POPPY:
-		first_visit()
+		%Door_WA.first_visit = true
 		unlock_storage_door(false)
+		unlock_security_door(false)
+		first_visit()
 	elif Global.curr_state == Global.GAME_STATE.FIRST_CHASE:
-		unlock_storage_door(true)
 		%Door_WA.first_visit = false
+		unlock_storage_door(true)
+		unlock_security_door(false)
 	else:
-		unlock_storage_door(true)
 		%Door_WA.first_visit = false
+		unlock_storage_door(true)
 		unlock_security_door(true)
 
 
@@ -37,4 +40,5 @@ func unlock_storage_door(unlock: bool):
 	$Doors/Door_Storage.is_active = unlock
 
 func unlock_security_door(unlock: bool):
-	pass
+	%SecurityLocked.disable = unlock
+	$Doors/Door_Security.is_active = unlock

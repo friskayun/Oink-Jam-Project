@@ -5,13 +5,12 @@ signal on_pick_up_item(item: Item)
 var freeze_input: bool = false
 var in_cutscene: bool = false
 
-var curr_state: GAME_STATE = GAME_STATE.EXPLORE_SECURITY
+var curr_state: GAME_STATE = GAME_STATE.FIND_PENNY
 
 enum GAME_STATE {
 	LOOKING_FOR_POPPY,
 	FIRST_CHASE,
-	EXPLORE_SECURITY,
-	FIND_GUARDS_ROOM
+	FIND_PENNY
 }
 
 

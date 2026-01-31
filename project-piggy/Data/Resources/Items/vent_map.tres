@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c4k8s22e033h6"]
+
+[ext_resource type="Texture2D" uid="uid://dyvfbs4mduuu0" path="res://Assets/Prototype assets/items/vent_map.png" id="1_6bpmr"]
+[ext_resource type="Script" uid="uid://c0btubbo133er" path="res://Data/Resources/item.gd" id="1_xsf73"]
+
+[resource]
+script = ExtResource("1_xsf73")
+item_name = "Vent map"
+item_description = "Vent scheme"
+item_texture = ExtResource("1_6bpmr")
+metadata/_custom_type_script = "uid://c0btubbo133er"

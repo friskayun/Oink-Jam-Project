@@ -29,5 +29,5 @@ func _first_visit():
 	DialogueManager.play_dialogue("storage_hide_3")
 	await DialogueManager.dialogue_ended
 	
-	Global.curr_state = Global.GAME_STATE.EXPLORE_SECURITY
+	Global.curr_state = Global.GAME_STATE.FIND_PENNY
 	Global.end_cutscene()

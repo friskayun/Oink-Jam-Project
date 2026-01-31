@@ -22,4 +22,20 @@
 			{"text": "No"}
 		]
 	},
+	
+	"shelf_security_choice": {
+		"line": "Read them",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	},
+	
+	"cabinet_security_choice": {
+		"line": "Take a look",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	}
 }

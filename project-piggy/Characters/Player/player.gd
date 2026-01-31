@@ -3,8 +3,12 @@ class_name Player
 
 const SPEED = 300
 
+
+func _ready():
+	NavigationManager.connect("on_trigger_player_spawn", _on_spawn)
+
 func _process(_delta):
-	if Global.freeze_input:
+	if Global.freeze_input or Global.in_cutscene:
 		velocity = Vector2.ZERO
 		return
 	
@@ -12,3 +16,8 @@ func _process(_delta):
 	
 	velocity = dir * SPEED
 	move_and_slide()
+
+@warning_ignore("unused_parameter")
+func _on_spawn(_position: Vector2, direction: String):
+	global_position = _position
+	#anim sprite to dir

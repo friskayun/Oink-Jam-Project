@@ -32,7 +32,7 @@ func show_panel(id: String):
 	clear_buttons()
 	show()
 	
-	var choices = DialogueManager.dialogues[id]
+	var choices = DialogueManager.choices[id]
 	
 	%Label.text = choices["line"]
 	for c in choices["choices"].size():

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cquiyclkfhpy8"]
+
+[ext_resource type="Script" uid="uid://c0btubbo133er" path="res://Data/Resources/item.gd" id="1_4pneo"]
+[ext_resource type="Texture2D" uid="uid://x0y6v8e6rfwl" path="res://Assets/Prototype assets/items/toothbrush.png" id="1_yq1tb"]
+
+[resource]
+script = ExtResource("1_4pneo")
+item_name = "Poppy's Hair Pin"
+item_description = "Poppy's lucky charm. I hope I can give it back to her soon..."
+item_texture = ExtResource("1_yq1tb")
+metadata/_custom_type_script = "uid://c0btubbo133er"

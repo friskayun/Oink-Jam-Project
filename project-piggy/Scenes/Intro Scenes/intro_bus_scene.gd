@@ -1,19 +1,19 @@
 extends Node2D
 
-const IntroFactoryScene = "res://Scenes/Intro Scenes/intro_factory_scene.tscn"
+const NEXT_SCENE = "intro_factory_scene"
 
 @onready var anim_player = $AnimationPlayer
 
-signal cutscene_ended
 
 func _ready():
-	cutscene_ended.connect(_change_next_scene)
-	print("opening: intro_bus_scene")
 	call_deferred("intro_cutscene")
 
 func intro_cutscene():
-	anim_player.play("fade_in")
-	await  anim_player.animation_finished
+	#remove transition call here later -> previous switch to scene
+	TransitionScene.play_fade_in_transition()
+	await TransitionScene.on_transition_finished
+	
+	## Excited animation + Dialoguie
 	anim_player.play("everyone_jump")
 	await get_tree().create_timer(1).timeout
 	
@@ -47,11 +47,4 @@ func intro_cutscene():
 	$NPCs/NPC.look("right")
 	
 	## Screen fades black -> transition to next scene
-	anim_player.play("fade_out")
-	await  anim_player.animation_finished
-	
-	cutscene_ended.emit()
-
-func _change_next_scene():
-	print("changig scene...")
-	get_tree().change_scene_to_file(IntroFactoryScene)
+	NavigationManager.go_to_level(NEXT_SCENE)

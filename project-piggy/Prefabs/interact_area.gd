@@ -6,6 +6,8 @@ class_name InteractArea
 var interact: Callable = func(): 
 	pass
 
+var use_item: Callable = func():
+	return false
 
 func _on_body_entered(_body):
 	InteractionManager.register_area(self)

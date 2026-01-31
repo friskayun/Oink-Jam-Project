@@ -44,6 +44,9 @@ func _input(event):
 		move_cursor(0, -1)
 	elif event.is_action_pressed("walk_right"):
 		move_cursor(0, 1)
+	
+	if event.is_action_pressed("interact"):
+		use_item()
 
 func move_cursor(row: int, col: int):
 	slot_row += row
@@ -123,3 +126,9 @@ func set_item_details(item: Item = null):
 	else:
 		%ItemName.text = ""
 		%ItemText.text = ""
+
+func use_item():
+	if curr_slot.has_item():
+		print("   - Item used: " + curr_slot.item.item_name)
+		curr_slot.remove_item()
+		set_item_details()

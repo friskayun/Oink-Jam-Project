@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg4we3alc3ufr"]
+
+[ext_resource type="Script" uid="uid://db1wiy4g3e5j8" path="res://Scenes/Puzzle Scenes/vent_maze.gd" id="1_vtbde"]
+[ext_resource type="Texture2D" uid="uid://csugisulsufi3" path="res://Assets/Prototype assets/square.png" id="2_wcp4q"]
+
+[node name="VentMaze" type="Node2D"]
+script = ExtResource("1_vtbde")
+
+[node name="tiles" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_wcp4q")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(2, 2)

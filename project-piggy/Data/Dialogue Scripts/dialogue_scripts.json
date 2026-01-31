@@ -210,9 +210,9 @@
 		]
 	},
 	
-	"vent_security_locked": {
+	"vent_security": {
 		"lines":[
-			{"text": "It's too high, I can't climb it."}
+			{"text": "It's too high, I need to find another vent"}
 		]
 	},
 	
@@ -228,6 +228,7 @@
 		]
 	},
 	
+	
 	"pc": {
 		"lines":[
 			{"text": "Security screens."},
@@ -237,7 +238,14 @@
 	
 	"shelf_security": {
 		"lines":[
-			{"text": "An empty shelf."}
+			{"text": "There's a fax and some emails next to it."}
+		]
+	},
+	
+	"cabinet_security": {
+		"lines":[
+			{"text": "Cabinet full with random stuff."},
+			{"text": "There's map."}
 		]
 	},
 }

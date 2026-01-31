@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciexudc5eq80w"]
+
+[ext_resource type="Texture2D" uid="uid://csugisulsufi3" path="res://Assets/Prototype assets/square.png" id="1_dywp2"]
+
+[node name="VentTile" type="Sprite2D"]
+texture = ExtResource("1_dywp2")

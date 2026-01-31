@@ -15,6 +15,7 @@ const STORAGE_CLOSET_ROOM = preload("res://Scenes/Game Scenes/storage_closet_roo
 const LOCKERS_ROOM = preload("res://Scenes/Game Scenes/lockers_room.tscn")
 const SECURITY_ROOM = preload("res://Scenes/Game Scenes/security_room.tscn")
 const GUARDS_ROOM = preload("res://Scenes/Game Scenes/guards_room.tscn")
+const VENT_MAZE = preload("uid://bg4we3alc3ufr")
 
 #endregion 
 
@@ -72,3 +73,5 @@ func get_scene(scene_tag):
 			return SECURITY_ROOM
 		"guards_room":
 			return GUARDS_ROOM
+		"vent_maze":
+			return VENT_MAZE

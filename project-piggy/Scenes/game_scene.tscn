@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://3yn11wshixle"]
 
-[ext_resource type="Texture2D" uid="uid://0tji66tdy6tv" path="res://icon.svg" id="1_6h5vk"]
+[ext_resource type="Texture2D" uid="uid://0tji66tdy6tv" path="res://Assets/Prototype assets/icon.svg" id="1_6h5vk"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_fiftr"]
 [ext_resource type="PackedScene" uid="uid://dgfvddl5tq6wl" path="res://Prefabs/door.tscn" id="3_1ixah"]
 

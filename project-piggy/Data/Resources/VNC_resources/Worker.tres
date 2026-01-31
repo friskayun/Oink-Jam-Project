@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=3 format=3 uid="uid://br5lg7w7huk0"]
+
+[ext_resource type="Script" uid="uid://2a3tu1mode3v" path="res://Data/Resources/VNCharacter.gd" id="1_unabi"]
+[ext_resource type="Texture2D" uid="uid://bwi1w77mr8uuk" path="res://Assets/Prototype assets/VNSprites/body1 3.png" id="2_w313w"]
+
+[resource]
+script = ExtResource("1_unabi")
+character_name = "Worker"
+vn_sprite = ExtResource("2_w313w")
+color = Color(0.68019277, 0.04713822, 0.14151657, 1)
+metadata/_custom_type_script = "uid://2a3tu1mode3v"

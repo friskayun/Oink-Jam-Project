@@ -6,14 +6,14 @@ func _ready():
 	interact_area.interact = Callable(self, "_on_interact")
 
 func _on_interact():
-	DialogueManager._on_choice = _on_choice_selected
-	DialogueManager.show_dialogue_panel.emit("exit_door_1")
+	DialogueManager.play_dialogue("exit_door_event")
 	await DialogueManager.dialogue_ended
-	DialogueManager.show_choice_panel.emit("choice_event")
+	DialogueManager.play_choice("exit_door_choice", _on_choice_selected)
 
 func _on_choice_selected(index: int):
 	match index:
 		0:
-			DialogueManager.show_dialogue_panel.emit("exit_door_yes")
+			# switch to ending scene -> bad ending
+			DialogueManager.play_dialogue("exit_door_yes")
 		1:
-			DialogueManager.show_dialogue_panel.emit("exit_door_no")
+			DialogueManager.play_dialogue("exit_door_no")

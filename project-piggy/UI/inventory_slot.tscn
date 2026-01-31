@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj03w27nhu4h6"]
+
+[ext_resource type="Script" uid="uid://dfytt5p0ifhmo" path="res://UI/inventory_slot.gd" id="1_phof1"]
+[ext_resource type="Texture2D" uid="uid://csugisulsufi3" path="res://Assets/Prototype assets/square.png" id="2_t7war"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5672o"]
+
+[node name="InventorySlot" type="Panel"]
+custom_minimum_size = Vector2(128, 128)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5672o")
+script = ExtResource("1_phof1")
+
+[node name="SlotTexture" type="TextureRect" parent="."]
+unique_name_in_owner = true
+modulate = Color(0.15294118, 0.07058824, 0.13333334, 0.69803923)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_t7war")
+
+[node name="ItemTexture" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

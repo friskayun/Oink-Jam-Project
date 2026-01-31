@@ -3,10 +3,11 @@ class_name Data
 
 const SCRIPT_PATH = "res://Data/Dialogue Scripts/temp_script_1.json"
 const DIALOGUE_SCRIPTS = "res://Data/Dialogue Scripts/dialogue_scripts.json"
+const CHOICES_SCRIPT = "res://Data/Dialogue Scripts/choices_script.json"
 
 
-func read_script_data():
-	var file = FileAccess.open(DIALOGUE_SCRIPTS, FileAccess.READ)
+func read_script_data(path: String):
+	var file = FileAccess.open(path, FileAccess.READ)
 	var file_content = file.get_as_text()
 	file.close()
 	

@@ -112,14 +112,21 @@
 	
 	
 	
+	"hallway_corn_factory_1": {
+		"lines": [
+			{"speaker": "Penny", "text": "I can't find the bathrooms at all."},
+			{"speaker": "Penny", "text": "That's the only area I haven't checked, It should be here."}
+		]
+	},
 	
-	"hallway_corn_factory": {
+	"hallway_corn_factory_event": {
 		"lines": [
 			{"speaker": "Poppy", "text": "HEEELP!!!"},
 			{"speaker": "Penny", "text": "Poppy?"},
 			{"speaker": "Penny", "text": "I think it came from the end of the hall! I need to get to her!"}
 		]
 	},
+	
 	
 	"hallway_ham_factory_visit": {
 		"lines": [
@@ -130,10 +137,107 @@
 	},
 	
 	
+	"work_area_visit": {
+		"lines": [
+			{"speaker": "Worker", "text": "Well, well, well what do we have here? Another piggie?"},
+			{"speaker": "Penny", "text": "Eep!!!"}
+		]
+	},
+	
+	"work_area_after_visit": {
+		"lines": [
+			{"speaker": "Penny", "text": "There is no way I'm going back there!"}
+		]
+	},
+	
+	
+	
+	"storage_hide_1": {
+		"lines": [
+			{"speaker": "Penny", "text": "I need to hide!"}
+		]
+	},
+	
+	"storage_hide_2": {
+		"lines": [
+			{"speaker": "Worker", "text": "Little piggie? Where did you go..."},
+			{"speaker": "Worker", "text": "Eh, at least we got the other one..."}
+		]
+	},
+	
+	"storage_hide_3": {
+		"lines": [
+			{"speaker": "Penny", "text": "This is horrible! How could they make a canned ham factory under the corn factory?"},
+			{"speaker": "Penny", "text": "I need to get out of here but... but Poppy!"}
+		]
+	},
+	
+	
+	
+	
 	
 	"door_locked": {
 		"lines": [
 			{"text": "It's locked."}
 		]
-	}
+	},
+	
+	
+	"exit_door_event": {
+		"lines":[
+			{"speaker": "Penny", "text": "An exit door! I can escape and save my life!"}
+		]
+	},
+	
+	"exit_door_yes": {
+		"lines":[
+			{"text": "Penny returned to the group and headed home after the tour."},
+			{"text": "Poppy was never seen again after that day."}
+		]
+	},
+	
+	"exit_door_no": {
+		"lines":[
+			{"speaker": "Penny", "text": "No! I need to be brave… I need to save my friend and then we can escape together!"},
+			{"speaker": "Penny", "text": "But first, I need to figure out where she is."}
+		]
+	},
+	
+	
+	"vent_storage_locked": {
+		"lines":[
+			{"text": "It's sealed pretty good. I need something to open it."}
+		]
+	},
+	
+	"vent_security_locked": {
+		"lines":[
+			{"text": "It's too high, I can't climb it."}
+		]
+	},
+	
+	"locker_storage_empty": {
+		"lines":[
+			{"text": "A locker with some random stuff."}
+		]
+	},
+	
+	"locker_storage_item": {
+		"lines":[
+			{"text": "There's a screwdriver."}
+		]
+	},
+	
+	"pc": {
+		"lines":[
+			{"text": "Security screens."},
+			{"text": "One of the cameras show Poppy locked in a cage."}
+		]
+	},
+	
+	"shelf_security": {
+		"lines":[
+			{"text": "An empty shelf."}
+		]
+	},
 }

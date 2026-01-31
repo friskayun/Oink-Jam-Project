@@ -1,10 +1,11 @@
 extends Node
 
-var freeze_input: bool = false
+signal on_pick_up_item(item: Item)
 
+var freeze_input: bool = false
 var in_cutscene: bool = false
 
-var curr_state: GAME_STATE = GAME_STATE.LOOKING_FOR_POPPY
+var curr_state: GAME_STATE = GAME_STATE.EXPLORE_SECURITY
 
 enum GAME_STATE {
 	LOOKING_FOR_POPPY,
@@ -19,3 +20,7 @@ func play_cutscene():
 
 func end_cutscene():
 	in_cutscene = false
+
+
+func pick_up_item(item: Item):
+	on_pick_up_item.emit(item)

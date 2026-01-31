@@ -206,7 +206,7 @@
 	
 	"vent_storage_locked": {
 		"lines":[
-			{"text": "I'm not able to use it at the moment."}
+			{"text": "It's sealed pretty good. I need something to open it."}
 		]
 	},
 	
@@ -216,9 +216,15 @@
 		]
 	},
 	
-	"locker_storage": {
+	"locker_storage_empty": {
 		"lines":[
-			{"text": "An empty locker."}
+			{"text": "A locker with some random stuff."}
+		]
+	},
+	
+	"locker_storage_item": {
+		"lines":[
+			{"text": "There's a screwdriver."}
 		]
 	},
 	

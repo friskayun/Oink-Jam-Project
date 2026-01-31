@@ -1,12 +1,15 @@
 extends ObjectInteract
 
+var is_vent_locked: bool = true
 
 func _on_interact():
-	if Global.curr_state >= Global.GAME_STATE.FIND_GUARDS_ROOM:
-		_objective_unlocked()
-	else:
+	if is_vent_locked:
 		_objective_locked()
+	else:
+		_objective_unlocked()
 
+func use_item_action():
+	is_vent_locked = false
 
 func _objective_locked():
 	DialogueManager.play_dialogue("vent_storage_locked")

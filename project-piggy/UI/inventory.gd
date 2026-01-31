@@ -18,6 +18,8 @@ var slot_col: int = 0
 var curr_slot: InventorySlot
 
 func _ready():
+	Global.on_pick_up_item.connect(add_item_to_inventory)
+	
 	close_inventory()
 	%GridContainer.columns = GRID_COLOMNS
 	load_inventory()
@@ -104,11 +106,13 @@ func open_inventory():
 	show()
 	is_active = true
 	Global.freeze_input = true
+	get_tree().paused = true
 
 func close_inventory():
 	hide()
 	is_active = false
 	Global.freeze_input = false
+	get_tree().paused = false
 
 
 func add_item_to_inventory(item: Item):
@@ -128,7 +132,16 @@ func set_item_details(item: Item = null):
 		%ItemText.text = ""
 
 func use_item():
-	if curr_slot.has_item():
+	if curr_slot.has_item() == null:
+		return
+	
+	var used = InteractionManager.use_item_on_active_area(curr_slot.has_item())
+	
+	if used:
 		print("   - Item used: " + curr_slot.item.item_name)
 		curr_slot.remove_item()
 		set_item_details()
+		call_deferred("close_inventory")
+	else:
+		print(" Item cannot be used here")
+	

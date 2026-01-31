@@ -1,5 +1,6 @@
 extends ObjectInteract
 
+@export var vent_index: int = 2
 var is_vent_locked: bool = true
 
 func _on_interact():
@@ -21,7 +22,7 @@ func _vent_choice(index: int):
 	match index:
 		0:
 			# open vent maze
-			pass
+			NavigationManager.go_to_level("vent_maze", str(vent_index))
 		1:
 			# pass / nothing happens
 			pass

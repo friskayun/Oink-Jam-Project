@@ -7,6 +7,18 @@ Team members: ***Vanessinha, Grilhado, Camryn, Friska***
 
 ## Dev-Log               
 
+### v0.04 - First Gameplay and Inventory - 31 Jan 2026
+---
+Added:
+- Navigation between scenes
+- Transition scene
+- Base Objectives
+- Base Level Setup
+- Inventory
+- Items
+- Base gameplay - first 2 objectives
+- 
+<br>
 
 ### v0.03 - Intro Scenes and Dialogue Improvements - 28 Jan 2026
 ---

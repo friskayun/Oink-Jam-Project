@@ -2,6 +2,10 @@ extends Control
 
 const INVENTORY_SLOT = preload("uid://bj03w27nhu4h6")
 
+# testing - delete later
+const SLEEPING_PILLS = preload("uid://bqfep7s4a6du5")
+const HAIR_PIN = preload("uid://cquiyclkfhpy8")
+
 const GRID_ROWS = 2
 const GRID_COLOMNS = 4
 
@@ -17,6 +21,10 @@ func _ready():
 	close_inventory()
 	%GridContainer.columns = GRID_COLOMNS
 	load_inventory()
+	
+	# testing - delete later
+	add_item_to_inventory(SLEEPING_PILLS)
+	add_item_to_inventory(HAIR_PIN)
 
 func _input(event):
 	if event.is_action_pressed("inventory"):
@@ -55,6 +63,9 @@ func move_cursor(row: int, col: int):
 	
 	curr_slot = slots[slot_row][slot_col]
 	curr_slot.select()
+	
+	set_item_details(curr_slot.has_item())
+
 
 func load_inventory():
 	clear_slots()
@@ -82,6 +93,8 @@ func load_select():
 	slot_col = 0
 	curr_slot = slots[slot_row][slot_col]
 	curr_slot.select()
+	set_item_details(curr_slot.has_item())
+
 
 func open_inventory():
 	load_select()
@@ -93,3 +106,20 @@ func close_inventory():
 	hide()
 	is_active = false
 	Global.freeze_input = false
+
+
+func add_item_to_inventory(item: Item):
+	for i in range(0, GRID_ROWS):
+		for j in range (0, GRID_COLOMNS):
+			var slot = slots[i][j] as InventorySlot
+			if slot.item == null:
+				slot.add_item(item)
+				return
+
+func set_item_details(item: Item = null):
+	if item:
+		%ItemName.text = item.item_name
+		%ItemText.text = item.item_description
+	else:
+		%ItemName.text = ""
+		%ItemText.text = ""

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://naso8kxch7yx"]
+
+[ext_resource type="Script" uid="uid://c0btubbo133er" path="res://Data/Resources/item.gd" id="1_hpt0j"]
+[ext_resource type="Texture2D" uid="uid://bw41wany82ie6" path="res://Assets/Prototype assets/items/toothbrush_set.png" id="1_xwk6l"]
+
+[resource]
+script = ExtResource("1_hpt0j")
+item_name = "Bottle of oil"
+item_description = "Found next to the pig cages. I don't even want to know why they have it."
+item_texture = ExtResource("1_xwk6l")
+metadata/_custom_type_script = "uid://c0btubbo133er"

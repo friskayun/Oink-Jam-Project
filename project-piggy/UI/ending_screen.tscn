@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1jg30hae7644"]
+
+[ext_resource type="Script" uid="uid://buajm1dyoqe65" path="res://UI/ending_screen.gd" id="1_hneqi"]
+[ext_resource type="PackedScene" uid="uid://b87g3llg7qgy2" path="res://Prefabs/level_ui_elements.tscn" id="1_o161o"]
+
+[node name="EndingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hneqi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.22497684, 0.018308371, 0.074558534, 1)
+
+[node name="Level UI Elements" parent="." instance=ExtResource("1_o161o")]

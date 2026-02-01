@@ -5,8 +5,8 @@ const INVENTORY_SLOT = preload("uid://bj03w27nhu4h6")
 # testing - delete later
 const SLEEPING_PILLS = preload("uid://bqfep7s4a6du5")
 const HAIR_PIN = preload("uid://cquiyclkfhpy8")
-const SCREWDRIVER = preload("uid://bqbp21mulaqaq")
-const KEY = preload("uid://dx8f1y3dpjba2")
+const LIGHTER = preload("uid://bctbnurjsvah2")
+const ACCESS_CARD = preload("uid://b82xkabpi757b")
 
 const GRID_ROWS = 2
 const GRID_COLOMNS = 4
@@ -27,8 +27,10 @@ func _ready():
 	load_inventory()
 	
 	# testing - delete later
-	add_item_to_inventory(KEY)
 	add_item_to_inventory(HAIR_PIN)
+	add_item_to_inventory(LIGHTER)
+	add_item_to_inventory(SLEEPING_PILLS)
+	add_item_to_inventory(ACCESS_CARD)
 
 func _input(event):
 	if event.is_action_pressed("inventory"):

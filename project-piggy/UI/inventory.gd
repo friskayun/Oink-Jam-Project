@@ -33,7 +33,7 @@ func _input(event):
 	if event.is_action_pressed("inventory"):
 		if is_active:
 			close_inventory()
-		else:
+		elif !is_active and !Global.freeze_input:
 			open_inventory()
 	
 	if !is_active:

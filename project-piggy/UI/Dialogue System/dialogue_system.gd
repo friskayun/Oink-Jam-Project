@@ -144,7 +144,7 @@ func show_next_line():
 		#print("showing next line...")
 		var line = curr_dialogue["lines"][line_index]
 		
-		var text = line["text"] if line.has("speaker") else ""
+		var text = line["text"]
 		var speaker = line["speaker"] if line.has("speaker") else ""
 		var sprite_id = line["sprite_id"] if line.has("sprite_id") else ""
 		

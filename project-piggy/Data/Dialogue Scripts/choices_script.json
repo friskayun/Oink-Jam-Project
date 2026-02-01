@@ -1,4 +1,12 @@
 {
+	"in_vent_choice": {
+		"line": "Next step?",
+		"choices": [
+			{"text": "Go back"},
+			{"text": "Get down"}
+		]
+	},
+	
 	"exit_door_choice": {
 		"line": "Exit",
 		"choices": [

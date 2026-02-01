@@ -22,10 +22,10 @@ var curr_player_row: int = 7
 var on_vent: bool = false
 
 var vent_rooms: Dictionary = {
-	VENT_STORAGE: {"scene_id": "storage_scene", "x": 5, "y": 8},
-	VENT_SECURITY: {"scene_id": "security_room", "x": 0, "y": 6},
-	VENT_LOCKER: {"scene_id": "lockers_room", "x": 10, "y": 3},
-	VENT_GUARD: {"scene_id": "guards_room", "x": 2, "y": 0}
+	VENT_STORAGE: {"scene_id": "storage_scene", "destination_id": "V_Up", "x": 5, "y": 8},
+	VENT_SECURITY: {"scene_id": "security_room", "destination_id": "V_Up", "x": 0, "y": 6},
+	VENT_LOCKER: {"scene_id": "lockers_room", "destination_id": "V_Up", "x": 10, "y": 3},
+	VENT_GUARD: {"scene_id": "guards_room", "destination_id": "V_Up", "x": 2, "y": 0}
 }
 
 var grid = [
@@ -103,6 +103,7 @@ func move_player(row: int, col: int):
 
 
 func switch_to_vent(index: int):
+	Global.player_enter_vent()
 	curr_player_col = vent_rooms[index]["x"]
 	curr_player_row = vent_rooms[index]["y"]
 	
@@ -116,4 +117,5 @@ func switch_to_vent(index: int):
 func switch_to_room():
 	var index = grid[curr_player_row][curr_player_col]
 	var scene_id = vent_rooms[index]["scene_id"]
-	NavigationManager.go_to_level(scene_id)
+	var destination_id = vent_rooms[index]["destination_id"]
+	NavigationManager.go_to_level(scene_id, destination_id)

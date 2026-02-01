@@ -206,13 +206,19 @@
 	
 	"vent_storage_locked": {
 		"lines":[
-			{"text": "It's sealed pretty good. I need something to open it."}
+			{"speaker": "Penny", "text": "It's sealed pretty good. I need something to open it."}
 		]
 	},
 	
-	"vent_security": {
+	"vent_security_down": {
 		"lines":[
-			{"text": "It's too high, I need to find another vent"}
+			{"speaker": "Penny", "text": "It's too high, I need to find another vent."}
+		]
+	},
+	
+	"vent_security_up": {
+		"lines":[
+			{"speaker": "Penny", "text": "It's too high, I can't go down!"}
 		]
 	},
 	

@@ -182,6 +182,33 @@
 		]
 	},
 	
+	"locker_locked": {
+		"lines": [
+			{"text": "It's locked."}
+		]
+	},
+	
+	"guard_locker_unlock_item": {
+		"lines": [
+			{"text": "It has some casual clothes, another uniform, and some confy shoes."},
+			{"text": "There's also a blister of what seems to be sleeping pills."},
+			{"speaker": "Penny", "text": "Those can come handy!", "sprite_id": "idle_1"}
+		]
+	},
+	
+	"guard_locker_unlock": {
+		"lines": [
+			{"text": "It has some casual clothes, another uniform, and some confy shoes."}
+		]
+	},
+	
+	
+	"lockers_door": {
+		"lines": [
+			{"speaker": "Penny", "text": "I can hear people passing by, it's too risky to go out.", "sprite_id": "doubt"}
+		]
+	},
+	
 	
 	"exit_door_event": {
 		"lines":[
@@ -206,13 +233,19 @@
 	
 	"vent_storage_locked": {
 		"lines":[
-			{"text": "It's sealed pretty good. I need something to open it."}
+			{"speaker": "Penny", "text": "It's sealed pretty good. I need something to open it."}
 		]
 	},
 	
-	"vent_security": {
+	"vent_security_down": {
 		"lines":[
-			{"text": "It's too high, I need to find another vent"}
+			{"speaker": "Penny", "text": "It's too high, I need to find another vent."}
+		]
+	},
+	
+	"vent_security_up": {
+		"lines":[
+			{"speaker": "Penny", "text": "It's too high, I can't go down!"}
 		]
 	},
 	

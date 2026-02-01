@@ -8,7 +8,7 @@ func _ready():
 	NavigationManager.connect("on_trigger_player_spawn", _on_spawn)
 
 func _process(_delta):
-	if Global.freeze_input or Global.in_cutscene:
+	if Global.freeze_input or Global.in_cutscene or Global.is_player_in_vent:
 		velocity = Vector2.ZERO
 		return
 	

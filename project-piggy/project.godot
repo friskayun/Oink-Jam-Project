@@ -22,6 +22,11 @@ Global="*res://Data/global.gd"
 DialogueManager="*res://Data/dialogue_manager.gd"
 NavigationManager="*res://Data/navigation_manager.gd"
 TransitionScene="*res://UI/transition_scene.tscn"
+ItemInspect="*res://UI/item_inspect.tscn"
+
+[global_group]
+
+Player=""
 
 [input]
 

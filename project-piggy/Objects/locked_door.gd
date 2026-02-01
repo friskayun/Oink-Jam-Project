@@ -12,4 +12,4 @@ func _on_interact():
 	if disable:
 		return
 	
-	DialogueManager.show_dialogue_panel.emit("door_locked")
+	DialogueManager.play_dialogue("door_locked")

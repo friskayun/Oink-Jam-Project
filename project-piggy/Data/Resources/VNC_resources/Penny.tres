@@ -1,11 +1,37 @@
-[gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=3 format=3 uid="uid://dgr2sihp2af0v"]
+[gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=15 format=3 uid="uid://dgr2sihp2af0v"]
 
 [ext_resource type="Script" uid="uid://2a3tu1mode3v" path="res://Data/Resources/VNCharacter.gd" id="1_4l68j"]
 [ext_resource type="Texture2D" uid="uid://b0iyinwd05rwp" path="res://Assets/Prototype assets/VNSprites/body1 4.png" id="2_cdoek"]
+[ext_resource type="Texture2D" uid="uid://dbrifa7iy233i" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_IDLE_POSE_1.png" id="2_pjgcq"]
+[ext_resource type="Texture2D" uid="uid://d2qsboaaflyu1" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_IDLE_POSE_2.png" id="3_fc6on"]
+[ext_resource type="Texture2D" uid="uid://d0ke7wmja6eff" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_IDLE_POSE_3.png" id="4_xhc23"]
+[ext_resource type="Texture2D" uid="uid://d0oc7l1f6xxic" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_HAPPY_POSE_1.png" id="5_m0n2c"]
+[ext_resource type="Texture2D" uid="uid://ck2bmdfihlwxe" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_HAPPY_POSE_2.png" id="6_2uam0"]
+[ext_resource type="Texture2D" uid="uid://j5knoxmqot6e" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_SAD_POSE.png" id="7_lykh1"]
+[ext_resource type="Texture2D" uid="uid://cnugmeyn2urrw" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_DOUBT_POSE.png" id="8_2u1vs"]
+[ext_resource type="Texture2D" uid="uid://kkg7hwxwxa06" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_DETERMINATION_POSE.png" id="9_hq7d3"]
+[ext_resource type="Texture2D" uid="uid://r13d4p6p4hkn" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_SCARED_POSE_1.png" id="10_srx3b"]
+[ext_resource type="Texture2D" uid="uid://ccnyjato032xb" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_SCARED_POSE_2.png" id="11_7y6ky"]
+[ext_resource type="Texture2D" uid="uid://b7t7hjvik0nsr" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_SCARED_POSE_1_COLOR_VARIATION.png" id="12_t8owh"]
+[ext_resource type="Texture2D" uid="uid://dafy6578sbbb7" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_SCARED_POSE_2_COLOR_VARIATION.png" id="13_gyyok"]
 
 [resource]
 script = ExtResource("1_4l68j")
 character_name = "Penny"
 vn_sprite = ExtResource("2_cdoek")
 color = Color(0.9137255, 0.63529414, 0.6862745, 1)
+sprites = Dictionary[String, Texture2D]({
+"determined": ExtResource("9_hq7d3"),
+"doubt": ExtResource("8_2u1vs"),
+"happy_1": ExtResource("5_m0n2c"),
+"happy_2": ExtResource("6_2uam0"),
+"idle_1": ExtResource("2_pjgcq"),
+"idle_2": ExtResource("3_fc6on"),
+"idle_3": ExtResource("4_xhc23"),
+"sad": ExtResource("7_lykh1"),
+"scared_1": ExtResource("10_srx3b"),
+"scared_1_var": ExtResource("12_t8owh"),
+"scared_2": ExtResource("11_7y6ky"),
+"scared_2_var": ExtResource("13_gyyok")
+})
 metadata/_custom_type_script = "uid://2a3tu1mode3v"

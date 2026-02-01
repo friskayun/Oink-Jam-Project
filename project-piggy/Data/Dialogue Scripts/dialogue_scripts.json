@@ -114,25 +114,25 @@
 	
 	"hallway_corn_factory_1": {
 		"lines": [
-			{"speaker": "Penny", "text": "I can't find the bathrooms at all."},
-			{"speaker": "Penny", "text": "That's the only area I haven't checked, It should be here."}
+			{"speaker": "Penny", "text": "I can't find the bathrooms at all.", "sprite_id": "idle_3"},
+			{"speaker": "Penny", "text": "That's the only area I haven't checked, It should be here.", "sprite_id": "idle_2"}
 		]
 	},
 	
 	"hallway_corn_factory_event": {
 		"lines": [
 			{"speaker": "Poppy", "text": "HEEELP!!!"},
-			{"speaker": "Penny", "text": "Poppy?"},
-			{"speaker": "Penny", "text": "I think it came from the end of the hall! I need to get to her!"}
+			{"speaker": "Penny", "text": "Poppy?", "sprite_id": "sad"},
+			{"speaker": "Penny", "text": "I think it came from the end of the hall! I need to get to her!", "sprite_id": "sad"}
 		]
 	},
 	
 	
 	"hallway_ham_factory_visit": {
 		"lines": [
-			{"speaker": "Penny", "text": "What in the world is this place?"},
+			{"speaker": "Penny", "text": "What in the world is this place?", "sprite_id": "idle_2"},
 			{"speaker": "Poppy", "text": "Let me go!!"},
-			{"speaker": "Penny", "text": "Poppy!!"}
+			{"speaker": "Penny", "text": "Poppy!!", "sprite_id": "scared_1"}
 		]
 	},
 	
@@ -174,11 +174,48 @@
 	
 	
 	
+	"bad_ending_exit": {
+		"lines": [
+			{"text": "Penny returned to the group and headed home after the tour."},
+			{"text": "Poppy was never seen again after that day."},
+			{"text": "Ending #2 - A Runaway pig."}
+		]
+	},
+	
+	
+	
 	
 	
 	"door_locked": {
 		"lines": [
 			{"text": "It's locked."}
+		]
+	},
+	
+	"locker_locked": {
+		"lines": [
+			{"text": "It's locked."}
+		]
+	},
+	
+	"guard_locker_unlock_item": {
+		"lines": [
+			{"text": "It has some casual clothes, another uniform, and some confy shoes."},
+			{"text": "There's also a blister of what seems to be sleeping pills."},
+			{"speaker": "Penny", "text": "Those can come handy!", "sprite_id": "idle_1"}
+		]
+	},
+	
+	"guard_locker_unlock": {
+		"lines": [
+			{"text": "It has some casual clothes, another uniform, and some confy shoes."}
+		]
+	},
+	
+	
+	"lockers_door": {
+		"lines": [
+			{"speaker": "Penny", "text": "I can hear people passing by, it's too risky to go out.", "sprite_id": "doubt"}
 		]
 	},
 	
@@ -206,15 +243,28 @@
 	
 	"vent_storage_locked": {
 		"lines":[
-			{"text": "It's sealed pretty good. I need something to open it."}
+			{"speaker": "Penny", "text": "It's sealed pretty good. I need something to open it."}
 		]
 	},
 	
-	"vent_security_locked": {
+	"vent_security_down": {
 		"lines":[
-			{"text": "It's too high, I can't climb it."}
+			{"speaker": "Penny", "text": "It's too high, I need to find another vent."}
 		]
 	},
+	
+	"vent_security_up": {
+		"lines":[
+			{"speaker": "Penny", "text": "It's too high, I can't go down!"}
+		]
+	},
+	
+	"vent_guard_up": {
+		"lines":[
+			{"speaker": "Penny", "text": "I can't go down now, the guard is there."}
+		]
+	},
+	
 	
 	"locker_storage_empty": {
 		"lines":[
@@ -237,7 +287,129 @@
 	
 	"shelf_security": {
 		"lines":[
-			{"text": "An empty shelf."}
+			{"text": "There's a fax and some emails next to it."}
 		]
 	},
+	
+	"cabinet_security": {
+		"lines":[
+			{"text": "Cabinet full with random stuff."},
+			{"text": "There's map."}
+		]
+	},
+	
+	"guard_cage_poppy_interaction": {
+		"lines":[
+			{"speaker": "Penny", "text": "Poppy!"},
+			{"speaker": "Poppy", "text": "Penny! What are you doing here, they will catch you!"},
+			{"speaker": "Penny", "text": "I'm here to save you! How do I open that thing..."},
+			{"speaker": "Poppy", "text": "You can't... the guard uses the numpad on the wall."},
+			{"speaker": "Poppy", "text": "You can only use it with the access card, but it's on his neck."},
+			{"speaker": "Poppy", "text": "Anyways, you have to leave, the guard may comeback any second!"},
+			{"speaker": "Penny", "text": "I'll find a way to save you! I'll be back soon."}
+		]
+	},
+	
+	"guard_cage_poppy_idle": {
+		"lines":[
+			{"speaker": "Poppy", "text": "Please be careful, Penny! You got this!"}
+		]
+	},
+	
+	"guard_cage_1": {
+		"lines":[
+			{"speaker": "Penny", "text": "Poor guys, they're barely staying alive."},
+			{"speaker": "Penny", "text": "Who knows for how long they've been stuck here..."}
+		]
+	},
+	
+	"guard_cage_2": {
+		"lines":[
+			{"text": "Both pigs are hugged into each other, looking scared."}
+		]
+	},
+	
+	"guard_cage_3": {
+		"lines":[
+			{"text": "Those two doesn't seem to like each other."}
+		]
+	},
+	
+	"guard_cage_4": {
+		"lines":[
+			{"text": "The pigs here are just chilling"}
+		]
+	},
+	
+	"guard_cage_5": {
+		"lines":[
+			{"text": "The sadness can be seen in their faces"}
+		]
+	},
+	
+	"guard_badge_key": {
+		"lines":[
+			{"text": "There's a badge with the name: \"Smith, Sean\" and a ring of keys."}
+		]
+	},
+	
+	"guard_badge_idle": {
+		"lines":[
+			{"text": "There's a badge with the name: \"Smith, Sean\"."}
+		]
+	},
+	
+	"guard_cabinet_oil": {
+		"lines":[
+			{"text": "The cabinet is full with random stuff. There's a bottle of oil in there."},
+			{"speaker": "Penny", "text": "Hmm..."},
+			{"speaker": "Penny", "text": "Maybe this could help if someone is chasing us, give them a great fall and slow them down."}
+		]
+	},
+	
+	"guard_cabinet_idle": {
+		"lines":[
+			{"text": "The cabinet is full with random stuff."}
+		]
+	},
+	
+	"guard_water_idle": {
+		"lines":[
+			{"text": "A cup of water. It says \"Be your best everyday\"."},
+			{"speaker": "Penny", "text": "Yeah, how about you save me some work then..."}
+		]
+	},
+	
+	"guard_water_active": {
+		"lines":[
+			{"speaker": "Penny", "text": "Everything is set! Now I just need to hide and wait..."}
+		]
+	},
+	
+	"guard_dynamite_idle": {
+		"lines":[
+			{"speaker": "Penny", "text": "Why is there dynamite in a meat factory?"},
+			{"speaker": "Poppy", "text": "It’s probably a plot device!"},
+			{"speaker": "Penny", "text": "Oh, that makes sense!"},
+		]
+	},
+	
+	"guard_dynamite_active": {
+		"lines":[
+			{"speaker": "Penny", "text": "WE HAVE TO RUN, BEFORE WE EXPLODE!!!"}
+		]
+	},
+	
+	"guard_numbpad_idle": {
+		"lines":[
+			{"text": "A small control device."},
+			{"speaker": "Penny", "text": "I need to get the access card from the guard for that."}
+		]
+	},
+	
+	"guard_numbpad_active": {
+		"lines":[
+			{"speaker": "Penny", "text": "Here we go friends! Run!"}
+		]
+	}
 }

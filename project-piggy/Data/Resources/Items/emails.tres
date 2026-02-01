@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dchh5pek47b17"]
+
+[ext_resource type="Script" uid="uid://c0btubbo133er" path="res://Data/Resources/item.gd" id="1_idedm"]
+[ext_resource type="Texture2D" uid="uid://dktmbc51fnwnx" path="res://Assets/Prototype assets/items/emails.png" id="1_o0h13"]
+
+[resource]
+script = ExtResource("1_idedm")
+item_name = "Security Emails"
+item_texture = ExtResource("1_o0h13")
+metadata/_custom_type_script = "uid://c0btubbo133er"

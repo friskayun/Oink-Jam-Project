@@ -1,11 +1,21 @@
-[gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=3 format=3 uid="uid://br5lg7w7huk0"]
+[gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=7 format=3 uid="uid://br5lg7w7huk0"]
 
 [ext_resource type="Script" uid="uid://2a3tu1mode3v" path="res://Data/Resources/VNCharacter.gd" id="1_unabi"]
+[ext_resource type="Texture2D" uid="uid://dsvtj1liug4d" path="res://Assets/CharacterSprites/DialogueSprites/MeatWorker/MEAT_WORKER_1_FACE_1.png" id="2_u4fd1"]
 [ext_resource type="Texture2D" uid="uid://bwi1w77mr8uuk" path="res://Assets/Prototype assets/VNSprites/body1 3.png" id="2_w313w"]
+[ext_resource type="Texture2D" uid="uid://jwc4bb42wgmi" path="res://Assets/CharacterSprites/DialogueSprites/MeatWorker/MEAT_WORKER_1_FACE_2.png" id="3_ucfh0"]
+[ext_resource type="Texture2D" uid="uid://btx7owoh3yp0j" path="res://Assets/CharacterSprites/DialogueSprites/MeatWorker/MEAT_WORKER_2_FACE_1.png" id="4_wxx07"]
+[ext_resource type="Texture2D" uid="uid://kl2xsq6p7454" path="res://Assets/CharacterSprites/DialogueSprites/MeatWorker/MEAT_WORKER_2_FACE_2.png" id="5_pvmpp"]
 
 [resource]
 script = ExtResource("1_unabi")
 character_name = "Worker"
 vn_sprite = ExtResource("2_w313w")
 color = Color(0.68019277, 0.04713822, 0.14151657, 1)
+sprites = Dictionary[String, Texture2D]({
+"worker_1_face_1": ExtResource("2_u4fd1"),
+"worker_1_face_2": ExtResource("3_ucfh0"),
+"worker_2_face_1": ExtResource("4_wxx07"),
+"worker_2_face_2": ExtResource("5_pvmpp")
+})
 metadata/_custom_type_script = "uid://2a3tu1mode3v"

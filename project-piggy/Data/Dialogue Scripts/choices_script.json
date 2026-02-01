@@ -1,4 +1,12 @@
 {
+	"in_vent_choice": {
+		"line": "Next step?",
+		"choices": [
+			{"text": "Go back"},
+			{"text": "Get down"}
+		]
+	},
+	
 	"exit_door_choice": {
 		"line": "Exit",
 		"choices": [
@@ -22,4 +30,44 @@
 			{"text": "No"}
 		]
 	},
+	
+	"shelf_security_choice": {
+		"line": "Read them",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	},
+	
+	"cabinet_security_choice": {
+		"line": "Take a look",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	},
+	
+	"pills_choice": {
+		"line": "Take blister",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	},
+	
+	"keys_choice": {
+		"line": "Take keys",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	},
+	
+	"oil_choice": {
+		"line": "Take oil",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	}
 }

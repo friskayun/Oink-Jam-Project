@@ -7,6 +7,20 @@ Team members: ***Vanessinha, Grilhado, Camryn, Friska***
 
 ## Dev-Log               
 
+### v0.05 - Vent System and Room Setup - 1 Feb 2026
+---
+Added:
+- Base Lockers room
+- Base Guards room
+- Vent Maze
+- Vent System
+- Dialogue Sprite Variation option
+- Penny and Faceless Worker sprite variations
+- Item Inspect
+- Ending Screen
+  
+<br>
+
 ### v0.04 - First Gameplay and Inventory - 31 Jan 2026
 ---
 Added:
@@ -17,7 +31,7 @@ Added:
 - Inventory
 - Items
 - Base gameplay - first 2 objectives
-- 
+  
 <br>
 
 ### v0.03 - Intro Scenes and Dialogue Improvements - 28 Jan 2026

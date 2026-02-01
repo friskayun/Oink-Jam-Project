@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=3 uid="uid://dt3i1jpnbrmw5"]
+
+[ext_resource type="Script" uid="uid://dykqrctpwnsr7" path="res://UI/item_inspect.gd" id="1_ddbd2"]
+[ext_resource type="Texture2D" uid="uid://dyvfbs4mduuu0" path="res://Assets/Prototype assets/items/vent_map.png" id="2_y02pf"]
+
+[sub_resource type="Animation" id="Animation_p6lnl"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visual:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p6rjp"]
+resource_name = "hide_item"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visual:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_07q8p"]
+resource_name = "show_item"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visual:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b11io"]
+_data = {
+&"RESET": SubResource("Animation_p6lnl"),
+&"hide_item": SubResource("Animation_p6rjp"),
+&"show_item": SubResource("Animation_07q8p")
+}
+
+[node name="Item Inspect" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_ddbd2")
+
+[node name="Visual" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Visual"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16862746, 0.12941177, 0.26666668, 0.5019608)
+
+[node name="TextureRect" type="TextureRect" parent="Visual"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -329.06143
+offset_top = -214.125
+offset_right = 329.0614
+offset_bottom = 214.125
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_y02pf")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_b11io")
+}

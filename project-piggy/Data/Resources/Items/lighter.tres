@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bctbnurjsvah2"]
+
+[ext_resource type="Script" uid="uid://c0btubbo133er" path="res://Data/Resources/item.gd" id="1_437ks"]
+[ext_resource type="Texture2D" uid="uid://b8khmp70urfyq" path="res://Assets/Prototype assets/items/toothpaste_box.png" id="1_emsvi"]
+
+[resource]
+script = ExtResource("1_437ks")
+item_name = "Lighter"
+item_description = "it's pretty hot"
+item_texture = ExtResource("1_emsvi")
+metadata/_custom_type_script = "uid://c0btubbo133er"

@@ -114,25 +114,25 @@
 	
 	"hallway_corn_factory_1": {
 		"lines": [
-			{"speaker": "Penny", "text": "I can't find the bathrooms at all."},
-			{"speaker": "Penny", "text": "That's the only area I haven't checked, It should be here."}
+			{"speaker": "Penny", "text": "I can't find the bathrooms at all.", "sprite_id": "idle_3"},
+			{"speaker": "Penny", "text": "That's the only area I haven't checked, It should be here.", "sprite_id": "idle_2"}
 		]
 	},
 	
 	"hallway_corn_factory_event": {
 		"lines": [
 			{"speaker": "Poppy", "text": "HEEELP!!!"},
-			{"speaker": "Penny", "text": "Poppy?"},
-			{"speaker": "Penny", "text": "I think it came from the end of the hall! I need to get to her!"}
+			{"speaker": "Penny", "text": "Poppy?", "sprite_id": "sad"},
+			{"speaker": "Penny", "text": "I think it came from the end of the hall! I need to get to her!", "sprite_id": "sad"}
 		]
 	},
 	
 	
 	"hallway_ham_factory_visit": {
 		"lines": [
-			{"speaker": "Penny", "text": "What in the world is this place?"},
+			{"speaker": "Penny", "text": "What in the world is this place?", "sprite_id": "idle_2"},
 			{"speaker": "Poppy", "text": "Let me go!!"},
-			{"speaker": "Penny", "text": "Poppy!!"}
+			{"speaker": "Penny", "text": "Poppy!!", "sprite_id": "scared_1"}
 		]
 	},
 	

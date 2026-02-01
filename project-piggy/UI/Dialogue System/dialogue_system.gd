@@ -47,29 +47,27 @@ func show_dialogue_panel():
 func hide_dialogue_panel():
 	hide()
 
-func show_left_character():
-	if last_speaker != curr_speaker.character_name:
-		anim_player.play("show_left_sprite")
-		%LeftSprite.texture = curr_speaker.vn_sprite
-		%RightSprite.self_modulate = curr_speaker.color
-	
+func show_left_character(sprite_id: String = ""):
+	%LeftSprite.texture = curr_speaker.get_sprite(sprite_id)
 	%LeftSprite.show()
 	%RightSprite.hide()
-
-func show_right_character():
+	
 	if last_speaker != curr_speaker.character_name:
-		anim_player.play("show_right_sprite")
-		%RightSprite.texture = curr_speaker.vn_sprite
-		%RightSprite.self_modulate = curr_speaker.color
+		anim_player.play("show_left_sprite")
 
+func show_right_character(sprite_id: String = ""):
+	%RightSprite.texture = curr_speaker.get_sprite(sprite_id)
 	%LeftSprite.hide()
 	%RightSprite.show()
+	
+	if last_speaker != curr_speaker.character_name:
+		anim_player.play("show_right_sprite")
 
 func hide_character_sprites():
 	%LeftSprite.hide()
 	%RightSprite.hide()
 
-func change_panel_contents(text: String, speaker: String  = ""):
+func change_panel_contents(text: String, speaker: String = "", sprite_id: String = ""):
 	# switching between character dialogue or item description 
 	if speaker == "":
 		%NameLabel.hide()
@@ -84,7 +82,7 @@ func change_panel_contents(text: String, speaker: String  = ""):
 			curr_speaker = DialogueManager.get_vnc_resource(speaker)
 		
 		@warning_ignore("standalone_ternary")
-		show_left_character() if speaker == "Penny" else show_right_character()
+		show_left_character(sprite_id) if speaker == "Penny" else show_right_character(sprite_id)
 		
 		if last_speaker != speaker:
 			last_speaker = speaker
@@ -146,10 +144,16 @@ func show_next_line():
 		#print("showing next line...")
 		var line = curr_dialogue["lines"][line_index]
 		
-		if line.has("speaker"):
-			change_panel_contents(line["text"], line["speaker"])
-		else:
-			change_panel_contents(line["text"])
+		var text = line["text"] if line.has("speaker") else ""
+		var speaker = line["speaker"] if line.has("speaker") else ""
+		var sprite_id = line["sprite_id"] if line.has("sprite_id") else ""
+		
+		change_panel_contents(text, speaker, sprite_id)
+		
+		#if line.has("speaker"):
+			#change_panel_contents(line["text"], line["speaker"])
+		#else:
+			#change_panel_contents(line["text"])
 		
 		line_index += 1
 	else:

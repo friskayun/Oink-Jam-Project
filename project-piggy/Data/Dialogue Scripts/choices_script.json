@@ -45,5 +45,13 @@
 			{"text": "Yes"},
 			{"text": "No"}
 		]
+	},
+	
+	"pills_choice": {
+		"line": "Take blister",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
 	}
 }

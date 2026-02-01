@@ -1,7 +1,8 @@
 extends ObjectInteract
 
 @export var vent_index: int = 2
-var is_vent_locked: bool = true
+@export var is_vent_locked: bool = true
+@export var scene_id: String = "storage_scene"
 
 func _on_interact():
 	if Global.is_player_in_vent:
@@ -40,4 +41,4 @@ func _vent_choice_up(index: int):
 		1:
 			# get down to scene
 			Global.player_exit_vent()
-			NavigationManager.go_to_level("storage_scene", "V_Down")
+			NavigationManager.go_to_level(scene_id, "V_Down")

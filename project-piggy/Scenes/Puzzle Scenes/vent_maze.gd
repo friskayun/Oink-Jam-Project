@@ -10,8 +10,9 @@ const WALL = 0
 const PATH = 1
 const VENT_STORAGE = 2
 const VENT_SECURITY = 3
-const VENT_LOCKER = 4
-const VENT_GUARD = 5
+const VENT_LOCKER_R = 4
+const VENT_LOCKER_W = 5
+const VENT_GUARD = 6
 
 const TILE_GAP = 36                #32px  tile size + 4px gap
 const OFFSET = 18
@@ -24,13 +25,14 @@ var on_vent: bool = false
 var vent_rooms: Dictionary = {
 	VENT_STORAGE: {"scene_id": "storage_scene", "destination_id": "V_Up", "x": 5, "y": 8},
 	VENT_SECURITY: {"scene_id": "security_room", "destination_id": "V_Up", "x": 0, "y": 6},
-	VENT_LOCKER: {"scene_id": "lockers_room", "destination_id": "V_Up", "x": 10, "y": 3},
+	VENT_LOCKER_R: {"scene_id": "lockers_room", "destination_id": "V_Up_R", "x": 10, "y": 3},
+	VENT_LOCKER_W: {"scene_id": "lockers_room", "destination_id": "V_Up_W", "x": 10, "y": 1},
 	VENT_GUARD: {"scene_id": "guards_room", "destination_id": "V_Up", "x": 2, "y": 0}
 }
 
 var grid = [
-	[0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0],
-	[1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0],
+	[0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0],
+	[1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 5],
 	[1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0],
 	[1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 4],
 	[0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1],

@@ -53,5 +53,21 @@
 			{"text": "Yes"},
 			{"text": "No"}
 		]
+	},
+	
+	"keys_choice": {
+		"line": "Take keys",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	},
+	
+	"oil_choice": {
+		"line": "Take oil",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
 	}
 }

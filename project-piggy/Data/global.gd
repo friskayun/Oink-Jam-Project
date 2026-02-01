@@ -7,6 +7,8 @@ var in_cutscene: bool = false
 
 var is_player_in_vent: bool = false
 
+var is_guard_in_room: bool = true
+
 var curr_state: GAME_STATE = GAME_STATE.FIND_PENNY
 
 enum GAME_STATE {
@@ -25,8 +27,6 @@ func end_cutscene():
 
 func pick_up_item(item: Item):
 	on_pick_up_item.emit(item)
-
-
 
 
 func player_enter_vent():

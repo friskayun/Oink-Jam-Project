@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_c1lp3")
 item_name = "Sleeping Pills"
+item_id = "sleeping_pills_lockers"
 item_description = "Found in the guard's locker "
 item_texture = ExtResource("1_0dmy3")
 metadata/_custom_type_script = "uid://c0btubbo133er"

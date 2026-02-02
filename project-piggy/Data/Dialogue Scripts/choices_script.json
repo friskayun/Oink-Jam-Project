@@ -1,14 +1,30 @@
 {
-	"in_vent_choice": {
-		"line": "Next step?",
+	"take_choice": {
+		"line": "Take?",
 		"choices": [
-			{"text": "Go back"},
-			{"text": "Get down"}
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	},
+	
+	"hair_pin_choice": {
+		"line": "Pick up?",
+		"choices": [
+			{"text": "yes"},
+			{"text": "leave it there"}
 		]
 	},
 	
 	"exit_door_choice": {
 		"line": "Exit",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	},
+	
+	"exit_hallay_door_choice": {
+		"line": "Find Mr. Horns",
 		"choices": [
 			{"text": "Yes"},
 			{"text": "No"}
@@ -23,13 +39,15 @@
 		]
 	},
 	
-	"locker_storage_choice": {
-		"line": "Pick up",
+	"in_vent_choice": {
+		"line": "Next step?",
 		"choices": [
-			{"text": "Yes"},
-			{"text": "No"}
+			{"text": "Go back"},
+			{"text": "Get down"}
 		]
 	},
+	
+	
 	
 	"shelf_security_choice": {
 		"line": "Read them",

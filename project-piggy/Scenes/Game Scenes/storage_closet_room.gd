@@ -4,7 +4,8 @@ extends Level
 
 func _ready():
 	super()
-	if Global.curr_state <= Global.GAME_STATE.FIRST_CHASE:
+	
+	if GameState.curr_state <= GameState.STATE.FIRST_CHASE:
 		_first_visit()
 
 
@@ -29,5 +30,6 @@ func _first_visit():
 	DialogueManager.play_dialogue("storage_hide_3")
 	await DialogueManager.dialogue_ended
 	
-	Global.curr_state = Global.GAME_STATE.FIND_PENNY
+	GameState.curr_state = GameState.STATE.EXPLORE_FACTORY
+	
 	Global.end_cutscene()

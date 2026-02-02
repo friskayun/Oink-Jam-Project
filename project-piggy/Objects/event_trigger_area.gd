@@ -14,4 +14,4 @@ func _on_area_2d_body_entered(body):
 		area.disconnect("body_entered", _on_area_2d_body_entered)
 
 func play_event():
-	DialogueManager.show_dialogue_panel.emit(dialogue_key)
+	DialogueManager.play_dialogue(dialogue_key)

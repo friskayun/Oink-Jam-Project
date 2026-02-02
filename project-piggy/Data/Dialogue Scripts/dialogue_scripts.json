@@ -119,6 +119,12 @@
 		]
 	},
 	
+	"hallway_corn_factory_hair_pin": {
+		"lines": [
+			{"speaker": "Penny", "text": "That must be Poppy's favourite hair pin! She must have been here.", "sprite_id": "idle_3"}
+		]
+	},
+	
 	"hallway_corn_factory_event": {
 		"lines": [
 			{"speaker": "Poppy", "text": "HEEELP!!!"},
@@ -133,6 +139,12 @@
 			{"speaker": "Penny", "text": "What in the world is this place?", "sprite_id": "idle_2"},
 			{"speaker": "Poppy", "text": "Let me go!!"},
 			{"speaker": "Penny", "text": "Poppy!!", "sprite_id": "scared_1"}
+		]
+	},
+	
+	"hallway_ham_factory_doors_interact": {
+		"lines": [
+			{"speaker": "Penny", "text": "I don't have time for that, I need to get to Poppy!", "sprite_id": "idle_2"}
 		]
 	},
 	
@@ -174,11 +186,49 @@
 	
 	
 	
-	"bad_ending_exit": {
+	
+	
+	"bad_ending_exit_hallway": {
+		"lines": [
+			{"text": "Penny got her way to the group, and tried telling Mr. Horns."},
+			{"text": "Instead of helping, he got really annoyed and scouted Penny, telling her it's not time for jokes."},
+			{"text": "Apperantly someone told from the staff told him Poppy was not feeling well and headed home."},
+			{"text": "But Penny hasn't seen her again after that."},
+			{"text": "Ending #2 - A Runaway pig."}
+		]
+	},
+	"bad_ending_exit_storage": {
 		"lines": [
 			{"text": "Penny returned to the group and headed home after the tour."},
 			{"text": "Poppy was never seen again after that day."},
-			{"text": "Ending #2 - A Runaway pig."}
+			{"text": "Ending #3 - Trust no one."}
+		]
+	},
+	
+	
+	
+	"exit_storage_door_event": {
+		"lines":[
+			{"speaker": "Penny", "text": "An exit door! I can escape and save my life!"}
+		]
+	},
+	"exit_storage_door_no": {
+		"lines":[
+			{"speaker": "Penny", "text": "No! I need to be brave… I need to save my friend and then we can escape together!"},
+			{"speaker": "Penny", "text": "But first, I need to figure out where she is."}
+		]
+	},
+	
+	"exit_hallway_door_event": {
+		"lines": [
+			{"speaker": "Penny", "text": "I might go back to the group and tell them everything.", "sprite_id": "idle_2"},
+			{"speaker": "Penny", "text": "Mr. Horns can help Poppy.", "sprite_id": "scared_1"}
+		]
+	},
+	"exit_hallway_door_no": {
+		"lines":[
+			{"speaker": "Penny", "text": "There's no time for this. Besides, no one will believe me."},
+			{"speaker": "Penny", "text": "I gotta be strong and save her myself!"}
 		]
 	},
 	
@@ -220,32 +270,18 @@
 	},
 	
 	
-	"exit_door_event": {
-		"lines":[
-			{"speaker": "Penny", "text": "An exit door! I can escape and save my life!"}
-		]
-	},
-	
-	"exit_door_yes": {
-		"lines":[
-			{"text": "Penny returned to the group and headed home after the tour."},
-			{"text": "Poppy was never seen again after that day."}
-		]
-	},
-	
-	"exit_door_no": {
-		"lines":[
-			{"speaker": "Penny", "text": "No! I need to be brave… I need to save my friend and then we can escape together!"},
-			{"speaker": "Penny", "text": "But first, I need to figure out where she is."}
-		]
-	},
-	
-	
 	"vent_storage_locked": {
 		"lines":[
 			{"speaker": "Penny", "text": "It's sealed pretty good. I need something to open it."}
 		]
 	},
+	
+	"vent_storage_below_state": {
+		"lines":[
+			{"speaker": "Penny", "text": "I'm not sure where to go yet. Maybe I can look around first."}
+		]
+	},
+	
 	
 	"vent_security_down": {
 		"lines":[
@@ -266,7 +302,7 @@
 	},
 	
 	
-	"locker_storage_empty": {
+	"locker_storage_idle": {
 		"lines":[
 			{"text": "A locker with some random stuff."}
 		]
@@ -277,6 +313,19 @@
 			{"text": "There's a screwdriver."}
 		]
 	},
+	
+	"table_storage_idle": {
+		"lines":[
+			{"text": "It's stuffed with tons of things"}
+		]
+	},
+	
+	"table_storage_item": {
+		"lines":[
+			{"text": "There's a lighter under the papers."}
+		]
+	},
+	
 	
 	"pc": {
 		"lines":[

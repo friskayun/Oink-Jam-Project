@@ -1,7 +1,6 @@
 extends ObjectInteract
 
 @export var vent_index: int = 2
-@export var is_vent_locked: bool = true
 @export var scene_id: String = "storage_scene"
 
 func _on_interact():
@@ -9,20 +8,27 @@ func _on_interact():
 		DialogueManager.play_choice("in_vent_choice", _vent_choice_up)
 		return
 	
-	if is_vent_locked:
-		_objective_locked()
+	if GameState.is_storage_vent_locked():
+		objective_locked()
+	elif !GameState.is_storage_vent_locked() and GameState.curr_state < GameState.STATE.FIND_VENT:
+		objective_below_state()
 	else:
-		_objective_unlocked()
+		objective_unlocked()
 
 func use_item_action():
-	is_vent_locked = false
+	if !GameState.is_storage_vent_locked():
+		GameState.unlock_storage_vent()
 
 
-func _objective_locked():
+func objective_locked():
 	DialogueManager.play_dialogue("vent_storage_locked")
 
-func _objective_unlocked():
+func objective_below_state():
+	DialogueManager.play_dialogue("vent_storage_below_state")
+
+func objective_unlocked():
 	DialogueManager.play_choice("vent_storage_choice", _vent_choice_down)
+
 
 func _vent_choice_down(index: int):
 	match index:

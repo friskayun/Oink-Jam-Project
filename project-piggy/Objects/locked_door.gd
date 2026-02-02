@@ -1,15 +1,13 @@
-extends Node2D
+extends ObjectInteract
 
-@onready var interact_area: InteractArea = $"Interact Area"
 
 @export var disable: bool = false
-
-
-func _ready():
-	interact_area.interact = Callable(self, "_on_interact")
 
 func _on_interact():
 	if disable:
 		return
 	
-	DialogueManager.play_dialogue("door_locked")
+	if GameState.curr_state == GameState.STATE.GET_TO_POPPY:
+		DialogueManager.play_dialogue("hallway_ham_factory_doors_interact")
+	else:
+		DialogueManager.play_dialogue("door_locked")

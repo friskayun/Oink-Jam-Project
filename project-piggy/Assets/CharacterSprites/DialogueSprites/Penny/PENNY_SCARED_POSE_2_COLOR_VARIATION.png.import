@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dafy6578sbbb7"
-path="res://.godot/imported/PENNY_SCARED_POSE_2_COLOR_VARIATION.png-c7f04a2b6f46e03fb492a687962ff756.ctex"
+path="res://.godot/imported/PENNY_SCARED_POSE_2_COLOR_VARIATION.png-e9c17da58ee78dfd98d26446e5aad94f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_SCARED_POSE_2_COLOR_VARIATION.png"
-dest_files=["res://.godot/imported/PENNY_SCARED_POSE_2_COLOR_VARIATION.png-c7f04a2b6f46e03fb492a687962ff756.ctex"]
+source_file="res://Assets/CharacterSprites/DialogueSprites/PENNY/PENNY_SCARED_POSE_2_COLOR_VARIATION.png"
+dest_files=["res://.godot/imported/PENNY_SCARED_POSE_2_COLOR_VARIATION.png-e9c17da58ee78dfd98d26446e5aad94f.ctex"]
 
 [params]
 

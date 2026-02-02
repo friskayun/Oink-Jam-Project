@@ -248,19 +248,20 @@
 		]
 	},
 	
+	
+	"guard_locker_unlock_idle": {
+		"lines": [
+			{"text": "It has some casual clothes, another uniform, and some confy shoes."}
+		]
+	},
+	
 	"guard_locker_unlock_item": {
 		"lines": [
-			{"text": "It has some casual clothes, another uniform, and some confy shoes."},
 			{"text": "There's also a blister of what seems to be sleeping pills."},
 			{"speaker": "Penny", "text": "Those can come handy!", "sprite_id": "idle_1"}
 		]
 	},
 	
-	"guard_locker_unlock": {
-		"lines": [
-			{"text": "It has some casual clothes, another uniform, and some confy shoes."}
-		]
-	},
 	
 	
 	"lockers_door": {

@@ -16,7 +16,7 @@ func _on_interact():
 		objective_unlocked()
 
 func use_item_action():
-	if !GameState.is_storage_vent_locked():
+	if GameState.is_storage_vent_locked():
 		GameState.unlock_storage_vent()
 
 
@@ -34,6 +34,8 @@ func _vent_choice_down(index: int):
 	match index:
 		0:
 			# open vent maze
+			if GameState.curr_state < GameState.STATE.FIND_POPPY_ROOM:
+				GameState.curr_state = GameState.STATE.FIND_POPPY_ROOM
 			NavigationManager.go_to_level("vent_maze", str(vent_index))
 		1:
 			# pass / nothing happens

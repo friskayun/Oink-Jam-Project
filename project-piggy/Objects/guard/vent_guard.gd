@@ -15,6 +15,8 @@ func _vent_choice_down(index: int):
 	match index:
 		0:
 			# open vent maze
+			if GameState.is_fire_alarm_on():
+				GameState.off_fire_alarm()
 			NavigationManager.go_to_level("vent_maze", str(vent_index))
 		1:
 			# pass / nothing happens
@@ -27,7 +29,7 @@ func _vent_choice_up(index: int):
 			NavigationManager.go_to_level("vent_maze", str(vent_index))
 		1:
 			# get down to scene
-			if Global.is_guard_in_room:
+			if GameState.is_guard_in_room():
 				DialogueManager.play_dialogue("vent_guard_up")
 				await DialogueManager.dialogue_ended
 				DialogueManager.play_choice("in_vent_choice", _vent_choice_up)

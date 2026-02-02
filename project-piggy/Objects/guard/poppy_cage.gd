@@ -1,11 +1,9 @@
 extends ObjectInteract
 
-var first_interaction: bool = true
-
 func _on_interact():
-	if first_interaction:
+	if GameState.is_first_poppy_interaction():
+		GameState.complete_first_poppy_interaction()
 		DialogueManager.play_dialogue("guard_cage_poppy_interaction")
-		first_interaction = false
 	else:
 		DialogueManager.play_dialogue("guard_cage_poppy_idle")
 	

@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://jlwjn2u8hip3" path="res://Prefabs/level.gd" id="1_qg5xs"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_1tnp7"]
 [ext_resource type="PackedScene" uid="uid://b87g3llg7qgy2" path="res://Prefabs/level_ui_elements.tscn" id="2_6f1jk"]
-[ext_resource type="Script" uid="uid://bvi4i8r6hti5r" path="res://Objects/vent_storage.gd" id="3_4k14m"]
 [ext_resource type="PackedScene" uid="uid://b8o2oiblmlte6" path="res://Objects/lockers/locked_locker.tscn" id="3_ou720"]
+[ext_resource type="Script" uid="uid://ys3tl2bfedu8" path="res://Objects/lockers/vent_lockers_right.gd" id="4_5f7kn"]
 [ext_resource type="PackedScene" uid="uid://c57wlulahu4d4" path="res://Prefabs/interact_area.tscn" id="4_pa5j2"]
 [ext_resource type="PackedScene" uid="uid://dgfvddl5tq6wl" path="res://Prefabs/door.tscn" id="5_pa5j2"]
 [ext_resource type="Script" uid="uid://drqw2wy6r1rvn" path="res://Objects/security/vent_security.gd" id="6_2hrto"]
@@ -42,10 +42,7 @@ zoom = Vector2(1.5, 1.5)
 
 [node name="Vent_Right" type="Node2D" parent="Objects"]
 position = Vector2(1088, 32)
-script = ExtResource("3_4k14m")
-vent_index = 4
-is_vent_locked = false
-scene_id = "lockers_room"
+script = ExtResource("4_5f7kn")
 
 [node name="Interact Area" parent="Objects/Vent_Right" instance=ExtResource("4_pa5j2")]
 

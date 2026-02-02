@@ -47,8 +47,6 @@
 		]
 	},
 	
-	
-	
 	"shelf_security_choice": {
 		"line": "Read them",
 		"choices": [
@@ -87,5 +85,13 @@
 			{"text": "Yes"},
 			{"text": "No"}
 		]
-	}
+	},
+	
+	"fire_alarm_choice": {
+		"line": "Activate?",
+		"choices": [
+			{"text": "Yes"},
+			{"text": "No"}
+		]
+	},
 }

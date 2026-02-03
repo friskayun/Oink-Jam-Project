@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsvtj1liug4d"
-path="res://.godot/imported/MEAT_WORKER_1_FACE_1.png-b8d56e4fa9d81eab41cc8f4ef661946b.ctex"
+path="res://.godot/imported/MEAT_WORKER_1_FACE_1.png-8af6e7ecf41f4988139be78030ba6a19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CharacterSprites/DialogueSprites/MeatWorker/MEAT_WORKER_1_FACE_1.png"
-dest_files=["res://.godot/imported/MEAT_WORKER_1_FACE_1.png-b8d56e4fa9d81eab41cc8f4ef661946b.ctex"]
+source_file="res://Assets/CharacterSprites/DialogueSprites/MEAT WORKERS/MEAT_WORKER_1_FACE_1.png"
+dest_files=["res://.godot/imported/MEAT_WORKER_1_FACE_1.png-8af6e7ecf41f4988139be78030ba6a19.ctex"]
 
 [params]
 

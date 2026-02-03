@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://ufw6qwg3dcs"]
 
 [ext_resource type="Script" uid="uid://d0scimstdvdyw" path="res://UI/Dialogue System/dialogue_system.gd" id="1_jsqu7"]
-[ext_resource type="Texture2D" uid="uid://dbrifa7iy233i" path="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_IDLE_POSE_1.png" id="2_fdqpb"]
-[ext_resource type="Texture2D" uid="uid://dsvtj1liug4d" path="res://Assets/CharacterSprites/DialogueSprites/MeatWorker/MEAT_WORKER_1_FACE_1.png" id="3_guiua"]
+[ext_resource type="Texture2D" uid="uid://dbrifa7iy233i" path="res://Assets/CharacterSprites/DialogueSprites/PENNY/PENNY_IDLE_POSE_1.png" id="2_fdqpb"]
+[ext_resource type="Texture2D" uid="uid://dsvtj1liug4d" path="res://Assets/CharacterSprites/DialogueSprites/MEAT WORKERS/MEAT_WORKER_1_FACE_1.png" id="3_guiua"]
 
 [sub_resource type="Animation" id="Animation_1mqkp"]
 length = 0.001

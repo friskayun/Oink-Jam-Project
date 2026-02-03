@@ -12,5 +12,7 @@ func _on_choice(i: int):
 	match i:
 		0:
 			ItemInspect.show_item_inspect(VENT_MAP)
+			if GameState.curr_state < GameState.STATE.FIND_VENT:
+				GameState.curr_state = GameState.STATE.FIND_VENT
 		1:
 			pass

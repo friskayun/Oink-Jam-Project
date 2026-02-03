@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_khr8o")
 item_name = "Access Card"
+item_id = "access_card_guard"
 item_description = "Can get access to the numbpad inside the cage room."
 item_texture = ExtResource("1_67fv5")
 metadata/_custom_type_script = "uid://c0btubbo133er"

@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_4pneo")
 item_name = "Poppy's Hair Pin"
+item_id = "hair_pin_hallway"
 item_description = "Poppy's lucky charm. I hope I can give it back to her soon..."
 item_texture = ExtResource("1_yq1tb")
 metadata/_custom_type_script = "uid://c0btubbo133er"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cbgd0k8ywo8j1"]
+[gd_scene load_steps=15 format=4 uid="uid://cbgd0k8ywo8j1"]
 
 [ext_resource type="TileSet" uid="uid://dlnvr10pdnuph" path="res://Prefabs/prototyle_tiles.tres" id="1_7utjt"]
 [ext_resource type="Script" uid="uid://bxwi24otqj2v4" path="res://Scenes/Game Scenes/hallway_corn_factory.gd" id="1_vm8aj"]
@@ -7,11 +7,16 @@
 [ext_resource type="PackedScene" uid="uid://c2tsaym5min71" path="res://Objects/locked_door.tscn" id="3_pvjn6"]
 [ext_resource type="Script" uid="uid://d1bew1ojh1abm" path="res://Objects/event_trigger_area.gd" id="4_dnnuv"]
 [ext_resource type="PackedScene" uid="uid://c57wlulahu4d4" path="res://Prefabs/interact_area.tscn" id="5_7d70e"]
-[ext_resource type="Script" uid="uid://dbdskdnva4m50" path="res://Objects/red_door.gd" id="5_teodi"]
+[ext_resource type="Script" uid="uid://dbdskdnva4m50" path="res://Objects/hallway/red_door.gd" id="5_teodi"]
+[ext_resource type="Script" uid="uid://bdbrsevuqcau2" path="res://Objects/poppy_hair_pin.gd" id="6_7wjmf"]
+[ext_resource type="Texture2D" uid="uid://0tji66tdy6tv" path="res://Assets/icon.svg" id="7_pkico"]
 [ext_resource type="PackedScene" uid="uid://dgfvddl5tq6wl" path="res://Prefabs/door.tscn" id="7_q7e1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvjn6"]
 size = Vector2(66, 391)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wjmf"]
+radius = 33.01515
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7e1d"]
 size = Vector2(207, 52)
@@ -25,7 +30,7 @@ tile_map_data = PackedByteArray("AAAAAAAADwANAAEAAAAAAAEADwANAAEAAAAAAAIADwANAAE
 tile_set = ExtResource("1_7utjt")
 
 [node name="Player" parent="." instance=ExtResource("2_aterv")]
-position = Vector2(994, 252)
+position = Vector2(204, 188)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.5, 1.5)
@@ -64,6 +69,19 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/EventTriggerArea/Area2D"]
 position = Vector2(-16, -1.5)
 shape = SubResource("RectangleShape2D_pvjn6")
+
+[node name="Poppy\'s Hair Pin" type="Node2D" parent="Objects"]
+position = Vector2(1447, 207)
+script = ExtResource("6_7wjmf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Objects/Poppy\'s Hair Pin"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_pkico")
+
+[node name="Interact Area" parent="Objects/Poppy\'s Hair Pin" instance=ExtResource("5_7d70e")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Poppy\'s Hair Pin/Interact Area"]
+shape = SubResource("CircleShape2D_7wjmf")
 
 [node name="Doors" type="Node" parent="."]
 

@@ -2,7 +2,7 @@ extends ObjectInteract
 
 
 func _on_interact():
-	if GameState.curr_state == GameState.STATE.UNLOCK_CAGES:
+	if GameState.are_pills_planted():
 		DialogueManager.play_dialogue("guard_water_active")
 		await DialogueManager.dialogue_ended
 		return
@@ -12,8 +12,8 @@ func _on_interact():
 
 func use_item_action():
 	
-	if GameState.curr_state <= GameState.STATE.PUT_TO_SLEEP:
-		GameState.curr_state = GameState.STATE.UNLOCK_CAGES
+	if !GameState.are_pills_planted():
+		GameState.plant_pills()
 	
 	DialogueManager.play_dialogue("guard_water_active")
 	await DialogueManager.dialogue_ended

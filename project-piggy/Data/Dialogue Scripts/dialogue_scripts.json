@@ -185,6 +185,13 @@
 	},
 	
 	
+	"guard_sleep": {
+		"lines": [
+			{"speaker": "Worker", "text": "ZzZzZz..."},
+			{"speaker": "Penny", "text": "That was quicker than I thought..."}
+		]
+	},
+	
 	"final_chase_start": {
 		"lines": [
 			{"speaker": "Worker", "text": "They are escaping! Catch them!"},
@@ -332,6 +339,12 @@
 	"vent_guard_up": {
 		"lines":[
 			{"speaker": "Penny", "text": "I can't go down now, the guard is there."}
+		]
+	},
+	
+	"vent_guard_sleep_down": {
+		"lines":[
+			{"speaker": "Penny", "text": "I need to save them before he wakes up."}
 		]
 	},
 	
@@ -489,6 +502,18 @@
 	"guard_dynamite_active": {
 		"lines":[
 			{"speaker": "Penny", "text": "WE HAVE TO RUN, BEFORE WE EXPLODE!!!"}
+		]
+	},
+	
+	"guard_card_idle": {
+		"lines":[
+			{"speaker": "Penny", "text": "I better not bother him anymore, I don't wanna risk to wake him up"}
+		]
+	},
+	
+	"guard_card_item": {
+		"lines":[
+			{"speaker": "Penny", "text": "Here we go..."}
 		]
 	},
 	

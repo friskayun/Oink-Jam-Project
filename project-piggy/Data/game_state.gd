@@ -3,8 +3,10 @@ extends Node
 var storage_vent_locked: bool = true
 var fire_alarm_on: bool = false
 var poppy_first_interaction: bool = true
-var guard_in_room: bool = true
+var guard_in_room: bool = false
 var dynamite_lighted: bool = false
+var guard_sleeping: bool = false
+var pills_planted: bool = false
 
 var taken_items: Array[String] = []
 
@@ -66,7 +68,7 @@ func change_guard_status(value: bool):
 	guard_in_room = value
 
 func first_visit_guard():
-	guard_in_room = false
+	guard_in_room = true
 
 func is_guard_in_room():
 	return guard_in_room
@@ -76,5 +78,17 @@ func light_dynamite():
 
 func is_dynamite_lighted():
 	return dynamite_lighted
+
+func put_guard_to_sleep():
+	guard_sleeping = true
+
+func is_guard_sleeping():
+	return guard_sleeping
+
+func plant_pills():
+	pills_planted = true
+
+func are_pills_planted():
+	return pills_planted
 
 #endregion

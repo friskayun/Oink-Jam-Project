@@ -2,12 +2,6 @@ extends Control
 
 const INVENTORY_SLOT = preload("uid://bj03w27nhu4h6")
 
-# testing - delete later
-const SLEEPING_PILLS = preload("uid://bqfep7s4a6du5")
-const HAIR_PIN = preload("uid://cquiyclkfhpy8")
-const LIGHTER = preload("uid://bctbnurjsvah2")
-const ACCESS_CARD = preload("uid://b82xkabpi757b")
-
 const GRID_ROWS = 2
 const GRID_COLOMNS = 4
 
@@ -21,16 +15,12 @@ var curr_slot: InventorySlot
 
 func _ready():
 	Global.on_pick_up_item.connect(add_item_to_inventory)
+	GameState.connect("on_save_data", _save_inventory_items)
+	GameState.connect("on_load_data", _load_inventory_items)
 	
 	close_inventory()
 	%GridContainer.columns = GRID_COLOMNS
 	load_inventory()
-	
-	# testing - delete later
-	add_item_to_inventory(HAIR_PIN)
-	add_item_to_inventory(LIGHTER)
-	add_item_to_inventory(SLEEPING_PILLS)
-	add_item_to_inventory(ACCESS_CARD)
 
 func _input(event):
 	if event.is_action_pressed("inventory"):
@@ -53,6 +43,15 @@ func _input(event):
 	
 	if event.is_action_pressed("interact"):
 		use_item()
+
+func _save_inventory_items():
+	pass
+
+func _load_inventory_items():
+	var items = GameState.taken_items
+	for id in items:
+		var item = DataManager.get_item_resource_by_item_id(id)
+		add_item_to_inventory(item)
 
 func move_cursor(row: int, col: int):
 	slot_row += row
@@ -88,6 +87,7 @@ func load_inventory():
 		
 		slots.append(x_array)
 	
+	_load_inventory_items()
 	load_select()
 
 func clear_slots():
@@ -148,4 +148,3 @@ func use_item():
 		call_deferred("close_inventory")
 	else:
 		print(" Item cannot be used here")
-	

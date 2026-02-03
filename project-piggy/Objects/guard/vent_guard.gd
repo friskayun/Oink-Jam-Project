@@ -25,6 +25,9 @@ func _on_interact():
 func _vent_choice_down(index: int):
 	match index:
 		0:
+			if !GameState.is_fire_alarm_on() and !GameState.is_guard_in_room():
+					GameState.first_visit_guard()
+			
 			# get guard in room, after distracted with fire alarm
 			if GameState.is_fire_alarm_on():
 				GameState.off_fire_alarm()
@@ -59,7 +62,6 @@ func _vent_choice_up(index: int):
 func _guard_put_to_sleep_cutscene():
 	Global.play_cutscene()
 	
-	GameState.curr_state = GameState.STATE.UNLOCK_CAGES
 	
 	await get_tree().create_timer(1.5).timeout
 	DialogueManager.play_dialogue("guard_sleep")
@@ -67,3 +69,4 @@ func _guard_put_to_sleep_cutscene():
 	NavigationManager.go_to_level(scene_id, "V_Down")
 	
 	Global.end_cutscene()
+	GameState.curr_state = GameState.STATE.UNLOCK_CAGES

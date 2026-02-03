@@ -1,15 +1,16 @@
 extends Control
 
-const GAME_SCENE = "uid://3yn11wshixle"
-const TEST_GAME_SCENE = "uid://cldtus0sc2416"
+const intro_bus_scene = "intro_bus_scene"
+const hallway_corn_factory = "hallway_corn_factory"
 
 
 func _on_new_button_pressed():
-	get_tree().change_scene_to_file(TEST_GAME_SCENE)
+	GameState._on_new_game()
+	NavigationManager.go_to_level("hallway_corn_factory")
 
 
 func _on_load_button_pressed():
-	pass # Replace with function body.
+	GameState._load_checkpoint()
 
 
 func _on_options_button_pressed():

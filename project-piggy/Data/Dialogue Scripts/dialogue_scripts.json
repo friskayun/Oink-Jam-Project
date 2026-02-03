@@ -238,10 +238,10 @@
 			{"text": "Ending #4 - Trust no one."}
 		]
 	},
-	"bad_ending_exit_storage": {
+	"bad_ending_caught": {
 		"lines": [
 			{"text": "Penny got caught."},
-			{"text": "Ending #4 - A ham can."}
+			{"text": "Ending #5 - A ham can."}
 		]
 	},
 	

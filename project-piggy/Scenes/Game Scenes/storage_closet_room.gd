@@ -7,6 +7,7 @@ func _ready():
 	
 	if GameState.curr_state <= GameState.STATE.FIRST_CHASE:
 		_first_visit()
+		return
 
 
 func _first_visit():
@@ -33,3 +34,7 @@ func _first_visit():
 	GameState.curr_state = GameState.STATE.EXPLORE_FACTORY
 	
 	Global.end_cutscene()
+	
+	if GameState.curr_checkpoint < GameState.CHECKPOINT.FOUND_STORAGE_ROOM:
+		GameState.curr_checkpoint = GameState.CHECKPOINT.FOUND_STORAGE_ROOM
+		GameState._save_checkpoint()

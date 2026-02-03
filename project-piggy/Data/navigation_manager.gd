@@ -40,6 +40,7 @@ func go_to_level(level_tag, destination_tag: String = ""):
 			spawn_door_tag = destination_tag
 		
 		print("opening: " + level_tag)
+		GameState.set_curr_scene_id(level_tag)
 		change_to_packed_scene(scene_to_load)
 
 func trigger_player_spawn(position: Vector2, direction: String):

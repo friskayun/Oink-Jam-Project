@@ -7,16 +7,6 @@ var in_cutscene: bool = false
 
 var is_player_in_vent: bool = false
 
-var is_guard_in_room: bool = true
-
-var curr_state: GAME_STATE = GAME_STATE.FIND_PENNY
-
-enum GAME_STATE {
-	LOOKING_FOR_POPPY,
-	FIRST_CHASE,
-	FIND_PENNY
-}
-
 
 func play_cutscene():
 	in_cutscene = true

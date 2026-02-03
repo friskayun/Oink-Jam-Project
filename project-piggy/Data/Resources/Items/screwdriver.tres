@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_kh06e")
 item_name = "Screwdriver"
+item_id = "screwdriver_storage"
 item_description = "It's a bit rusty, but still working."
 item_texture = ExtResource("1_ngrev")
 metadata/_custom_type_script = "uid://c0btubbo133er"

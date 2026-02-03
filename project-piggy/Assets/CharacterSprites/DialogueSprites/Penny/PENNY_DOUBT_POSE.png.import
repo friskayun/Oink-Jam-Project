@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnugmeyn2urrw"
-path="res://.godot/imported/PENNY_DOUBT_POSE.png-9f38aab1dcd2d2f85103c2a8617a4486.ctex"
+path="res://.godot/imported/PENNY_DOUBT_POSE.png-01bcbcc0b32042376f863dbb167e3509.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CharacterSprites/DialogueSprites/Penny/PENNY_DOUBT_POSE.png"
-dest_files=["res://.godot/imported/PENNY_DOUBT_POSE.png-9f38aab1dcd2d2f85103c2a8617a4486.ctex"]
+source_file="res://Assets/CharacterSprites/DialogueSprites/PENNY/PENNY_DOUBT_POSE.png"
+dest_files=["res://.godot/imported/PENNY_DOUBT_POSE.png-01bcbcc0b32042376f863dbb167e3509.ctex"]
 
 [params]
 

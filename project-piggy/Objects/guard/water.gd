@@ -1,10 +1,8 @@
 extends ObjectInteract
 
-var put_sleeping_pills: bool = false
-
 
 func _on_interact():
-	if put_sleeping_pills:
+	if GameState.are_pills_planted():
 		DialogueManager.play_dialogue("guard_water_active")
 		await DialogueManager.dialogue_ended
 		return
@@ -13,8 +11,9 @@ func _on_interact():
 	await DialogueManager.dialogue_ended
 
 func use_item_action():
-	put_sleeping_pills = true
+	
+	if !GameState.are_pills_planted():
+		GameState.plant_pills()
+	
 	DialogueManager.play_dialogue("guard_water_active")
 	await DialogueManager.dialogue_ended
-	
-	# transition player to vent

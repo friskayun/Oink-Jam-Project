@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_hpt0j")
 item_name = "Bottle of oil"
+item_id = "oil_bottle_guard"
 item_description = "Found next to the pig cages. I don't even want to know why they have it."
 item_texture = ExtResource("1_xwk6l")
 metadata/_custom_type_script = "uid://c0btubbo133er"

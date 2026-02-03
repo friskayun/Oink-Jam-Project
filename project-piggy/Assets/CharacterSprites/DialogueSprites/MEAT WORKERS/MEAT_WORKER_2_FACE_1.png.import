@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jwc4bb42wgmi"
-path="res://.godot/imported/MEAT_WORKER_1_FACE_2.png-79426840f24d5c963f85b1c165768b84.ctex"
+uid="uid://btx7owoh3yp0j"
+path="res://.godot/imported/MEAT_WORKER_2_FACE_1.png-4c34751ef923d30ce6eb50de6080300a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CharacterSprites/DialogueSprites/MeatWorker/MEAT_WORKER_1_FACE_2.png"
-dest_files=["res://.godot/imported/MEAT_WORKER_1_FACE_2.png-79426840f24d5c963f85b1c165768b84.ctex"]
+source_file="res://Assets/CharacterSprites/DialogueSprites/MEAT WORKERS/MEAT_WORKER_2_FACE_1.png"
+dest_files=["res://.godot/imported/MEAT_WORKER_2_FACE_1.png-4c34751ef923d30ce6eb50de6080300a.ctex"]
 
 [params]
 

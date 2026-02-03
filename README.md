@@ -7,6 +7,17 @@ Team members: ***Vanessinha, Grilhado, Camryn, Friska***
 
 ## Dev-Log               
 
+### v0.06 - Game States, Save and Load - 3 Feb 2026
+---
+Added:
+- Full Gameplay
+- Game states
+- Checkpoint
+- Save and Load
+- Inventory save and load 
+
+<br>
+
 ### v0.05 - Vent System and Room Setup - 1 Feb 2026
 ---
 Added:

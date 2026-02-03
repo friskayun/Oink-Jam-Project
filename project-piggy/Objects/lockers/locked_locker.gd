@@ -19,6 +19,8 @@ func use_item_action():
 func _on_choice(index: int):
 	match index:
 		0:
+			if GameState.curr_state <= GameState.STATE.FIND_LOCKER:
+				GameState.curr_state = GameState.STATE.PUT_TO_SLEEP
 			GameState.took_item(SLEEPING_PILLS.item_id)
 			Global.pick_up_item(SLEEPING_PILLS)
 		1: 

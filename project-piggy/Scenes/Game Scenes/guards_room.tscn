@@ -201,6 +201,8 @@ is_active = false
 [node name="Door_E" type="Node2D" parent="Doors"]
 position = Vector2(746, 240)
 script = ExtResource("3_gmon8")
+destination_level_tag = "hallway_last_chase"
+destination_door_tag = "Guard"
 
 [node name="Interact Area" parent="Doors/Door_E" instance=ExtResource("3_h2t11")]
 

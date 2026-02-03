@@ -185,23 +185,56 @@
 	},
 	
 	
+	"final_chase_start": {
+		"lines": [
+			{"speaker": "Worker", "text": "They are escaping! Catch them!"},
+			{"speaker": "Penny", "text": "RUN!"}
+		]
+	},
 	
 	
-	
+	"good_ending_explosion": {
+		"lines": [
+			{"speaker": "Mr. Horns", "text": "Alright, is everyone ready to get back on the bus? Wait... where is Poppy and Penny?"},
+			{"speaker": "Penny", "text": "Right here sir, sorry! We had to go grab our free shirts."},
+			{"speaker": "Wendy", "text": "OWhere were you guys the whole time?"},
+			{"speaker": "Penny", "text": "Just doing something boring."},
+			{"text": "..."},
+			{"text": "Explosion occures..."},
+			{"speaker": "Penny", "text": "..."},
+			{"speaker": "Poppy", "text": "So cool."},
+			{"text": "Ending #1 - Idk, I ran out of ideas."}
+		]
+	},
+	"good_ending_default": {
+		"lines": [
+			{"speaker": "Mr. Horns", "text": "Alright, is everyone ready to get back on the bus? Wait... where is Poppy and Penny?"},
+			{"speaker": "Penny", "text": "Right here sir, sorry! We had to go grab our free shirts."},
+			{"speaker": "Wendy", "text": "OWhere were you guys the whole time?"},
+			{"speaker": "Penny", "text": "Just doing something boring."},
+			{"text": "Ending #2 - The hero."}
+		]
+	},
 	"bad_ending_exit_hallway": {
 		"lines": [
 			{"text": "Penny got her way to the group, and tried telling Mr. Horns."},
 			{"text": "Instead of helping, he got really annoyed and scouted Penny, telling her it's not time for jokes."},
 			{"text": "Apperantly someone told from the staff told him Poppy was not feeling well and headed home."},
 			{"text": "But Penny hasn't seen her again after that."},
-			{"text": "Ending #2 - A Runaway pig."}
+			{"text": "Ending #3 - A Runaway pig."}
 		]
 	},
 	"bad_ending_exit_storage": {
 		"lines": [
 			{"text": "Penny returned to the group and headed home after the tour."},
 			{"text": "Poppy was never seen again after that day."},
-			{"text": "Ending #3 - Trust no one."}
+			{"text": "Ending #4 - Trust no one."}
+		]
+	},
+	"bad_ending_exit_storage": {
+		"lines": [
+			{"text": "Penny got caught."},
+			{"text": "Ending #4 - A ham can."}
 		]
 	},
 	
@@ -397,31 +430,34 @@
 		]
 	},
 	
-	"guard_badge_key": {
-		"lines":[
-			{"text": "There's a badge with the name: \"Smith, Sean\" and a ring of keys."}
-		]
-	},
-	
 	"guard_badge_idle": {
 		"lines":[
 			{"text": "There's a badge with the name: \"Smith, Sean\"."}
 		]
 	},
 	
-	"guard_cabinet_oil": {
+	"guard_badge_item": {
 		"lines":[
-			{"text": "The cabinet is full with random stuff. There's a bottle of oil in there."},
-			{"speaker": "Penny", "text": "Hmm..."},
-			{"speaker": "Penny", "text": "Maybe this could help if someone is chasing us, give them a great fall and slow them down."}
+			{"text": "Next to the badge, there's a ring of keys."}
 		]
 	},
+	
+	
 	
 	"guard_cabinet_idle": {
 		"lines":[
 			{"text": "The cabinet is full with random stuff."}
 		]
 	},
+	
+	"guard_cabinet_oil": {
+		"lines":[
+			{"text": "There's a bottle of oil in there."},
+			{"speaker": "Penny", "text": "Hmm..."},
+			{"speaker": "Penny", "text": "Maybe this could help if someone is chasing us, give them a great fall and slow them down."}
+		]
+	},
+	
 	
 	"guard_water_idle": {
 		"lines":[
@@ -441,6 +477,12 @@
 			{"speaker": "Penny", "text": "Why is there dynamite in a meat factory?"},
 			{"speaker": "Poppy", "text": "It’s probably a plot device!"},
 			{"speaker": "Penny", "text": "Oh, that makes sense!"},
+		]
+	},
+	
+	"guard_dynamite_use_early": {
+		"lines":[
+			{"speaker": "Penny", "text": "It may be too early to do that, it's better to first free everyone."}
 		]
 	},
 	

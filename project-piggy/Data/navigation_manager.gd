@@ -16,6 +16,7 @@ const LOCKERS_ROOM = preload("res://Scenes/Game Scenes/lockers_room.tscn")
 const SECURITY_ROOM = preload("res://Scenes/Game Scenes/security_room.tscn")
 const GUARDS_ROOM = preload("res://Scenes/Game Scenes/guards_room.tscn")
 const VENT_MAZE = preload("uid://bg4we3alc3ufr")
+const HALLWAY_LAST_CHASE = preload("uid://cxvigbgixpw6q")
 
 	## UI Scene 
 const MAIN_MENU = preload("uid://dvm87cwckmutu")
@@ -79,6 +80,9 @@ func get_scene(scene_tag):
 			return GUARDS_ROOM
 		"vent_maze":
 			return VENT_MAZE
+		"hallway_last_chase":
+			return HALLWAY_LAST_CHASE
+		
 		"ending_screen":
 			return ENDING_SCREEN
 		"main_menu":

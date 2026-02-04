@@ -1,6 +1,8 @@
 extends Level
 
+const MEAT_WORKER = preload("res://Characters/meat_worker.tscn")
 const DIALOGUE_FIRST_VISIT = "hallway_ham_factory_visit"
+
 
 @onready var anim_player = $AnimationPlayer
 
@@ -14,6 +16,7 @@ func level_state():
 		unlock_security_door(false)
 		first_visit()
 	elif GameState.curr_state == GameState.STATE.FIRST_CHASE:
+		spawn_meat_worker()
 		unlock_storage_door(true)
 		unlock_security_door(false)
 	else:
@@ -33,6 +36,14 @@ func first_visit():
 	GameState.curr_state = GameState.STATE.GET_TO_POPPY
 	
 	Global.end_cutscene()
+
+func spawn_meat_worker():
+	await get_tree().create_timer(3).timeout
+	var npc = MEAT_WORKER.instantiate()
+	npc.player = $Player
+	npc.global_position = $Doors/Door_WA/Spawn.global_position
+	add_child(npc)
+	npc.start_chase()
 
 func unlock_storage_door(unlock: bool):
 	%StorageLocked.disable = unlock

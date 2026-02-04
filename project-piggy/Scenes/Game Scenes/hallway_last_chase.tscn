@@ -1,11 +1,14 @@
-[gd_scene load_steps=8 format=4 uid="uid://cxvigbgixpw6q"]
+[gd_scene load_steps=11 format=4 uid="uid://cxvigbgixpw6q"]
 
 [ext_resource type="Script" uid="uid://carnx8hrgtu4j" path="res://Scenes/Game Scenes/hallway_last_chase.gd" id="1_3rbc4"]
 [ext_resource type="TileSet" uid="uid://dlnvr10pdnuph" path="res://Prefabs/prototyle_tiles.tres" id="1_t1lcs"]
 [ext_resource type="PackedScene" uid="uid://dgfvddl5tq6wl" path="res://Prefabs/door.tscn" id="2_0k8iw"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_c3muq"]
+[ext_resource type="PackedScene" uid="uid://cojrbw6f6mfb6" path="res://Characters/poppy.tscn" id="4_r8g1t"]
 [ext_resource type="Script" uid="uid://deoxc4ctts4mr" path="res://Objects/end_door.gd" id="5_cy4xc"]
+[ext_resource type="PackedScene" uid="uid://8ycaml5aijon" path="res://Characters/meat_worker.tscn" id="5_w3toh"]
 [ext_resource type="PackedScene" uid="uid://b87g3llg7qgy2" path="res://Prefabs/level_ui_elements.tscn" id="6_4vbi1"]
+[ext_resource type="PackedScene" uid="uid://bxk44jjbp44h5" path="res://Characters/pig.tscn" id="6_70jc4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cy4xc"]
 size = Vector2(33, 129)
@@ -19,10 +22,40 @@ tile_map_data = PackedByteArray("AAAAAAAADwANAAEAAAAAAAEADwANAAEAAAAAAAIADwANAAE
 tile_set = ExtResource("1_t1lcs")
 
 [node name="Player" parent="." instance=ExtResource("2_c3muq")]
-position = Vector2(319, 148)
+position = Vector2(85, 160)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.5, 1.5)
+
+[node name="NPC" type="Node2D" parent="."]
+
+[node name="Poppy" parent="NPC" node_paths=PackedStringArray("player") instance=ExtResource("4_r8g1t")]
+position = Vector2(32, 183)
+player = NodePath("../../Player")
+
+[node name="MeatWorker" parent="NPC" node_paths=PackedStringArray("player") instance=ExtResource("5_w3toh")]
+position = Vector2(205, -670)
+player = NodePath("../../Player")
+
+[node name="MeatWorker2" parent="NPC" node_paths=PackedStringArray("player") instance=ExtResource("5_w3toh")]
+position = Vector2(310, -812)
+player = NodePath("../../Player")
+
+[node name="MeatWorker3" parent="NPC" node_paths=PackedStringArray("player") instance=ExtResource("5_w3toh")]
+position = Vector2(72, -793)
+player = NodePath("../../Player")
+
+[node name="Pig" parent="NPC" instance=ExtResource("6_70jc4")]
+position = Vector2(297, 147)
+y_destination = 147
+
+[node name="Pig2" parent="NPC" instance=ExtResource("6_70jc4")]
+position = Vector2(238.00002, 118)
+y_destination = 118
+
+[node name="Pig3" parent="NPC" instance=ExtResource("6_70jc4")]
+position = Vector2(186.00002, 171)
+y_destination = 171
 
 [node name="Doors" type="Node" parent="."]
 

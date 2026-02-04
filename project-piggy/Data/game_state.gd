@@ -2,6 +2,8 @@ extends Node
 
 signal on_save_data
 signal on_load_data
+@warning_ignore("unused_signal")
+signal start_final_chase
 
 var player_global_pos: Vector2
 var curr_scene_id: String

@@ -1,10 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://c6yui6ubp7sq"]
+[gd_scene load_steps=30 format=3 uid="uid://8ycaml5aijon"]
 
-[ext_resource type="Script" uid="uid://d2i5cytnnaeha" path="res://Characters/Player/player.gd" id="1_j341n"]
-[ext_resource type="Texture2D" uid="uid://civl4u2ehg0rl" path="res://Assets/Spritesheets/IDLE PENNY.png" id="2_cue0d"]
-[ext_resource type="Texture2D" uid="uid://db3amb732n2p5" path="res://Assets/Spritesheets/WALK PENNY.png" id="3_bqsbk"]
+[ext_resource type="Script" uid="uid://b8txmhsyqt84n" path="res://Characters/meat_worker.gd" id="1_h0cy7"]
+[ext_resource type="Texture2D" uid="uid://by667dmo5mrrs" path="res://Assets/Spritesheets/IDLE MEATW.png" id="2_n7ljp"]
+[ext_resource type="Texture2D" uid="uid://dkf1l3lpjh8d2" path="res://Assets/Spritesheets/WALK MEATW.png" id="3_lplgj"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_j341n"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_n7ljp"]
 radius = 4.0
 
 [sub_resource type="Animation" id="Animation_yhol4"]
@@ -307,7 +307,7 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xf5fp"]
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_cue0d"]
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_lplgj"]
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_cue0d")
 states/Idle/position = Vector2(392, 100)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_bqsbk")
@@ -315,25 +315,29 @@ states/Walk/position = Vector2(635, 100)
 transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_cue0d"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_bqsbk"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_xf5fp")]
 graph_offset = Vector2(-33, -45)
 
-[node name="Penny" type="CharacterBody2D" groups=["Player"]]
+[sub_resource type="CircleShape2D" id="CircleShape2D_lplgj"]
+radius = 15.0
+
+[node name="MeatWorker" type="CharacterBody2D"]
 scale = Vector2(3, 3)
-collision_layer = 2
-script = ExtResource("1_j341n")
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_h0cy7")
 
 [node name="IdleSprites" type="Sprite2D" parent="."]
-texture = ExtResource("2_cue0d")
+texture = ExtResource("2_n7ljp")
 hframes = 4
 vframes = 3
 
 [node name="WalkSprites" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("3_bqsbk")
+texture = ExtResource("3_lplgj")
 hframes = 8
 vframes = 3
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)
-shape = SubResource("CircleShape2D_j341n")
+shape = SubResource("CircleShape2D_n7ljp")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -341,7 +345,17 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeStateMachine_cue0d")
+tree_root = SubResource("AnimationNodeStateMachine_lplgj")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(-0.005128205, 1)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -2.6666667)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_lplgj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

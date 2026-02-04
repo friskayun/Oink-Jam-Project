@@ -81,13 +81,14 @@ shape = SubResource("RectangleShape2D_dpob5")
 
 [node name="Door_V_Up" parent="Doors" instance=ExtResource("3_gghh2")]
 position = Vector2(-192, -131)
+direction_spawn = "down"
 is_active = false
 
 [node name="Door_Hallway" parent="Doors" instance=ExtResource("3_gghh2")]
 position = Vector2(64, 288)
 destination_level_tag = "hallway_ham_factory"
 destination_door_tag = "Security"
-direction_spawn = "down"
+direction_spawn = "up"
 
 [node name="Spawn" parent="Doors/Door_Hallway" index="1"]
 position = Vector2(0, -64)

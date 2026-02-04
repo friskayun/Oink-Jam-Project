@@ -97,6 +97,7 @@ position = Vector2(-852, 69)
 [node name="Door_HCF" type="Node2D" parent="Doors"]
 position = Vector2(-659, 338)
 script = ExtResource("5_4frcv")
+ending_id = "3"
 
 [node name="Spawn" type="Marker2D" parent="Doors/Door_HCF"]
 

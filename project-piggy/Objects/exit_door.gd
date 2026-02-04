@@ -1,6 +1,6 @@
 extends ObjectInteract
 
-var ending_id = "bad_ending_exit_storage"
+@export var ending_id: String = "0"
 
 func _on_interact():
 	DialogueManager.play_dialogue("exit_storage_door_event")

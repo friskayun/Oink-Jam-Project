@@ -9,7 +9,6 @@ const MEAT_FACTORY_CUTSCENE = preload("res://Scenes/Cutscenes/meat_factory_cutsc
 	## Level scenes
 const HALLWAY_CORN_FACTORY = preload("res://Scenes/Game Scenes/hallway_corn_factory.tscn")
 const HALLWAY_HAM_FACTORY = preload("res://Scenes/Game Scenes/hallway_ham_factory.tscn")
-const WORK_AREA_ROOM = preload("res://Scenes/Game Scenes/work_area_room.tscn")
 const STORAGE_CLOSET_ROOM = preload("res://Scenes/Game Scenes/storage_closet_room.tscn")
 const LOCKERS_ROOM = preload("res://Scenes/Game Scenes/lockers_room.tscn")
 const SECURITY_ROOM = preload("res://Scenes/Game Scenes/security_room.tscn")
@@ -55,15 +54,14 @@ func get_scene(scene_tag):
 			return INTRO_CUTSCENE
 		"meat_factory_cutscene":
 			return MEAT_FACTORY_CUTSCENE
+		"ending_screen":
+			return ENDING_SCREEN
 		
 		# Level Scenes
-		
 		"hallway_corn_factory":
 			return HALLWAY_CORN_FACTORY
 		"hallway_ham_factory":
 			return HALLWAY_HAM_FACTORY
-		"work_area_room":
-			return WORK_AREA_ROOM
 		"storage_scene":
 			return STORAGE_CLOSET_ROOM
 		"lockers_room":
@@ -78,8 +76,5 @@ func get_scene(scene_tag):
 			return HALLWAY_LAST_CHASE
 		
 		# UI Scenes
-		
-		"ending_screen":
-			return ENDING_SCREEN
 		"main_menu":
 			return MAIN_MENU

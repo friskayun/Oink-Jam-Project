@@ -103,6 +103,12 @@
 		]
 	},
 	
+	"work_area_visit": {
+		"lines": [
+			{"speaker": "Worker", "text": "Well, well, well what do we have here? Another piggie?"},
+			{"speaker": "Penny", "text": "Eep!!!"}
+		]
+	},
 	
 	
 	"hallway_corn_factory_1": {
@@ -142,12 +148,7 @@
 	},
 	
 	
-	"work_area_visit": {
-		"lines": [
-			{"speaker": "Worker", "text": "Well, well, well what do we have here? Another piggie?"},
-			{"speaker": "Penny", "text": "Eep!!!"}
-		]
-	},
+	
 	
 	"work_area_after_visit": {
 		"lines": [

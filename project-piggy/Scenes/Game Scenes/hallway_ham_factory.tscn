@@ -128,7 +128,7 @@ position = Vector2(0, 64)
 unique_name_in_owner = true
 position = Vector2(1151, -779)
 script = ExtResource("7_4frcv")
-destination_level_tag = "work_area_room"
+destination_level_tag = "meat_factory_cutscene"
 destination_door_tag = "Hallway"
 direction_spawn = "up"
 

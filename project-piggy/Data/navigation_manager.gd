@@ -4,6 +4,7 @@ extends Node
 
 	## Cutscenes
 const INTRO_CUTSCENE = preload("res://Scenes/Cutscenes/intro_cutscene.tscn")
+const MEAT_FACTORY_CUTSCENE = preload("res://Scenes/Cutscenes/meat_factory_cutscene.tscn")
 
 	## Level scenes
 const HALLWAY_CORN_FACTORY = preload("res://Scenes/Game Scenes/hallway_corn_factory.tscn")
@@ -52,6 +53,8 @@ func get_scene(scene_tag):
 		# Cutscenes
 		"intro_cutscene":
 			return INTRO_CUTSCENE
+		"meat_factory_cutscene":
+			return MEAT_FACTORY_CUTSCENE
 		
 		# Level Scenes
 		

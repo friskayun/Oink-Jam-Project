@@ -1,11 +1,21 @@
-[gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=3 format=3 uid="uid://c3sitvwmdojgl"]
+[gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=7 format=3 uid="uid://c3sitvwmdojgl"]
 
 [ext_resource type="Script" uid="uid://2a3tu1mode3v" path="res://Data/Resources/VNCharacter.gd" id="1_xqrmd"]
 [ext_resource type="Texture2D" uid="uid://cv10wei64fchg" path="res://Assets/Prototype assets/VNSprites/body1 19.png" id="2_rlqvu"]
+[ext_resource type="Texture2D" uid="uid://dp7aufi57gpbc" path="res://Assets/Characters/POPPY/POPPY_POSE_1.png" id="2_w2lfe"]
+[ext_resource type="Texture2D" uid="uid://baurydmnwdhf1" path="res://Assets/Characters/POPPY/POPPY_POSE_2.png" id="3_6l5uj"]
+[ext_resource type="Texture2D" uid="uid://dfcy14tihh3nv" path="res://Assets/Characters/POPPY/POPPY_POSE_3.png" id="4_6mnkf"]
+[ext_resource type="Texture2D" uid="uid://bp4ojwne0sghy" path="res://Assets/Characters/POPPY/POPPY_POSE_4.png" id="5_8bpbg"]
 
 [resource]
 script = ExtResource("1_xqrmd")
 character_name = "Poppy"
 vn_sprite = ExtResource("2_rlqvu")
 color = Color(1, 1, 1, 1)
+sprites = Dictionary[String, Texture2D]({
+"happy": ExtResource("3_6l5uj"),
+"idle": ExtResource("2_w2lfe"),
+"sad": ExtResource("4_6mnkf"),
+"scared": ExtResource("5_8bpbg")
+})
 metadata/_custom_type_script = "uid://2a3tu1mode3v"

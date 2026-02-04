@@ -1,12 +1,10 @@
 extends Control
 
-const intro_bus_scene = "intro_bus_scene"
-const hallway_corn_factory = "hallway_corn_factory"
-
+const INTRO_CUTSCENE = "intro_cutscene"
 
 func _on_new_button_pressed():
 	GameState._on_new_game()
-	NavigationManager.go_to_level("hallway_corn_factory")
+	NavigationManager.go_to_level(INTRO_CUTSCENE)
 
 
 func _on_load_button_pressed():

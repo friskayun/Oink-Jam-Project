@@ -1,7 +1,7 @@
 extends ObjectInteract
 
 @export var direction_spawn: String = "down"
-@export var ending_id: String = "bad_ending_exit_hallway"
+@export var ending_id: String = "0"
   
 @onready var spawn = $Spawn
 

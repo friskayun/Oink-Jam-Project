@@ -7,6 +7,16 @@ Team members: ***Vanessinha, Grilhado, Camryn, Friska***
 
 ## Dev-Log               
 
+### v0.07 - Visuals - 4 Feb 2026
+---
+Added:
+- Character dialogue sprites
+- Dialogue animations
+- Idle and run animation for Penny, Poppy, Meat Workers and Pigs
+- Base NPC logic for Poppy - following Penny, Meat Workers - chasing, Pigs - running  
+
+<br>
+
 ### v0.06 - Game States, Save and Load - 3 Feb 2026
 ---
 Added:

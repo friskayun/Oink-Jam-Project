@@ -13,42 +13,34 @@
 			{"speaker": "Mr. Horns", "text": "A Corn Canning Factory!"}
 		]
 	},
-	
 	"intro_bus_2": {
 		"lines": [
-			{"text": "..."},
-			{"speaker": "Wendy", "text": "You have GOT to be kidding."},
-			{"speaker": "Ryan", "text": "Boring."},
-			{"speaker": "Ollie", "text": "Dude, a pile of dirt is better than this."}
-		]
-	},
-	
-	"intro_bus_3": {
-		"lines": [
+			{"speaker": "Wendy", "text": "You have GOT to be kidding..."},
+			{"speaker": "Ryan", "text": "Boring..."},
+			{"speaker": "Ollie", "text": "Dude, a pile of dirt is better than this."},
+			{"speaker": "Penny", "text": "..."},
 			{"speaker": "Penny", "text": "I bet we will learn a whole bunch! Thank you Mr. Horns!"},
 			{"speaker": "Wendy", "text": "Of course you would like something so boring."},
 			{"speaker": "Mr. Horns", "text": "Now Penny is right, the trip will be very informational about the work place."},
 			{"speaker": "Mr. Horns", "text": "Plus we will get to see some very cool machinery in action!"},
-			{"speaker": "Ryan", "text": "(Sign)..."},
+			{"speaker": "Ryan", "text": "..."},
 			{"speaker": "Ryan", "text": "I guess robots are cool."},
 			{"speaker": "Mr. Horns", "text": "Yes they are! Plus they are giving us free corn t-shirts."}
 		]
 	},
-	
-	"intro_bus_4": {
+	"intro_bus_3": {
 		"lines": [
+			{"text": "..."},
 			{"text": "FREE! FREE! FREE!"}
 		]
 	},
-	
-	"intro_bus_5": {
+	"intro_bus_4": {
 		"lines": [
 			{"speaker": "Poppy", "text": "I don’t think you are boring."},
 			{"speaker": "Penny", "text": "Haha thanks Poppy, but it's okay if I am boring. I am happy as I am."},
 			{"speaker": "Poppy", "text": "Well, I am excited for the field trip, who knows what is in store!"}
 		]
 	},
-	
 	
 	"intro_factory_1": {
 		"lines": [
@@ -62,13 +54,11 @@
 			{"speaker": "Ollie", "text": "I just ate some corn I found on the ground. Is that okay?"}
 		]
 	},
-	
 	"intro_factory_2": {
 		"lines": [
 			{"speaker": "Tour Guide", "text": "..."}
 		]
 	},
-	
 	"intro_factory_3": {
 		"lines": [
 			{"speaker": "Penny", "text": "Why do you wash the corn Mr. Worker?"},
@@ -80,28 +70,22 @@
 		]
 	},
 	
-	
 	"intro_missing_1": {
 		"lines": [
 			{"speaker": "Tour Guide", "text": "Blah, blah, blah... Uh... Blah, blah..."},
-			{"speaker": "Penny", "text": "I don’t think the tour guide likes giving tours, Poppy."}
-		]
-	},
-	
-	"intro_missing_2": {
-		"lines": [
+			{"speaker": "Penny", "text": "I don’t think the tour guide likes giving tours, Poppy."},
+			{"text": "..."},
 			{"speaker": "Penny", "text": "Poppy?"}
 		]
 	},
-	
-	"intro_missing_3": {
+	"intro_missing_2": {
 		"lines": [
-			{"speaker": "Penny", "text": "I have to go find her! She must have gotten lost on her way to the bathroom or something."},
+			{"speaker": "Penny", "text": "Oh no! I have to go find her!"},
+			{"speaker": "Penny", "text": "She must have gotten lost on her way to the bathroom or something."},
 			{"speaker": "Penny", "text": "She gets scared when she is alone!"}
 		]
 	},
-	
-	"intro_missing_4": {
+	"intro_missing_3": {
 		"lines": [
 			{"speaker": "Mr. Horns", "text": "Penny, please come join the rest of the group!"},
 			{"speaker": "Penny", "text": "Mr. Horns I just need to go to the bathroom. I will be right back!"},
@@ -111,91 +95,10 @@
 	},
 	
 	
-	
-	"hallway_corn_factory_1": {
-		"lines": [
-			{"speaker": "Penny", "text": "I can't find the bathrooms at all.", "sprite_id": "idle_3"},
-			{"speaker": "Penny", "text": "That's the only area I haven't checked, It should be here.", "sprite_id": "idle_2"}
-		]
-	},
-	
-	"hallway_corn_factory_hair_pin": {
-		"lines": [
-			{"speaker": "Penny", "text": "That must be Poppy's favourite hair pin! She must have been here.", "sprite_id": "idle_3"}
-		]
-	},
-	
-	"hallway_corn_factory_event": {
-		"lines": [
-			{"speaker": "Poppy", "text": "HEEELP!!!"},
-			{"speaker": "Penny", "text": "Poppy?", "sprite_id": "sad"},
-			{"speaker": "Penny", "text": "I think it came from the end of the hall! I need to get to her!", "sprite_id": "sad"}
-		]
-	},
-	
-	
-	"hallway_ham_factory_visit": {
-		"lines": [
-			{"speaker": "Penny", "text": "What in the world is this place?", "sprite_id": "idle_2"},
-			{"speaker": "Poppy", "text": "Let me go!!"},
-			{"speaker": "Penny", "text": "Poppy!!", "sprite_id": "scared_1"}
-		]
-	},
-	
-	"hallway_ham_factory_doors_interact": {
-		"lines": [
-			{"speaker": "Penny", "text": "I don't have time for that, I need to get to Poppy!", "sprite_id": "idle_2"}
-		]
-	},
-	
-	
 	"work_area_visit": {
 		"lines": [
 			{"speaker": "Worker", "text": "Well, well, well what do we have here? Another piggie?"},
 			{"speaker": "Penny", "text": "Eep!!!"}
-		]
-	},
-	
-	"work_area_after_visit": {
-		"lines": [
-			{"speaker": "Penny", "text": "There is no way I'm going back there!"}
-		]
-	},
-	
-	
-	
-	"storage_hide_1": {
-		"lines": [
-			{"speaker": "Penny", "text": "I need to hide!"}
-		]
-	},
-	
-	"storage_hide_2": {
-		"lines": [
-			{"speaker": "Worker", "text": "Little piggie? Where did you go..."},
-			{"speaker": "Worker", "text": "Eh, at least we got the other one..."}
-		]
-	},
-	
-	"storage_hide_3": {
-		"lines": [
-			{"speaker": "Penny", "text": "This is horrible! How could they make a canned ham factory under the corn factory?"},
-			{"speaker": "Penny", "text": "I need to get out of here but... but Poppy!"}
-		]
-	},
-	
-	
-	"guard_sleep": {
-		"lines": [
-			{"speaker": "Worker", "text": "ZzZzZz..."},
-			{"speaker": "Penny", "text": "That was quicker than I thought..."}
-		]
-	},
-	
-	"final_chase_start": {
-		"lines": [
-			{"speaker": "Worker", "text": "They are escaping! Catch them!"},
-			{"speaker": "Penny", "text": "RUN!"}
 		]
 	},
 	
@@ -244,6 +147,95 @@
 			{"text": "Ending #5 - A ham can."}
 		]
 	},
+	
+	
+	
+	
+	
+	
+	"hallway_corn_factory_1": {
+		"lines": [
+			{"speaker": "Penny", "text": "I can't find the bathrooms at all.", "sprite_id": "idle_3"},
+			{"speaker": "Penny", "text": "That's the only area I haven't checked, It should be here.", "sprite_id": "idle_2"}
+		]
+	},
+	
+	"hallway_corn_factory_hair_pin": {
+		"lines": [
+			{"speaker": "Penny", "text": "That must be Poppy's favourite hair pin! She must have been here.", "sprite_id": "idle_3"}
+		]
+	},
+	
+	"hallway_corn_factory_event": {
+		"lines": [
+			{"speaker": "Poppy", "text": "HEEELP!!!"},
+			{"speaker": "Penny", "text": "Poppy?", "sprite_id": "sad"},
+			{"speaker": "Penny", "text": "I think it came from the end of the hall! I need to get to her!", "sprite_id": "sad"}
+		]
+	},
+	
+	
+	"hallway_ham_factory_visit": {
+		"lines": [
+			{"speaker": "Penny", "text": "What in the world is this place?", "sprite_id": "idle_2"},
+			{"speaker": "Poppy", "text": "Let me go!!"},
+			{"speaker": "Penny", "text": "Poppy!!", "sprite_id": "scared_1"}
+		]
+	},
+	
+	"hallway_ham_factory_doors_interact": {
+		"lines": [
+			{"speaker": "Penny", "text": "I don't have time for that, I need to get to Poppy!", "sprite_id": "idle_2"}
+		]
+	},
+	
+	
+	
+	"work_area_after_visit": {
+		"lines": [
+			{"speaker": "Penny", "text": "There is no way I'm going back there!"}
+		]
+	},
+	
+	
+	
+	"storage_hide_1": {
+		"lines": [
+			{"speaker": "Penny", "text": "I need to hide!"}
+		]
+	},
+	
+	"storage_hide_2": {
+		"lines": [
+			{"speaker": "Worker", "text": "Little piggie? Where did you go..."},
+			{"speaker": "Worker", "text": "Eh, at least we got the other one..."}
+		]
+	},
+	
+	"storage_hide_3": {
+		"lines": [
+			{"speaker": "Penny", "text": "This is horrible! How could they make a canned ham factory under the corn factory?"},
+			{"speaker": "Penny", "text": "I need to get out of here but... but Poppy!"}
+		]
+	},
+	
+	
+	"guard_sleep": {
+		"lines": [
+			{"speaker": "Worker", "text": "ZzZzZz..."},
+			{"speaker": "Penny", "text": "That was quicker than I thought..."}
+		]
+	},
+	
+	"final_chase_start": {
+		"lines": [
+			{"speaker": "Worker", "text": "They are escaping! Catch them!"},
+			{"speaker": "Penny", "text": "RUN!"}
+		]
+	},
+	
+	
+	
 	
 	
 	

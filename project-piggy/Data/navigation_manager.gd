@@ -2,15 +2,13 @@ extends Node
 
 #region Scene paths
 
-	## Intro Scenes
-const INTRO_BUS_SCENE = preload("res://Scenes/Intro Scenes/intro_bus_scene.tscn")
-const INTRO_FACTORY_SCENE = preload("res://Scenes/Intro Scenes/intro_factory_scene.tscn")
-const INTRO_FINAL_SCENE = preload("res://Scenes/Intro Scenes/intro_final_scene.tscn")
+	## Cutscenes
+const INTRO_CUTSCENE = preload("res://Scenes/Cutscenes/intro_cutscene.tscn")
+const MEAT_FACTORY_CUTSCENE = preload("res://Scenes/Cutscenes/meat_factory_cutscene.tscn")
 
 	## Level scenes
 const HALLWAY_CORN_FACTORY = preload("res://Scenes/Game Scenes/hallway_corn_factory.tscn")
 const HALLWAY_HAM_FACTORY = preload("res://Scenes/Game Scenes/hallway_ham_factory.tscn")
-const WORK_AREA_ROOM = preload("res://Scenes/Game Scenes/work_area_room.tscn")
 const STORAGE_CLOSET_ROOM = preload("res://Scenes/Game Scenes/storage_closet_room.tscn")
 const LOCKERS_ROOM = preload("res://Scenes/Game Scenes/lockers_room.tscn")
 const SECURITY_ROOM = preload("res://Scenes/Game Scenes/security_room.tscn")
@@ -23,9 +21,6 @@ const MAIN_MENU = preload("uid://dvm87cwckmutu")
 const ENDING_SCREEN = preload("uid://c1jg30hae7644")
 
 #endregion 
-
-
-const TEST_SCENE = preload("res://Scenes/test_game_scene.tscn")
 
 signal on_trigger_player_spawn
 
@@ -54,23 +49,19 @@ func change_to_file_scene(file_to_load):
 
 func get_scene(scene_tag):
 	match scene_tag:
-		"intro_bus_scene":
-			return INTRO_BUS_SCENE
-		"intro_factory_scene":
-			return INTRO_FACTORY_SCENE
-		"intro_final_scene":
-			return INTRO_FINAL_SCENE
+		# Cutscenes
+		"intro_cutscene":
+			return INTRO_CUTSCENE
+		"meat_factory_cutscene":
+			return MEAT_FACTORY_CUTSCENE
+		"ending_screen":
+			return ENDING_SCREEN
 		
-		# Delete test scene later 
-		"test_scene":
-			return TEST_SCENE
-		
+		# Level Scenes
 		"hallway_corn_factory":
 			return HALLWAY_CORN_FACTORY
 		"hallway_ham_factory":
 			return HALLWAY_HAM_FACTORY
-		"work_area_room":
-			return WORK_AREA_ROOM
 		"storage_scene":
 			return STORAGE_CLOSET_ROOM
 		"lockers_room":
@@ -84,7 +75,6 @@ func get_scene(scene_tag):
 		"hallway_last_chase":
 			return HALLWAY_LAST_CHASE
 		
-		"ending_screen":
-			return ENDING_SCREEN
+		# UI Scenes
 		"main_menu":
 			return MAIN_MENU

@@ -1,58 +1,70 @@
 [gd_scene load_steps=8 format=3 uid="uid://ufw6qwg3dcs"]
 
 [ext_resource type="Script" uid="uid://d0scimstdvdyw" path="res://UI/Dialogue System/dialogue_system.gd" id="1_jsqu7"]
-[ext_resource type="Texture2D" uid="uid://dbrifa7iy233i" path="res://Assets/CharacterSprites/DialogueSprites/PENNY/PENNY_IDLE_POSE_1.png" id="2_fdqpb"]
-[ext_resource type="Texture2D" uid="uid://dsvtj1liug4d" path="res://Assets/CharacterSprites/DialogueSprites/MEAT WORKERS/MEAT_WORKER_1_FACE_1.png" id="3_guiua"]
+[ext_resource type="Texture2D" uid="uid://b532wx4ic1im5" path="res://Assets/Characters/PENNY/PENNY_SCARED_POSE_1.png" id="2_guiua"]
+[ext_resource type="Texture2D" uid="uid://eo7mxvwflo2w" path="res://Assets/Characters/WENDY/WENDY_POSE_2.png" id="3_guiua"]
 
 [sub_resource type="Animation" id="Animation_1mqkp"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("LeftSprite:position")
+tracks/0/path = NodePath("LeftSprite:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-407, 72)]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("RightSprite:position")
+tracks/1/path = NodePath("LeftSprite:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1057, 70)]
+"values": [Vector2(-96, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("RightSprite:modulate")
+tracks/2/path = NodePath("RightSprite:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0.19607843)]
+"values": [Vector2(757, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("LeftSprite:modulate")
+tracks/3/path = NodePath("RightSprite:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0.19607843)]
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Panel:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(251, 498)]
 }
 
 [sub_resource type="Animation" id="Animation_guiua"]
@@ -61,26 +73,38 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("LeftSprite:position")
+tracks/0/path = NodePath("LeftSprite:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-407, 72), Vector2(-107, 72)]
+"values": [Color(1, 1, 1, 0.3137255), Color(1, 1, 1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("LeftSprite:modulate")
+tracks/1/path = NodePath("LeftSprite:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0.19607843), Color(1, 1, 1, 1)]
+"values": [Vector2(-500, 0), Vector2(-96, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(251, 658), Vector2(251, 498)]
 }
 
 [sub_resource type="Animation" id="Animation_li07r"]
@@ -96,7 +120,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1057, 70), Vector2(757, 70)]
+"values": [Vector2(1257, 0), Vector2(757, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -108,7 +132,19 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0.19607843), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0.3137255), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(251, 658), Vector2(251, 498)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_li07r"]
@@ -129,33 +165,22 @@ script = ExtResource("1_jsqu7")
 
 [node name="LeftSprite" type="TextureRect" parent="."]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0.19607843)
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = -407.0
-offset_top = -576.0
-offset_right = 76.0
-offset_bottom = 404.0
-grow_vertical = 0
-texture = ExtResource("2_fdqpb")
+offset_left = -96.0
+offset_right = 395.0
+offset_bottom = 1082.0
+texture = ExtResource("2_guiua")
 
 [node name="RightSprite" type="TextureRect" parent="."]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0.19607843)
 layout_mode = 1
-anchors_preset = 3
+anchors_preset = 1
 anchor_left = 1.0
-anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -95.0
-offset_top = -578.0
-offset_right = 267.0
-offset_bottom = 330.0
+offset_left = -395.0
+offset_right = 96.00012
+offset_bottom = 1082.0
 grow_horizontal = 0
-grow_vertical = 0
 texture = ExtResource("3_guiua")
 
 [node name="Panel" type="Panel" parent="."]
@@ -169,6 +194,7 @@ anchor_bottom = 1.0
 offset_left = -325.0
 offset_top = -150.0
 offset_right = 325.0
+offset_bottom = 6.1035156e-05
 grow_horizontal = 2
 grow_vertical = 0
 

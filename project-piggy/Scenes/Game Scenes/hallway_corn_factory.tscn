@@ -87,6 +87,7 @@ shape = SubResource("CircleShape2D_7wjmf")
 
 [node name="Door_Spawn" parent="Doors" instance=ExtResource("7_q7e1d")]
 position = Vector2(2612, 272)
+direction_spawn = "left"
 is_active = false
 
 [node name="Spawn" parent="Doors/Door_Spawn" index="1"]
@@ -97,7 +98,7 @@ position = Vector2(192, 65)
 script = ExtResource("5_teodi")
 destination_level_tag = "hallway_ham_factory"
 destination_door_tag = "HCF"
-direction_spawn = "up"
+direction_spawn = "down"
 
 [node name="Spawn" type="Marker2D" parent="Doors/Door_Red"]
 position = Vector2(0, 76)

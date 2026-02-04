@@ -181,6 +181,7 @@ shape = SubResource("RectangleShape2D_quukp")
 [node name="ExitDoor" type="Node2D" parent="Objects"]
 position = Vector2(512, -47)
 script = ExtResource("3_pqada")
+ending_id = "4"
 
 [node name="Interact Area" parent="Objects/ExitDoor" instance=ExtResource("4_e1v2r")]
 position = Vector2(177, -117)
@@ -192,10 +193,12 @@ shape = SubResource("RectangleShape2D_pqada")
 
 [node name="Door_V_Up" parent="Doors" instance=ExtResource("7_138vt")]
 position = Vector2(160, -257)
+direction_spawn = "down"
 is_active = false
 
 [node name="Door_V_Down" parent="Doors" instance=ExtResource("7_138vt")]
 position = Vector2(160, -70)
+direction_spawn = "down"
 is_active = false
 
 [node name="Door_W" parent="Doors" instance=ExtResource("7_138vt")]

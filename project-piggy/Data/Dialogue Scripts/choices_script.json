@@ -1,4 +1,12 @@
 {
+	"end_choice": {
+		"line": "Load last checkpoint?",
+		"choices": [
+			{"text": "Go back"},
+			{"text": "Main Menu"}
+		]
+	},
+	
 	"take_choice": {
 		"line": "Take?",
 		"choices": [
@@ -16,7 +24,7 @@
 	},
 	
 	"exit_door_choice": {
-		"line": "Exit",
+		"line": "Exit?",
 		"choices": [
 			{"text": "Yes"},
 			{"text": "No"}
@@ -24,7 +32,7 @@
 	},
 	
 	"exit_hallay_door_choice": {
-		"line": "Find Mr. Horns",
+		"line": "Find Mr. Horns?",
 		"choices": [
 			{"text": "Yes"},
 			{"text": "No"}
@@ -32,7 +40,7 @@
 	},
 	
 	"vent_storage_choice": {
-		"line": "Use Vent",
+		"line": "Use Vent?",
 		"choices": [
 			{"text": "Yes"},
 			{"text": "No"}
@@ -48,7 +56,7 @@
 	},
 	
 	"shelf_security_choice": {
-		"line": "Read them",
+		"line": "Read?",
 		"choices": [
 			{"text": "Yes"},
 			{"text": "No"}
@@ -56,7 +64,7 @@
 	},
 	
 	"cabinet_security_choice": {
-		"line": "Take a look",
+		"line": "Take a look?",
 		"choices": [
 			{"text": "Yes"},
 			{"text": "No"}

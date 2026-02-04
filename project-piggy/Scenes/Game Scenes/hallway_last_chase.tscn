@@ -38,6 +38,8 @@ position = Vector2(84, 0)
 position = Vector2(3040, 768)
 script = ExtResource("5_cy4xc")
 destination_level_tag = "ending_screen"
+ending_id_1 = "1"
+ending_id_2 = "2"
 
 [node name="Area2D" type="Area2D" parent="Doors/Door_End"]
 collision_layer = 0

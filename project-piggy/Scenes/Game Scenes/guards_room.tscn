@@ -206,10 +206,12 @@ shape = SubResource("RectangleShape2D_nh1wq")
 
 [node name="Door_V_Up" parent="Doors" instance=ExtResource("6_redmu")]
 position = Vector2(224, -95)
+direction_spawn = "down"
 is_active = false
 
 [node name="Door_V_Down" parent="Doors" instance=ExtResource("6_redmu")]
 position = Vector2(224, 129)
+direction_spawn = "down"
 is_active = false
 
 [node name="Door_E" type="Node2D" parent="Doors"]

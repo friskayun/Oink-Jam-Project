@@ -63,7 +63,7 @@ tile_map_data = PackedByteArray("AAAaAAAADwANAAEAAAAaAAEADwANAAEAAAAaAAIADwAEAAE
 tile_set = ExtResource("1_j41bo")
 
 [node name="Player" parent="." instance=ExtResource("2_5yb8y")]
-position = Vector2(1189, -621)
+position = Vector2(-643, 274)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.5, 1.5)
@@ -97,9 +97,11 @@ position = Vector2(-852, 69)
 [node name="Door_HCF" type="Node2D" parent="Doors"]
 position = Vector2(-659, 338)
 script = ExtResource("5_4frcv")
+direction_spawn = "up"
 ending_id = "3"
 
 [node name="Spawn" type="Marker2D" parent="Doors/Door_HCF"]
+position = Vector2(0, -66)
 
 [node name="Interact Area" parent="Doors/Door_HCF" instance=ExtResource("8_wnbm1")]
 
@@ -110,7 +112,7 @@ shape = SubResource("RectangleShape2D_4frcv")
 position = Vector2(1522, 145)
 destination_level_tag = "storage_scene"
 destination_door_tag = "W"
-direction_spawn = "right"
+direction_spawn = "left"
 is_active = false
 
 [node name="Spawn" parent="Doors/Door_Storage" index="1"]
@@ -120,7 +122,7 @@ position = Vector2(-64, 0)
 position = Vector2(-305, 0)
 destination_level_tag = "security_room"
 destination_door_tag = "Hallway"
-direction_spawn = "up"
+direction_spawn = "down"
 
 [node name="Spawn" parent="Doors/Door_Security" index="1"]
 position = Vector2(0, 64)
@@ -131,7 +133,7 @@ position = Vector2(1151, -779)
 script = ExtResource("7_4frcv")
 destination_level_tag = "meat_factory_cutscene"
 destination_door_tag = "Hallway"
-direction_spawn = "up"
+direction_spawn = "down"
 
 [node name="Spawn" type="Marker2D" parent="Doors/Door_WA"]
 position = Vector2(0, 76)

@@ -143,14 +143,17 @@ shape = SubResource("RectangleShape2D_y0lc8")
 
 [node name="Door_V_Up_R" parent="Doors" instance=ExtResource("5_pa5j2")]
 position = Vector2(1087, -59)
+direction_spawn = "down"
 is_active = false
 
 [node name="Door_V_Up_W" parent="Doors" instance=ExtResource("5_pa5j2")]
 position = Vector2(257, -62)
+direction_spawn = "down"
 is_active = false
 
 [node name="Door_V_Down" parent="Doors" instance=ExtResource("5_pa5j2")]
 position = Vector2(1088, 189)
+direction_spawn = "down"
 is_active = false
 
 [node name="Door_S" type="Node2D" parent="Doors"]

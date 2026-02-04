@@ -4,15 +4,16 @@ extends CharacterBody2D
 @onready var idle_sprites = $IdleSprites
 @onready var walk_sprites = $WalkSprites
 
-const SPEED = 290
+@export var y_destination: int = 240
+@export var x_destination: int = 850
 
-@export var player: Player 
+const SPEED = 400
 
 var in_cage = true
 var direction: Vector2 = Vector2.ZERO
 
 func _ready():
-	GameState.connect("start_final_chase", _follow_penny)
+	GameState.connect("start_final_chase", run_away_guard)
 	
 	direction = Vector2.ZERO
 	update_anim_parameters()
@@ -21,16 +22,19 @@ func _process(_delta):
 	if in_cage:
 		return
 	
+	if global_position.distance_to(Vector2(x_destination, global_position.y)) <= 10:
+		queue_free()
+	
 	update_anim_parameters()
-	_follow_penny()
+	run_away_guard()
 
-func _follow_penny():
+func run_away_guard():
 	in_cage = false
 	
-	if global_position.distance_to(player.global_position) > 64:
-		direction = (player.global_position - global_position).normalized()
+	if global_position.distance_to(Vector2(global_position.x, y_destination)) >= 10:
+		direction = (Vector2(global_position.x, y_destination) - global_position).normalized()
 	else:
-		direction = Vector2.ZERO
+		direction = (Vector2(x_destination, global_position.y) - global_position).normalized()
 	
 	velocity = direction * SPEED
 	move_and_slide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://8ycaml5aijon"]
+[gd_scene load_steps=30 format=3 uid="uid://8ycaml5aijon"]
 
 [ext_resource type="Script" uid="uid://b8txmhsyqt84n" path="res://Characters/meat_worker.gd" id="1_h0cy7"]
 [ext_resource type="Texture2D" uid="uid://by667dmo5mrrs" path="res://Assets/Spritesheets/IDLE MEATW.png" id="2_n7ljp"]
@@ -255,49 +255,49 @@ _data = {
 &"walk_up": SubResource("Animation_j341n")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gg5hu"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ru73w"]
 animation = &"idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hy3xm"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_50kyn"]
 animation = &"idle_left"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uvqwb"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mr6fs"]
 animation = &"idle_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ihjqx"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6m5sy"]
 animation = &"idle_up"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_cue0d"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_gg5hu")
+blend_point_0/node = SubResource("AnimationNodeAnimation_ru73w")
 blend_point_0/pos = Vector2(0, 1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_hy3xm")
+blend_point_1/node = SubResource("AnimationNodeAnimation_50kyn")
 blend_point_1/pos = Vector2(-1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_uvqwb")
+blend_point_2/node = SubResource("AnimationNodeAnimation_mr6fs")
 blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_ihjqx")
+blend_point_3/node = SubResource("AnimationNodeAnimation_6m5sy")
 blend_point_3/pos = Vector2(0, -1)
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bg723"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0xmb3"]
 animation = &"walk_down"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ocng6"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wuscp"]
 animation = &"walk_up"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_27pny"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n7lug"]
 animation = &"walk_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dp173"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dlmbg"]
 animation = &"walk_left"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_bqsbk"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_bg723")
+blend_point_0/node = SubResource("AnimationNodeAnimation_0xmb3")
 blend_point_0/pos = Vector2(0, 1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_ocng6")
+blend_point_1/node = SubResource("AnimationNodeAnimation_wuscp")
 blend_point_1/pos = Vector2(0, -1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_27pny")
+blend_point_2/node = SubResource("AnimationNodeAnimation_n7lug")
 blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_dp173")
+blend_point_3/node = SubResource("AnimationNodeAnimation_dlmbg")
 blend_point_3/pos = Vector2(-1, 0)
 blend_mode = 1
 
@@ -315,8 +315,13 @@ states/Walk/position = Vector2(635, 100)
 transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_cue0d"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_bqsbk"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_xf5fp")]
 graph_offset = Vector2(-33, -45)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_lplgj"]
+radius = 15.0
+
 [node name="MeatWorker" type="CharacterBody2D"]
+scale = Vector2(3, 3)
 collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_h0cy7")
 
 [node name="IdleSprites" type="Sprite2D" parent="."]
@@ -344,3 +349,13 @@ tree_root = SubResource("AnimationNodeStateMachine_lplgj")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(-0.005128205, 1)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -2.6666667)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_lplgj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

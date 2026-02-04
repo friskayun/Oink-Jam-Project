@@ -53,7 +53,7 @@ func show_left_character(sprite_id: String = ""):
 	%RightSprite.hide()
 	
 	if last_speaker != curr_speaker.character_name:
-		#anim_player.play("show_left_sprite")
+		anim_player.play("show_left_sprite")
 		pass
 
 func show_right_character(sprite_id: String = ""):
@@ -62,7 +62,7 @@ func show_right_character(sprite_id: String = ""):
 	%RightSprite.show()
 	
 	if last_speaker != curr_speaker.character_name:
-		#anim_player.play("show_right_sprite")
+		anim_player.play("show_right_sprite")
 		pass
 
 func hide_character_sprites():

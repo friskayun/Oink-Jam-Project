@@ -1,7 +1,7 @@
 extends Camera2D
 
+@onready var player := get_node("../Player")
 
 func _physics_process(_delta):
-	if get_node("../Player").motion.x > 15 or get_node("../Player").motion.y > 15 or -get_node("../Player").motion.x > -15 or -get_node("../Player").motion.y > -15:
-		global_position = get_node("../Player").global_position.round()
-		force_update_scroll()
+	global_position = player.global_position.round()
+	force_update_scroll()

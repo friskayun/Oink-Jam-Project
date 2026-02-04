@@ -16,32 +16,28 @@
 	
 	"intro_bus_2": {
 		"lines": [
-			{"text": "..."},
-			{"speaker": "Wendy", "text": "You have GOT to be kidding."},
-			{"speaker": "Ryan", "text": "Boring."},
-			{"speaker": "Ollie", "text": "Dude, a pile of dirt is better than this."}
-		]
-	},
-	
-	"intro_bus_3": {
-		"lines": [
+			{"speaker": "Wendy", "text": "You have GOT to be kidding..."},
+			{"speaker": "Ryan", "text": "Boring..."},
+			{"speaker": "Ollie", "text": "Dude, a pile of dirt is better than this."},
+			{"speaker": "Penny", "text": "..."},
 			{"speaker": "Penny", "text": "I bet we will learn a whole bunch! Thank you Mr. Horns!"},
 			{"speaker": "Wendy", "text": "Of course you would like something so boring."},
 			{"speaker": "Mr. Horns", "text": "Now Penny is right, the trip will be very informational about the work place."},
 			{"speaker": "Mr. Horns", "text": "Plus we will get to see some very cool machinery in action!"},
-			{"speaker": "Ryan", "text": "(Sign)..."},
+			{"speaker": "Ryan", "text": "..."},
 			{"speaker": "Ryan", "text": "I guess robots are cool."},
 			{"speaker": "Mr. Horns", "text": "Yes they are! Plus they are giving us free corn t-shirts."}
 		]
 	},
 	
-	"intro_bus_4": {
+	"intro_bus_3": {
 		"lines": [
+			{"text": "..."},
 			{"text": "FREE! FREE! FREE!"}
 		]
 	},
 	
-	"intro_bus_5": {
+	"intro_bus_4": {
 		"lines": [
 			{"speaker": "Poppy", "text": "I don’t think you are boring."},
 			{"speaker": "Penny", "text": "Haha thanks Poppy, but it's okay if I am boring. I am happy as I am."},
@@ -84,24 +80,21 @@
 	"intro_missing_1": {
 		"lines": [
 			{"speaker": "Tour Guide", "text": "Blah, blah, blah... Uh... Blah, blah..."},
-			{"speaker": "Penny", "text": "I don’t think the tour guide likes giving tours, Poppy."}
+			{"speaker": "Penny", "text": "I don’t think the tour guide likes giving tours, Poppy."},
+			{"text": "..."},
+			{"speaker": "Penny", "text": "Poppy?"}
 		]
 	},
 	
 	"intro_missing_2": {
 		"lines": [
-			{"speaker": "Penny", "text": "Poppy?"}
-		]
-	},
-	
-	"intro_missing_3": {
-		"lines": [
-			{"speaker": "Penny", "text": "I have to go find her! She must have gotten lost on her way to the bathroom or something."},
+			{"speaker": "Penny", "text": "Oh no! I have to go find her!"},
+			{"speaker": "Penny", "text": "She must have gotten lost on her way to the bathroom or something."},
 			{"speaker": "Penny", "text": "She gets scared when she is alone!"}
 		]
 	},
 	
-	"intro_missing_4": {
+	"intro_missing_3": {
 		"lines": [
 			{"speaker": "Mr. Horns", "text": "Penny, please come join the rest of the group!"},
 			{"speaker": "Penny", "text": "Mr. Horns I just need to go to the bathroom. I will be right back!"},

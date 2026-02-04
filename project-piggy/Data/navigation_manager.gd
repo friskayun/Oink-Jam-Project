@@ -2,10 +2,8 @@ extends Node
 
 #region Scene paths
 
-	## Intro Scenes
-const INTRO_BUS_SCENE = preload("res://Scenes/Intro Scenes/intro_bus_scene.tscn")
-const INTRO_FACTORY_SCENE = preload("res://Scenes/Intro Scenes/intro_factory_scene.tscn")
-const INTRO_FINAL_SCENE = preload("res://Scenes/Intro Scenes/intro_final_scene.tscn")
+	## Cutscenes
+const INTRO_CUTSCENE = preload("res://Scenes/Cutscenes/intro_cutscene.tscn")
 
 	## Level scenes
 const HALLWAY_CORN_FACTORY = preload("res://Scenes/Game Scenes/hallway_corn_factory.tscn")
@@ -23,9 +21,6 @@ const MAIN_MENU = preload("uid://dvm87cwckmutu")
 const ENDING_SCREEN = preload("uid://c1jg30hae7644")
 
 #endregion 
-
-
-const TEST_SCENE = preload("res://Scenes/test_game_scene.tscn")
 
 signal on_trigger_player_spawn
 
@@ -54,16 +49,11 @@ func change_to_file_scene(file_to_load):
 
 func get_scene(scene_tag):
 	match scene_tag:
-		"intro_bus_scene":
-			return INTRO_BUS_SCENE
-		"intro_factory_scene":
-			return INTRO_FACTORY_SCENE
-		"intro_final_scene":
-			return INTRO_FINAL_SCENE
+		# Cutscenes
+		"intro_cutscene":
+			return INTRO_CUTSCENE
 		
-		# Delete test scene later 
-		"test_scene":
-			return TEST_SCENE
+		# Level Scenes
 		
 		"hallway_corn_factory":
 			return HALLWAY_CORN_FACTORY
@@ -83,6 +73,8 @@ func get_scene(scene_tag):
 			return VENT_MAZE
 		"hallway_last_chase":
 			return HALLWAY_LAST_CHASE
+		
+		# UI Scenes
 		
 		"ending_screen":
 			return ENDING_SCREEN

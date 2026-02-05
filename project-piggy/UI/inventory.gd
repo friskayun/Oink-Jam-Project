@@ -143,8 +143,8 @@ func use_item():
 	
 	if used:
 		print("   - Item used: " + curr_slot.item.item_name)
-		curr_slot.remove_item()
-		set_item_details()
+		#curr_slot.remove_item()
+		#set_item_details()
 		call_deferred("close_inventory")
 	else:
 		print(" Item cannot be used here")

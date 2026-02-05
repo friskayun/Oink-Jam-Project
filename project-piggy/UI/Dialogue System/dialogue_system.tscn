@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ufw6qwg3dcs"]
+[gd_scene load_steps=9 format=3 uid="uid://ufw6qwg3dcs"]
 
 [ext_resource type="Script" uid="uid://d0scimstdvdyw" path="res://UI/Dialogue System/dialogue_system.gd" id="1_jsqu7"]
 [ext_resource type="Texture2D" uid="uid://b532wx4ic1im5" path="res://Assets/Characters/PENNY/PENNY_SCARED_POSE_1.png" id="2_guiua"]
@@ -64,7 +64,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(251, 658)]
+"values": [Vector2(251, 497.99994)]
 }
 
 [sub_resource type="Animation" id="Animation_guiua"]
@@ -94,18 +94,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(-500, 0), Vector2(-96, 0)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Panel:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(251, 658), Vector2(251, 498)]
-}
 
 [sub_resource type="Animation" id="Animation_li07r"]
 resource_name = "show_right_sprite"
@@ -134,13 +122,17 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0.3137255), Color(1, 1, 1, 1)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Panel:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+
+[sub_resource type="Animation" id="Animation_pk8ma"]
+resource_name = "show_panel"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -151,6 +143,7 @@ tracks/2/keys = {
 _data = {
 &"RESET": SubResource("Animation_1mqkp"),
 &"show_left_sprite": SubResource("Animation_guiua"),
+&"show_panel": SubResource("Animation_pk8ma"),
 &"show_right_sprite": SubResource("Animation_li07r")
 }
 
@@ -194,9 +187,8 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -325.0
-offset_top = 10.0
+offset_top = -150.00006
 offset_right = 325.0
-offset_bottom = 160.00006
 grow_horizontal = 2
 grow_vertical = 0
 

@@ -18,7 +18,7 @@ func _ready():
 	GameState.connect("on_save_data", _save_inventory_items)
 	GameState.connect("on_load_data", _load_inventory_items)
 	
-	close_inventory()
+	hide()
 	%GridContainer.columns = GRID_COLOMNS
 	load_inventory()
 

@@ -7,7 +7,8 @@ bg_color = Color(0, 0, 0, 1)
 bg_color = Color(0.10747979, 0.107479714, 0.10747977, 1)
 
 [node name="ChoiceButton" type="Button"]
-custom_minimum_size = Vector2(192, 32)
+custom_minimum_size = Vector2(192, 64)
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_qmcda")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ydqfx")
 text = "Choice"

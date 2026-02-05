@@ -30,6 +30,10 @@ GameState="*res://Data/game_state.gd"
 
 Player=""
 
+[gui]
+
+theme/custom_font="uid://c0xjvfkyly2mi"
+
 [input]
 
 walk_up={

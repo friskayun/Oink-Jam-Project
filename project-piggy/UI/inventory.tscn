@@ -89,10 +89,16 @@ layout_mode = 2
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Poppy's hair Pin"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ItemText" type="Label" parent="VBoxContainer/HBoxContainer/ItemDescription/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(384, 128)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Prompt here Prompt here Prompt here Prompt here Prompt here Prompt here Prompt here Prompt here Prompt here "
+autowrap_mode = 2

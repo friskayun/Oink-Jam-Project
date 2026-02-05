@@ -1,8 +1,16 @@
 {
-	"end_choice": {
-		"line": "Load last checkpoint?",
+	"end_load_choice": {
+		"line": "Try again?",
 		"choices": [
-			{"text": "Go back"},
+			{"text": "Go Back"},
+			{"text": "Main Menu"}
+		]
+	},
+	
+	"end_new_choice": {
+		"line": "Try again?",
+		"choices": [
+			{"text": "New Game"},
 			{"text": "Main Menu"}
 		]
 	},

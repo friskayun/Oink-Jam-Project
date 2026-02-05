@@ -5,6 +5,8 @@ const OUTSIDE_FACTORY = preload("res://Assets/Backgrounds/Outside factory.PNG")
 const CORNFACTORY = preload("res://Assets/Backgrounds/Cornfactory.PNG")
 const MEAT_FACTORY = preload("res://Assets/Backgrounds/Meat factory.PNG")
 
+const INTRO_CUTSCENE = "intro_cutscene"
+
 @onready var rect = $TextureRect
 
 var ending_id: int = 0
@@ -38,13 +40,24 @@ func cutscene():
 func next():
 	Global.end_cutscene()
 	if ending_id != 1:
-		DialogueManager.play_choice("end_choice", _on_choice)
+		if DataManager.load_game_data():
+			DialogueManager.play_choice("end_load_choice", _on_choice_load)
+		else:
+			DialogueManager.play_choice("end_new_choice", _on_choice_new)
 	else:
 		NavigationManager.go_to_level("main_menu")
 
-func _on_choice(index: int):
+func _on_choice_load(index: int):
 	match index:
 		0:
 			GameState._load_checkpoint()
+		1:
+			NavigationManager.go_to_level("main_menu")
+
+func _on_choice_new(index: int):
+	match index:
+		0:
+			GameState._on_new_game()
+			NavigationManager.go_to_level(INTRO_CUTSCENE)
 		1:
 			NavigationManager.go_to_level("main_menu")

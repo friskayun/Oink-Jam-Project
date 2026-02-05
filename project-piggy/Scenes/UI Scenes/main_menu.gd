@@ -2,6 +2,9 @@ extends Control
 
 const INTRO_CUTSCENE = "intro_cutscene"
 
+func _ready():
+	%LoadButton.disabled = false if DataManager.load_game_data() else true
+
 func _on_new_button_pressed():
 	GameState._on_new_game()
 	NavigationManager.go_to_level(INTRO_CUTSCENE)

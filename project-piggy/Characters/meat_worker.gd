@@ -13,7 +13,7 @@ signal _on_stop_moving
 var is_chasing = false
 var direction: Vector2 = Vector2.ZERO
 
-var is_moving = false
+var is_moving_cutscene = false
 var destination: Vector2 = Vector2.ZERO
 
 func _ready():
@@ -21,7 +21,12 @@ func _ready():
 	update_anim_parameters()
 
 func _process(_delta):
-	if is_moving:
+	if Global.freeze_input and !is_moving_cutscene:
+		direction = Vector2.ZERO
+		update_anim_parameters()
+		return
+	
+	if is_moving_cutscene:
 		move_anim_manual()
 	
 	if !is_chasing:
@@ -37,7 +42,6 @@ func stop_chase():
 	is_chasing = false
 
 func _follow_player():
-	
 	if global_position.distance_to(player.global_position) >= 32:
 		direction = (player.global_position - global_position).normalized()
 	else:
@@ -79,11 +83,11 @@ func move_anim_manual():
 	move_and_slide()
 
 func _start_moving(x: int):
-	is_moving = true
+	is_moving_cutscene = true
 	destination = Vector2(x, global_position.y)
 
 func _stop_moving():
-	is_moving = false
+	is_moving_cutscene = false
 	direction = Vector2.ZERO
 	destination = Vector2.ZERO
 	_on_stop_moving.emit()

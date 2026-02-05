@@ -25,7 +25,7 @@ func _input(event):
 	if event.is_action_pressed("inventory"):
 		if is_active:
 			close_inventory()
-		elif !is_active and !Global.freeze_input:
+		elif !is_active and !Global.freeze_input and !Global.in_cutscene:
 			open_inventory()
 	
 	if !is_active:

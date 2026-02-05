@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://ux02m37odly6"]
+[gd_scene load_steps=16 format=4 uid="uid://ux02m37odly6"]
 
 [ext_resource type="TileSet" uid="uid://dlnvr10pdnuph" path="res://Prefabs/prototyle_tiles.tres" id="1_e1v2r"]
 [ext_resource type="Script" uid="uid://cwx0sm8hnp5hy" path="res://Scenes/Game Scenes/storage_closet_room.gd" id="1_stp30"]
@@ -6,108 +6,11 @@
 [ext_resource type="Script" uid="uid://bsnxynp51xb3b" path="res://Objects/exit_door.gd" id="3_pqada"]
 [ext_resource type="Script" uid="uid://bvi4i8r6hti5r" path="res://Objects/vent_storage.gd" id="4_388j7"]
 [ext_resource type="PackedScene" uid="uid://c57wlulahu4d4" path="res://Prefabs/interact_area.tscn" id="4_e1v2r"]
-[ext_resource type="PackedScene" uid="uid://dht13kpyrwf4i" path="res://Characters/npc.tscn" id="4_quukp"]
+[ext_resource type="PackedScene" uid="uid://8ycaml5aijon" path="res://Characters/meat_worker.tscn" id="5_qydam"]
 [ext_resource type="Script" uid="uid://d3glksly0qido" path="res://Objects/locker_storage.gd" id="6_stp30"]
 [ext_resource type="PackedScene" uid="uid://dgfvddl5tq6wl" path="res://Prefabs/door.tscn" id="7_138vt"]
 [ext_resource type="PackedScene" uid="uid://b87g3llg7qgy2" path="res://Prefabs/level_ui_elements.tscn" id="7_ieo8l"]
 [ext_resource type="Script" uid="uid://b4kkfttoxc8nk" path="res://Objects/table_storage.gd" id="8_3ixbo"]
-
-[sub_resource type="Animation" id="Animation_quukp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-160, 32)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("NPC/NPC:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-287, 31)]
-}
-
-[sub_resource type="Animation" id="Animation_stp30"]
-resource_name = "penny_hide"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-160, 32), Vector2(-36, 32), Vector2(-36, -109), Vector2(-130, -109)]
-}
-
-[sub_resource type="Animation" id="Animation_3ixbo"]
-resource_name = "worker_walk_in"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("NPC/NPC:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-287, 31), Vector2(162, 31)]
-}
-
-[sub_resource type="Animation" id="Animation_qydam"]
-resource_name = "worker_walk_out"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("NPC/NPC:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(162, 31), Vector2(-308, 31)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("NPC/NPC")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["left"],
-"method": &"look"
-}]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ixbo"]
-_data = {
-&"RESET": SubResource("Animation_quukp"),
-&"penny_hide": SubResource("Animation_stp30"),
-&"worker_walk_in": SubResource("Animation_3ixbo"),
-&"worker_walk_out": SubResource("Animation_qydam")
-}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ieo8l"]
 size = Vector2(95, 201)
@@ -130,21 +33,16 @@ tile_map_data = PackedByteArray("AAAAAAAADwAEAAEAAAAAAAEADwAEAAEAAAAAAAIADwAEAAE
 tile_set = ExtResource("1_e1v2r")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(345, 35)
+position = Vector2(76, 35)
 
 [node name="Player" parent="." instance=ExtResource("2_a2m15")]
 position = Vector2(-160, 32)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_3ixbo")
-}
-
 [node name="NPC" type="Node" parent="."]
 
-[node name="NPC" parent="NPC" instance=ExtResource("4_quukp")]
-position = Vector2(-287, 31)
-color = Color(0.76644194, 0.43000734, 0.43126166, 1)
+[node name="MeatWorker" parent="NPC" instance=ExtResource("5_qydam")]
+position = Vector2(-331, 35)
+rotation = 0.0018761704
 
 [node name="Objects" type="Node" parent="."]
 

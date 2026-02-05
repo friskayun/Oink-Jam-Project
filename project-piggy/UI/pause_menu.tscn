@@ -32,13 +32,19 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LoadButton" parent="VBoxContainer" instance=ExtResource("2_03fe5")]
+[node name="ContinueButton" parent="VBoxContainer" instance=ExtResource("2_03fe5")]
 layout_mode = 2
-text = "Load Last"
+text = "Continue"
 
 [node name="NewButton" parent="VBoxContainer" instance=ExtResource("2_03fe5")]
+visible = false
 layout_mode = 2
 text = "New game"
+
+[node name="LoadButton" parent="VBoxContainer" instance=ExtResource("2_03fe5")]
+visible = false
+layout_mode = 2
+text = "Load Last"
 
 [node name="OptionsButton" parent="VBoxContainer" instance=ExtResource("2_03fe5")]
 layout_mode = 2
@@ -48,7 +54,8 @@ text = "Options"
 layout_mode = 2
 text = "Exit"
 
-[connection signal="pressed" from="VBoxContainer/LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/NewButton" to="." method="_on_new_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LoadButton" to="." method="_on_load_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit_button" to="." method="_on_exit_button_pressed"]

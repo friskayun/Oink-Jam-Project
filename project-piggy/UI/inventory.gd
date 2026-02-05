@@ -15,7 +15,6 @@ var curr_slot: InventorySlot
 
 func _ready():
 	Global.on_pick_up_item.connect(add_item_to_inventory)
-	GameState.connect("on_save_data", _save_inventory_items)
 	GameState.connect("on_load_data", _load_inventory_items)
 	
 	hide()
@@ -43,9 +42,6 @@ func _input(event):
 	
 	if event.is_action_pressed("interact"):
 		use_item()
-
-func _save_inventory_items():
-	pass
 
 func _load_inventory_items():
 	var items = GameState.taken_items

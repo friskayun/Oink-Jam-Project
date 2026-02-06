@@ -1,7 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
-const SPEED = 300
+const WALK_SPEED = 300
+const RUN_SPEED = 400
 
 @onready var anim_tree = $AnimationTree
 @onready var idle_sprites = $IdleSprites
@@ -9,6 +10,7 @@ const SPEED = 300
 
 signal _on_stop_moving
 
+var speed = 3000
 var direction : Vector2 = Vector2.ZERO
 
 var is_moving_cutscene: bool = false
@@ -28,9 +30,14 @@ func _physics_process(_delta):
 	else:
 		direction = Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down").normalized()
 	
+	if Input.is_action_pressed("run"):
+		speed = RUN_SPEED
+	else: 
+		speed = WALK_SPEED
+	
 	update_anim_parameters()
 	
-	velocity = direction * SPEED
+	velocity = direction * speed
 	move_and_slide()
 
 
@@ -64,14 +71,19 @@ func update_anim_parameters():
 		anim_tree.get("parameters/playback").travel("Idle")
 		idle_sprites.visible = true
 		walk_sprites.visible = false
-	else:
+	elif speed == WALK_SPEED:
 		anim_tree.get("parameters/playback").travel("Walk")
+		idle_sprites.visible = false
+		walk_sprites.visible = true
+	else:
+		anim_tree.get("parameters/playback").travel("Run")
 		idle_sprites.visible = false
 		walk_sprites.visible = true
 	
 	if direction != Vector2.ZERO:
 		anim_tree["parameters/Idle/blend_position"] = direction
 		anim_tree["parameters/Walk/blend_position"] = direction
+		anim_tree["parameters/Run/blend_position"] = direction
 
 
 #region Storage cutscene

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://0tji66tdy6tv" path="res://Assets/icon.svg" id="2_28fry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2la8y"]
-size = Vector2(68, 297.5)
+size = Vector2(314, 309.875)
 
 [node name="OilArea" type="Area2D"]
 collision_layer = 0
@@ -12,7 +12,7 @@ collision_mask = 4
 script = ExtResource("1_ciu04")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5234375, 2.2890625)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_28fry")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -67,7 +67,8 @@ func _guard_put_to_sleep_cutscene():
 	await get_tree().create_timer(3).timeout
 	
 	if meat_worker:
-		meat_worker.guard_sleep_anim()
+		meat_worker.guard_fall_asleep_anim()
+		await get_tree().create_timer(1).timeout
 	
 	DialogueManager.play_dialogue("guard_sleep")
 	await DialogueManager.dialogue_ended

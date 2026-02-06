@@ -11,6 +11,8 @@ func _ready():
 	if GameState.curr_state < GameState.STATE.EXPLORE_CAGE_ROOM:
 		GameState.curr_state = GameState.STATE.EXPLORE_CAGE_ROOM
 	
+	if GameState.curr_state >= GameState.STATE.UNLOCK_CAGES:
+		meat_worker.guard_sleep_anim()
 	
 	if !GameState.is_fire_alarm_on() and !GameState.is_guard_in_room() and !Global.is_player_in_vent:
 		if GameState.curr_checkpoint < GameState.CHECKPOINT.FOUND_POPPY_ROOM:

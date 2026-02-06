@@ -5,6 +5,7 @@ class_name MeatWorker
 @onready var anim_tree = $AnimationTree
 @onready var idle_sprites = $IdleSprites
 @onready var walk_sprites = $WalkSprites
+@onready var sleep_sprite = $SleepSprite
 @onready var timer = $Timer
 
 const CHASE_SPEED = 350
@@ -32,7 +33,7 @@ func _ready():
 	update_anim_parameters()
 
 func _process(_delta):
-	if Global.freeze_input and !is_moving_cutscene:
+	if Global.freeze_input and !is_moving_cutscene and !is_guard:
 		direction = Vector2.ZERO
 		update_anim_parameters()
 		return
@@ -66,10 +67,12 @@ func update_anim_parameters():
 		anim_tree.get("parameters/playback").travel("Idle")
 		idle_sprites.visible = true
 		walk_sprites.visible = false
+		sleep_sprite.visible = false
 	else:
 		anim_tree.get("parameters/playback").travel("Walk")
 		idle_sprites.visible = false
 		walk_sprites.visible = true
+		sleep_sprite.visible = false
 	
 	if direction != Vector2.ZERO:
 		anim_tree["parameters/Idle/blend_position"] = direction
@@ -123,11 +126,17 @@ func guard_up():
 	update_anim_parameters()
 	direction = Vector2.ZERO
 
-func guard_sleep_anim():
-	await get_tree().create_timer(2).timeout
-	anim_tree.get("parameters/playback").travel("Sleep")
-	idle_sprites.visible = true
+func guard_fall_asleep_anim():
+	#await get_tree().create_timer(2).timeout
+	anim_tree.get("parameters/playback").travel("fall_asleep")
+	idle_sprites.visible = false
 	walk_sprites.visible = false
-	await anim_player.animation_finished
+	sleep_sprite.visible = true
+
+func guard_sleep_anim():
+	anim_tree.get("parameters/playback").travel("sleep")
+	idle_sprites.visible = false
+	walk_sprites.visible = false
+	sleep_sprite.visible = true
 
 #endregion

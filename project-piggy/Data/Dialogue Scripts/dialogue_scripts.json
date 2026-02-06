@@ -1,31 +1,31 @@
 {
 	"intro_bus_1": {
 		"lines": [
-			{"speaker": "Mr. Horns", "text": "Okay class settle down, settle down! We have almost arrived at our field trip destination!"},
-			{"speaker": "Mr. Horns", "text": "Can anyone guess where we are going?"},
-			{"speaker": "Wendy", "text": "An amusement park!"},
-			{"speaker": "Mr. Horns", "text": "Nope, more informational!"},
-			{"speaker": "Ryan", "text": "The Science Museum!"},
-			{"speaker": "Mr. Horns", "text": "More hands on!"},
-			{"speaker": "Ollie", "text": "Pile of dirt?!"},
-			{"speaker": "Mr. Horns", "text": "No Ollie, we have that at school! Fine I will tell you…"},
-			{"speaker": "Mr. Horns", "text": "We are going to..."},
-			{"speaker": "Mr. Horns", "text": "A Corn Canning Factory!"}
+			{"speaker": "Mr. Horns", "text": "Okay class, settle down, settle down! We have almost arrived at our field trip destination!", "sprite_id": "idle"},
+			{"speaker": "Mr. Horns", "text": "Can anyone guess where we are going?", "sprite_id": "idle"}, 
+			{"speaker": "Wendy", "text": "An amusement park!", "sprite_id": "happy"},
+			{"speaker": "Mr. Horns", "text": "Nope, more informational!", "sprite_id": "happy"},
+			{"speaker": "Ryan", "text": "The Science Museum!",  "sprite_id": "idle" },
+			{"speaker": "Mr. Horns", "text": "More hands on!", "sprite_id": "happy" },
+			{"speaker": "Ollie", "text": "Pile of dirt?!", "sprite_id": "idle" },
+			{"speaker": "Mr. Horns", "text": "No Ollie, we have that at school! Fine I will tell you…", "sprite_id": "sweat_smile"},
+			{"speaker": "Mr. Horns", "text": "We are going to...", "sprite_id": "happy"},
+			{"speaker": "Mr. Horns", "text": "A Corn Canning Factory!", "sprite_id": "happy"}
 		]
 	},
 	"intro_bus_2": {
 		"lines": [
-			{"speaker": "Wendy", "text": "You have GOT to be kidding..."},
-			{"speaker": "Ryan", "text": "Boring..."},
-			{"speaker": "Ollie", "text": "Dude, a pile of dirt is better than this."},
-			{"speaker": "Penny", "text": "..."},
-			{"speaker": "Penny", "text": "I bet we will learn a whole bunch! Thank you Mr. Horns!"},
-			{"speaker": "Wendy", "text": "Of course you would like something so boring."},
-			{"speaker": "Mr. Horns", "text": "Now Penny is right, the trip will be very informational about the work place."},
-			{"speaker": "Mr. Horns", "text": "Plus we will get to see some very cool machinery in action!"},
-			{"speaker": "Ryan", "text": "..."},
-			{"speaker": "Ryan", "text": "I guess robots are cool."},
-			{"speaker": "Mr. Horns", "text": "Yes they are! Plus they are giving us free corn t-shirts."}
+			{"speaker": "Wendy", "text": "You have GOT to be kidding...", "sprite_id": "doubt"},
+			{"speaker": "Ryan", "text": "Boring...",  "sprite_id": "idle",  "sprite_id": "annoyed"},
+			{"speaker": "Ollie", "text": "Dude, a pile of dirt is better than this.",  "sprite_id": "annoyed"},
+			{"speaker": "Penny", "text": "...", "sprite_id": "idle_2"},
+			{"speaker": "Penny", "text": "I bet we will learn a whole bunch! Thank you Mr. Horns!", "sprite_id": "happy_2"},
+			{"speaker": "Wendy", "text": "Of course you would like something so boring.", "sprite_id": "doubt"},
+			{"speaker": "Mr. Horns", "text": "Now Penny is right, the trip will be very informational about the work place.", "sprite_id": "annoyed"},
+			{"speaker": "Mr. Horns", "text": "Plus we will get to see some very cool machinery in action!", "sprite_id": "happy"},
+			{"speaker": "Ryan", "text": "...",  "sprite_id": "idle"},
+			{"speaker": "Ryan", "text": "I guess robots are cool.",  "sprite_id": "sad"},
+			{"speaker": "Mr. Horns", "text": "Yes they are! Plus they are giving us free corn t-shirts.", "sprite_id": "happy"}
 		]
 	},
 	"intro_bus_3": {
@@ -36,100 +36,100 @@
 	},
 	"intro_bus_4": {
 		"lines": [
-			{"speaker": "Poppy", "text": "I don’t think you are boring."},
-			{"speaker": "Penny", "text": "Haha thanks Poppy, but it's okay if I am boring. I am happy as I am."},
-			{"speaker": "Poppy", "text": "Well, I am excited for the field trip, who knows what is in store!"}
+			{"speaker": "Poppy", "text": "I don’t think you are boring.", "sprite_id": "idle"},
+			{"speaker": "Penny", "text": "Haha thanks Poppy, but it's okay if I am boring. I am happy as I am.", "sprite_id": "happy_1"},
+			{"speaker": "Poppy", "text": "Well, I am excited for the field trip, who knows what is in store!", "sprite_id": "happy"}
 		]
 	},
 	
 	"intro_factory_1": {
 		"lines": [
-			{"speaker": "Tour Guide", "text": "Uh hi, welcome to Corny Cans Canned Corn."},
-			{"speaker": "Tour Guide", "text": "We will be giving you a tour of the facility."},
-			{"speaker": "Tour Guide", "text": "Yeah, Uh... follow me."},
-			{"speaker": "Mr. Horns", "text": "Alright kids, listen carefully to the worker, he is going to teach you all about how a factory works! Bestow your knowledge to us!"},
-			{"speaker": "Tour Guide", "text": "Uh... right... I guess we can start where we wash the corn."},
-			{"speaker": "Wendy", "text": "Well, When do we get the free shirts?"},
-			{"speaker": "Ryan", "text": "Where are the robots with guns on them?"},
-			{"speaker": "Ollie", "text": "I just ate some corn I found on the ground. Is that okay?"}
+			{"speaker": "Tour Guide", "text": "Uh hi, welcome to Corny Cans Canned Corn.",  "sprite_id": "idle_2"},
+			{"speaker": "Tour Guide", "text": "We will be giving you a tour of the facility.",  "sprite_id": "idle_1"},
+			{"speaker": "Tour Guide", "text": "Yeah, Uh... follow me.",  "sprite_id": "idle_1"},
+			{"speaker": "Mr. Horns", "text": "Alright kids, listen carefully to the worker, he is going to teach you all about how a factory works! Bestow your knowledge to us!", "sprite_id": "happy"},
+			{"speaker": "Tour Guide", "text": "Uh... right... I guess we can start where we wash the corn.",  "sprite_id": "idle_2"},
+			{"speaker": "Wendy", "text": "Well, When do we get the free shirts?", "sprite_id": "idle"},
+			{"speaker": "Ryan", "text": "Where are the robots with guns on them?",  "sprite_id": "annoyed"},
+			{"speaker": "Ollie", "text": "I just ate some corn I found on the ground. Is that okay?",  "sprite_id": "worried"}
 		]
 	},
 	"intro_factory_2": {
 		"lines": [
-			{"speaker": "Tour Guide", "text": "..."}
+			{"speaker": "Tour Guide", "text": "...",  "sprite_id": "idle_1"}
 		]
 	},
 	"intro_factory_3": {
 		"lines": [
-			{"speaker": "Penny", "text": "Why do you wash the corn Mr. Worker?"},
-			{"speaker": "Mr. Horns", "text": "Great question Penny!"},
-			{"speaker": "Tour Guide", "text": "Because it’s dirty if not."},
-			{"speaker": "Penny", "text": "..."},
-			{"speaker": "Penny", "text": "Oh."},
-			{"speaker": "Tour Guide", "text": "Follow me so we can look at things… I guess."}
+			{"speaker": "Penny", "text": "Why do you wash the corn Mr. Worker?", "sprite_id": "idle_1"},
+			{"speaker": "Mr. Horns", "text": "Great question Penny!", "sprite_id": "happy"},
+			{"speaker": "Tour Guide", "text": "Because it’s dirty if not.",  "sprite_id": "idle_2"},
+			{"speaker": "Penny", "text": "...", "sprite_id": "idle_2"},
+			{"speaker": "Penny", "text": "Oh.", "sprite_id": "doubt"},
+			{"speaker": "Tour Guide", "text": "Follow me so we can look at things… I guess.",  "sprite_id": "idle_1"}
 		]
 	},
 	
 	"intro_missing_1": {
 		"lines": [
-			{"speaker": "Tour Guide", "text": "Blah, blah, blah... Uh... Blah, blah..."},
-			{"speaker": "Penny", "text": "I don’t think the tour guide likes giving tours, Poppy."},
+			{"speaker": "Tour Guide", "text": "Blah, blah, blah... Uh... Blah, blah...",  "sprite_id": "idle_2"},
+			{"speaker": "Penny", "text": "I don’t think the tour guide likes giving tours, Poppy.", "sprite_id": "doubt"},
 			{"text": "..."},
-			{"speaker": "Penny", "text": "Poppy?"}
+			{"speaker": "Penny", "text": "Poppy?", "sprite_id": "doubt"}
 		]
 	},
 	"intro_missing_2": {
 		"lines": [
-			{"speaker": "Penny", "text": "Oh no! I have to go find her!"},
-			{"speaker": "Penny", "text": "She must have gotten lost on her way to the bathroom or something."},
-			{"speaker": "Penny", "text": "She gets scared when she is alone!"}
+			{"speaker": "Penny", "text": "Oh no! I have to go find her!", "sprite_id": "scared_1"},
+			{"speaker": "Penny", "text": "She must have gotten lost on her way to the bathroom or something.", "sprite_id": "sad"},
+			{"speaker": "Penny", "text": "She gets scared when she is alone!", "sprite_id": "sad"}
 		]
 	},
 	"intro_missing_3": {
 		"lines": [
-			{"speaker": "Mr. Horns", "text": "Penny, please come join the rest of the group!"},
-			{"speaker": "Penny", "text": "Mr. Horns I just need to go to the bathroom. I will be right back!"},
-			{"speaker": "Mr. Horns", "text": "Okay, just come right back after!"},
-			{"speaker": "Penny", "text": "Yes, sir!"},
+			{"speaker": "Mr. Horns", "text": "Penny, please come join the rest of the group!", "sprite_id": "idle"},
+			{"speaker": "Penny", "text": "Mr. Horns, I just need to go to the bathroom. I will be right back!", "sprite_id": "idle_3"},
+			{"speaker": "Mr. Horns", "text": "Okay, just come right back after!", "sprite_id": "idle"},
+			{"speaker": "Penny", "text": "Yes, sir!", "sprite_id": "determined"}
 		]
 	},
 	
 	
 	"work_area_visit": {
 		"lines": [
-			{"speaker": "Worker", "text": "Well, well, well what do we have here? Another piggie?"},
-			{"speaker": "Penny", "text": "Eep!!!"}
+			{"speaker": "Worker", "text": "Well, well, well what do we have here? Another piggie?", "sprite_id": "idle_1_1"},
+			{"speaker": "Penny", "text": "Eep!!!", "sprite_id": "scared_2"}
 		]
 	},
 	
 	
 	"good_ending_explosion": {
 		"lines": [
-			{"speaker": "Mr. Horns", "text": "Alright, is everyone ready to get back on the bus? Wait... where is Poppy and Penny?"},
-			{"speaker": "Penny", "text": "Right here sir, sorry! We had to go grab our free shirts."},
-			{"speaker": "Wendy", "text": "OWhere were you guys the whole time?"},
-			{"speaker": "Penny", "text": "Just doing something boring."},
+			{"speaker": "Mr. Horns", "text": "Alright, is everyone ready to get back on the bus? Wait... where is Poppy and Penny?", "sprite_id": "sweat_smile"},
+			{"speaker": "Penny", "text": "Right here sir, sorry! We had to go grab our free shirts.", "sprite_id": "happy_2"},
+			{"speaker": "Wendy", "text": "Where were you guys the whole time?", "sprite_id": "idle"},
+			{"speaker": "Penny", "text": "Just doing something boring.", "sprite_id": "happy_1"},
 			{"text": "..."},
-			{"text": "Explosion occures..."},
-			{"speaker": "Penny", "text": "..."},
-			{"speaker": "Poppy", "text": "So cool."},
-			{"text": "Ending #1 - Idk, I ran out of ideas."}
+			{"text": "(Explosion occures...)"},
+			{"speaker": "Penny", "text": "...", "sprite_id": "idle"},
+			{"speaker": "Poppy", "text": "So cool.", "sprite_id": "happy"},
+			{"text": "Ending #1 - Factory on fire and a rainbow in the background."}
 		]
 	},
 	"good_ending_default": {
 		"lines": [
-			{"speaker": "Mr. Horns", "text": "Alright, is everyone ready to get back on the bus? Wait... where is Poppy and Penny?"},
-			{"speaker": "Penny", "text": "Right here sir, sorry! We had to go grab our free shirts."},
-			{"speaker": "Wendy", "text": "OWhere were you guys the whole time?"},
-			{"speaker": "Penny", "text": "Just doing something boring."},
+			{"speaker": "Mr. Horns", "text": "Alright, is everyone ready to get back on the bus? Wait... where is Poppy and Penny?", "sprite_id": "sweat_smile"},
+			{"speaker": "Penny", "text": "Right here sir, sorry! We had to go grab our free shirts.", "sprite_id": "happy_2"},
+			{"speaker": "Wendy", "text": "Where were you guys the whole time?", "sprite_id": "idle"},
+			{"speaker": "Penny", "text": "Just doing something boring.", "sprite_id": "happy_1"},
 			{"text": "Ending #2 - The hero."}
 		]
 	},
 	"bad_ending_exit_hallway": {
 		"lines": [
-			{"text": "Penny got her way to the group, and tried telling Mr. Horns."},
-			{"text": "Instead of helping, he got really annoyed and scouted Penny, telling her it's not time for jokes."},
-			{"text": "Apperantly someone told from the staff told him Poppy was not feeling well and headed home."},
+			{"text": "Penny found her way to the group, and tried telling Mr. Horns about what she saw."},
+			{"text": "Instead of helping, he got really annoyed and scolded Penny, telling her it's not time for jokes."},
+			{"text": "Apperantly someone from the staff told him Poppy was not feeling well and headed home."},
 			{"text": "But Penny hasn't seen her again after that."},
 			{"text": "Ending #3 - A Runaway pig."}
 		]
@@ -168,7 +168,7 @@
 	
 	"hallway_corn_factory_event": {
 		"lines": [
-			{"speaker": "Poppy", "text": "HEEELP!!!"},
+			{"speaker": "Poppy", "text": "HEEELP!!!", "sprite_id": "scared"},
 			{"speaker": "Penny", "text": "Poppy?", "sprite_id": "sad"},
 			{"speaker": "Penny", "text": "I think it came from the end of the hall! I need to get to her!", "sprite_id": "sad"}
 		]
@@ -178,7 +178,7 @@
 	"hallway_ham_factory_visit": {
 		"lines": [
 			{"speaker": "Penny", "text": "What in the world is this place?", "sprite_id": "idle_2"},
-			{"speaker": "Poppy", "text": "Let me go!!"},
+			{"speaker": "Poppy", "text": "Let me go!!", "sprite_id": "scared"},
 			{"speaker": "Penny", "text": "Poppy!!", "sprite_id": "scared_1"}
 		]
 	},
@@ -193,7 +193,7 @@
 	
 	"work_area_after_visit": {
 		"lines": [
-			{"speaker": "Penny", "text": "There is no way I'm going back there!"}
+			{"speaker": "Penny", "text": "There is no way I'm going back there!", "sprite_id": "doubt"}
 		]
 	},
 	
@@ -201,36 +201,38 @@
 	
 	"storage_hide_1": {
 		"lines": [
-			{"speaker": "Penny", "text": "I need to hide!"}
+			{"speaker": "Penny", "text": "I need to hide!", "sprite_id": "scared_2"}
 		]
 	},
 	
 	"storage_hide_2": {
 		"lines": [
-			{"speaker": "Worker", "text": "Little piggie? Where did you go..."},
-			{"speaker": "Worker", "text": "Eh, at least we got the other one..."}
+			{"speaker": "Worker", "text": "Little piggie? Where did you go...", "sprite_id": "idle_2_1"},
+			{"speaker": "Worker", "text": "Eh, at least we got the other one...", "sprite_id": "idle_1_1"}
 		]
 	},
 	
 	"storage_hide_3": {
 		"lines": [
-			{"speaker": "Penny", "text": "This is horrible! How could they make a canned ham factory under the corn factory?"},
-			{"speaker": "Penny", "text": "I need to get out of here but... but Poppy!"}
+			{"speaker": "Penny", "text": "This is horrible!", "sprite_id": "scared_1"},
+			{"speaker": "Penny", "text": "How could they make a canned ham factory under the corn factory?", "sprite_id": "scared_1"},
+			{"speaker": "Penny", "text": "I need to get out of here but...", "sprite_id": "scared_1"},
+			{"speaker": "Penny", "text": "but Poppy!", "sprite_id": "scared_2"}
 		]
 	},
 	
 	
 	"guard_sleep": {
 		"lines": [
-			{"speaker": "Worker", "text": "ZzZzZz..."},
-			{"speaker": "Penny", "text": "That was quicker than I thought..."}
+			{"speaker": "Worker", "text": "ZzZzZz...", "sprite_id": "idle_2_1"},
+			{"speaker": "Penny", "text": "That was quicker than I thought...", "sprite_id": "idle_3"}
 		]
 	},
 	
 	"final_chase_start": {
 		"lines": [
-			{"speaker": "Worker", "text": "They are escaping! Catch them!"},
-			{"speaker": "Penny", "text": "RUN!"}
+			{"speaker": "Worker", "text": "They are escaping! Catch them!", "sprite_id": "idle_2_2"},
+			{"speaker": "Penny", "text": "RUN!", "sprite_id": "scared_2"}
 		]
 	},
 	
@@ -241,26 +243,26 @@
 	
 	"exit_storage_door_event": {
 		"lines":[
-			{"speaker": "Penny", "text": "An exit door! I can escape and save my life!"}
+			{"speaker": "Penny", "text": "An exit door! I can escape and save my life!", "sprite_id": "sacred_1"}
 		]
 	},
 	"exit_storage_door_no": {
 		"lines":[
-			{"speaker": "Penny", "text": "No! I need to be brave… I need to save my friend and then we can escape together!"},
-			{"speaker": "Penny", "text": "But first, I need to figure out where she is."}
+			{"speaker": "Penny", "text": "No! I need to be brave… I need to save my friend and then we can escape together!", "sprite_id": "determined"},
+			{"speaker": "Penny", "text": "But first, I need to figure out where she is.", "sprite_id": "idle_3"}
 		]
 	},
 	
 	"exit_hallway_door_event": {
 		"lines": [
 			{"speaker": "Penny", "text": "I might go back to the group and tell them everything.", "sprite_id": "idle_2"},
-			{"speaker": "Penny", "text": "Mr. Horns can help Poppy.", "sprite_id": "scared_1"}
+			{"speaker": "Penny", "text": "Mr. Horns can help Poppy.", "sprite_id": "sad"}
 		]
 	},
 	"exit_hallway_door_no": {
 		"lines":[
-			{"speaker": "Penny", "text": "There's no time for this. Besides, no one will believe me."},
-			{"speaker": "Penny", "text": "I gotta be strong and save her myself!"}
+			{"speaker": "Penny", "text": "There's no time for this. Besides, no one will believe me.", "sprite_id": "sad"},
+			{"speaker": "Penny", "text": "I gotta be strong and save her myself!", "sprite_id": "determined"}
 		]
 	},
 	
@@ -289,7 +291,7 @@
 	
 	"guard_locker_unlock_item": {
 		"lines": [
-			{"text": "There's also a blister of what seems to be sleeping pills."},
+			{"text": "There's also a bottle of what seems to be sleeping pills."},
 			{"speaker": "Penny", "text": "Those can come handy!", "sprite_id": "idle_1"}
 		]
 	},
@@ -302,41 +304,40 @@
 		]
 	},
 	
-	
 	"vent_storage_locked": {
 		"lines":[
-			{"speaker": "Penny", "text": "It's sealed pretty good. I need something to open it."}
+			{"speaker": "Penny", "text": "It's sealed pretty good. I need something to open it.", "sprite_id": "idle_3"}
 		]
 	},
 	
 	"vent_storage_below_state": {
 		"lines":[
-			{"speaker": "Penny", "text": "I'm not sure where to go yet. Maybe I can look around first."}
+			{"speaker": "Penny", "text": "I'm not sure where to go yet. Maybe I can look around first.", "sprite_id": "doubt"}
 		]
 	},
 	
 	
 	"vent_security_down": {
 		"lines":[
-			{"speaker": "Penny", "text": "It's too high, I need to find another vent."}
+			{"speaker": "Penny", "text": "It's too high, I need to find another vent.", "sprite_id": "idle_3"}
 		]
 	},
 	
 	"vent_security_up": {
 		"lines":[
-			{"speaker": "Penny", "text": "It's too high, I can't go down!"}
+			{"speaker": "Penny", "text": "It's too high, I can't go down!", "sprite_id": "sad"}
 		]
 	},
 	
 	"vent_guard_up": {
 		"lines":[
-			{"speaker": "Penny", "text": "I can't go down now, the guard is there."}
+			{"speaker": "Penny", "text": "I can't go down now, the guard is there.", "sprite_id": "scared_1"}
 		]
 	},
 	
 	"vent_guard_sleep_down": {
 		"lines":[
-			{"speaker": "Penny", "text": "I need to save them before he wakes up."}
+			{"speaker": "Penny", "text": "I need to save them before he wakes up.", "sprite_id": "determined"}
 		]
 	},
 	
@@ -382,32 +383,33 @@
 	"cabinet_security": {
 		"lines":[
 			{"text": "Cabinet full with random stuff."},
-			{"text": "There's map."}
+			{"text": "There's a map."}
 		]
 	},
 	
 	"guard_cage_poppy_interaction": {
 		"lines":[
-			{"speaker": "Penny", "text": "Poppy!"},
-			{"speaker": "Poppy", "text": "Penny! What are you doing here, they will catch you!"},
-			{"speaker": "Penny", "text": "I'm here to save you! How do I open that thing..."},
-			{"speaker": "Poppy", "text": "You can't... the guard uses the numpad on the wall."},
-			{"speaker": "Poppy", "text": "You can only use it with the access card, but it's on his neck."},
-			{"speaker": "Poppy", "text": "Anyways, you have to leave, the guard may comeback any second!"},
-			{"speaker": "Penny", "text": "I'll find a way to save you! I'll be back soon."}
+			{"speaker": "Penny", "text": "Poppy!", "sprite_id": "happy_2"},
+			{"speaker": "Poppy", "text": "Penny! What are you doing here, they will catch you!", "sprite_id": "scared"},
+			{"speaker": "Penny", "text": "I'm here to save you! Now, how do I open that thing...", "sprite_id": "determined"},
+			{"speaker": "Poppy", "text": "You can't... the guard uses the num-pad on the wall.", "sprite_id": "sad"},
+			{"speaker": "Poppy", "text": "You can only use it with the access card, but it's on his neck.", "sprite_id": "sad"},
+			{"speaker": "Poppy", "text": "Anyways, you have to leave, the guard may comeback any second!", "sprite_id": "scared"},
+			{"speaker": "Penny", "text": "I'll find a way to save you! I'll be back soon.", "sprite_id": "determined"}
 		]
 	},
+
 	
 	"guard_cage_poppy_idle": {
 		"lines":[
-			{"speaker": "Poppy", "text": "Please be careful, Penny! You got this!"}
+			{"speaker": "Poppy", "text": "Please be careful, Penny! You got this!", "sprite_id": "idle"}
 		]
 	},
 	
 	"guard_cage_1": {
 		"lines":[
-			{"speaker": "Penny", "text": "Poor guys, they're barely staying alive."},
-			{"speaker": "Penny", "text": "Who knows for how long they've been stuck here..."}
+			{"speaker": "Penny", "text": "Poor guys, they're barely staying alive.", "sprite_id": "sad"},
+			{"speaker": "Penny", "text": "Who knows for how long they've been stuck here...", "sprite_id": "scared_1"}
 		]
 	},
 	
@@ -435,6 +437,8 @@
 		]
 	},
 	
+	
+	
 	"guard_badge_idle": {
 		"lines":[
 			{"text": "There's a badge with the name: \"Smith, Sean\"."}
@@ -458,8 +462,8 @@
 	"guard_cabinet_oil": {
 		"lines":[
 			{"text": "There's a bottle of oil in there."},
-			{"speaker": "Penny", "text": "Hmm..."},
-			{"speaker": "Penny", "text": "Maybe this could help if someone is chasing us, give them a great fall and slow them down."}
+			{"speaker": "Penny", "text": "Hmm...", "sprite_id": "doubt"},
+			{"speaker": "Penny", "text": "Maybe this could help if someone is chasing us, give them a great fall and slow them down.", "sprite_id": "determined"}
 		]
 	},
 	
@@ -467,58 +471,58 @@
 	"guard_water_idle": {
 		"lines":[
 			{"text": "A cup of water. It says \"Be your best everyday\"."},
-			{"speaker": "Penny", "text": "Yeah, how about you save me some work then..."}
+			{"speaker": "Penny", "text": "Yeah, sure...", "sprite_id": "doubt"}
 		]
 	},
 	
 	"guard_water_active": {
 		"lines":[
-			{"speaker": "Penny", "text": "Everything is set! Now I just need to hide and wait..."}
+			{"speaker": "Penny", "text": "Everything is set! Now I just need to hide and wait...", "sprite_id": "determined"}
 		]
 	},
 	
 	"guard_dynamite_idle": {
 		"lines":[
-			{"speaker": "Penny", "text": "Why is there dynamite in a meat factory?"},
-			{"speaker": "Poppy", "text": "It’s probably a plot device!"},
-			{"speaker": "Penny", "text": "Oh, that makes sense!"},
+			{"speaker": "Penny", "text": "Why is there dynamite in a meat factory?", "sprite_id": "doubt"},
+			{"speaker": "Poppy", "text": "It’s probably a plot device!", "sprite_id": "happy"},
+			{"speaker": "Penny", "text": "Oh, that makes sense!", "sprite_id": "happy_1"},
 		]
 	},
 	
 	"guard_dynamite_use_early": {
 		"lines":[
-			{"speaker": "Penny", "text": "It may be too early to do that, it's better to first free everyone."}
+			{"speaker": "Penny", "text": "It may be too early to do that, it's better to  free everyone first.", "sprite_id": "doubt"}
 		]
 	},
 	
 	"guard_dynamite_active": {
 		"lines":[
-			{"speaker": "Penny", "text": "WE HAVE TO RUN, BEFORE WE EXPLODE!!!"}
+			{"speaker": "Penny", "text": "WE HAVE TO RUN, BEFORE WE EXPLODE!", "sprite_id": "scared_2"}
 		]
 	},
 	
 	"guard_card_idle": {
 		"lines":[
-			{"speaker": "Penny", "text": "I better not bother him anymore, I don't wanna risk to wake him up"}
+			{"speaker": "Penny", "text": "I better not bother him anymore, I don't wanna risk to wake him up", "sprite_id": "idle_3"}
 		]
 	},
 	
 	"guard_card_item": {
 		"lines":[
-			{"speaker": "Penny", "text": "Here we go..."}
+			{"speaker": "Penny", "text": "Here we go...", "sprite_id": "scared_1"}
 		]
 	},
 	
 	"guard_numbpad_idle": {
 		"lines":[
 			{"text": "A small control device."},
-			{"speaker": "Penny", "text": "I need to get the access card from the guard for that."}
+			{"speaker": "Penny", "text": "I need to get the access card from the guard for that.", "sprite_id": "idle_2"}
 		]
 	},
 	
 	"guard_numbpad_active": {
 		"lines":[
-			{"speaker": "Penny", "text": "Here we go friends! Run!"}
+			{"speaker": "Penny", "text": "Here we go friends! Run!", "sprite_id": "determined"}
 		]
 	}
 }

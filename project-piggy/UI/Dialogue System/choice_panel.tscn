@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://duit8flwqn84i"]
+[gd_scene load_steps=5 format=3 uid="uid://duit8flwqn84i"]
 
 [ext_resource type="Script" uid="uid://b3q56c2kfr4nk" path="res://UI/Dialogue System/choice_panel.gd" id="1_ydqfx"]
+[ext_resource type="Texture2D" uid="uid://bx22qmcuwteky" path="res://Assets/UI/CHOICE_PANEL.png" id="2_o4i8k"]
 [ext_resource type="PackedScene" uid="uid://b10rkn60a0bq" path="res://UI/Dialogue System/choice_button.tscn" id="2_qmcda"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shtt6"]
+texture = ExtResource("2_o4i8k")
 
 [node name="ChoicePanel" type="Control"]
 layout_mode = 3
@@ -13,7 +17,7 @@ grow_vertical = 2
 script = ExtResource("1_ydqfx")
 
 [node name="Panel" type="Panel" parent="."]
-custom_minimum_size = Vector2(224, 240)
+custom_minimum_size = Vector2(360, 240)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -26,28 +30,24 @@ offset_right = 112.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_shtt6")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -112.0
-offset_top = -100.0
-offset_right = 112.0
-offset_bottom = 100.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 16
+theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
+theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 16
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true

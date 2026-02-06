@@ -10,7 +10,7 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("skip_dialogue"):
-		if Global.in_cutscene:
+		if Global.in_cutscene or Global.dialogue_run:
 			return
 		
 		@warning_ignore("standalone_ternary")

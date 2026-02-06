@@ -132,6 +132,7 @@ func start_dialogue(id: String):
 	dialogue_id = id
 	curr_dialogue = DialogueManager.dialogues[dialogue_id]
 	active_dialogue = true
+	Global.dialogue_run = true
 	Global.freeze_input = true
 	show_next_line()
 	show_dialogue_panel()
@@ -155,6 +156,7 @@ func show_next_line():
 
 func end_dialogue():
 	active_dialogue = false
+	Global.dialogue_run = false
 	Global.freeze_input = false
 	hide_dialogue_panel()
 	DialogueManager.emit_signal("dialogue_ended")

@@ -68,3 +68,7 @@ func load_game_data():
 		
 		return load_data
 	return null
+
+func delete_save_data():
+	if FileAccess.file_exists(GAME_DATA_PATH):
+		DirAccess.remove_absolute(GAME_DATA_PATH)

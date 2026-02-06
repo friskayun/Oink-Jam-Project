@@ -115,6 +115,8 @@ func are_pills_planted():
 #endregion
 
 func _on_new_game():
+	DataManager.delete_save_data()
+	
 	NavigationManager.spawn_door_tag = null
 	
 	curr_state = STATE.LOOK_FOR_POPPY

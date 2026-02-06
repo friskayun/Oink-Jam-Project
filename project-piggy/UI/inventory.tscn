@@ -1,7 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsll4mno0gwbb"]
+[gd_scene load_steps=9 format=3 uid="uid://bsll4mno0gwbb"]
 
 [ext_resource type="Script" uid="uid://doewg8b0a52ql" path="res://UI/inventory.gd" id="1_23vm5"]
 [ext_resource type="PackedScene" uid="uid://bj03w27nhu4h6" path="res://UI/inventory_slot.tscn" id="2_7g8kd"]
+[ext_resource type="Texture2D" uid="uid://dwqnvuv1ni6id" path="res://Assets/UI/INVENTORY_PANEL_SLOTS.png" id="2_fxcd2"]
+[ext_resource type="Texture2D" uid="uid://bpq0avjafipyi" path="res://Assets/UI/INVENTORY_OBJECTIVE_PANEL.png" id="2_k0eh3"]
+[ext_resource type="Texture2D" uid="uid://0fcdk00wilu" path="res://Assets/UI/INVENTORY_ITEM_DESCRIPTION.png" id="4_0knst"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0knst"]
+texture = ExtResource("2_fxcd2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k0eh3"]
+texture = ExtResource("4_0knst")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qf0od"]
+texture = ExtResource("2_k0eh3")
 
 [node name="Inventory" type="Control"]
 process_mode = 3
@@ -12,6 +24,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_23vm5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.38039216, 0.18431373, 0.24313726, 0.7294118)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -29,46 +50,59 @@ grow_vertical = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Panel" type="Panel" parent="VBoxContainer"]
-custom_minimum_size = Vector2(100, 128)
-layout_mode = 2
-
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
+[node name="Inventory Panel" type="Panel" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(554, 288)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0knst")
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer/Inventory Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -130.0
+offset_right = 262.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
 columns = 4
 
-[node name="InventorySlot" parent="VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_7g8kd")]
+[node name="InventorySlot" parent="VBoxContainer/HBoxContainer/Inventory Panel/GridContainer" instance=ExtResource("2_7g8kd")]
 layout_mode = 2
 
-[node name="InventorySlot2" parent="VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_7g8kd")]
+[node name="InventorySlot2" parent="VBoxContainer/HBoxContainer/Inventory Panel/GridContainer" instance=ExtResource("2_7g8kd")]
 layout_mode = 2
 
-[node name="InventorySlot3" parent="VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_7g8kd")]
+[node name="InventorySlot3" parent="VBoxContainer/HBoxContainer/Inventory Panel/GridContainer" instance=ExtResource("2_7g8kd")]
 layout_mode = 2
 
-[node name="InventorySlot4" parent="VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_7g8kd")]
+[node name="InventorySlot4" parent="VBoxContainer/HBoxContainer/Inventory Panel/GridContainer" instance=ExtResource("2_7g8kd")]
 layout_mode = 2
 
-[node name="InventorySlot5" parent="VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_7g8kd")]
+[node name="InventorySlot5" parent="VBoxContainer/HBoxContainer/Inventory Panel/GridContainer" instance=ExtResource("2_7g8kd")]
 layout_mode = 2
 
-[node name="InventorySlot6" parent="VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_7g8kd")]
+[node name="InventorySlot6" parent="VBoxContainer/HBoxContainer/Inventory Panel/GridContainer" instance=ExtResource("2_7g8kd")]
 layout_mode = 2
 
-[node name="InventorySlot7" parent="VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_7g8kd")]
+[node name="InventorySlot7" parent="VBoxContainer/HBoxContainer/Inventory Panel/GridContainer" instance=ExtResource("2_7g8kd")]
 layout_mode = 2
 
-[node name="InventorySlot8" parent="VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_7g8kd")]
+[node name="InventorySlot8" parent="VBoxContainer/HBoxContainer/Inventory Panel/GridContainer" instance=ExtResource("2_7g8kd")]
 layout_mode = 2
 
 [node name="ItemDescription" type="Panel" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_k0eh3")
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/ItemDescription"]
 layout_mode = 1
@@ -77,10 +111,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ItemDescription/MarginContainer"]
 layout_mode = 2
@@ -89,10 +123,21 @@ layout_mode = 2
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Poppy's hair Pin"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ItemText" type="Label" parent="VBoxContainer/HBoxContainer/ItemDescription/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(384, 128)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Prompt here Prompt here Prompt here Prompt here Prompt here Prompt here Prompt here Prompt here Prompt here "
+autowrap_mode = 2
+
+[node name="ObjectivePanel" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 192)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qf0od")

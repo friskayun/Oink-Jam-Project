@@ -1,22 +1,21 @@
 extends Panel
 class_name InventorySlot
 
-var selected_color = "d7aacb69"
-var idle_color = "271222b2"
+const INVENTORY_SLOT_SELECTED = preload("uid://deuhnrdwec8vl")
+const INVENTORY_SLOT_UNSELECTED = preload("uid://txwfnm5e8l6i")
+
 
 var item: Item = null
 
 func _ready():
-	pass
-
+	unselect()
 
 
 func select():
-	%SlotTexture.modulate = selected_color
+	%SlotTexture.texture = INVENTORY_SLOT_SELECTED
 
 func unselect():
-	%SlotTexture.modulate = idle_color
-
+	%SlotTexture.texture = INVENTORY_SLOT_UNSELECTED
 
 
 func has_item():

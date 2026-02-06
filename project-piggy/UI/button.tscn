@@ -1,5 +1,10 @@
-[gd_scene load_steps=0 format=3 uid="uid://diyntio4siccb"]
+[gd_scene load_steps=2 format=3 uid="uid://diyntio4siccb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sd24d"]
+bg_color = Color(0.24845093, 0.100564755, 0.13358516, 1)
 
 [node name="Button" type="Button"]
 custom_minimum_size = Vector2(224, 64)
-focus_mode = 0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxFlat_sd24d")
+text = "Text Here"

@@ -3,6 +3,8 @@ extends ObjectInteract
 @export var vent_index: int = 6
 @export var scene_id: String = "guards_room"
 
+@export var meat_worker: MeatWorker
+
 func _ready():
 	super()
 	
@@ -62,8 +64,12 @@ func _vent_choice_up(index: int):
 func _guard_put_to_sleep_cutscene():
 	Global.play_cutscene()
 	
+	await get_tree().create_timer(3).timeout
 	
-	await get_tree().create_timer(1.5).timeout
+	if meat_worker:
+		meat_worker.guard_fall_asleep_anim()
+		await get_tree().create_timer(1).timeout
+	
 	DialogueManager.play_dialogue("guard_sleep")
 	await DialogueManager.dialogue_ended
 	NavigationManager.go_to_level(scene_id, "V_Down")

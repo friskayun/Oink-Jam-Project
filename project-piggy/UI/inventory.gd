@@ -135,6 +135,11 @@ func use_item():
 	if curr_slot.has_item() == null:
 		return
 	
+	if curr_slot.item.item_name == "Bottle of oil" and GameState.curr_scene_id == "hallway_last_chase" and !Global.used_oil_item:
+		Global.use_oil_item()
+		call_deferred("close_inventory")
+		return
+	
 	var used = InteractionManager.use_item_on_active_area(curr_slot.has_item())
 	
 	if used:

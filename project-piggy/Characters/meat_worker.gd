@@ -1,15 +1,19 @@
 extends CharacterBody2D
+class_name MeatWorker
 
 @onready var anim_tree = $AnimationTree
 @onready var idle_sprites = $IdleSprites
 @onready var walk_sprites = $WalkSprites
+@onready var timer = $Timer
 
-const SPEED = 350
+const CHASE_SPEED = 350
+const SLOW_SPEED = 150
 
 @export var player: Player 
 
 signal _on_stop_moving
 
+var speed = 350
 var is_chasing = false
 var direction: Vector2 = Vector2.ZERO
 
@@ -17,6 +21,9 @@ var is_moving_cutscene = false
 var destination: Vector2 = Vector2.ZERO
 
 func _ready():
+	timer.wait_time = 4
+	timer.autostart = true
+	speed = CHASE_SPEED
 	direction = Vector2.ZERO
 	update_anim_parameters()
 
@@ -47,7 +54,7 @@ func _follow_player():
 	else:
 		direction = Vector2.ZERO
 	
-	velocity = direction * SPEED
+	velocity = direction * speed
 	move_and_slide()
 
 func update_anim_parameters():
@@ -79,7 +86,7 @@ func move_anim_manual():
 		_stop_moving()
 	
 	update_anim_parameters()
-	velocity = direction * 300
+	velocity = direction * speed
 	move_and_slide()
 
 func _start_moving(x: int):
@@ -91,5 +98,16 @@ func _stop_moving():
 	direction = Vector2.ZERO
 	destination = Vector2.ZERO
 	_on_stop_moving.emit()
+
+#endregion
+
+#region Last Chase
+
+func _slow_down():
+	speed = SLOW_SPEED
+	timer.start()
+	
+func _on_timer_timeout():
+	speed = CHASE_SPEED
 
 #endregion

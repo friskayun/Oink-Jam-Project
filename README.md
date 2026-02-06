@@ -7,6 +7,15 @@ Team members: ***Vanessinha, Grilhado, Camryn, Friska***
 
 ## Dev-Log               
 
+### v0.08 - Bugfixes and Visuals - 6 Feb 2026
+---
+- Added pause menu
+- Imported and setup font and UI sprites
+- Bugfixes
+- Gameplay and animation improvements
+
+<br>
+
 ### v0.07 - Visuals - 4 Feb 2026
 ---
 Added:

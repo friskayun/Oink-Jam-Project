@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://c57wlulahu4d4" path="res://Prefabs/interact_area.tscn" id="3_h2t11"]
 [ext_resource type="Script" uid="uid://ddwadqoxproiq" path="res://Objects/guard/vent_guard.gd" id="4_6uuj2"]
 [ext_resource type="PackedScene" uid="uid://cojrbw6f6mfb6" path="res://Characters/poppy.tscn" id="4_7tbde"]
+[ext_resource type="PackedScene" uid="uid://8ycaml5aijon" path="res://Characters/meat_worker.tscn" id="4_vf1dr"]
 [ext_resource type="Script" uid="uid://c3fl80fuvcyxx" path="res://Objects/guard/guard.gd" id="5_csxwp"]
-[ext_resource type="Texture2D" uid="uid://0tji66tdy6tv" path="res://Assets/icon.svg" id="6_7tbde"]
 [ext_resource type="PackedScene" uid="uid://dgfvddl5tq6wl" path="res://Prefabs/door.tscn" id="6_redmu"]
 [ext_resource type="Script" uid="uid://iofsvjjs6qt6" path="res://Objects/guard/cage.gd" id="7_55jq6"]
 [ext_resource type="Script" uid="uid://cckwyqgmqm2hu" path="res://Objects/guard/poppy_cage.gd" id="7_eav2x"]
@@ -20,8 +20,7 @@
 [ext_resource type="Script" uid="uid://cxov0ih41yon" path="res://Objects/guard/oil_bottle.gd" id="12_csxwp"]
 [ext_resource type="Script" uid="uid://dc1fhx1pnk3vu" path="res://Objects/guard/numbpad.gd" id="13_u21er"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_csxwp"]
-size = Vector2(73, 44)
+[sub_resource type="CircleShape2D" id="CircleShape2D_vf1dr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_55jq6"]
 size = Vector2(124, 236)
@@ -67,22 +66,21 @@ position = Vector2(-70, 229)
 
 [node name="NPCs" type="Node" parent="."]
 
+[node name="MeatWorker" parent="NPCs" instance=ExtResource("4_vf1dr")]
+position = Vector2(-79, 115.00001)
+is_guard = true
+
+[node name="AccessCard" type="Node2D" parent="NPCs/MeatWorker"]
+script = ExtResource("5_csxwp")
+
+[node name="Interact Area" parent="NPCs/MeatWorker/AccessCard" instance=ExtResource("3_h2t11")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/MeatWorker/AccessCard/Interact Area"]
+shape = SubResource("CircleShape2D_vf1dr")
+
 [node name="Poppy" parent="NPCs" node_paths=PackedStringArray("player") instance=ExtResource("4_7tbde")]
 position = Vector2(-161, 404.00003)
 player = NodePath("../../Player")
-
-[node name="Guard" type="Node2D" parent="NPCs"]
-position = Vector2(-79, 109)
-script = ExtResource("5_csxwp")
-
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Guard"]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("6_7tbde")
-
-[node name="Interact Area" parent="NPCs/Guard" instance=ExtResource("3_h2t11")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Guard/Interact Area"]
-shape = SubResource("RectangleShape2D_csxwp")
 
 [node name="Pigs" type="Node2D" parent="NPCs"]
 
@@ -118,9 +116,10 @@ position = Vector2(-1, 398)
 
 [node name="Objects" type="Node" parent="."]
 
-[node name="Vent" type="Node2D" parent="Objects"]
+[node name="Vent" type="Node2D" parent="Objects" node_paths=PackedStringArray("meat_worker")]
 position = Vector2(222, 0)
 script = ExtResource("4_6uuj2")
+meat_worker = NodePath("../../NPCs/MeatWorker")
 
 [node name="Interact Area" parent="Objects/Vent" instance=ExtResource("3_h2t11")]
 

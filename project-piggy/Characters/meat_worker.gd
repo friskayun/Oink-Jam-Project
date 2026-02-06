@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name MeatWorker
 
+@onready var anim_player = $AnimationPlayer
 @onready var anim_tree = $AnimationTree
 @onready var idle_sprites = $IdleSprites
 @onready var walk_sprites = $WalkSprites
@@ -10,6 +11,7 @@ const CHASE_SPEED = 350
 const SLOW_SPEED = 150
 
 @export var player: Player 
+@export var is_guard = false
 
 signal _on_stop_moving
 
@@ -21,7 +23,9 @@ var is_moving_cutscene = false
 var destination: Vector2 = Vector2.ZERO
 
 func _ready():
-	timer.wait_time = 4
+	if is_guard:
+		guard_up()
+	timer.wait_time = 3
 	timer.autostart = true
 	speed = CHASE_SPEED
 	direction = Vector2.ZERO
@@ -72,7 +76,7 @@ func update_anim_parameters():
 		anim_tree["parameters/Walk/blend_position"] = direction
 
 func _on_area_2d_body_entered(body):
-	if body is Player:
+	if body is Player and !is_guard:
 		stop_chase()
 		NavigationManager.go_to_level("ending_screen", "5")
 
@@ -109,5 +113,21 @@ func _slow_down():
 	
 func _on_timer_timeout():
 	speed = CHASE_SPEED
+
+#endregion
+
+#region Guard Room
+
+func guard_up():
+	direction = Vector2.DOWN
+	update_anim_parameters()
+	direction = Vector2.ZERO
+
+func guard_sleep_anim():
+	await get_tree().create_timer(2).timeout
+	anim_tree.get("parameters/playback").travel("Sleep")
+	idle_sprites.visible = true
+	walk_sprites.visible = false
+	await anim_player.animation_finished
 
 #endregion

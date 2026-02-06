@@ -1,9 +1,12 @@
 extends Level
 
+@onready var meat_worker = $NPCs/MeatWorker
+
 func _ready():
 	super()
 	
-	$NPCs/Guard.visible = GameState.is_guard_in_room()
+	if !GameState.is_guard_in_room():
+		meat_worker.queue_free()
 	
 	if GameState.curr_state < GameState.STATE.EXPLORE_CAGE_ROOM:
 		GameState.curr_state = GameState.STATE.EXPLORE_CAGE_ROOM

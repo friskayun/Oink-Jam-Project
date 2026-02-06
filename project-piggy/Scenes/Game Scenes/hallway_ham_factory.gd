@@ -38,7 +38,7 @@ func first_visit():
 	Global.end_cutscene()
 
 func spawn_meat_worker():
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(4).timeout
 	var npc = MEAT_WORKER.instantiate()
 	npc.player = $Player
 	npc.global_position = $Doors/Door_WA/Spawn.global_position

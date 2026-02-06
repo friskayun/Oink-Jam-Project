@@ -1,13 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://b10rkn60a0bq"]
+[gd_scene load_steps=5 format=3 uid="uid://b10rkn60a0bq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmcda"]
-bg_color = Color(0, 0, 0, 1)
+[ext_resource type="Texture2D" uid="uid://t2mjd7fgwkjn" path="res://Assets/UI/CHOICE_BUTTON_UNSELECTED.png" id="1_pmtc4"]
+[ext_resource type="Texture2D" uid="uid://5nfvogo2v0gg" path="res://Assets/UI/CHOICE_BUTTON_SELECTED.png.png" id="2_bq17s"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydqfx"]
-bg_color = Color(0.10747979, 0.107479714, 0.10747977, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kdw2x"]
+texture = ExtResource("1_pmtc4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t6uef"]
+texture = ExtResource("2_bq17s")
 
 [node name="ChoiceButton" type="Button"]
-custom_minimum_size = Vector2(192, 32)
-theme_override_styles/normal = SubResource("StyleBoxFlat_qmcda")
-theme_override_styles/focus = SubResource("StyleBoxFlat_ydqfx")
+custom_minimum_size = Vector2(192, 64)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_kdw2x")
+theme_override_styles/focus = SubResource("StyleBoxTexture_t6uef")
 text = "Choice"

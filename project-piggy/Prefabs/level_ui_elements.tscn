@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b87g3llg7qgy2"]
+[gd_scene load_steps=6 format=3 uid="uid://b87g3llg7qgy2"]
 
 [ext_resource type="PackedScene" uid="uid://ufw6qwg3dcs" path="res://UI/Dialogue System/dialogue_system.tscn" id="1_vqr1p"]
 [ext_resource type="PackedScene" uid="uid://duit8flwqn84i" path="res://UI/Dialogue System/choice_panel.tscn" id="2_ae8vo"]
 [ext_resource type="PackedScene" uid="uid://bsll4mno0gwbb" path="res://UI/inventory.tscn" id="3_ae8vo"]
 [ext_resource type="PackedScene" uid="uid://bxggv54pjtnsi" path="res://UI/checkpoint.tscn" id="4_w16ry"]
+[ext_resource type="PackedScene" uid="uid://g4wcq2idtn4q" path="res://UI/pause_menu.tscn" id="5_q8mhi"]
 
 [node name="Level UI Elements" type="CanvasLayer"]
 
@@ -14,3 +15,5 @@
 [node name="Inventory" parent="." instance=ExtResource("3_ae8vo")]
 
 [node name="Checkpoint" parent="." instance=ExtResource("4_w16ry")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_q8mhi")]

@@ -15,10 +15,9 @@ var curr_slot: InventorySlot
 
 func _ready():
 	Global.on_pick_up_item.connect(add_item_to_inventory)
-	GameState.connect("on_save_data", _save_inventory_items)
 	GameState.connect("on_load_data", _load_inventory_items)
 	
-	close_inventory()
+	hide()
 	%GridContainer.columns = GRID_COLOMNS
 	load_inventory()
 
@@ -26,7 +25,7 @@ func _input(event):
 	if event.is_action_pressed("inventory"):
 		if is_active:
 			close_inventory()
-		elif !is_active and !Global.freeze_input:
+		elif !is_active and !Global.freeze_input and !Global.in_cutscene:
 			open_inventory()
 	
 	if !is_active:
@@ -43,9 +42,6 @@ func _input(event):
 	
 	if event.is_action_pressed("interact"):
 		use_item()
-
-func _save_inventory_items():
-	pass
 
 func _load_inventory_items():
 	var items = GameState.taken_items
@@ -139,12 +135,17 @@ func use_item():
 	if curr_slot.has_item() == null:
 		return
 	
+	if curr_slot.item.item_name == "Bottle of oil" and GameState.curr_scene_id == "hallway_last_chase" and !Global.used_oil_item:
+		Global.use_oil_item()
+		call_deferred("close_inventory")
+		return
+	
 	var used = InteractionManager.use_item_on_active_area(curr_slot.has_item())
 	
 	if used:
 		print("   - Item used: " + curr_slot.item.item_name)
-		curr_slot.remove_item()
-		set_item_details()
+		#curr_slot.remove_item()
+		#set_item_details()
 		call_deferred("close_inventory")
 	else:
 		print(" Item cannot be used here")

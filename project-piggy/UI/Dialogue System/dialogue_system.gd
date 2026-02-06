@@ -54,7 +54,6 @@ func show_left_character(sprite_id: String = ""):
 	
 	if last_speaker != curr_speaker.character_name:
 		anim_player.play("show_left_sprite")
-		pass
 
 func show_right_character(sprite_id: String = ""):
 	%RightSprite.texture = curr_speaker.get_sprite(sprite_id)
@@ -63,7 +62,6 @@ func show_right_character(sprite_id: String = ""):
 	
 	if last_speaker != curr_speaker.character_name:
 		anim_player.play("show_right_sprite")
-		pass
 
 func hide_character_sprites():
 	%LeftSprite.hide()
@@ -134,6 +132,7 @@ func start_dialogue(id: String):
 	dialogue_id = id
 	curr_dialogue = DialogueManager.dialogues[dialogue_id]
 	active_dialogue = true
+	Global.dialogue_run = true
 	Global.freeze_input = true
 	show_next_line()
 	show_dialogue_panel()
@@ -143,7 +142,6 @@ func show_next_line():
 		reset_print_anim()
 	
 	if curr_dialogue["lines"].size() > line_index:
-		#print("showing next line...")
 		var line = curr_dialogue["lines"][line_index]
 		
 		var text = line["text"]
@@ -152,18 +150,13 @@ func show_next_line():
 		
 		change_panel_contents(text, speaker, sprite_id)
 		
-		#if line.has("speaker"):
-			#change_panel_contents(line["text"], line["speaker"])
-		#else:
-			#change_panel_contents(line["text"])
-		
 		line_index += 1
 	else:
-		#print("ending...")
 		end_dialogue()
 
 func end_dialogue():
 	active_dialogue = false
+	Global.dialogue_run = false
 	Global.freeze_input = false
 	hide_dialogue_panel()
 	DialogueManager.emit_signal("dialogue_ended")

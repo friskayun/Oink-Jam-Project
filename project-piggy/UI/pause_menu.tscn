@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://g4wcq2idtn4q"]
+
+[ext_resource type="Script" uid="uid://cyu2ntr8m43xk" path="res://UI/pause_menu.gd" id="1_jfm1e"]
+[ext_resource type="PackedScene" uid="uid://diyntio4siccb" path="res://UI/button.tscn" id="2_03fe5"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jfm1e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2627451, 0.043137256, 0.12156863, 0.5882353)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContinueButton" parent="VBoxContainer" instance=ExtResource("2_03fe5")]
+layout_mode = 2
+text = "Continue"
+
+[node name="NewButton" parent="VBoxContainer" instance=ExtResource("2_03fe5")]
+visible = false
+layout_mode = 2
+text = "New game"
+
+[node name="LoadButton" parent="VBoxContainer" instance=ExtResource("2_03fe5")]
+visible = false
+layout_mode = 2
+text = "Load Last"
+
+[node name="OptionsButton" parent="VBoxContainer" instance=ExtResource("2_03fe5")]
+layout_mode = 2
+text = "Options"
+
+[node name="Exit_button" parent="VBoxContainer" instance=ExtResource("2_03fe5")]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/NewButton" to="." method="_on_new_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit_button" to="." method="_on_exit_button_pressed"]

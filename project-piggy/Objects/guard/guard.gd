@@ -1,5 +1,6 @@
 extends ObjectInteract
 
+
 const ACCESS_CARD = preload("uid://b82xkabpi757b")
 
 func _on_interact():

@@ -15,6 +15,16 @@ func _on_interact():
 	else:
 		objective_unlocked()
 
+func _on_use_item(item: Item):
+	if item.item_name == required_item_name and required_item_name != "":
+		if !GameState.is_storage_vent_locked():
+			return false
+		
+		use_item_action()
+		return true
+	
+	return false
+
 func use_item_action():
 	if GameState.is_storage_vent_locked():
 		GameState.unlock_storage_vent()

@@ -57,6 +57,8 @@ y_destination = 118
 position = Vector2(186.00002, 171)
 y_destination = 171
 
+[node name="Objects" type="Node2D" parent="."]
+
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door_Guard" parent="Doors" instance=ExtResource("2_0k8iw")]

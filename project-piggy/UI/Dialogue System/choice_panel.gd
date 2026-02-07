@@ -10,6 +10,10 @@ func _ready():
 	DialogueManager.connect("show_choice_panel", show_panel)
 	hide()
 
+func _input(event):
+	if event.is_action_pressed("cancel"):
+		hide_panel()
+
 func get_button(_text: String):
 	var button = CHOICE_BUTTON.instantiate()
 	button.text = _text

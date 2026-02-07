@@ -27,12 +27,18 @@ func setup():
 	v_box_container.get_child(0).call_deferred("grab_focus")
 
 func show_panel():
+	if Global.get_ui_win_status():
+		return
+	
+	Global.set_ui_win_status(true)
+	
 	show()
 	setup()
 	get_tree().paused = true
 	Global.freeze_input = true
 
 func hide_panel():
+	Global.set_ui_win_status(false)
 	hide()
 	get_tree().paused = false
 	Global.freeze_input = false

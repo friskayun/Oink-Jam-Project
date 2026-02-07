@@ -13,6 +13,11 @@ func _input(event):
 		hide_item_inspect()
 
 func show_item_inspect(item: Item = null):
+	if Global.get_ui_win_status():
+		return
+	
+	Global.set_ui_win_status(true)
+	
 	if item != null:
 		$Visual/TextureRect.texture = item.item_texture
 	
@@ -23,6 +28,7 @@ func show_item_inspect(item: Item = null):
 	can_close = true
 
 func hide_item_inspect():
+	Global.set_ui_win_status(false)
 	can_close = false
 	anim_player.play("hide_item")
 	await anim_player.animation_finished

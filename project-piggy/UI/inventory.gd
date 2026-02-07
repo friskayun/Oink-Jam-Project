@@ -103,6 +103,11 @@ func load_select():
 
 
 func open_inventory():
+	if Global.get_ui_win_status():
+		return
+	
+	Global.set_ui_win_status(true)
+	
 	load_select()
 	show()
 	is_active = true
@@ -110,6 +115,7 @@ func open_inventory():
 	get_tree().paused = true
 
 func close_inventory():
+	Global.set_ui_win_status(false)
 	hide()
 	is_active = false
 	Global.freeze_input = false

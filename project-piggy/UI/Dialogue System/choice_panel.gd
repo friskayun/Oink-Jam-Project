@@ -24,6 +24,11 @@ func clear_buttons():
 	buttons.clear()
 
 func show_panel(id: String):
+	if Global.get_ui_win_status():
+		return
+	
+	Global.set_ui_win_status(true)
+	
 	if active_choice:
 		return
 	
@@ -42,6 +47,7 @@ func show_panel(id: String):
 	buttons[0].call_deferred("grab_focus")
 
 func hide_panel():
+	Global.set_ui_win_status(false)
 	hide()
 	active_choice = false
 	Global.freeze_input = false

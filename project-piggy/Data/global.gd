@@ -6,6 +6,7 @@ signal _on_use_oil_item
 var freeze_input: bool = false
 var in_cutscene: bool = false
 var dialogue_run: bool = false
+var ui_win_shown: bool = false
 
 var is_player_in_vent: bool = false
 var used_oil_item = false
@@ -23,6 +24,11 @@ func play_cutscene():
 func end_cutscene():
 	in_cutscene = false
 
+func set_ui_win_status(value: bool):
+	ui_win_shown = value
+
+func get_ui_win_status():
+	return ui_win_shown
 
 func pick_up_item(item: Item):
 	on_pick_up_item.emit(item)

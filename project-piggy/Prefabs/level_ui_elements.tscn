@@ -9,16 +9,11 @@
 [node name="Level UI Elements" type="CanvasLayer"]
 
 [node name="Dialogue System" parent="." instance=ExtResource("1_vqr1p")]
-visible = false
 
 [node name="ChoicePanel" parent="." instance=ExtResource("2_ae8vo")]
-visible = false
 
 [node name="Inventory" parent="." instance=ExtResource("3_ae8vo")]
-visible = false
 
 [node name="Checkpoint" parent="." instance=ExtResource("4_w16ry")]
-visible = false
 
 [node name="PauseMenu" parent="." instance=ExtResource("5_q8mhi")]
-visible = false

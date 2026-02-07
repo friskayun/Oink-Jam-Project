@@ -55,13 +55,14 @@ func show_panel(id: String):
 	buttons[0].call_deferred("grab_focus")
 
 func hide_panel():
-	Global.set_ui_win_status(false)
 	hide()
 	active_choice = false
+	Global.set_ui_win_status(false)
 	Global.freeze_input = false
 
 func _on_choice_selected(index: int):
-	press_sfx.play()
+	if index != 0:
+		press_sfx.play()	#late responce due to pausing or overlapping with other sounds
 	hide_panel()
 	DialogueManager._on_choice.call(index)
 

@@ -1,5 +1,8 @@
 extends Control
 
+const BACKGROUND_MUSIC_CAMRYN_01 = preload("uid://ygyopyamotkl")
+const BACKGROUND_MUSIC_CAMRYN_02 = preload("uid://cbphmhwmqlomw")
+
 const NEXT_SCENE = "hallway_corn_factory"
 
 const BACKOFFBUS = preload("uid://bx1ncpqiqcest")
@@ -30,6 +33,7 @@ var factory_dialogues: Array = [
 
 func _ready():
 	Global.play_cutscene()
+	Global.play_track(BACKGROUND_MUSIC_CAMRYN_02)
 	bus()
 
 func _input(event):
@@ -74,4 +78,5 @@ func corn_factory():
 
 func hallway():
 	Global.end_cutscene()
+	Global.play_track(null)
 	NavigationManager.go_to_level(NEXT_SCENE, "Spawn")

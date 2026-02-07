@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cbgd0k8ywo8j1"]
+[gd_scene load_steps=16 format=4 uid="uid://cbgd0k8ywo8j1"]
 
 [ext_resource type="Script" uid="uid://bxwi24otqj2v4" path="res://Scenes/Game Scenes/hallway_corn_factory.gd" id="1_vm8aj"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_aterv"]
@@ -9,8 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://c57wlulahu4d4" path="res://Prefabs/interact_area.tscn" id="5_7d70e"]
 [ext_resource type="Script" uid="uid://dbdskdnva4m50" path="res://Objects/hallway/red_door.gd" id="5_teodi"]
 [ext_resource type="Script" uid="uid://bdbrsevuqcau2" path="res://Objects/poppy_hair_pin.gd" id="6_7wjmf"]
-[ext_resource type="Texture2D" uid="uid://0tji66tdy6tv" path="res://Assets/icon.svg" id="7_pkico"]
+[ext_resource type="Texture2D" uid="uid://bda4wadhsergu" path="res://Assets/Items/HairPin.png" id="7_pkico"]
 [ext_resource type="PackedScene" uid="uid://dgfvddl5tq6wl" path="res://Prefabs/door.tscn" id="7_q7e1d"]
+[ext_resource type="AudioStream" uid="uid://b0kkvf06gtet2" path="res://Assets/SFX/door_opening.mp3" id="11_jdut8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvjn6"]
 size = Vector2(16, 180)
@@ -83,7 +84,7 @@ position = Vector2(370, 137)
 script = ExtResource("6_7wjmf")
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/Poppy\'s Hair Pin"]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_pkico")
 
 [node name="Interact Area" parent="Objects/Poppy\'s Hair Pin" instance=ExtResource("5_7d70e")]
@@ -117,6 +118,10 @@ collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door_Red/Interact Area"]
 shape = SubResource("RectangleShape2D_q7e1d")
+
+[node name="DoorOpenSFX" type="AudioStreamPlayer" parent="Doors/Door_Red"]
+stream = ExtResource("11_jdut8")
+volume_db = -10.0
 
 [node name="Level UI Elements" parent="." instance=ExtResource("2_hq7vo")]
 

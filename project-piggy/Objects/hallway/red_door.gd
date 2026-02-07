@@ -5,10 +5,12 @@ extends ObjectInteract
 @export var direction_spawn: String = ""
    
 @onready var spawn = $Spawn
+@onready var door_open_sfx = $DoorOpenSFX
 
 
 func _on_interact():
 	if GameState.curr_state < GameState.STATE.FIRST_CHASE:
+		door_open_sfx.play()
 		NavigationManager.go_to_level(destination_level_tag, destination_door_tag)
 	else:
-		DialogueManager.play_dialogue("work_area_after_visit") 
+		DialogueManager.play_dialogue("work_area_after_visit")

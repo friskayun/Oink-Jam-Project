@@ -155,8 +155,9 @@ func show_next_line():
 		end_dialogue()
 
 func end_dialogue():
-	active_dialogue = false
-	Global.dialogue_run = false
-	Global.freeze_input = false
+	DialogueManager.call_deferred("emit_signal", "dialogue_ended")
+	#DialogueManager.emit_signal("dialogue_ended")
 	hide_dialogue_panel()
-	DialogueManager.emit_signal("dialogue_ended")
+	active_dialogue = false
+	Global.freeze_input = false
+	Global.dialogue_run = false

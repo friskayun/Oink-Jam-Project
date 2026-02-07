@@ -87,6 +87,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_pkico")
 
 [node name="Interact Area" parent="Objects/Poppy\'s Hair Pin" instance=ExtResource("5_7d70e")]
+collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Poppy\'s Hair Pin/Interact Area"]
 shape = SubResource("CircleShape2D_7wjmf")
@@ -112,10 +113,16 @@ direction_spawn = "down"
 position = Vector2(0, 23)
 
 [node name="Interact Area" parent="Doors/Door_Red" instance=ExtResource("5_7d70e")]
+collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door_Red/Interact Area"]
 shape = SubResource("RectangleShape2D_q7e1d")
 
 [node name="Level UI Elements" parent="." instance=ExtResource("2_hq7vo")]
+
+[connection signal="area_entered" from="Objects/Poppy\'s Hair Pin/Interact Area" to="Objects/Poppy\'s Hair Pin/Interact Area" method="_on_area_entered"]
+[connection signal="area_exited" from="Objects/Poppy\'s Hair Pin/Interact Area" to="Objects/Poppy\'s Hair Pin/Interact Area" method="_on_area_exited"]
+[connection signal="area_entered" from="Doors/Door_Red/Interact Area" to="Doors/Door_Red/Interact Area" method="_on_area_entered"]
+[connection signal="area_exited" from="Doors/Door_Red/Interact Area" to="Doors/Door_Red/Interact Area" method="_on_area_exited"]
 
 [editable path="Doors/Door_Spawn"]

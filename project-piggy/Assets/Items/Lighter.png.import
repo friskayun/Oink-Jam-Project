@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv10wei64fchg"
-path="res://.godot/imported/body1 19.png-382146607481c370b419b1e2d08297e3.ctex"
+uid="uid://bwbyvs3fiatl5"
+path="res://.godot/imported/Lighter.png-c5b5e7968da5e42ddf82fb53456c5e59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prototype assets/VNSprites/body1 19.png"
-dest_files=["res://.godot/imported/body1 19.png-382146607481c370b419b1e2d08297e3.ctex"]
+source_file="res://Assets/Items/Lighter.png"
+dest_files=["res://.godot/imported/Lighter.png-c5b5e7968da5e42ddf82fb53456c5e59.ctex"]
 
 [params]
 

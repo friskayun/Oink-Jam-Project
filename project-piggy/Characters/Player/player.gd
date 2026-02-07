@@ -1,8 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
-const WALK_SPEED = 300
-const RUN_SPEED = 400
+const WALK_SPEED = 320
+const RUN_SPEED = 350
 
 @onready var anim_tree = $AnimationTree
 @onready var idle_sprites = $IdleSprites
@@ -39,6 +39,7 @@ func _physics_process(_delta):
 	
 	velocity = direction * speed
 	move_and_slide()
+	global_position = global_position.round()
 
 
 func _save_pos():

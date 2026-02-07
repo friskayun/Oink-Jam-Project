@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnaauc4dr6l6s"
-path="res://.godot/imported/body1 13.png-80c4570702f9910241fc9f164e62cb39.ctex"
+uid="uid://d1eh5xbkn1kec"
+path="res://.godot/imported/Emails.png-7f760ad8f8311b17898e96ba8aa32f50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prototype assets/VNSprites/body1 13.png"
-dest_files=["res://.godot/imported/body1 13.png-80c4570702f9910241fc9f164e62cb39.ctex"]
+source_file="res://Assets/Items/Emails.png"
+dest_files=["res://.godot/imported/Emails.png-7f760ad8f8311b17898e96ba8aa32f50.ctex"]
 
 [params]
 

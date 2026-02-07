@@ -9,10 +9,18 @@ const SCRIPT_PATH = "res://Data/Dialogue Scripts/temp_script_1.json"
 const DIALOGUE_SCRIPTS = "res://Data/Dialogue Scripts/dialogue_scripts.json"
 const CHOICES_SCRIPT = "res://Data/Dialogue Scripts/choices_script.json"
 
-var item_resources: Array[Item] = []
+var item_resources: Dictionary = {
+	"access_card_guard": preload("uid://b82xkabpi757b"),
+	"emails": preload("uid://dchh5pek47b17"),
+	"hair_pin_hallway": preload("uid://cquiyclkfhpy8"),
+	"locker_key_guard": preload("uid://dx8f1y3dpjba2"),
+	"lighter_security": preload("uid://bctbnurjsvah2"),
+	"oil_bottle_guard": preload("uid://naso8kxch7yx"),
+	"screwdriver_storage": preload("uid://bqbp21mulaqaq"),
+	"sleeping_pills_lockers": preload("uid://bqfep7s4a6du5"),
+	"vent_map": preload("uid://c4k8s22e033h6")
+}
 
-func _ready():
-	read_item_resources()
 
 func read_script_data(path: String):
 	var file = FileAccess.open(path, FileAccess.READ)
@@ -38,22 +46,8 @@ func fetch_resources(folder_path: String) -> Array:
 	
 	return array
 
-func read_item_resources():
-	var dir = DirAccess.open(ITEMS_PATH)
-	if dir == null:
-		return
-	
-	for file in dir.get_files():
-		if file.ends_with(".tres"):
-			var res = load(ITEMS_PATH + file)
-			if res:
-				item_resources.append(res)
-
 func get_item_resource_by_item_id(id: String):
-	for item in item_resources:
-		if item.item_id == id:
-			return item
-	return null
+	return item_resources.get(id)
 
 func save_game_data(data: Dictionary):
 	var file = FileAccess.open(GAME_DATA_PATH, FileAccess.WRITE)

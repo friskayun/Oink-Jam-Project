@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxnh353pof3ob"
-path="res://.godot/imported/run.png-04433d474ff691dd8e49f17ce2b6e61c.ctex"
+uid="uid://def2est3nyye4"
+path="res://.godot/imported/OilBottle.png-689a04af3264d27b774a75d3de1cf8aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prototype assets/Hana Caraka - Base Character [sample]/run.png"
-dest_files=["res://.godot/imported/run.png-04433d474ff691dd8e49f17ce2b6e61c.ctex"]
+source_file="res://Assets/Items/OilBottle.png"
+dest_files=["res://.godot/imported/OilBottle.png-689a04af3264d27b774a75d3de1cf8aa.ctex"]
 
 [params]
 

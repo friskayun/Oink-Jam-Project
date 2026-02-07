@@ -13,6 +13,7 @@ var slot_row: int = 0
 var slot_col: int = 0
 var curr_slot: InventorySlot
 
+
 func _ready():
 	Global.on_pick_up_item.connect(add_item_to_inventory)
 	GameState.connect("on_load_data", _load_inventory_items)

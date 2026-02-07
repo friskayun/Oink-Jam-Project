@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x0y6v8e6rfwl"
-path="res://.godot/imported/toothbrush.png-1c59617b431e0c37011457835773eea2.ctex"
+uid="uid://b81vv3avaetck"
+path="res://.godot/imported/AccessCard.png-f72cac408001dc6b7ca1d8b8214537f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prototype assets/items/toothbrush.png"
-dest_files=["res://.godot/imported/toothbrush.png-1c59617b431e0c37011457835773eea2.ctex"]
+source_file="res://Assets/Items/AccessCard.png"
+dest_files=["res://.godot/imported/AccessCard.png-f72cac408001dc6b7ca1d8b8214537f7.ctex"]
 
 [params]
 

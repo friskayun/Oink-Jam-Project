@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dncxfolrt87sw"
-path="res://.godot/imported/body1 2.png-d701c3837f7968921c87e3086d3043cb.ctex"
+uid="uid://dbahb5j0l01kj"
+path="res://.godot/imported/SleepingPills.png-1d1df71daacddd85cf00db8bc502450d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prototype assets/VNSprites/body1 2.png"
-dest_files=["res://.godot/imported/body1 2.png-d701c3837f7968921c87e3086d3043cb.ctex"]
+source_file="res://Assets/Items/SleepingPills.png"
+dest_files=["res://.godot/imported/SleepingPills.png-1d1df71daacddd85cf00db8bc502450d.ctex"]
 
 [params]
 

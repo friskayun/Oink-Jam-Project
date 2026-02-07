@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btjcorth1xa6b"
-path="res://.godot/imported/body1 33.png-947ad67333f0ce54db0c13d5fb9e8d57.ctex"
+uid="uid://rki7ykys6s55"
+path="res://.godot/imported/FireAlarm.png-4b596161e7904b648da0d064b4a97b47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prototype assets/VNSprites/body1 33.png"
-dest_files=["res://.godot/imported/body1 33.png-947ad67333f0ce54db0c13d5fb9e8d57.ctex"]
+source_file="res://Assets/Items/FireAlarm.png"
+dest_files=["res://.godot/imported/FireAlarm.png-4b596161e7904b648da0d064b4a97b47.ctex"]
 
 [params]
 

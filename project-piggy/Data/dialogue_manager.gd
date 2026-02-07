@@ -5,7 +5,16 @@ const VNCR_PATH = "res://Data/Resources/VNC_resources/"
 
 var dialogues: Dictionary = {}
 var choices: Dictionary = {}
-var vn_characters: Dictionary = {}
+var vn_characters: Dictionary = {
+	"Ollie": preload("uid://dh56rjlhjdvnh"),
+	"Penny": preload("uid://dgr2sihp2af0v"),
+	"Poppy": preload("uid://c3sitvwmdojgl"),
+	"Ryan": preload("uid://vcf84m2cbfto"),
+	"Mr. Horns": preload("uid://cbwkodjektpky"),
+	"Tour Guide": preload("uid://c1ph1f7ybkhru"),
+	"Wendy": preload("uid://ctxa2pbtksnsl"),
+	"Worker": preload("uid://br5lg7w7huk0")
+}
 
 @warning_ignore("unused_signal")
 signal show_dialogue_panel(id: String)
@@ -23,9 +32,6 @@ func _ready():
 func load_data():
 	dialogues = DataManager.read_script_data(DataManager.DIALOGUE_SCRIPTS)
 	choices = DataManager.read_script_data(DataManager.CHOICES_SCRIPT)
-	
-	for c in DataManager.fetch_resources(VNCR_PATH):
-		vn_characters[c.character_name] = c
 
 
 func get_vnc_resource(_character_name: String) -> VisualNovelCharacter:

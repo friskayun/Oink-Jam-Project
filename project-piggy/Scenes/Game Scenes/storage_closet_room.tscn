@@ -49,7 +49,7 @@ rotation = 0.0018761704
 [node name="Vent" type="Node2D" parent="Objects"]
 position = Vector2(161, -110)
 script = ExtResource("4_388j7")
-required_item_name = "Screwdriver"
+required_item_name = "Toolbox"
 
 [node name="Interact Area" parent="Objects/Vent" instance=ExtResource("4_e1v2r")]
 

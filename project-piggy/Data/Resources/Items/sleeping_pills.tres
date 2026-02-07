@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bqfep7s4a6du5"]
 
-[ext_resource type="Texture2D" uid="uid://bw41wany82ie6" path="res://Assets/Prototype assets/items/toothbrush_set.png" id="1_0dmy3"]
+[ext_resource type="Texture2D" uid="uid://dbahb5j0l01kj" path="res://Assets/Items/SleepingPills.png" id="1_0dmy3"]
 [ext_resource type="Script" uid="uid://c0btubbo133er" path="res://Data/Resources/item.gd" id="1_c1lp3"]
 
 [resource]

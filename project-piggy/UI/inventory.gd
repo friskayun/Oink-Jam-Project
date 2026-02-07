@@ -13,6 +13,15 @@ var slot_row: int = 0
 var slot_col: int = 0
 var curr_slot: InventorySlot
 
+const ACCESS_CARD = preload("uid://b82xkabpi757b")
+const HAIR_PIN = preload("uid://cquiyclkfhpy8")
+const KEY = preload("uid://dx8f1y3dpjba2")
+const LIGHTER = preload("uid://bctbnurjsvah2")
+const OIL = preload("uid://naso8kxch7yx")
+const SCREWDRIVER = preload("uid://bqbp21mulaqaq")
+const SLEEPING_PILLS = preload("uid://bqfep7s4a6du5")
+
+
 func _ready():
 	Global.on_pick_up_item.connect(add_item_to_inventory)
 	GameState.connect("on_load_data", _load_inventory_items)
@@ -20,6 +29,14 @@ func _ready():
 	hide()
 	%GridContainer.columns = GRID_COLOMNS
 	load_inventory()
+	
+	add_item_to_inventory(ACCESS_CARD)
+	add_item_to_inventory(HAIR_PIN)
+	add_item_to_inventory(KEY)
+	add_item_to_inventory(LIGHTER)
+	add_item_to_inventory(OIL)
+	add_item_to_inventory(SCREWDRIVER)
+	add_item_to_inventory(SLEEPING_PILLS)
 
 func _input(event):
 	if event.is_action_pressed("inventory"):

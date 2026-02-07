@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="VisualNovelCharacter" load_steps=7 format=3 uid="uid://dh56rjlhjdvnh"]
 
 [ext_resource type="Script" uid="uid://2a3tu1mode3v" path="res://Data/Resources/VNCharacter.gd" id="1_br5vw"]
-[ext_resource type="Texture2D" uid="uid://dncxfolrt87sw" path="res://Assets/Prototype assets/VNSprites/body1 2.png" id="2_5i7gr"]
+[ext_resource type="Texture2D" uid="uid://b1mwl0aajx6d7" path="res://Assets/Characters/OLLIE/OLLIE_POSE_1.png" id="2_5i7gr"]
 [ext_resource type="Texture2D" uid="uid://b1mwl0aajx6d7" path="res://Assets/Characters/OLLIE/OLLIE_POSE_1.png" id="2_rk4wr"]
 [ext_resource type="Texture2D" uid="uid://bfevmvd1ghm7e" path="res://Assets/Characters/OLLIE/OLLIE_POSE_2.png" id="3_sv4jn"]
 [ext_resource type="Texture2D" uid="uid://m0kd4stlsigg" path="res://Assets/Characters/OLLIE/OLLIE_POSE_3.png" id="4_4d46w"]

@@ -6,5 +6,6 @@
 [resource]
 script = ExtResource("1_idedm")
 item_name = "Security Emails"
+item_id = "emails"
 item_texture = ExtResource("1_o0h13")
 metadata/_custom_type_script = "uid://c0btubbo133er"

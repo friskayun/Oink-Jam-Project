@@ -442,7 +442,6 @@ transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_
 graph_offset = Vector2(-33, -45)
 
 [node name="Penny" type="CharacterBody2D" groups=["Player"]]
-scale = Vector2(3, 3)
 collision_layer = 2
 script = ExtResource("1_j341n")
 

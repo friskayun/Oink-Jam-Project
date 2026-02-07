@@ -1,8 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
-const WALK_SPEED = 320
-const RUN_SPEED = 350
+const WALK_SPEED = 100
+const RUN_SPEED = 150
 
 @onready var anim_tree = $AnimationTree
 @onready var idle_sprites = $IdleSprites

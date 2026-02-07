@@ -11,6 +11,9 @@ var ui_win_shown: bool = false
 var is_player_in_vent: bool = false
 var used_oil_item = false
 
+func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+
 func _input(event):
 	if event.is_action_pressed("screenshot"):
 		var timestamp = Time.get_datetime_string_from_system(false, true).replace(":", "-")

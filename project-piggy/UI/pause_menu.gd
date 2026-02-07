@@ -9,7 +9,7 @@ func _ready():
 	hide()
 
 func _input(event):
-	if event.is_action_pressed("skip_dialogue"):
+	if event.is_action_pressed("cancel"):
 		if Global.in_cutscene or Global.dialogue_run:
 			return
 		

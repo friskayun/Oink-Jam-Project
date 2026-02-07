@@ -26,13 +26,13 @@ func _ready():
 	timer.wait_time = CHAR_WAIT_TIME
 
 func _input(event):
-	if event.is_action_pressed("advance_dialogue") and active_dialogue:
+	if event.is_action_pressed("interact") and active_dialogue:
 		if !printing_prompt:
 			show_next_line()
 		elif printing_prompt:
 			reset_print_anim()
 	
-	if event.is_action_pressed("skip_dialogue") and active_dialogue:
+	if event.is_action_pressed("cancel") and active_dialogue:
 		end_dialogue()
 
 func _on_print_timer_timeout():

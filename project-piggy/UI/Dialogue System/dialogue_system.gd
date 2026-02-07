@@ -8,6 +8,7 @@ const EXCLAM_WAIT_TIME = 0.2
 
 @onready var timer = $PrintTimer
 @onready var anim_player = $AnimationPlayer
+@onready var sfx_print = $AudioStreamPlayer
 
 var dialogue_id: String = ""
 var curr_dialogue
@@ -120,6 +121,7 @@ func reset_print_anim():
 	char_index = 0
 	%TextLabel.visible_characters = -1
 	printing_prompt = false
+	sfx_print.stop()
 
 #endregion
 
@@ -151,12 +153,13 @@ func show_next_line():
 		change_panel_contents(text, speaker, sprite_id)
 		
 		line_index += 1
+		sfx_print.play()
 	else:
 		end_dialogue()
 
 func end_dialogue():
+	sfx_print.stop()
 	DialogueManager.call_deferred("emit_signal", "dialogue_ended")
-	#DialogueManager.emit_signal("dialogue_ended")
 	hide_dialogue_panel()
 	active_dialogue = false
 	Global.freeze_input = false

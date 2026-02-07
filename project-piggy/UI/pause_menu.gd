@@ -3,6 +3,8 @@ extends Control
 const INTRO_CUTSCENE = "intro_cutscene"
 @onready var load_button = $VBoxContainer/LoadButton
 @onready var v_box_container = $VBoxContainer
+@onready var switch_sfx = $SwitchSFX
+@onready var press_sfx = $PressSFX
 
 func _ready():
 	setup()
@@ -44,22 +46,30 @@ func hide_panel():
 	Global.freeze_input = false
 
 
+func _on_button_focus_entered():
+	switch_sfx.play()
+
+
 func _on_continue_button_pressed():
+	press_sfx.play()
 	hide_panel()
 
 func _on_load_button_pressed():
+	press_sfx.play()
 	hide_panel()
 	GameState._load_checkpoint()
 
 func _on_new_button_pressed():
+	press_sfx.play()
 	hide_panel()
 	GameState._on_new_game()
 	NavigationManager.go_to_level("intro_cutscene")
 
 func _on_options_button_pressed():
-	pass # Replace with function body.
+	press_sfx.play()
 	hide_panel()
 
 func _on_exit_button_pressed():
+	press_sfx.play()
 	hide_panel()
 	NavigationManager.go_to_level("main_menu")

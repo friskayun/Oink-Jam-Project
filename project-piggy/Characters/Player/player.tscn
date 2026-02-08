@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://busv7brhu8wgj" path="res://Assets/SFX/walk_run.mp3" id="4_bqsbk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j341n"]
-radius = 3.0
+radius = 4.0
 
 [sub_resource type="Animation" id="Animation_yhol4"]
 length = 0.001
@@ -443,7 +443,6 @@ transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_
 graph_offset = Vector2(-33, -45)
 
 [node name="Penny" type="CharacterBody2D" groups=["Player"]]
-z_index = 1
 collision_layer = 2
 script = ExtResource("1_j341n")
 

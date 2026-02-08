@@ -1,12 +1,13 @@
 extends CharacterBody2D
 class_name Player
 
-const WALK_SPEED = 320
-const RUN_SPEED = 350
+const WALK_SPEED = 100
+const RUN_SPEED = 150
 
 @onready var anim_tree = $AnimationTree
 @onready var idle_sprites = $IdleSprites
 @onready var walk_sprites = $WalkSprites
+@onready var walk_sfx = $WalkSFX
 
 signal _on_stop_moving
 
@@ -72,20 +73,35 @@ func update_anim_parameters():
 		anim_tree.get("parameters/playback").travel("Idle")
 		idle_sprites.visible = true
 		walk_sprites.visible = false
+		stop_sfx()
 	elif speed == WALK_SPEED:
 		anim_tree.get("parameters/playback").travel("Walk")
 		idle_sprites.visible = false
 		walk_sprites.visible = true
+		change_sfx_pitch(1)
+		play_sfx()
 	else:
 		anim_tree.get("parameters/playback").travel("Run")
 		idle_sprites.visible = false
 		walk_sprites.visible = true
+		change_sfx_pitch(1.5)
+		play_sfx()
 	
 	if direction != Vector2.ZERO:
 		anim_tree["parameters/Idle/blend_position"] = direction
 		anim_tree["parameters/Walk/blend_position"] = direction
 		anim_tree["parameters/Run/blend_position"] = direction
 
+func play_sfx():
+	if !walk_sfx.playing:
+		walk_sfx.play()
+
+func change_sfx_pitch(_scale: float):
+	walk_sfx.pitch_scale = _scale
+
+func stop_sfx():
+	if walk_sfx.playing:
+		walk_sfx.stop()
 
 #region Storage cutscene
 

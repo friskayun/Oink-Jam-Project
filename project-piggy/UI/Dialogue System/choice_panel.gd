@@ -3,12 +3,19 @@ class_name ChoicePanel
 
 const CHOICE_BUTTON = preload("uid://b10rkn60a0bq")
 
+@onready var switch_sfx = $SwitchSFX
+@onready var press_sfx = $PressSFX
+
 var buttons: Array = [] 
 var active_choice: bool = false
 
 func _ready():
 	DialogueManager.connect("show_choice_panel", show_panel)
 	hide()
+
+func _input(event):
+	if event.is_action_pressed("cancel"):
+		hide_panel()
 
 func get_button(_text: String):
 	var button = CHOICE_BUTTON.instantiate()
@@ -24,6 +31,11 @@ func clear_buttons():
 	buttons.clear()
 
 func show_panel(id: String):
+	if Global.get_ui_win_status():
+		return
+	
+	Global.set_ui_win_status(true)
+	
 	if active_choice:
 		return
 	
@@ -38,14 +50,21 @@ func show_panel(id: String):
 	for c in choices["choices"].size():
 		get_button(choices["choices"][c]["text"])
 		buttons[c].pressed.connect(func(): _on_choice_selected(c))
+		buttons[c].focus_entered.connect(_on_button_focus_entered)
 		
 	buttons[0].call_deferred("grab_focus")
 
 func hide_panel():
 	hide()
 	active_choice = false
+	Global.set_ui_win_status(false)
 	Global.freeze_input = false
 
 func _on_choice_selected(index: int):
+	if index != 0:
+		press_sfx.play()	#late responce due to pausing or overlapping with other sounds
 	hide_panel()
 	DialogueManager._on_choice.call(index)
+
+func _on_button_focus_entered():
+	switch_sfx.play()

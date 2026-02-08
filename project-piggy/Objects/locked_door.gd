@@ -11,3 +11,5 @@ func _on_interact():
 		DialogueManager.play_dialogue("hallway_ham_factory_doors_interact")
 	else:
 		DialogueManager.play_dialogue("door_locked")
+	
+	await DialogueManager.dialogue_ended

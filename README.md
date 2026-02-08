@@ -7,6 +7,30 @@ Team members: ***Vanessinha, Grilhado, Camryn, Friska***
 
 ## Dev-Log               
 
+### v0.08 - SFX - 8 Feb 2026
+---
+Added:
+- Hallway Corn Level TileMap and objects setup /fully completed/
+- SFX UI /main menu, pause menu, inspect item, inventory, choice panel, dialogue/
+- SFX item actions
+- SFX intro cutscene
+- SFX player walk/run
+- Tutorial screen
+- Item sprites
+
+Improved:
+- Input map
+- Choice panel can be now closed without picking a choice
+
+Bud Fixes
+- UI panels overlapping
+- Pixel art jittering
+- Export issues
+- Character animations
+
+
+<br>
+
 ### v0.08 - Bugfixes and Visuals - 6 Feb 2026
 ---
 - Added pause menu

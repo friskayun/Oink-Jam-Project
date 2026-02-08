@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bj03w27nhu4h6"]
+[gd_scene load_steps=5 format=3 uid="uid://bj03w27nhu4h6"]
 
 [ext_resource type="Script" uid="uid://dfytt5p0ifhmo" path="res://UI/inventory_slot.gd" id="1_phof1"]
 [ext_resource type="Texture2D" uid="uid://txwfnm5e8l6i" path="res://Assets/UI/INVENTORY_SLOT_UNSELECTED.png" id="2_phof1"]
+[ext_resource type="AudioStream" uid="uid://d1485lpxtp3vj" path="res://Assets/SFX/switch.mp3" id="3_t7war"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5672o"]
 
@@ -23,9 +24,20 @@ expand_mode = 1
 
 [node name="ItemTexture" type="TextureRect" parent="."]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="FocusSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_t7war")
+volume_db = -10.0

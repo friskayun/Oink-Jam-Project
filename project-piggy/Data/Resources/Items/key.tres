@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dx8f1y3dpjba2"]
 
-[ext_resource type="Texture2D" uid="uid://b8khmp70urfyq" path="res://Assets/Prototype assets/items/toothpaste_box.png" id="1_8gyqm"]
+[ext_resource type="Texture2D" uid="uid://by8ge2wbodql2" path="res://Assets/Items/Key.png" id="1_8gyqm"]
 [ext_resource type="Script" uid="uid://c0btubbo133er" path="res://Data/Resources/item.gd" id="1_ii67r"]
 
 [resource]

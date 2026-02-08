@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvm87cwckmutu"]
+[gd_scene load_steps=5 format=3 uid="uid://dvm87cwckmutu"]
 
 [ext_resource type="PackedScene" uid="uid://diyntio4siccb" path="res://UI/button.tscn" id="1_28flt"]
 [ext_resource type="Script" uid="uid://bn60pud7w7c6i" path="res://Scenes/UI Scenes/main_menu.gd" id="1_48xlc"]
+[ext_resource type="AudioStream" uid="uid://c07tohvcegbp" path="res://Assets/SFX/button_hover.mp3" id="3_pih3d"]
+[ext_resource type="AudioStream" uid="uid://7k2cehkogn7v" path="res://Assets/SFX/button_press.mp3" id="4_pih3d"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -56,8 +58,19 @@ text = "Credits"
 layout_mode = 2
 text = "Exit"
 
+[node name="SwitchSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_pih3d")
+
+[node name="PressSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pih3d")
+
+[connection signal="focus_entered" from="VBoxContainer/NewButton" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/NewButton" to="." method="_on_new_button_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/LoadButton" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/OptionsButton" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/CreditsButton" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/ExitButton" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

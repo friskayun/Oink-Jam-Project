@@ -8,6 +8,7 @@ const EXCLAM_WAIT_TIME = 0.2
 
 @onready var timer = $PrintTimer
 @onready var anim_player = $AnimationPlayer
+@onready var sfx_print = $AudioStreamPlayer
 
 var dialogue_id: String = ""
 var curr_dialogue
@@ -26,13 +27,13 @@ func _ready():
 	timer.wait_time = CHAR_WAIT_TIME
 
 func _input(event):
-	if event.is_action_pressed("advance_dialogue") and active_dialogue:
+	if event.is_action_pressed("interact") and active_dialogue:
 		if !printing_prompt:
 			show_next_line()
 		elif printing_prompt:
 			reset_print_anim()
 	
-	if event.is_action_pressed("skip_dialogue") and active_dialogue:
+	if event.is_action_pressed("cancel") and active_dialogue:
 		end_dialogue()
 
 func _on_print_timer_timeout():
@@ -120,6 +121,7 @@ func reset_print_anim():
 	char_index = 0
 	%TextLabel.visible_characters = -1
 	printing_prompt = false
+	sfx_print.stop()
 
 #endregion
 
@@ -151,12 +153,14 @@ func show_next_line():
 		change_panel_contents(text, speaker, sprite_id)
 		
 		line_index += 1
+		sfx_print.play()
 	else:
 		end_dialogue()
 
 func end_dialogue():
-	active_dialogue = false
-	Global.dialogue_run = false
-	Global.freeze_input = false
+	sfx_print.stop()
+	DialogueManager.call_deferred("emit_signal", "dialogue_ended")
 	hide_dialogue_panel()
-	DialogueManager.emit_signal("dialogue_ended")
+	active_dialogue = false
+	Global.freeze_input = false
+	Global.dialogue_run = false

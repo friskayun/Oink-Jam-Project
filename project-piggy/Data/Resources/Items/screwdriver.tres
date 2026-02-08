@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bqbp21mulaqaq"]
 
 [ext_resource type="Script" uid="uid://c0btubbo133er" path="res://Data/Resources/item.gd" id="1_kh06e"]
-[ext_resource type="Texture2D" uid="uid://dcyfii640oxx3" path="res://Assets/Prototype assets/items/toothpaste.png" id="1_ngrev"]
+[ext_resource type="Texture2D" uid="uid://djjykt2yk78mx" path="res://Assets/Items/Toolbox.png" id="1_ngrev"]
 
 [resource]
 script = ExtResource("1_kh06e")
-item_name = "Screwdriver"
+item_name = "Toolbox"
 item_id = "screwdriver_storage"
-item_description = "It's a bit rusty, but still working."
+item_description = "Full with some rusty tools, but they still do the work."
 item_texture = ExtResource("1_ngrev")
 metadata/_custom_type_script = "uid://c0btubbo133er"

@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://duit8flwqn84i"]
+[gd_scene load_steps=7 format=3 uid="uid://duit8flwqn84i"]
 
 [ext_resource type="Script" uid="uid://b3q56c2kfr4nk" path="res://UI/Dialogue System/choice_panel.gd" id="1_ydqfx"]
 [ext_resource type="Texture2D" uid="uid://bx22qmcuwteky" path="res://Assets/UI/CHOICE_PANEL.png" id="2_o4i8k"]
 [ext_resource type="PackedScene" uid="uid://b10rkn60a0bq" path="res://UI/Dialogue System/choice_button.tscn" id="2_qmcda"]
+[ext_resource type="AudioStream" uid="uid://d1485lpxtp3vj" path="res://Assets/SFX/switch.mp3" id="4_shtt6"]
+[ext_resource type="AudioStream" uid="uid://7k2cehkogn7v" path="res://Assets/SFX/button_press.mp3" id="5_ddwyj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shtt6"]
 texture = ExtResource("2_o4i8k")
@@ -62,3 +64,10 @@ layout_mode = 2
 
 [node name="Button2" parent="Panel/MarginContainer/VBoxContainer" instance=ExtResource("2_qmcda")]
 layout_mode = 2
+
+[node name="SwitchSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_shtt6")
+volume_db = -10.0
+
+[node name="PressSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ddwyj")

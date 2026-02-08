@@ -4,6 +4,11 @@ const FRONT_OF_BUS = preload("res://Assets/Backgrounds/Front of us.PNG")
 const OUTSIDE_FACTORY = preload("res://Assets/Backgrounds/Outside factory.PNG")
 const CORNFACTORY = preload("res://Assets/Backgrounds/Cornfactory.PNG")
 const MEAT_FACTORY = preload("res://Assets/Backgrounds/Meat factory.PNG")
+const MEATROOM = preload("res://Assets/Backgrounds/Meatroom.PNG")
+const POPPY_MISSING = preload("res://Assets/Backgrounds/POPPY_MISSING.png")
+const FINAL_SCENE = preload("res://Assets/Backgrounds/Final scene.PNG")
+
+
 
 const INTRO_CUTSCENE = "intro_cutscene"
 
@@ -12,11 +17,11 @@ const INTRO_CUTSCENE = "intro_cutscene"
 var ending_id: int = 0
 
 var end_id: Dictionary = {
-	1: {"dialogue_id": "good_ending_explosion", "BG": FRONT_OF_BUS},
-	2: {"dialogue_id": "good_ending_default", "BG": FRONT_OF_BUS},
-	3: {"dialogue_id": "bad_ending_exit_hallway", "BG": CORNFACTORY},
-	4: {"dialogue_id": "bad_ending_exit_storage", "BG": OUTSIDE_FACTORY},
-	5: {"dialogue_id": "bad_ending_caught", "BG": MEAT_FACTORY}
+	1: {"dialogue_id": "good_ending_explosion", "BG": FINAL_SCENE},
+	2: {"dialogue_id": "good_ending_default", "BG": FINAL_SCENE},
+	3: {"dialogue_id": "bad_ending_exit_hallway", "BG": POPPY_MISSING},
+	4: {"dialogue_id": "bad_ending_exit_storage", "BG": POPPY_MISSING},
+	5: {"dialogue_id": "bad_ending_caught", "BG": MEATROOM}
 }
 
 func _ready():

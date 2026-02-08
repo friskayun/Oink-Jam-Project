@@ -12,7 +12,7 @@ func _ready():
 	visit()
 
 func _input(event):
-	if event.is_action_pressed("skip_dialogue") and Global.in_cutscene:
+	if event.is_action_pressed("cancel") and Global.in_cutscene:
 		hallway()
 
 func visit():

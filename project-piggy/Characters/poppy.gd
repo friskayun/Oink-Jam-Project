@@ -1,10 +1,11 @@
 extends CharacterBody2D
+class_name Poppy
 
 @onready var anim_tree = $AnimationTree
 @onready var idle_sprites = $IdleSprites
 @onready var walk_sprites = $WalkSprites
 
-const SPEED = 290
+const SPEED = 300
 
 @export var player: Player 
 
@@ -17,7 +18,7 @@ func _ready():
 	direction = Vector2.ZERO
 	update_anim_parameters()
 
-func _process(_delta):
+func _physics_process(_delta):
 	if in_cage:
 		return
 	
@@ -34,6 +35,11 @@ func _follow_penny():
 	
 	velocity = direction * SPEED
 	move_and_slide()
+
+func freeze():
+	in_cage = true
+	direction = Vector2.ZERO
+	update_anim_parameters()
 
 func update_anim_parameters():
 	if direction == Vector2.ZERO:

@@ -4,6 +4,7 @@ class_name InventorySlot
 const INVENTORY_SLOT_SELECTED = preload("uid://deuhnrdwec8vl")
 const INVENTORY_SLOT_UNSELECTED = preload("uid://txwfnm5e8l6i")
 
+@onready var focus_sfx = $FocusSFX
 
 var item: Item = null
 
@@ -12,6 +13,7 @@ func _ready():
 
 
 func select():
+	focus_sfx.play()
 	%SlotTexture.texture = INVENTORY_SLOT_SELECTED
 
 func unselect():

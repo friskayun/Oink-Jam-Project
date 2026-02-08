@@ -32,7 +32,7 @@ func _ready():
 	direction = Vector2.ZERO
 	update_anim_parameters()
 
-func _process(_delta):
+func _physics_process(_delta):
 	if Global.freeze_input and !is_moving_cutscene and !is_guard:
 		direction = Vector2.ZERO
 		update_anim_parameters()
@@ -79,7 +79,7 @@ func update_anim_parameters():
 		anim_tree["parameters/Walk/blend_position"] = direction
 
 func _on_area_2d_body_entered(body):
-	if body is Player and !is_guard:
+	if (body is Player and !is_guard) or body is Poppy:
 		stop_chase()
 		NavigationManager.go_to_level("ending_screen", "5")
 

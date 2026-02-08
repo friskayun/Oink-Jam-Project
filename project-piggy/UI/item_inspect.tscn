@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dt3i1jpnbrmw5"]
+[gd_scene load_steps=8 format=3 uid="uid://dt3i1jpnbrmw5"]
 
 [ext_resource type="Script" uid="uid://dykqrctpwnsr7" path="res://UI/item_inspect.gd" id="1_ddbd2"]
 [ext_resource type="Texture2D" uid="uid://dyvfbs4mduuu0" path="res://Assets/Prototype assets/items/vent_map.png" id="2_y02pf"]
+[ext_resource type="AudioStream" uid="uid://bk60hvl6acc6p" path="res://Assets/SFX/paper_files.mp3" id="3_x462r"]
 
 [sub_resource type="Animation" id="Animation_p6lnl"]
 tracks/0/type = "value"
@@ -19,7 +20,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_p6rjp"]
 resource_name = "hide_item"
-length = 0.5
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -27,7 +28,7 @@ tracks/0/path = NodePath("Visual:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.19999999),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -35,7 +36,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_07q8p"]
 resource_name = "show_item"
-length = 0.5
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -43,7 +44,7 @@ tracks/0/path = NodePath("Visual:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.19999999),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -97,3 +98,7 @@ expand_mode = 1
 libraries = {
 &"": SubResource("AnimationLibrary_b11io")
 }
+
+[node name="InspectSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_x462r")
+volume_db = -10.0

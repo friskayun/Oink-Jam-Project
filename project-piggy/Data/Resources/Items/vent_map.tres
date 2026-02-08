@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_xsf73")
 item_name = "Vent map"
+item_id = "vent_map"
 item_description = "Vent scheme"
 item_texture = ExtResource("1_6bpmr")
 metadata/_custom_type_script = "uid://c0btubbo133er"

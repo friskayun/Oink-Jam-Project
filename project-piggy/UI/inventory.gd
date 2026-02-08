@@ -1,7 +1,10 @@
 extends Control
 
-const INVENTORY_SLOT = preload("uid://bj03w27nhu4h6")
+@onready var add_item_sfx = $AddItemSFX
+@onready var use_item_sfx = $UseItemSFX
+@onready var wrong_sfx = $WrongSFX
 
+const INVENTORY_SLOT = preload("uid://bj03w27nhu4h6")
 const GRID_ROWS = 2
 const GRID_COLOMNS = 4
 
@@ -13,8 +16,9 @@ var slot_row: int = 0
 var slot_col: int = 0
 var curr_slot: InventorySlot
 
+
 func _ready():
-	Global.on_pick_up_item.connect(add_item_to_inventory)
+	Global.on_pick_up_item.connect(_pick_up_item)
 	GameState.connect("on_load_data", _load_inventory_items)
 	
 	hide()
@@ -27,6 +31,9 @@ func _input(event):
 			close_inventory()
 		elif !is_active and !Global.freeze_input and !Global.in_cutscene:
 			open_inventory()
+	
+	if event.is_action_pressed("cancel") and is_active:
+		close_inventory()
 	
 	if !is_active:
 		return
@@ -102,6 +109,11 @@ func load_select():
 
 
 func open_inventory():
+	if Global.get_ui_win_status():
+		return
+	
+	Global.set_ui_win_status(true)
+	
 	load_select()
 	show()
 	is_active = true
@@ -109,6 +121,7 @@ func open_inventory():
 	get_tree().paused = true
 
 func close_inventory():
+	Global.set_ui_win_status(false)
 	hide()
 	is_active = false
 	Global.freeze_input = false
@@ -116,6 +129,15 @@ func close_inventory():
 
 
 func add_item_to_inventory(item: Item):
+	for i in range(0, GRID_ROWS):
+		for j in range (0, GRID_COLOMNS):
+			var slot = slots[i][j] as InventorySlot
+			if slot.item == null:
+				slot.add_item(item)
+				return
+
+func _pick_up_item(item: Item):
+	add_item_sfx.play()
 	for i in range(0, GRID_ROWS):
 		for j in range (0, GRID_COLOMNS):
 			var slot = slots[i][j] as InventorySlot
@@ -135,17 +157,23 @@ func use_item():
 	if curr_slot.has_item() == null:
 		return
 	
-	if curr_slot.item.item_name == "Bottle of oil" and GameState.curr_scene_id == "hallway_last_chase" and !Global.used_oil_item:
-		Global.use_oil_item()
-		call_deferred("close_inventory")
+	if curr_slot.item.item_name == "Bottle of oil":
+		if GameState.curr_scene_id == "hallway_last_chase" and !Global.used_oil_item:
+			use_item_sfx.play()
+			Global.use_oil_item()
+			call_deferred("close_inventory")
+		else:
+			wrong_sfx.play()
 		return
 	
 	var used = InteractionManager.use_item_on_active_area(curr_slot.has_item())
 	
 	if used:
+		use_item_sfx.play()
 		print("   - Item used: " + curr_slot.item.item_name)
 		#curr_slot.remove_item()
 		#set_item_details()
 		call_deferred("close_inventory")
 	else:
+		wrong_sfx.play()
 		print(" Item cannot be used here")

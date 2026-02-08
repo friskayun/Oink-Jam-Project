@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bsll4mno0gwbb"]
+[gd_scene load_steps=12 format=3 uid="uid://bsll4mno0gwbb"]
 
 [ext_resource type="Script" uid="uid://doewg8b0a52ql" path="res://UI/inventory.gd" id="1_23vm5"]
 [ext_resource type="PackedScene" uid="uid://bj03w27nhu4h6" path="res://UI/inventory_slot.tscn" id="2_7g8kd"]
 [ext_resource type="Texture2D" uid="uid://dwqnvuv1ni6id" path="res://Assets/UI/INVENTORY_PANEL_SLOTS.png" id="2_fxcd2"]
 [ext_resource type="Texture2D" uid="uid://bpq0avjafipyi" path="res://Assets/UI/INVENTORY_OBJECTIVE_PANEL.png" id="2_k0eh3"]
 [ext_resource type="Texture2D" uid="uid://0fcdk00wilu" path="res://Assets/UI/INVENTORY_ITEM_DESCRIPTION.png" id="4_0knst"]
+[ext_resource type="AudioStream" uid="uid://dofhgikj1sxa8" path="res://Assets/SFX/pick_up_item.mp3" id="6_qf0od"]
+[ext_resource type="AudioStream" uid="uid://btrh0i8bckx6e" path="res://Assets/SFX/item_use_successful.mp3" id="7_nl306"]
+[ext_resource type="AudioStream" uid="uid://ccxxfhmvff3ic" path="res://Assets/SFX/item_use_unsuccessful.mp3" id="8_yc0b1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0knst"]
 texture = ExtResource("2_fxcd2")
@@ -32,7 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.38039216, 0.18431373, 0.24313726, 0.7294118)
+color = Color(0, 0, 0, 0.74509805)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -141,3 +144,28 @@ autowrap_mode = 2
 custom_minimum_size = Vector2(100, 192)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_qf0od")
+
+[node name="Label" type="Label" parent="VBoxContainer/ObjectivePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Current Objective Text"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddItemSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_qf0od")
+volume_db = -10.0
+
+[node name="UseItemSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_nl306")
+volume_db = -20.0
+
+[node name="WrongSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_yc0b1")
+volume_db = -10.0

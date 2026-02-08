@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c57wlulahu4d4" path="res://Prefabs/interact_area.tscn" id="2_oy4fs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnnuv"]
-size = Vector2(77, 108)
+size = Vector2(32, 16)
 
 [node name="Locked door" type="Node2D"]
 script = ExtResource("1_iq7sc")
@@ -12,5 +12,4 @@ script = ExtResource("1_iq7sc")
 [node name="Interact Area" parent="." instance=ExtResource("2_oy4fs")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact Area"]
-position = Vector2(1.5, 44)
 shape = SubResource("RectangleShape2D_dnnuv")

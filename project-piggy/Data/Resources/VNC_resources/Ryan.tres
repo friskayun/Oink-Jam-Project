@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://2a3tu1mode3v" path="res://Data/Resources/VNCharacter.gd" id="1_w45sm"]
 [ext_resource type="Texture2D" uid="uid://bn52csrdrhtio" path="res://Assets/Characters/RYAN/RYAN_POSE_1.png" id="2_11aio"]
-[ext_resource type="Texture2D" uid="uid://btjcorth1xa6b" path="res://Assets/Prototype assets/VNSprites/body1 33.png" id="2_f66cs"]
+[ext_resource type="Texture2D" uid="uid://bn52csrdrhtio" path="res://Assets/Characters/RYAN/RYAN_POSE_1.png" id="2_f66cs"]
 [ext_resource type="Texture2D" uid="uid://behp3maq6aao7" path="res://Assets/Characters/RYAN/RYAN_POSE_2.png" id="3_dp87e"]
 [ext_resource type="Texture2D" uid="uid://csae0nhre8g5i" path="res://Assets/Characters/RYAN/RYAN_POSE_3.png" id="4_hb8am"]
 

@@ -3,13 +3,15 @@ extends Control
 const INTRO_CUTSCENE = "intro_cutscene"
 @onready var load_button = $VBoxContainer/LoadButton
 @onready var v_box_container = $VBoxContainer
+@onready var switch_sfx = $SwitchSFX
+@onready var press_sfx = $PressSFX
 
 func _ready():
 	setup()
 	hide()
 
 func _input(event):
-	if event.is_action_pressed("skip_dialogue"):
+	if event.is_action_pressed("cancel"):
 		if Global.in_cutscene or Global.dialogue_run:
 			return
 		
@@ -27,33 +29,47 @@ func setup():
 	v_box_container.get_child(0).call_deferred("grab_focus")
 
 func show_panel():
+	if Global.get_ui_win_status():
+		return
+	
+	Global.set_ui_win_status(true)
+	
 	show()
 	setup()
 	get_tree().paused = true
 	Global.freeze_input = true
 
 func hide_panel():
+	Global.set_ui_win_status(false)
 	hide()
 	get_tree().paused = false
 	Global.freeze_input = false
 
 
+func _on_button_focus_entered():
+	switch_sfx.play()
+
+
 func _on_continue_button_pressed():
+	press_sfx.play()
 	hide_panel()
 
 func _on_load_button_pressed():
+	press_sfx.play()
 	hide_panel()
 	GameState._load_checkpoint()
 
 func _on_new_button_pressed():
+	press_sfx.play()
 	hide_panel()
 	GameState._on_new_game()
 	NavigationManager.go_to_level("intro_cutscene")
 
 func _on_options_button_pressed():
-	pass # Replace with function body.
+	press_sfx.play()
 	hide_panel()
 
 func _on_exit_button_pressed():
+	press_sfx.play()
 	hide_panel()
 	NavigationManager.go_to_level("main_menu")

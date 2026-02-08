@@ -4,10 +4,10 @@ extends CharacterBody2D
 @onready var idle_sprites = $IdleSprites
 @onready var walk_sprites = $WalkSprites
 
-@export var y_destination: int = 240
-@export var x_destination: int = 850
+@export var y_destination: int = 110
+@export var x_destination: int = 258
 
-const SPEED = 400
+const SPEED = 100
 
 var in_cage = true
 var direction: Vector2 = Vector2.ZERO
@@ -18,11 +18,11 @@ func _ready():
 	direction = Vector2.ZERO
 	update_anim_parameters()
 
-func _process(_delta):
+func _physics_process(_delta):
 	if in_cage:
 		return
 	
-	if global_position.distance_to(Vector2(x_destination, global_position.y)) <= 10:
+	if global_position.distance_to(Vector2(x_destination, global_position.y)) <= 4:
 		queue_free()
 	
 	update_anim_parameters()

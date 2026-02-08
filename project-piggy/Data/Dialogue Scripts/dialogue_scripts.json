@@ -408,32 +408,32 @@
 	
 	"guard_cage_1": {
 		"lines":[
-			{"speaker": "Penny", "text": "Poor guys, they're barely staying alive.", "sprite_id": "sad"},
-			{"speaker": "Penny", "text": "Who knows for how long they've been stuck here...", "sprite_id": "scared_1"}
+			{"speaker": "Penny", "text": "Seems like they saved one for me...", "sprite_id": "scared"}
 		]
 	},
 	
 	"guard_cage_2": {
 		"lines":[
-			{"text": "Both pigs are hugged into each other, looking scared."}
+			{"speaker": "Penny", "text": "Poor guys, they're barely staying alive.", "sprite_id": "sad"},
+			{"speaker": "Penny", "text": "Who knows for how long they've been stuck here...", "sprite_id": "scared_1"}
 		]
 	},
 	
 	"guard_cage_3": {
 		"lines":[
-			{"text": "Those two doesn't seem to like each other."}
+			{"text": "A grumpy pig."}
 		]
 	},
 	
 	"guard_cage_4": {
 		"lines":[
-			{"text": "The pigs here are just chilling"}
+			{"text": "The pigs is just chilling"}
 		]
 	},
 	
 	"guard_cage_5": {
 		"lines":[
-			{"text": "The sadness can be seen in their faces"}
+			{"text": "The sadness can be seen in his eyes."}
 		]
 	},
 	

@@ -317,7 +317,8 @@ graph_offset = Vector2(-33, -45)
 
 [node name="Pig" type="CharacterBody2D"]
 modulate = Color(0.95917517, 0.6963171, 0.7566736, 1)
-scale = Vector2(3, 3)
+light_mask = 0
+visibility_layer = 0
 script = ExtResource("1_6d7np")
 
 [node name="IdleSprites" type="Sprite2D" parent="."]

@@ -122,7 +122,7 @@ func move_to_destination():
 		_stop_moving()
 	
 	update_anim_parameters()
-	velocity = direction * 150
+	velocity = direction * 50
 	move_and_slide()
 
 #endregion

@@ -106,7 +106,7 @@ func move_anim_manual():
 		_stop_moving()
 	
 	update_anim_parameters()
-	velocity = direction * speed
+	velocity = direction * SLOW_SPEED
 	move_and_slide()
 
 func _start_moving(x: int):

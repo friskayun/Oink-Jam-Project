@@ -7,7 +7,7 @@ Team members: ***Vanessinha, Grilhado, Camryn, Friska***
 
 ## Dev-Log               
 
-### v0.08 - SFX - 8 Feb 2026
+### v0.09 - SFX - 8 Feb 2026
 ---
 Added:
 - Hallway Corn Level TileMap and objects setup /fully completed/

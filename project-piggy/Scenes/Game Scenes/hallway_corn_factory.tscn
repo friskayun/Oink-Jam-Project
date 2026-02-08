@@ -155,6 +155,7 @@ shape = SubResource("RectangleShape2D_q7e1d")
 [node name="DoorOpenSFX" type="AudioStreamPlayer" parent="Doors/Door_Red"]
 stream = ExtResource("11_jdut8")
 volume_db = -10.0
+bus = &"SFX"
 
 [node name="Player" parent="." instance=ExtResource("2_aterv")]
 position = Vector2(736, 105)

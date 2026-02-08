@@ -7,9 +7,10 @@ class_name MeatWorker
 @onready var walk_sprites = $WalkSprites
 @onready var sleep_sprite = $SleepSprite
 @onready var timer = $Timer
+@onready var walk_sfx = $walk_sfx
 
-const CHASE_SPEED = 350
-const SLOW_SPEED = 150
+const CHASE_SPEED = 150
+const SLOW_SPEED = 75
 
 @export var player: Player 
 @export var is_guard = false
@@ -68,15 +69,27 @@ func update_anim_parameters():
 		idle_sprites.visible = true
 		walk_sprites.visible = false
 		sleep_sprite.visible = false
+		stop_sfx()
 	else:
 		anim_tree.get("parameters/playback").travel("Walk")
 		idle_sprites.visible = false
 		walk_sprites.visible = true
 		sleep_sprite.visible = false
+		play_sfx()
 	
 	if direction != Vector2.ZERO:
 		anim_tree["parameters/Idle/blend_position"] = direction
 		anim_tree["parameters/Walk/blend_position"] = direction
+
+
+func play_sfx():
+	if !walk_sfx.playing:
+		walk_sfx.play()
+
+func stop_sfx():
+	if walk_sfx.playing:
+		walk_sfx.stop()
+
 
 func _on_area_2d_body_entered(body):
 	if (body is Player and !is_guard) or body is Poppy:

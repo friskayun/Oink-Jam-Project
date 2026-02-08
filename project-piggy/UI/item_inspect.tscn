@@ -102,3 +102,4 @@ libraries = {
 [node name="InspectSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_x462r")
 volume_db = -10.0
+bus = &"SFX"

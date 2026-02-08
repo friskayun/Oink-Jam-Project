@@ -2,6 +2,7 @@ extends Control
 
 const NEXT_SCENE = "hallway_ham_factory"
 const DOOR_ID = "WA"
+const KNIFE_SOUND = preload("uid://bowpnq7ichs04")
 
 var meat_factory_dialogue: Array = [
 	"work_area_visit"
@@ -9,6 +10,8 @@ var meat_factory_dialogue: Array = [
 
 func _ready():
 	Global.play_cutscene()
+	Global.play_track(KNIFE_SOUND)
+
 	visit()
 
 func _input(event):
@@ -24,6 +27,7 @@ func visit():
 	hallway()
 
 func hallway():
+	Global.play_track(null)
 	GameState.curr_state = GameState.STATE.FIRST_CHASE
 	Global.end_cutscene()
 	NavigationManager.go_to_level(NEXT_SCENE, DOOR_ID)

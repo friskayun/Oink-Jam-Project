@@ -476,4 +476,5 @@ parameters/Walk/blend_position = Vector2(0.0427351, -0.27354264)
 [node name="WalkSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_bqsbk")
 volume_db = -10.0
+bus = &"SFX"
 parameters/looping = true

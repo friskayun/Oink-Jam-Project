@@ -4,6 +4,7 @@ extends ObjectInteract
 @export var ending_id: String = "0"
   
 @onready var spawn = $Spawn
+@onready var door_open_sfx = $DoorOpenSFX
 
 func _on_interact():
 	if GameState.curr_state == GameState.STATE.GET_TO_POPPY:
@@ -18,6 +19,7 @@ func _on_choice(index: int):
 	match index:
 		0:
 			## bad ending
+			door_open_sfx.play()
 			NavigationManager.go_to_level("ending_screen", ending_id)
 		1: 
 			## dialogue

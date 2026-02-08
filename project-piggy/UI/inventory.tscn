@@ -161,11 +161,14 @@ vertical_alignment = 1
 [node name="AddItemSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_qf0od")
 volume_db = -10.0
+bus = &"SFX"
 
 [node name="UseItemSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_nl306")
 volume_db = -20.0
+bus = &"SFX"
 
 [node name="WrongSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_yc0b1")
 volume_db = -10.0
+bus = &"SFX"

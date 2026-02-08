@@ -10,6 +10,7 @@ extends ObjectInteract
 
 func _on_interact():
 	if GameState.curr_state < GameState.STATE.FIRST_CHASE:
+		Global.play_track(null)
 		door_open_sfx.play()
 		NavigationManager.go_to_level(destination_level_tag, destination_door_tag)
 	else:

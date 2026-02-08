@@ -7,6 +7,6 @@
 script = ExtResource("1_ii67r")
 item_name = "Locker Key"
 item_id = "locker_key_guard"
-item_description = "Found on the guard's desk. It must be for his locker."
+item_description = "Found on the guard's desk. It must be for his locker. It has a tag with the number \"206\"."
 item_texture = ExtResource("1_8gyqm")
 metadata/_custom_type_script = "uid://c0btubbo133er"

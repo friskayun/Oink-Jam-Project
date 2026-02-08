@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://booev6fjsuiga"]
+[gd_scene load_steps=42 format=4 uid="uid://booev6fjsuiga"]
 
 [ext_resource type="Script" uid="uid://blydscraa7u45" path="res://Scenes/Game Scenes/guards_room.gd" id="1_redmu"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_n62ao"]
@@ -22,6 +22,8 @@
 [ext_resource type="Script" uid="uid://dc1fhx1pnk3vu" path="res://Objects/guard/numbpad.gd" id="13_u21er"]
 [ext_resource type="Texture2D" uid="uid://cnsvsckab52oa" path="res://Assets/Objects/Guard/cage.png" id="14_ybsmd"]
 [ext_resource type="Texture2D" uid="uid://d087q8hjdfgy" path="res://Assets/Objects/Guard/cage_table.png" id="15_lp2tq"]
+[ext_resource type="Texture2D" uid="uid://cbldgtmscue8p" path="res://Assets/Objects/Guard/nameplate.png" id="16_diver"]
+[ext_resource type="Texture2D" uid="uid://b3j1vmku8iabu" path="res://Assets/Objects/Guard/cup.png" id="17_4lic1"]
 [ext_resource type="Texture2D" uid="uid://5bmw6sqhihwh" path="res://Assets/Objects/Guard/cage_wooden_table.png" id="18_vmgqo"]
 [ext_resource type="Texture2D" uid="uid://cfna2xlumhifr" path="res://Assets/Objects/Guard/cage_shelf.png" id="20_u3p1h"]
 [ext_resource type="Texture2D" uid="uid://so7mt2dhtfjm" path="res://Assets/Objects/Guard/NumPad.png" id="22_2ce2h"]
@@ -272,6 +274,14 @@ script = ExtResource("9_d34yw")
 [node name="Sprite2D" type="Sprite2D" parent="Objects/Keys and Badge"]
 texture = ExtResource("15_lp2tq")
 offset = Vector2(0, -8)
+
+[node name="Nameplate" type="Sprite2D" parent="Objects/Keys and Badge"]
+position = Vector2(-13, -14)
+texture = ExtResource("16_diver")
+
+[node name="Cup" type="Sprite2D" parent="Objects/Keys and Badge"]
+position = Vector2(14, -17)
+texture = ExtResource("17_4lic1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Keys and Badge"]
 position = Vector2(-1, -5)

@@ -3,9 +3,17 @@ extends ObjectInteract
 const SLEEPING_PILLS = preload("uid://bqfep7s4a6du5")
 
 @export var locker_num: String = "001"
+@export var flip: bool = false
+@onready var collision_shape_2d = $"Interact Area/CollisionShape2D"
+
+func _ready():
+	super()
+	if flip:
+		collision_shape_2d.position.y -= 12
 
 func _on_interact():
 	DialogueManager.play_dialogue("locker_locked")
+	await DialogueManager.dialogue_ended
 
 func use_item_action():
 	DialogueManager.play_dialogue("guard_locker_unlock_idle")

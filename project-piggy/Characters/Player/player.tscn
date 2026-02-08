@@ -1,8 +1,9 @@
-[gd_scene load_steps=40 format=3 uid="uid://c6yui6ubp7sq"]
+[gd_scene load_steps=41 format=3 uid="uid://c6yui6ubp7sq"]
 
 [ext_resource type="Script" uid="uid://d2i5cytnnaeha" path="res://Characters/Player/player.gd" id="1_j341n"]
 [ext_resource type="Texture2D" uid="uid://civl4u2ehg0rl" path="res://Assets/Spritesheets/IDLE PENNY.png" id="2_cue0d"]
 [ext_resource type="Texture2D" uid="uid://db3amb732n2p5" path="res://Assets/Spritesheets/WALK PENNY.png" id="3_bqsbk"]
+[ext_resource type="AudioStream" uid="uid://busv7brhu8wgj" path="res://Assets/SFX/walk_run.mp3" id="4_bqsbk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j341n"]
 radius = 4.0
@@ -471,3 +472,8 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Run/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0.0427351, -0.27354264)
+
+[node name="WalkSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bqsbk")
+volume_db = -10.0
+parameters/looping = true

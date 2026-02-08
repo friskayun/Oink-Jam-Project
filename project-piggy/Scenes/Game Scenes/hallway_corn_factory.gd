@@ -15,3 +15,4 @@ func first_visit():
 	await DialogueManager.dialogue_ended
 	
 	Global.end_cutscene()
+	TutorialScreen.show_screen()

@@ -25,6 +25,7 @@ NavigationManager="*res://Data/navigation_manager.gd"
 TransitionScene="*res://UI/transition_scene.tscn"
 ItemInspect="*res://UI/item_inspect.tscn"
 GameState="*res://Data/game_state.gd"
+TutorialScreen="*res://UI/tutorial_screen.tscn"
 
 [display]
 

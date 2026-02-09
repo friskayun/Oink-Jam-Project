@@ -392,7 +392,7 @@ transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_
 graph_offset = Vector2(-33, -45)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lplgj"]
-radius = 15.0
+radius = 17.013067
 
 [node name="MeatWorker" type="CharacterBody2D"]
 collision_layer = 4

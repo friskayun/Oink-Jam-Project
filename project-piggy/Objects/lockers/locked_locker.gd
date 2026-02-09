@@ -14,13 +14,14 @@ func _ready():
 		collision_shape_2d.position.y -= 12
 
 func _on_interact():
-	DialogueManager.play_description(PROMPT + locker_num)
-	await DialogueManager.dialogue_ended
+	if !Global.in_cutscene:
+		DialogueManager.play_description(PROMPT + locker_num)
+		await DialogueManager.dialogue_ended
 
 func use_item_action():
 	Global.play_cutscene()
 	
-	DialogueManager.call_deferred("play_dialogue", "guard_locker_unlock_idle")
+	DialogueManager.play_dialogue("guard_locker_unlock_idle")
 	#DialogueManager.play_dialogue("guard_locker_unlock_idle")
 	await DialogueManager.dialogue_ended
 	

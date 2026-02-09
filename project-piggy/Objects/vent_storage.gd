@@ -3,11 +3,18 @@ extends ObjectInteract
 @export var vent_index: int = 2
 @export var scene_id: String = "storage_scene"
 @onready var vent_toggle_sfx = $VentToggleSFX
+@onready var chibi = $chibi
+
+func _ready():
+	super()
+	if Global.is_player_in_vent:
+		await get_tree().create_timer(1.5).timeout
+		DialogueManager.play_choice("in_vent_choice", _vent_choice_up)
 
 func _on_interact():
 	if Global.is_player_in_vent:
 		DialogueManager.play_choice("in_vent_choice", _vent_choice_up)
-		await DialogueManager.dialogue_ended
+		#await DialogueManager.dialogue_ended
 		return
 	
 	if GameState.is_storage_vent_locked():

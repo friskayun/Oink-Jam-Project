@@ -55,7 +55,7 @@ func stop_chase():
 	is_chasing = false
 
 func _follow_player():
-	if global_position.distance_to(player.global_position) >= 32:
+	if global_position.distance_to(player.global_position) >= 8:
 		direction = (player.global_position - global_position).normalized()
 	else:
 		direction = Vector2.ZERO

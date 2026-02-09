@@ -12,6 +12,11 @@ func _ready():
 	
 	if GameState.is_guard_sleeping() and GameState.curr_state < GameState.STATE.UNLOCK_CAGES:
 		_guard_put_to_sleep_cutscene()
+		return
+	
+	if Global.is_player_in_vent:
+		await get_tree().create_timer(1.5).timeout
+		DialogueManager.play_choice("in_vent_choice", _vent_choice_up)
 
 func _on_interact():
 	if Global.in_cutscene:
@@ -19,6 +24,10 @@ func _on_interact():
 	
 	if GameState.curr_state == GameState.STATE.UNLOCK_CAGES:
 		DialogueManager.play_dialogue("vent_guard_sleep_down")
+		await DialogueManager.dialogue_ended
+		return
+	elif GameState.curr_state >= GameState.STATE.FINAL_CHASE:
+		DialogueManager.play_dialogue("vent_guard_last_chase")
 		await DialogueManager.dialogue_ended
 		return
 	
@@ -71,6 +80,10 @@ func _vent_choice_up(index: int):
 				NavigationManager.go_to_level(scene_id, "V_Down")
 
 func _guard_put_to_sleep_cutscene():
+	var player = get_tree().get_first_node_in_group("Player")
+	if player:
+		player.visible = false
+	
 	Global.play_cutscene()
 	
 	await get_tree().create_timer(3).timeout

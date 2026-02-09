@@ -68,6 +68,8 @@ tile_map_data = PackedByteArray("AAAEAAAAAQAFAAEAAAAEAAEAAQAFAAIAAAAEAAIAAQAFAAM
 tile_set = ExtResource("3_mue6r")
 
 [node name="TileMapLayerTOP" type="TileMapLayer" parent="TileMaps"]
+z_index = 10
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAHAAkAAQAHAAoAAAAHAAoAAQAHAAsAAAAIAAkAAQAIAAoAAAAIAAoAAQAIAAsAAAAJAAkAAQAJAAoAAAAJAAoAAQAJAAsAAAAKAAkAAQAKAAoAAAAKAAoAAQAKAAsAAAALAAkAAQALAAoAAAALAAoAAQALAAsAAAAMAAkAAQAMAAoAAAAMAAoAAQAMAAsAAAANAAkAAQARAAYAAAAGAAkAAQARAAYAABANAAoAAQAVAAUAABAGAAoAAQAVAAUAAAAOAAkAAQAVAAUAAGAPAAkAAQAVAAUAAGAFAAkAAQAVAAQAAGAEAAkAAQAVAAQAAGADAAkAAQAVAAQAAGACAAkAAQAVAAQAAGA=")
 tile_set = ExtResource("3_mue6r")
 y_sort_origin = 10
@@ -76,7 +78,7 @@ y_sort_origin = 10
 position = Vector2(140, 139)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(6, 6)
+zoom = Vector2(4, 4)
 limit_left = -8
 limit_top = -216
 limit_right = 792

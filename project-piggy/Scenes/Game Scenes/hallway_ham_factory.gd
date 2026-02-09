@@ -38,9 +38,9 @@ func first_visit():
 	DialogueManager.play_dialogue(DIALOGUE_FIRST_VISIT)
 	await DialogueManager.dialogue_ended
 	
-	GameState.curr_state = GameState.STATE.GET_TO_POPPY
-	
 	Global.end_cutscene()
+	GameState.curr_state = GameState.STATE.GET_TO_POPPY
+	GameState._save_checkpoint()
 
 func spawn_meat_worker():
 	await get_tree().create_timer(3).timeout

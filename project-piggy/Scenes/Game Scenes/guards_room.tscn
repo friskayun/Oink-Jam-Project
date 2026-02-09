@@ -87,7 +87,7 @@ tile_set = ExtResource("3_vf1dr")
 
 [node name="Player" parent="." instance=ExtResource("2_n62ao")]
 y_sort_enabled = true
-position = Vector2(111, 79)
+position = Vector2(111, 143)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(6, 6)
@@ -180,8 +180,10 @@ position = Vector2(-0.5, -5)
 shape = SubResource("RectangleShape2D_diver")
 
 [node name="Cages" type="Node2D" parent="Objects"]
+y_sort_enabled = true
 
 [node name="Cage" type="StaticBody2D" parent="Objects/Cages"]
+y_sort_enabled = true
 position = Vector2(236, 157)
 collision_layer = 2
 script = ExtResource("7_55jq6")
@@ -201,6 +203,7 @@ position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_eav2x")
 
 [node name="Cage2" type="StaticBody2D" parent="Objects/Cages"]
+y_sort_enabled = true
 position = Vector2(196, 157)
 collision_layer = 2
 script = ExtResource("7_55jq6")
@@ -220,6 +223,7 @@ position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_eav2x")
 
 [node name="Cage3" type="StaticBody2D" parent="Objects/Cages"]
+y_sort_enabled = true
 position = Vector2(156, 157)
 collision_layer = 2
 script = ExtResource("7_55jq6")
@@ -239,6 +243,7 @@ position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_eav2x")
 
 [node name="Cage4" type="StaticBody2D" parent="Objects/Cages"]
+y_sort_enabled = true
 position = Vector2(116, 157)
 collision_layer = 2
 script = ExtResource("7_55jq6")
@@ -258,6 +263,7 @@ position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_eav2x")
 
 [node name="Cage5" type="StaticBody2D" parent="Objects/Cages"]
+y_sort_enabled = true
 position = Vector2(76, 157)
 collision_layer = 2
 script = ExtResource("7_55jq6")

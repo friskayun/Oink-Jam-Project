@@ -5,6 +5,12 @@ extends ObjectInteract
 
 @onready var vent_toggle_sfx = $VentToggleSFX
 
+func _ready():
+	super()
+	if Global.is_player_in_vent:
+		await get_tree().create_timer(1.5).timeout
+		DialogueManager.play_choice("in_vent_choice", _vent_choice_up)
+
 func _on_interact():
 	if Global.is_player_in_vent:
 		DialogueManager.play_choice("in_vent_choice", _vent_choice_up)

@@ -27,7 +27,6 @@ func visit():
 	hallway()
 
 func hallway():
-	Global.play_track(null)
 	GameState.curr_state = GameState.STATE.FIRST_CHASE
 	Global.end_cutscene()
 	NavigationManager.go_to_level(NEXT_SCENE, DOOR_ID)

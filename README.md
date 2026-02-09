@@ -7,6 +7,19 @@ Team members: ***Vanessinha, Grilhado, Camryn, Friska***
 
 ## Dev-Log               
 
+### v1.00 - Publishing - 9 Feb 2026
+- Published and Submitted to Oink Jam #1
+
+<br>
+
+### v0.10 - Wrapping up and Playtesting - 9 Feb 2026
+- Settin up art and final gameplay
+- Filling missed tasks
+- BugFixing
+- Playtesting 
+
+<br>
+
 ### v0.09 - SFX - 8 Feb 2026
 ---
 Added:

@@ -53,6 +53,7 @@ func _first_visit():
 	
 	
 	Global.end_cutscene()
+	Global.play_track(null)
 	GameState.curr_state = GameState.STATE.EXPLORE_FACTORY
 	if GameState.curr_checkpoint < GameState.CHECKPOINT.FOUND_STORAGE_ROOM:
 		GameState.curr_checkpoint = GameState.CHECKPOINT.FOUND_STORAGE_ROOM

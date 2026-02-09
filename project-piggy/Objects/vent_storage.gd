@@ -7,6 +7,7 @@ extends ObjectInteract
 func _on_interact():
 	if Global.is_player_in_vent:
 		DialogueManager.play_choice("in_vent_choice", _vent_choice_up)
+		await DialogueManager.dialogue_ended
 		return
 	
 	if GameState.is_storage_vent_locked():
@@ -33,9 +34,11 @@ func use_item_action():
 
 func objective_locked():
 	DialogueManager.play_dialogue("vent_storage_locked")
+	await DialogueManager.dialogue_ended
 
 func objective_below_state():
 	DialogueManager.play_dialogue("vent_storage_below_state")
+	await DialogueManager.dialogue_ended
 
 func objective_unlocked():
 	DialogueManager.play_choice("vent_storage_choice", _vent_choice_down)

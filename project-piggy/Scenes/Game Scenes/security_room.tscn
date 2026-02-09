@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://d4d6hj0fhnvt0"]
+[gd_scene load_steps=25 format=4 uid="uid://d4d6hj0fhnvt0"]
 
 [ext_resource type="Script" uid="uid://jlwjn2u8hip3" path="res://Prefabs/level.gd" id="1_l1yho"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_evd6k"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://tjv4c8d4cahv" path="res://Objects/security/pc.gd" id="5_l1yho"]
 [ext_resource type="Texture2D" uid="uid://doix4jovn8oc6" path="res://Assets/Objects/Vent_room.png" id="6_nvo2p"]
 [ext_resource type="Script" uid="uid://d11bgt4q33b2t" path="res://Objects/security/shelf_security.gd" id="6_o5lox"]
+[ext_resource type="PackedScene" uid="uid://c4yl87q4ji54l" path="res://Prefabs/vent_toggle_sfx.tscn" id="7_bfqch"]
 [ext_resource type="Script" uid="uid://bs57op102rao6" path="res://Objects/security/cabin.gd" id="8_o5lox"]
 [ext_resource type="Texture2D" uid="uid://cp0x0wexpxm5y" path="res://Assets/Objects/Security/security_screen.png" id="9_us13k"]
 [ext_resource type="Texture2D" uid="uid://dj2i2rh3m8lma" path="res://Assets/Objects/Security/book_shelf.png" id="11_gq7d8"]
@@ -59,7 +60,7 @@ tile_set = ExtResource("3_dpob5")
 
 [node name="Player" parent="." instance=ExtResource("2_evd6k")]
 y_sort_enabled = true
-position = Vector2(99, 91)
+position = Vector2(64, 58)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(5, 5)
@@ -72,7 +73,7 @@ limit_bottom = 200
 y_sort_enabled = true
 
 [node name="Vent" type="Node2D" parent="Objects"]
-position = Vector2(64, 15)
+position = Vector2(64, 12)
 script = ExtResource("3_nj346")
 vent_index = 3
 
@@ -84,6 +85,8 @@ texture = ExtResource("6_nvo2p")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Vent/Interact Area"]
 position = Vector2(0, 14)
 shape = SubResource("RectangleShape2D_2c71i")
+
+[node name="VentToggleSFX" parent="Objects/Vent" instance=ExtResource("7_bfqch")]
 
 [node name="PC" type="StaticBody2D" parent="Objects"]
 position = Vector2(151, 40)
@@ -158,7 +161,7 @@ shape = SubResource("RectangleShape2D_dvea3")
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door_V_Up" parent="Doors" instance=ExtResource("3_gghh2")]
-position = Vector2(64, 15)
+position = Vector2(64, 12)
 direction_spawn = "down"
 is_active = false
 

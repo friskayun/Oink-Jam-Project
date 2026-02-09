@@ -32,6 +32,7 @@ func _input(event):
 			show_next_line()
 		elif printing_prompt:
 			reset_print_anim()
+		get_viewport().set_input_as_handled()
 	
 	if event.is_action_pressed("cancel") and active_dialogue:
 		end_dialogue()

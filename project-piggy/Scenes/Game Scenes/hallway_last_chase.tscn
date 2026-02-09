@@ -107,6 +107,7 @@ position = Vector2(-3, -6.5)
 shape = SubResource("RectangleShape2D_cy4xc")
 
 [node name="Level UI Elements" parent="." instance=ExtResource("6_4vbi1")]
+visible = false
 
 [connection signal="body_entered" from="Doors/Door_End/Area2D" to="Doors/Door_End" method="_on_area_body_entered"]
 

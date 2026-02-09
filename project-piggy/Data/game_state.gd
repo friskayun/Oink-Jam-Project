@@ -133,6 +133,8 @@ func _on_new_game():
 	dynamite_lighted = false
 	guard_sleeping = false
 	pills_planted = false
+	
+	Global.is_player_in_vent = false
 
 func _save_checkpoint():
 	on_save_data.emit()
@@ -149,6 +151,7 @@ func _load_checkpoint():
 		print("Loading...")
 		print(dic)
 		parse_dic_to_data(dic)
+		Global.is_player_in_vent = false
 		on_load_data.emit()
 		NavigationManager.spawn_door_tag = null
 		NavigationManager.go_to_level(curr_scene_id)

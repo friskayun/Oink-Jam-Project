@@ -54,6 +54,9 @@ func _ready():
 	#draw_vent_maze()
 
 func _input(event):
+	if Global.freeze_input:
+		return
+	
 	if event.is_action_pressed("interact") and on_vent:
 		switch_to_room()
 	

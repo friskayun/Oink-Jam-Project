@@ -41,9 +41,12 @@ func _sort_by_distance_to_player(area1, area2):
 	var area2_to_player = player.global_position.distance_to(area2.global_position)
 	return area1_to_player < area2_to_player
 
-func _input(event):
+func _unhandled_input(event):
 	if Global.freeze_input or Global.dialogue_run:
+		can_interact = false
 		return
+	else:
+		can_interact = true
 	
 	if event.is_action_pressed("interact") and can_interact:
 		if active_areas.size() > 0:

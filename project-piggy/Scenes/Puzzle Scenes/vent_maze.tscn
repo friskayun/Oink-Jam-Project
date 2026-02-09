@@ -42,11 +42,9 @@ texture = ExtResource("3_wcp4q")
 zoom = Vector2(6, 6)
 
 [node name="PointLight2D" type="PointLight2D" parent="PlayerSprite"]
-visible = false
 texture = SubResource("GradientTexture2D_5ye64")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="StepSFX" type="AudioStreamPlayer" parent="."]

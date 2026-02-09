@@ -57,7 +57,7 @@ tile_set = ExtResource("3_hcj1j")
 
 [node name="Player" parent="." instance=ExtResource("2_1tnp7")]
 y_sort_enabled = true
-position = Vector2(105, 79)
+position = Vector2(124, 76)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(6, 6)
@@ -307,12 +307,12 @@ bus = &"SFX"
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door_V_Up_R" parent="Doors" instance=ExtResource("5_pa5j2")]
-position = Vector2(66, 26)
+position = Vector2(217, 26)
 direction_spawn = "down"
 is_active = false
 
 [node name="Door_V_Up_W" parent="Doors" instance=ExtResource("5_pa5j2")]
-position = Vector2(217, 26)
+position = Vector2(66, 26)
 direction_spawn = "down"
 is_active = false
 

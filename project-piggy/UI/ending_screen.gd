@@ -30,7 +30,7 @@ func _ready():
 	cutscene()
 
 func _input(event):
-	if event.is_action_pressed("skip_dialogue") and Global.in_cutscene:
+	if event.is_action_pressed("interact") and Global.in_cutscene:
 		next()
 
 func cutscene():

@@ -42,7 +42,7 @@ size = Vector2(30, 14.5)
 size = Vector2(39, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eav2x"]
-size = Vector2(30, 15)
+size = Vector2(30, 11.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lp2tq"]
 size = Vector2(46, 14)
@@ -87,7 +87,7 @@ tile_set = ExtResource("3_vf1dr")
 
 [node name="Player" parent="." instance=ExtResource("2_n62ao")]
 y_sort_enabled = true
-position = Vector2(129, 91)
+position = Vector2(111, 79)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(6, 6)
@@ -123,20 +123,24 @@ y_sort_enabled = true
 [node name="Pig" parent="NPCs/Pigs" instance=ExtResource("8_7tbde")]
 y_sort_enabled = true
 position = Vector2(230, 170)
+x_destination = 248
 
 [node name="Pig2" parent="NPCs/Pigs" instance=ExtResource("8_7tbde")]
 y_sort_enabled = true
 position = Vector2(159, 166)
+x_destination = 248
 skin = 2
 
 [node name="Pig3" parent="NPCs/Pigs" instance=ExtResource("8_7tbde")]
 y_sort_enabled = true
 position = Vector2(198, 172)
+x_destination = 248
 skin = 3
 
 [node name="Pig4" parent="NPCs/Pigs" instance=ExtResource("8_7tbde")]
 y_sort_enabled = true
 position = Vector2(111, 172)
+x_destination = 248
 
 [node name="Objects" type="Node2D" parent="."]
 y_sort_enabled = true

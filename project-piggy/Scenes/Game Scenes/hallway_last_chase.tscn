@@ -71,11 +71,13 @@ x_destination = 320
 position = Vector2(137, 77)
 y_destination = 77
 x_destination = 320
+skin = 2
 
 [node name="Pig3" parent="NPC" instance=ExtResource("6_70jc4")]
 position = Vector2(117, 105)
 y_destination = 105
 x_destination = 320
+skin = 3
 
 [node name="Objects" type="Node2D" parent="."]
 

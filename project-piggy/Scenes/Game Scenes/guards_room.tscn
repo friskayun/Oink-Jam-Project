@@ -127,10 +127,12 @@ position = Vector2(230, 170)
 [node name="Pig2" parent="NPCs/Pigs" instance=ExtResource("8_7tbde")]
 y_sort_enabled = true
 position = Vector2(159, 166)
+skin = 2
 
 [node name="Pig3" parent="NPCs/Pigs" instance=ExtResource("8_7tbde")]
 y_sort_enabled = true
 position = Vector2(198, 172)
+skin = 3
 
 [node name="Pig4" parent="NPCs/Pigs" instance=ExtResource("8_7tbde")]
 y_sort_enabled = true

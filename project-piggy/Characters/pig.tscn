@@ -1,8 +1,8 @@
 [gd_scene load_steps=29 format=3 uid="uid://bxk44jjbp44h5"]
 
 [ext_resource type="Script" uid="uid://c47rhf8yuvbpl" path="res://Characters/pig.gd" id="1_6d7np"]
-[ext_resource type="Texture2D" uid="uid://civl4u2ehg0rl" path="res://Assets/Spritesheets/IDLE PENNY.png" id="1_ltei2"]
-[ext_resource type="Texture2D" uid="uid://db3amb732n2p5" path="res://Assets/Spritesheets/WALK PENNY.png" id="2_6d7np"]
+[ext_resource type="Texture2D" uid="uid://g7ogh6qiwjv7" path="res://Assets/Spritesheets/IDLE_NPC_01.png" id="2_6d7np"]
+[ext_resource type="Texture2D" uid="uid://b37ehmu361g08" path="res://Assets/Spritesheets/WALKING_NPC_01.png" id="3_u3ydh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u3ydh"]
 radius = 4.0
@@ -320,13 +320,13 @@ modulate = Color(0.95917517, 0.6963171, 0.7566736, 1)
 script = ExtResource("1_6d7np")
 
 [node name="IdleSprites" type="Sprite2D" parent="."]
-texture = ExtResource("1_ltei2")
+texture = ExtResource("2_6d7np")
 hframes = 4
 vframes = 3
 
 [node name="WalkSprites" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("2_6d7np")
+texture = ExtResource("3_u3ydh")
 hframes = 8
 vframes = 3
 

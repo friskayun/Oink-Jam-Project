@@ -92,7 +92,10 @@ func stop_sfx():
 
 
 func _on_area_2d_body_entered(body):
-	if (body is Player and !is_guard) or body is Poppy:
+	if (body is Player or body is Poppy) and !is_guard:
+		if body is Poppy:
+			body.freeze()
+		
 		stop_chase()
 		NavigationManager.go_to_level("ending_screen", "5")
 

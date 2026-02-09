@@ -1,0 +1,170 @@
+[gd_scene load_steps=6 format=3 uid="uid://dn1mc0ifmj3ia"]
+
+[ext_resource type="Script" uid="uid://c8h13m5e31kyo" path="res://UI/options_menu.gd" id="1_xf62s"]
+[ext_resource type="PackedScene" uid="uid://diyntio4siccb" path="res://UI/button.tscn" id="2_q6x1i"]
+[ext_resource type="AudioStream" uid="uid://d1485lpxtp3vj" path="res://Assets/SFX/switch.mp3" id="3_hrc50"]
+[ext_resource type="AudioStream" uid="uid://7k2cehkogn7v" path="res://Assets/SFX/button_press.mp3" id="4_odouo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6x1i"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xf62s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 81.0
+offset_right = 826.0
+offset_bottom = 144.0
+theme_override_font_sizes/font_size = 62
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -105.0
+offset_right = 250.0
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_q6x1i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Volume" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Volume"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Audio Master"
+
+[node name="Control" type="Control" parent="Panel/VBoxContainer/Volume"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MasterAudio" type="HSlider" parent="Panel/VBoxContainer/Volume"]
+custom_minimum_size = Vector2(288, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.01
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Volume2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Volume2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Audio Music"
+
+[node name="Control2" type="Control" parent="Panel/VBoxContainer/Volume2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MusicAudio" type="HSlider" parent="Panel/VBoxContainer/Volume2"]
+custom_minimum_size = Vector2(288, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.01
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Volume3" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Volume3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Audio SFX"
+
+[node name="Control3" type="Control" parent="Panel/VBoxContainer/Volume3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SFXAudio" type="HSlider" parent="Panel/VBoxContainer/Volume3"]
+custom_minimum_size = Vector2(288, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.01
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="FullscreenButton" type="CheckButton" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+button_pressed = true
+text = "Fullscreen"
+
+[node name="Control" type="Control" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" parent="Panel/VBoxContainer" instance=ExtResource("2_q6x1i")]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Back"
+
+[node name="SwitchSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_hrc50")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="PressSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_odouo")
+volume_db = -10.0
+bus = &"SFX"
+
+[connection signal="focus_entered" from="Panel/VBoxContainer/Volume/MasterAudio" to="." method="_on_focus_entered"]
+[connection signal="value_changed" from="Panel/VBoxContainer/Volume/MasterAudio" to="." method="_on_master_audio_value_changed"]
+[connection signal="focus_entered" from="Panel/VBoxContainer/Volume2/MusicAudio" to="." method="_on_focus_entered"]
+[connection signal="value_changed" from="Panel/VBoxContainer/Volume2/MusicAudio" to="." method="_on_music_audio_value_changed"]
+[connection signal="focus_entered" from="Panel/VBoxContainer/Volume3/SFXAudio" to="." method="_on_focus_entered"]
+[connection signal="value_changed" from="Panel/VBoxContainer/Volume3/SFXAudio" to="." method="_on_sfx_audio_value_changed"]
+[connection signal="focus_entered" from="Panel/VBoxContainer/FullscreenButton" to="." method="_on_focus_entered"]
+[connection signal="toggled" from="Panel/VBoxContainer/FullscreenButton" to="." method="_on_fullscreen_button_toggled"]
+[connection signal="focus_entered" from="Panel/VBoxContainer/Button" to="." method="_on_focus_entered"]
+[connection signal="pressed" from="Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]

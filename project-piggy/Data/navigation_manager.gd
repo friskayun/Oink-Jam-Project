@@ -19,6 +19,7 @@ const HALLWAY_LAST_CHASE = preload("uid://cxvigbgixpw6q")
 	## UI Scene 
 const MAIN_MENU = preload("uid://dvm87cwckmutu")
 const ENDING_SCREEN = preload("uid://c1jg30hae7644")
+const CREDITS_SCREEN = preload("uid://dobla6vouuop3")
 
 #endregion 
 
@@ -78,3 +79,5 @@ func get_scene(scene_tag):
 		# UI Scenes
 		"main_menu":
 			return MAIN_MENU
+		"credits_screen":
+			return CREDITS_SCREEN

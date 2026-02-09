@@ -316,7 +316,7 @@ transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_
 graph_offset = Vector2(-33, -45)
 
 [node name="Poppy" type="CharacterBody2D"]
-scale = Vector2(3, 3)
+y_sort_enabled = true
 collision_layer = 4
 script = ExtResource("1_gg5hu")
 

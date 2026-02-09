@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var anim_player = $AnimationPlayer
 @onready var inspect_sfx = $InspectSFX
+@onready var texture_rect = $Visual/MarginContainer/TextureRect
 
 var can_close: bool = false
 
@@ -20,7 +21,7 @@ func show_item_inspect(item: Item = null):
 	Global.set_ui_win_status(true)
 	
 	if item != null:
-		$Visual/TextureRect.texture = item.item_texture
+		texture_rect.texture = item.item_texture
 	
 	visible = true
 	get_tree().paused = true

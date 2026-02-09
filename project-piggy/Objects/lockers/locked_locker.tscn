@@ -1,15 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8o2oiblmlte6"]
+[gd_scene load_steps=6 format=3 uid="uid://b8o2oiblmlte6"]
 
 [ext_resource type="Script" uid="uid://d30m64foysehd" path="res://Objects/lockers/locked_locker.gd" id="1_dn2ao"]
+[ext_resource type="Texture2D" uid="uid://dye5hl0ubt1ma" path="res://Assets/Objects/Lockers/locker.png" id="2_mu5e2"]
 [ext_resource type="PackedScene" uid="uid://c57wlulahu4d4" path="res://Prefabs/interact_area.tscn" id="2_tylqv"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0lc8"]
-size = Vector2(88, 48)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mu5e2"]
+size = Vector2(15, 10)
 
-[node name="Locked_locker" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0lc8"]
+size = Vector2(13, 10)
+
+[node name="Locked_locker" type="StaticBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_dn2ao")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mu5e2")
+offset = Vector2(0, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -5)
+shape = SubResource("RectangleShape2D_mu5e2")
 
 [node name="Interact Area" parent="." instance=ExtResource("2_tylqv")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact Area"]
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_y0lc8")

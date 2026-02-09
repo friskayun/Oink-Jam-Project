@@ -240,5 +240,6 @@ libraries = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_pk8ma")
+bus = &"SFX"
 
 [connection signal="timeout" from="PrintTimer" to="." method="_on_print_timer_timeout"]

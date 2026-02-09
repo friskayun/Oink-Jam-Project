@@ -14,12 +14,16 @@ var ui_win_shown: bool = false
 var is_player_in_vent: bool = false
 var used_oil_item = false
 
+var focus_sfx_enabled = true
 var curr_track: AudioStream = null
+var master_vol: float = 1.0
+var music_vol: float = 1.0
+var sfx_vol: float = 1.0
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	add_child(music_player)
-	#bg_music_player.bus = "Music"
+	music_player.bus = "Music"
 
 func _input(event):
 	if event.is_action_pressed("screenshot"):
@@ -83,3 +87,14 @@ func track_fade_out():
 	tween.tween_property(music_player, "volume_db", -60, 1)
 	await tween.finished
 	music_player.stop()
+
+func disable_focus_sfx():
+	focus_sfx_enabled = false
+
+func enable_focus_sfx():
+	focus_sfx_enabled = true
+
+func ignore_sfx_on_ready():
+	disable_focus_sfx()
+	await get_tree().process_frame
+	enable_focus_sfx()

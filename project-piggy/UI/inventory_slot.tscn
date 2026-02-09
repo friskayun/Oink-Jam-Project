@@ -41,3 +41,4 @@ grow_vertical = 2
 [node name="FocusSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_t7war")
 volume_db = -10.0
+bus = &"SFX"

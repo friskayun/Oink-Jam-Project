@@ -11,6 +11,7 @@ const FINAL_SCENE = preload("res://Assets/Backgrounds/Final scene.PNG")
 
 
 const INTRO_CUTSCENE = "intro_cutscene"
+const CREDITS_SCENE = "credits_screen"
 
 @onready var rect = $TextureRect
 
@@ -30,10 +31,11 @@ func _ready():
 	cutscene()
 
 func _input(event):
-	if event.is_action_pressed("skip_dialogue") and Global.in_cutscene:
+	if event.is_action_pressed("interact") and Global.in_cutscene:
 		next()
 
 func cutscene():
+	Global.play_track(null)
 	rect.texture = end_id[ending_id]["BG"]
 	
 	await get_tree().create_timer(2).timeout
@@ -50,7 +52,7 @@ func next():
 		else:
 			DialogueManager.play_choice("end_new_choice", _on_choice_new)
 	else:
-		NavigationManager.go_to_level("main_menu")
+		NavigationManager.go_to_level(CREDITS_SCENE)
 
 func _on_choice_load(index: int):
 	match index:

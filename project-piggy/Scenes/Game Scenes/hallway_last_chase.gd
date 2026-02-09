@@ -1,7 +1,7 @@
 extends Level
 
 const OIL_AREA = preload("uid://dtcsgcx4pe1eq")
-@onready var player = $Player
+const DURING_CHASE = preload("uid://cftrpcpj6602n")
 @onready var objects = $Objects
 
 func _ready():
@@ -14,6 +14,7 @@ func _process(_delta):
 	pass
 
 func level_start():
+	Global.play_track(DURING_CHASE)
 	Global.play_cutscene()
 	pigs_running()
 	await get_tree().create_timer(1.5).timeout

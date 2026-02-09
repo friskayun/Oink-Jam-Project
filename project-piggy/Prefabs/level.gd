@@ -2,8 +2,15 @@ extends Node
 class_name Level
 
 const DOOR_NODE_PATH = "Doors/Door_"
+@onready var player = get_tree().get_first_node_in_group("Player")
 
 func _ready():
+	
+	if player and Global.is_player_in_vent:
+		player.visible = false
+	else:
+		player.visible = true
+	
 	if NavigationManager.spawn_door_tag != null:
 		on_level_spawn(NavigationManager.spawn_door_tag)
 	

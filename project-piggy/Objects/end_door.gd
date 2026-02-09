@@ -7,6 +7,7 @@ extends Node2D
 
 func _on_area_body_entered(body):
 	if body is Player:
+		Global.play_track(null)
 		if GameState.dynamite_lighted:
 			NavigationManager.go_to_level(destination_level_tag, ending_id_1)
 		else:

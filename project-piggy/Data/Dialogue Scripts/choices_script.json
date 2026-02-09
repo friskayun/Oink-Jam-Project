@@ -56,7 +56,7 @@
 	},
 	
 	"in_vent_choice": {
-		"line": "Next step?",
+		"line": "Next?",
 		"choices": [
 			{"text": "Go back"},
 			{"text": "Get down"}

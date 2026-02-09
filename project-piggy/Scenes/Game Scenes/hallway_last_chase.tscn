@@ -52,14 +52,6 @@ player = NodePath("../../Player")
 position = Vector2(97, -69)
 player = NodePath("../../Player")
 
-[node name="MeatWorker2" parent="NPC" node_paths=PackedStringArray("player") instance=ExtResource("5_w3toh")]
-position = Vector2(123, -98)
-player = NodePath("../../Player")
-
-[node name="MeatWorker3" parent="NPC" node_paths=PackedStringArray("player") instance=ExtResource("5_w3toh")]
-position = Vector2(67, -105)
-player = NodePath("../../Player")
-
 [node name="Pig" parent="NPC" instance=ExtResource("6_70jc4")]
 position = Vector2(163, 95)
 y_destination = 95

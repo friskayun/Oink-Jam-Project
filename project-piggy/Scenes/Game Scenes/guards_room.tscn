@@ -393,4 +393,3 @@ destination_door_tag = "Guard"
 shape = SubResource("RectangleShape2D_gmon8")
 
 [node name="Level UI Elements" parent="." instance=ExtResource("2_x7xqu")]
-visible = false

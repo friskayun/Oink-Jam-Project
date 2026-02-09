@@ -4,7 +4,7 @@
 			{"speaker": "Mr. Horns", "text": "Okay class, settle down, settle down! We have almost arrived at our field trip destination!", "sprite_id": "idle"},
 			{"speaker": "Mr. Horns", "text": "Can anyone guess where we are going?", "sprite_id": "idle"}, 
 			{"speaker": "Wendy", "text": "An amusement park!", "sprite_id": "happy"},
-			{"speaker": "Mr. Horns", "text": "Nope, more informational!", "sprite_id": "happy"},
+			{"speaker": "Mr. Horns", "text": "Nope, more educational!", "sprite_id": "happy"},
 			{"speaker": "Ryan", "text": "The Science Museum!",  "sprite_id": "idle" },
 			{"speaker": "Mr. Horns", "text": "More hands on!", "sprite_id": "happy" },
 			{"speaker": "Ollie", "text": "Pile of dirt?!", "sprite_id": "idle" },
@@ -285,7 +285,7 @@
 	
 	"guard_locker_unlock_idle": {
 		"lines": [
-			{"text": "It has some casual clothes, another uniform, and some confy shoes."}
+			{"text": "It has some casual clothes, another uniform, and some comfy shoes."}
 		]
 	},
 	
@@ -342,7 +342,7 @@
 	},
 	"vent_guard_last_chase": {
 		"lines":[
-			{"speaker": "Penny", "text": "It's not save, they can wait for us in every room. ", "sprite_id": "determined"}
+			{"speaker": "Penny", "text": "It's not safe, they can wait for us in every room. ", "sprite_id": "determined"}
 		]
 	},
 	

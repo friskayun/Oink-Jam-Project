@@ -9,7 +9,9 @@ class_name Door
 @export var is_active: bool = true
 
 @onready var spawn = $Spawn
+@onready var door_open_sfx = $DoorOpenSFX
 
 func _on_body_entered(body):
 	if body is Player and is_active:
+		door_open_sfx.play()
 		NavigationManager.go_to_level(destination_level_tag, destination_door_tag)

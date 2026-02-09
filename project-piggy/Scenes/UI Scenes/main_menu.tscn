@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvm87cwckmutu"]
+[gd_scene load_steps=7 format=3 uid="uid://dvm87cwckmutu"]
 
 [ext_resource type="PackedScene" uid="uid://diyntio4siccb" path="res://UI/button.tscn" id="1_28flt"]
 [ext_resource type="Script" uid="uid://bn60pud7w7c6i" path="res://Scenes/UI Scenes/main_menu.gd" id="1_48xlc"]
 [ext_resource type="AudioStream" uid="uid://c07tohvcegbp" path="res://Assets/SFX/button_hover.mp3" id="3_pih3d"]
 [ext_resource type="AudioStream" uid="uid://7k2cehkogn7v" path="res://Assets/SFX/button_press.mp3" id="4_pih3d"]
+[ext_resource type="Texture2D" uid="uid://lb5w65s8sw6v" path="res://Assets/Backgrounds/MENU.png" id="5_j51p1"]
+[ext_resource type="PackedScene" uid="uid://dn1mc0ifmj3ia" path="res://UI/options_menu.tscn" id="6_p34sk"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -14,27 +16,28 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_48xlc")
 
-[node name="Label" type="Label" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -190.0
-offset_top = 58.0
-offset_right = 190.0
-offset_bottom = 146.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 64
-text = "MAIN MENU"
+grow_vertical = 2
+texture = ExtResource("5_j51p1")
+expand_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -70.0
-offset_right = 256.0
-offset_bottom = 266.0
+offset_left = -128.0
+offset_top = -56.0
+offset_right = 128.0
+offset_bottom = 280.0
+grow_horizontal = 2
 grow_vertical = 2
 
 [node name="NewButton" parent="VBoxContainer" instance=ExtResource("1_28flt")]
@@ -63,6 +66,9 @@ stream = ExtResource("3_pih3d")
 
 [node name="PressSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_pih3d")
+
+[node name="OptionsMenu" parent="." instance=ExtResource("6_p34sk")]
+layout_mode = 1
 
 [connection signal="focus_entered" from="VBoxContainer/NewButton" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/NewButton" to="." method="_on_new_button_pressed"]

@@ -5,10 +5,16 @@ const INTRO_CUTSCENE = "intro_cutscene"
 @onready var v_box_container = $VBoxContainer
 @onready var switch_sfx = $SwitchSFX
 @onready var press_sfx = $PressSFX
+@onready var options_menu = $OptionsMenu
 
 func _ready():
+	Global.disable_focus_sfx()
+	
 	setup()
 	hide()
+	
+	await get_tree().process_frame
+	Global.enable_focus_sfx()
 
 func _input(event):
 	if event.is_action_pressed("cancel"):
@@ -17,6 +23,15 @@ func _input(event):
 		
 		@warning_ignore("standalone_ternary")
 		hide_panel() if visible else show_panel()
+		options_menu.hide_options_screen()
+
+func toggle_focus(enable: bool):
+	for button in v_box_container.get_children():
+		if button is Button:
+			button.focus_mode = Control.FOCUS_ALL if enable else FOCUS_NONE
+
+func focus_first_button():
+	v_box_container.get_child(0).call_deferred("grab_focus")
 
 func setup():
 	if DataManager.load_game_data():
@@ -27,6 +42,7 @@ func setup():
 		load_button.focus_mode = FOCUS_NONE
 	
 	v_box_container.get_child(0).call_deferred("grab_focus")
+
 
 func show_panel():
 	if Global.get_ui_win_status():
@@ -47,6 +63,9 @@ func hide_panel():
 
 
 func _on_button_focus_entered():
+	if !Global.focus_sfx_enabled:
+		return
+	
 	switch_sfx.play()
 
 
@@ -67,7 +86,7 @@ func _on_new_button_pressed():
 
 func _on_options_button_pressed():
 	press_sfx.play()
-	hide_panel()
+	options_menu.show_options_screen(self)
 
 func _on_exit_button_pressed():
 	press_sfx.play()

@@ -1,6 +1,7 @@
 extends Node
 
 @onready var music_player: AudioStreamPlayer = AudioStreamPlayer.new()
+const BACKGROUND_MUSIC_CAMRYN_TOPDOWN = preload("uid://cwo1eju18nnoq")
 
 signal on_pick_up_item(item: Item)
 signal _on_use_oil_item
@@ -14,12 +15,18 @@ var ui_win_shown: bool = false
 var is_player_in_vent: bool = false
 var used_oil_item = false
 
-var curr_track: AudioStream = null
+var focus_sfx_enabled = true
+var curr_track: AudioStream = BACKGROUND_MUSIC_CAMRYN_TOPDOWN
+var master_vol: float = 1.0
+var music_vol: float = 1.0
+var sfx_vol: float = 1.0
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	add_child(music_player)
-	#bg_music_player.bus = "Music"
+	music_player.bus = "Music"
+	music_player.stream = BACKGROUND_MUSIC_CAMRYN_TOPDOWN
+	track_fade_in()
 
 func _input(event):
 	if event.is_action_pressed("screenshot"):
@@ -65,11 +72,9 @@ func play_track(track: AudioStream):
 		return
 	
 	if track == null:
-		track_fade_out()
-		curr_track = null
-		return
-	
-	curr_track = track
+		curr_track = BACKGROUND_MUSIC_CAMRYN_TOPDOWN
+	else:
+		curr_track = track
 	music_player.stream = curr_track
 	track_fade_in()
 
@@ -83,3 +88,14 @@ func track_fade_out():
 	tween.tween_property(music_player, "volume_db", -60, 1)
 	await tween.finished
 	music_player.stop()
+
+func disable_focus_sfx():
+	focus_sfx_enabled = false
+
+func enable_focus_sfx():
+	focus_sfx_enabled = true
+
+func ignore_sfx_on_ready():
+	disable_focus_sfx()
+	await get_tree().process_frame
+	enable_focus_sfx()

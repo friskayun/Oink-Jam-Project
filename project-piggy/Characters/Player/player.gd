@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 const WALK_SPEED = 100
-const RUN_SPEED = 150
+const RUN_SPEED = 130
 
 @onready var anim_tree = $AnimationTree
 @onready var idle_sprites = $IdleSprites
@@ -11,7 +11,6 @@ const RUN_SPEED = 150
 
 signal _on_stop_moving
 
-var speed = 3000
 var direction : Vector2 = Vector2.ZERO
 
 var is_moving_cutscene: bool = false
@@ -31,16 +30,13 @@ func _physics_process(_delta):
 	else:
 		direction = Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down").normalized()
 	
-	if Input.is_action_pressed("run"):
-		speed = RUN_SPEED
-	else: 
-		speed = WALK_SPEED
+	var is_running = Input.is_action_pressed("run") and direction != Vector2.ZERO
+	var current_speed = RUN_SPEED if is_running else WALK_SPEED
 	
-	update_anim_parameters()
+	update_anim_parameters(is_running)
 	
-	velocity = direction * speed
+	velocity = direction * current_speed
 	move_and_slide()
-	global_position = global_position.round()
 
 
 func _save_pos():
@@ -68,23 +64,23 @@ func _face_direction(_direction: String):
 		anim_tree["parameters/Walk/blend_position"] = direction
 
 
-func update_anim_parameters():
+func update_anim_parameters(is_running: bool):
 	if direction == Vector2.ZERO:
 		anim_tree.get("parameters/playback").travel("Idle")
 		idle_sprites.visible = true
 		walk_sprites.visible = false
 		stop_sfx()
-	elif speed == WALK_SPEED:
-		anim_tree.get("parameters/playback").travel("Walk")
-		idle_sprites.visible = false
-		walk_sprites.visible = true
-		change_sfx_pitch(1)
-		play_sfx()
 	else:
-		anim_tree.get("parameters/playback").travel("Run")
 		idle_sprites.visible = false
 		walk_sprites.visible = true
-		change_sfx_pitch(1.5)
+		
+		if is_running:
+			anim_tree.get("parameters/playback").travel("Run")
+			change_sfx_pitch(1.5)
+		else:
+			anim_tree.get("parameters/playback").travel("Walk")
+			change_sfx_pitch(1)
+		
 		play_sfx()
 	
 	if direction != Vector2.ZERO:
@@ -121,8 +117,8 @@ func move_to_destination():
 		direction = Vector2.ZERO
 		_stop_moving()
 	
-	update_anim_parameters()
-	velocity = direction * 150
+	update_anim_parameters(false)
+	velocity = direction * 50
 	move_and_slide()
 
 #endregion

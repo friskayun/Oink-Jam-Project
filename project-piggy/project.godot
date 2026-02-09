@@ -13,7 +13,9 @@ config_version=5
 config/name="Project Piggy"
 run/main_scene="uid://dvm87cwckmutu"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://Assets/icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="uid://gsqjiquobktl"
+config/icon="uid://hatwqg6hs0mo"
 
 [autoload]
 

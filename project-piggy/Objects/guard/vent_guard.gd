@@ -5,15 +5,29 @@ extends ObjectInteract
 
 @export var meat_worker: MeatWorker
 
+@onready var vent_toggle_sfx = $VentToggleSFX
+
 func _ready():
 	super()
 	
 	if GameState.is_guard_sleeping() and GameState.curr_state < GameState.STATE.UNLOCK_CAGES:
 		_guard_put_to_sleep_cutscene()
+		return
+	
+	if Global.is_player_in_vent:
+		await get_tree().create_timer(1.5).timeout
+		DialogueManager.play_choice("in_vent_choice", _vent_choice_up)
 
 func _on_interact():
+	if Global.in_cutscene:
+		return
+	
 	if GameState.curr_state == GameState.STATE.UNLOCK_CAGES:
 		DialogueManager.play_dialogue("vent_guard_sleep_down")
+		await DialogueManager.dialogue_ended
+		return
+	elif GameState.curr_state >= GameState.STATE.FINAL_CHASE:
+		DialogueManager.play_dialogue("vent_guard_last_chase")
 		await DialogueManager.dialogue_ended
 		return
 	
@@ -37,10 +51,12 @@ func _vent_choice_down(index: int):
 			# on guard put to sleep cutscene
 			if GameState.are_pills_planted():
 				GameState.put_guard_to_sleep()
+				vent_toggle_sfx.play()
 				NavigationManager.go_to_level(scene_id, "V_Up")
 				return
 			
 			# open vent maze
+			vent_toggle_sfx.play()
 			NavigationManager.go_to_level("vent_maze", str(vent_index))
 		1:
 			# pass / nothing happens
@@ -50,6 +66,7 @@ func _vent_choice_up(index: int):
 	match index:
 		0:
 			# go back to maze
+			vent_toggle_sfx.play()
 			NavigationManager.go_to_level("vent_maze", str(vent_index))
 		1:
 			# get down to scene
@@ -59,9 +76,14 @@ func _vent_choice_up(index: int):
 				DialogueManager.play_choice("in_vent_choice", _vent_choice_up)
 			else:
 				Global.player_exit_vent()
+				vent_toggle_sfx.play()
 				NavigationManager.go_to_level(scene_id, "V_Down")
 
 func _guard_put_to_sleep_cutscene():
+	var player = get_tree().get_first_node_in_group("Player")
+	if player:
+		player.visible = false
+	
 	Global.play_cutscene()
 	
 	await get_tree().create_timer(3).timeout

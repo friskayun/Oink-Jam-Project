@@ -4,7 +4,7 @@
 			{"speaker": "Mr. Horns", "text": "Okay class, settle down, settle down! We have almost arrived at our field trip destination!", "sprite_id": "idle"},
 			{"speaker": "Mr. Horns", "text": "Can anyone guess where we are going?", "sprite_id": "idle"}, 
 			{"speaker": "Wendy", "text": "An amusement park!", "sprite_id": "happy"},
-			{"speaker": "Mr. Horns", "text": "Nope, more informational!", "sprite_id": "happy"},
+			{"speaker": "Mr. Horns", "text": "Nope, more educational!", "sprite_id": "happy"},
 			{"speaker": "Ryan", "text": "The Science Museum!",  "sprite_id": "idle" },
 			{"speaker": "Mr. Horns", "text": "More hands on!", "sprite_id": "happy" },
 			{"speaker": "Ollie", "text": "Pile of dirt?!", "sprite_id": "idle" },
@@ -47,7 +47,7 @@
 			{"speaker": "Tour Guide", "text": "Uh hi, welcome to Corny Cans Canned Corn.",  "sprite_id": "idle_2"},
 			{"speaker": "Tour Guide", "text": "We will be giving you a tour of the facility.",  "sprite_id": "idle_1"},
 			{"speaker": "Tour Guide", "text": "Yeah, Uh... follow me.",  "sprite_id": "idle_1"},
-			{"speaker": "Mr. Horns", "text": "Alright kids, listen carefully to the worker, he is going to teach you all about how a factory works! Bestow your knowledge to us!", "sprite_id": "happy"},
+			{"speaker": "Mr. Horns", "text": "Alright kids, listen carefully to the worker, she is going to teach you all about how a factory works! Bestow your knowledge to us!", "sprite_id": "happy"},
 			{"speaker": "Tour Guide", "text": "Uh... right... I guess we can start where we wash the corn.",  "sprite_id": "idle_2"},
 			{"speaker": "Wendy", "text": "Well, When do we get the free shirts?", "sprite_id": "idle"},
 			{"speaker": "Ryan", "text": "Where are the robots with guns on them?",  "sprite_id": "annoyed"},
@@ -61,7 +61,7 @@
 	},
 	"intro_factory_3": {
 		"lines": [
-			{"speaker": "Penny", "text": "Why do you wash the corn Mr. Worker?", "sprite_id": "idle_1"},
+			{"speaker": "Penny", "text": "Why do you wash the corn Mrs. Worker?", "sprite_id": "idle_1"},
 			{"speaker": "Mr. Horns", "text": "Great question Penny!", "sprite_id": "happy"},
 			{"speaker": "Tour Guide", "text": "Because it’s dirty if not.",  "sprite_id": "idle_2"},
 			{"speaker": "Penny", "text": "...", "sprite_id": "idle_2"},
@@ -285,7 +285,7 @@
 	
 	"guard_locker_unlock_idle": {
 		"lines": [
-			{"text": "It has some casual clothes, another uniform, and some confy shoes."}
+			{"text": "It has some casual clothes, another uniform, and some comfy shoes."}
 		]
 	},
 	
@@ -338,6 +338,11 @@
 	"vent_guard_sleep_down": {
 		"lines":[
 			{"speaker": "Penny", "text": "I need to save them before he wakes up.", "sprite_id": "determined"}
+		]
+	},
+	"vent_guard_last_chase": {
+		"lines":[
+			{"speaker": "Penny", "text": "It's not safe, they can wait for us in every room. ", "sprite_id": "determined"}
 		]
 	},
 	
@@ -408,32 +413,32 @@
 	
 	"guard_cage_1": {
 		"lines":[
-			{"speaker": "Penny", "text": "Poor guys, they're barely staying alive.", "sprite_id": "sad"},
-			{"speaker": "Penny", "text": "Who knows for how long they've been stuck here...", "sprite_id": "scared_1"}
+			{"speaker": "Penny", "text": "Seems like they saved one for me...", "sprite_id": "scared"}
 		]
 	},
 	
 	"guard_cage_2": {
 		"lines":[
-			{"text": "Both pigs are hugged into each other, looking scared."}
+			{"speaker": "Penny", "text": "Poor guys, they're barely staying alive.", "sprite_id": "sad"},
+			{"speaker": "Penny", "text": "Who knows for how long they've been stuck here...", "sprite_id": "scared_1"}
 		]
 	},
 	
 	"guard_cage_3": {
 		"lines":[
-			{"text": "Those two doesn't seem to like each other."}
+			{"text": "A grumpy pig."}
 		]
 	},
 	
 	"guard_cage_4": {
 		"lines":[
-			{"text": "The pigs here are just chilling"}
+			{"text": "The pigs is just chilling"}
 		]
 	},
 	
 	"guard_cage_5": {
 		"lines":[
-			{"text": "The sadness can be seen in their faces"}
+			{"text": "The sadness can be seen in his eyes."}
 		]
 	},
 	

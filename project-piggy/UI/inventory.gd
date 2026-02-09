@@ -3,6 +3,7 @@ extends Control
 @onready var add_item_sfx = $AddItemSFX
 @onready var use_item_sfx = $UseItemSFX
 @onready var wrong_sfx = $WrongSFX
+@onready var objective_text = $VBoxContainer/ObjectivePanel/Text
 
 const INVENTORY_SLOT = preload("uid://bj03w27nhu4h6")
 const GRID_ROWS = 2
@@ -23,7 +24,11 @@ func _ready():
 	
 	hide()
 	%GridContainer.columns = GRID_COLOMNS
+	
+	Global.disable_focus_sfx()
 	load_inventory()
+	await get_tree().process_frame
+	Global.enable_focus_sfx()
 
 func _input(event):
 	if event.is_action_pressed("inventory"):
@@ -114,6 +119,7 @@ func open_inventory():
 	
 	Global.set_ui_win_status(true)
 	
+	set_objective_text()
 	load_select()
 	show()
 	is_active = true
@@ -153,6 +159,11 @@ func set_item_details(item: Item = null):
 		%ItemName.text = ""
 		%ItemText.text = ""
 
+func set_objective_text():
+	var text = GameState.get_curr_objective()
+	if text:
+		objective_text.text = text
+
 func use_item():
 	if curr_slot.has_item() == null:
 		return
@@ -173,7 +184,8 @@ func use_item():
 		print("   - Item used: " + curr_slot.item.item_name)
 		#curr_slot.remove_item()
 		#set_item_details()
-		call_deferred("close_inventory")
+		#call_deferred("close_inventory")
+		close_inventory()
 	else:
 		wrong_sfx.play()
 		print(" Item cannot be used here")

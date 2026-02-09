@@ -2,6 +2,21 @@
 
 [ext_resource type="Script" uid="uid://chbgj582vsdo5" path="res://UI/tutorial_screen.gd" id="1_2a0cn"]
 
+[sub_resource type="Animation" id="Animation_fj2rb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_2a0cn"]
 resource_name = "fade_in"
 length = 0.2
@@ -32,21 +47,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_fj2rb"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fj2rb"]
@@ -107,6 +107,13 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "WASD / Arrows   -   Move"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title7" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Shift   -   Run"
 horizontal_alignment = 1
 vertical_alignment = 1
 

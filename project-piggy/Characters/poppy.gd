@@ -5,7 +5,7 @@ class_name Poppy
 @onready var idle_sprites = $IdleSprites
 @onready var walk_sprites = $WalkSprites
 
-const SPEED = 300
+const SPEED = 100
 
 @export var player: Player 
 
@@ -28,7 +28,7 @@ func _physics_process(_delta):
 func _follow_penny():
 	in_cage = false
 	
-	if global_position.distance_to(player.global_position) > 64:
+	if global_position.distance_to(player.global_position) > 16:
 		direction = (player.global_position - global_position).normalized()
 	else:
 		direction = Vector2.ZERO

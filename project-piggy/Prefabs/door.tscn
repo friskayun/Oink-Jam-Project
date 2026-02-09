@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgfvddl5tq6wl"]
+[gd_scene load_steps=4 format=3 uid="uid://dgfvddl5tq6wl"]
 
 [ext_resource type="Script" uid="uid://cxow40ffk7ur2" path="res://Prefabs/door.gd" id="1_uqoeb"]
+[ext_resource type="AudioStream" uid="uid://b0kkvf06gtet2" path="res://Assets/SFX/door_opening.mp3" id="2_bp8im"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gd6iu"]
 size = Vector2(37, 37)
@@ -14,5 +15,10 @@ script = ExtResource("1_uqoeb")
 shape = SubResource("RectangleShape2D_gd6iu")
 
 [node name="Spawn" type="Marker2D" parent="."]
+
+[node name="DoorOpenSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_bp8im")
+volume_db = -10.0
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=37 format=3 uid="uid://8ycaml5aijon"]
+[gd_scene load_steps=38 format=3 uid="uid://8ycaml5aijon"]
 
 [ext_resource type="Script" uid="uid://b8txmhsyqt84n" path="res://Characters/meat_worker.gd" id="1_h0cy7"]
 [ext_resource type="Texture2D" uid="uid://by667dmo5mrrs" path="res://Assets/Spritesheets/IDLE MEATW.png" id="2_n7ljp"]
 [ext_resource type="Texture2D" uid="uid://dkf1l3lpjh8d2" path="res://Assets/Spritesheets/WALK MEATW.png" id="3_lplgj"]
 [ext_resource type="Texture2D" uid="uid://b0mgglorerge" path="res://Assets/Spritesheets/DEATH MEATHW.png" id="4_itwwe"]
+[ext_resource type="AudioStream" uid="uid://urlxijfs1n7q" path="res://Assets/SFX/heavy_walk_meatworker.mp3" id="5_3elye"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n7ljp"]
 radius = 4.0
@@ -391,10 +392,9 @@ transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_
 graph_offset = Vector2(-33, -45)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lplgj"]
-radius = 15.0
+radius = 17.013067
 
 [node name="MeatWorker" type="CharacterBody2D"]
-scale = Vector2(3, 3)
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_h0cy7")
@@ -442,6 +442,11 @@ shape = SubResource("CircleShape2D_lplgj")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
 one_shot = true
+
+[node name="walk_sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_3elye")
+pitch_scale = 4.0
+bus = &"SFX"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -7,9 +7,10 @@ class_name MeatWorker
 @onready var walk_sprites = $WalkSprites
 @onready var sleep_sprite = $SleepSprite
 @onready var timer = $Timer
+@onready var walk_sfx = $walk_sfx
 
-const CHASE_SPEED = 350
-const SLOW_SPEED = 150
+const CHASE_SPEED = 150
+const SLOW_SPEED = 75
 
 @export var player: Player 
 @export var is_guard = false
@@ -54,7 +55,7 @@ func stop_chase():
 	is_chasing = false
 
 func _follow_player():
-	if global_position.distance_to(player.global_position) >= 32:
+	if global_position.distance_to(player.global_position) >= 8:
 		direction = (player.global_position - global_position).normalized()
 	else:
 		direction = Vector2.ZERO
@@ -68,18 +69,33 @@ func update_anim_parameters():
 		idle_sprites.visible = true
 		walk_sprites.visible = false
 		sleep_sprite.visible = false
+		stop_sfx()
 	else:
 		anim_tree.get("parameters/playback").travel("Walk")
 		idle_sprites.visible = false
 		walk_sprites.visible = true
 		sleep_sprite.visible = false
+		play_sfx()
 	
 	if direction != Vector2.ZERO:
 		anim_tree["parameters/Idle/blend_position"] = direction
 		anim_tree["parameters/Walk/blend_position"] = direction
 
+
+func play_sfx():
+	if !walk_sfx.playing:
+		walk_sfx.play()
+
+func stop_sfx():
+	if walk_sfx.playing:
+		walk_sfx.stop()
+
+
 func _on_area_2d_body_entered(body):
-	if (body is Player and !is_guard) or body is Poppy:
+	if (body is Player or body is Poppy) and !is_guard:
+		if body is Poppy:
+			body.freeze()
+		
 		stop_chase()
 		NavigationManager.go_to_level("ending_screen", "5")
 
@@ -93,7 +109,7 @@ func move_anim_manual():
 		_stop_moving()
 	
 	update_anim_parameters()
-	velocity = direction * speed
+	velocity = direction * SLOW_SPEED
 	move_and_slide()
 
 func _start_moving(x: int):

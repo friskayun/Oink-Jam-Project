@@ -1,10 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://diyntio4siccb"]
+[gd_scene load_steps=7 format=3 uid="uid://diyntio4siccb"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sd24d"]
-bg_color = Color(0.24845093, 0.100564755, 0.13358516, 1)
+[ext_resource type="Texture2D" uid="uid://c8maqijx7yxly" path="res://Assets/UI/button_idle.png" id="1_ou3wi"]
+[ext_resource type="Texture2D" uid="uid://ckss8jsn0uhby" path="res://Assets/UI/button_disabled.png" id="2_v2cyx"]
+[ext_resource type="Texture2D" uid="uid://cw35wgpqcp0jf" path="res://Assets/UI/button_focus.png" id="2_yn0a4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v2cyx"]
+texture = ExtResource("1_ou3wi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a02ru"]
+texture = ExtResource("2_v2cyx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5iyt5"]
+texture = ExtResource("2_yn0a4")
 
 [node name="Button" type="Button"]
 custom_minimum_size = Vector2(224, 64)
+offset_right = 224.0
+offset_bottom = 64.0
 theme_override_font_sizes/font_size = 32
-theme_override_styles/focus = SubResource("StyleBoxFlat_sd24d")
+theme_override_styles/normal = SubResource("StyleBoxTexture_v2cyx")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_a02ru")
+theme_override_styles/focus = SubResource("StyleBoxTexture_5iyt5")
 text = "Text Here"

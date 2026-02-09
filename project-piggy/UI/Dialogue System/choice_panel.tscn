@@ -68,6 +68,8 @@ layout_mode = 2
 [node name="SwitchSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_shtt6")
 volume_db = -10.0
+bus = &"SFX"
 
 [node name="PressSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ddwyj")
+bus = &"SFX"

@@ -11,9 +11,12 @@ func _on_interact():
 	await DialogueManager.dialogue_ended
 
 func use_item_action():
+	Global.play_cutscene()
 	
 	if !GameState.are_pills_planted():
 		GameState.plant_pills()
 	
 	DialogueManager.play_dialogue("guard_water_active")
 	await DialogueManager.dialogue_ended
+	
+	Global.end_cutscene()

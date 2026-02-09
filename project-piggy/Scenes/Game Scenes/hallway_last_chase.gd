@@ -28,8 +28,6 @@ func level_start():
 
 func start_chase():
 	$NPC/MeatWorker.start_chase()
-	$NPC/MeatWorker2.start_chase()
-	$NPC/MeatWorker3.start_chase()
 
 func pigs_running():
 	$NPC/Pig.in_cage = false

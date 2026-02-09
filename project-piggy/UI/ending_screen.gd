@@ -48,7 +48,7 @@ func cutscene():
 
 func next():
 	Global.end_cutscene()
-	if ending_id != 1 or ending_id != 2:
+	if ending_id != 1 and ending_id != 2:
 		if DataManager.load_game_data():
 			DialogueManager.play_choice("end_load_choice", _on_choice_load)
 		else:

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvm87cwckmutu"]
+[gd_scene load_steps=7 format=3 uid="uid://dvm87cwckmutu"]
 
 [ext_resource type="PackedScene" uid="uid://diyntio4siccb" path="res://UI/button.tscn" id="1_28flt"]
 [ext_resource type="Script" uid="uid://bn60pud7w7c6i" path="res://Scenes/UI Scenes/main_menu.gd" id="1_48xlc"]
 [ext_resource type="AudioStream" uid="uid://c07tohvcegbp" path="res://Assets/SFX/button_hover.mp3" id="3_pih3d"]
 [ext_resource type="AudioStream" uid="uid://7k2cehkogn7v" path="res://Assets/SFX/button_press.mp3" id="4_pih3d"]
 [ext_resource type="Texture2D" uid="uid://lb5w65s8sw6v" path="res://Assets/Backgrounds/MENU.png" id="5_j51p1"]
+[ext_resource type="PackedScene" uid="uid://dn1mc0ifmj3ia" path="res://UI/options_menu.tscn" id="6_p34sk"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -65,6 +66,9 @@ stream = ExtResource("3_pih3d")
 
 [node name="PressSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_pih3d")
+
+[node name="OptionsMenu" parent="." instance=ExtResource("6_p34sk")]
+layout_mode = 1
 
 [connection signal="focus_entered" from="VBoxContainer/NewButton" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/NewButton" to="." method="_on_new_button_pressed"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://g4wcq2idtn4q"]
+[gd_scene load_steps=6 format=3 uid="uid://g4wcq2idtn4q"]
 
 [ext_resource type="Script" uid="uid://cyu2ntr8m43xk" path="res://UI/pause_menu.gd" id="1_jfm1e"]
 [ext_resource type="PackedScene" uid="uid://diyntio4siccb" path="res://UI/button.tscn" id="2_03fe5"]
 [ext_resource type="AudioStream" uid="uid://d1485lpxtp3vj" path="res://Assets/SFX/switch.mp3" id="3_0b5ob"]
 [ext_resource type="AudioStream" uid="uid://7k2cehkogn7v" path="res://Assets/SFX/button_press.mp3" id="4_pqlge"]
+[ext_resource type="PackedScene" uid="uid://dn1mc0ifmj3ia" path="res://UI/options_menu.tscn" id="5_pqlge"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
@@ -64,6 +65,10 @@ bus = &"SFX"
 [node name="PressSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_pqlge")
 bus = &"SFX"
+
+[node name="OptionsMenu" parent="." instance=ExtResource("5_pqlge")]
+visible = false
+layout_mode = 1
 
 [connection signal="focus_entered" from="VBoxContainer/ContinueButton" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]

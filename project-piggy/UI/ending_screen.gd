@@ -11,6 +11,7 @@ const FINAL_SCENE = preload("res://Assets/Backgrounds/Final scene.PNG")
 
 
 const INTRO_CUTSCENE = "intro_cutscene"
+const CREDITS_SCENE = "credits_screen"
 
 @onready var rect = $TextureRect
 
@@ -51,7 +52,7 @@ func next():
 		else:
 			DialogueManager.play_choice("end_new_choice", _on_choice_new)
 	else:
-		NavigationManager.go_to_level("main_menu")
+		NavigationManager.go_to_level(CREDITS_SCENE)
 
 func _on_choice_load(index: int):
 	match index:

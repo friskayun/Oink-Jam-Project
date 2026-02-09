@@ -41,9 +41,26 @@ enum CHECKPOINT {
 	FREE_CAGES
 }
 
+var state_objectives: Dictionary = {
+	STATE.LOOK_FOR_POPPY: "Look for Poppy around the factory.",
+	STATE.GET_TO_POPPY: "Get to Poppy!",
+	STATE.FIRST_CHASE: "HIDE!!!",
+	STATE.EXPLORE_FACTORY: "Explore around the Meat factory.",
+	STATE.FIND_VENT: "Get to the vents.",
+	STATE.FIND_POPPY_ROOM: "Find Poppy.",
+	STATE.EXPLORE_CAGE_ROOM: "Explore the cage room.",
+	STATE.FIND_LOCKER: "Find guard's locker.",
+	STATE.PUT_TO_SLEEP: "Put the guard to sleep.",
+	STATE.UNLOCK_CAGES: "Free everyone.",
+	STATE.FINAL_CHASE: "RUN!!!"
+}
+
 
 func set_curr_scene_id(scene_id: String):
 	curr_scene_id = scene_id
+
+func get_curr_objective():
+	return state_objectives.get(curr_state)
 
 func get_curr_scene_id():
 	return curr_scene_id

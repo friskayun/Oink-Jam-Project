@@ -11,9 +11,10 @@ var item: Item = null
 func _ready():
 	unselect()
 
-
 func select():
-	focus_sfx.play()
+	if Global.focus_sfx_enabled:
+		focus_sfx.play()
+	
 	%SlotTexture.texture = INVENTORY_SLOT_SELECTED
 
 func unselect():

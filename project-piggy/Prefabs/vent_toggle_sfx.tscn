@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4yl87q4ji54l"]
+
+[ext_resource type="AudioStream" uid="uid://cvbfriwc3pbms" path="res://Assets/SFX/open_close_vent.mp3" id="1_kgae5"]
+
+[node name="VentToggleSFX" type="AudioStreamPlayer"]
+stream = ExtResource("1_kgae5")
+volume_db = -10.0
+bus = &"SFX"

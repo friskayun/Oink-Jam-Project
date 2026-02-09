@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bn2c0ejqk5bj5"]
+[gd_scene load_steps=25 format=4 uid="uid://bn2c0ejqk5bj5"]
 
 [ext_resource type="Script" uid="uid://jlwjn2u8hip3" path="res://Prefabs/level.gd" id="1_qg5xs"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_1tnp7"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dgfvddl5tq6wl" path="res://Prefabs/door.tscn" id="5_pa5j2"]
 [ext_resource type="Script" uid="uid://drqw2wy6r1rvn" path="res://Objects/security/vent_security.gd" id="6_2hrto"]
 [ext_resource type="Texture2D" uid="uid://doix4jovn8oc6" path="res://Assets/Objects/Vent_room.png" id="6_xf8xs"]
+[ext_resource type="PackedScene" uid="uid://c4yl87q4ji54l" path="res://Prefabs/vent_toggle_sfx.tscn" id="7_onnsf"]
 [ext_resource type="Script" uid="uid://hbal1o1cncpb" path="res://Objects/lockers/fire_alarm.gd" id="8_5f7kn"]
 [ext_resource type="Script" uid="uid://bvb4r03kaqmmb" path="res://Objects/lockers/door_s.gd" id="9_s2gf5"]
 [ext_resource type="Texture2D" uid="uid://d1c0sxisrsotc" path="res://Assets/Objects/Lockers/bench_up.png" id="10_3r3dg"]
@@ -81,6 +82,8 @@ texture = ExtResource("6_xf8xs")
 position = Vector2(0, 14.5)
 shape = SubResource("RectangleShape2D_4k14m")
 
+[node name="VentToggleSFX" parent="Objects/Vent_Right" instance=ExtResource("7_onnsf")]
+
 [node name="Vent_Left" type="Node2D" parent="Objects"]
 position = Vector2(66, 26)
 script = ExtResource("6_2hrto")
@@ -94,6 +97,8 @@ texture = ExtResource("6_xf8xs")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Vent_Left/Interact Area"]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_2hrto")
+
+[node name="VentToggleSFX" parent="Objects/Vent_Left" instance=ExtResource("7_onnsf")]
 
 [node name="Lockers" type="Node2D" parent="Objects"]
 y_sort_enabled = true

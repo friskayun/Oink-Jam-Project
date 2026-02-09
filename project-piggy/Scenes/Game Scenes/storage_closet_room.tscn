@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://ux02m37odly6"]
+[gd_scene load_steps=26 format=4 uid="uid://ux02m37odly6"]
 
 [ext_resource type="Script" uid="uid://cwx0sm8hnp5hy" path="res://Scenes/Game Scenes/storage_closet_room.gd" id="1_stp30"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_a2m15"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dgfvddl5tq6wl" path="res://Prefabs/door.tscn" id="7_138vt"]
 [ext_resource type="PackedScene" uid="uid://b87g3llg7qgy2" path="res://Prefabs/level_ui_elements.tscn" id="7_ieo8l"]
 [ext_resource type="Script" uid="uid://b4kkfttoxc8nk" path="res://Objects/table_storage.gd" id="8_3ixbo"]
+[ext_resource type="PackedScene" uid="uid://c4yl87q4ji54l" path="res://Prefabs/vent_toggle_sfx.tscn" id="8_vbagt"]
 [ext_resource type="Texture2D" uid="uid://cbqeb3bgr5rtq" path="res://Assets/Objects/Storage/single_barrel.png" id="9_dcvee"]
 [ext_resource type="Texture2D" uid="uid://bmxwawr8v12qp" path="res://Assets/Objects/Storage/storage_locker.png" id="11_3k6kh"]
 [ext_resource type="Texture2D" uid="uid://c7jww8m0jxqw7" path="res://Assets/Objects/Storage/table.png" id="12_f8nu5"]
@@ -53,7 +54,6 @@ tile_map_data = PackedByteArray("AAAAAAAAAgAAAAAAAAAAAAEAAgAAAAEAAAAAAAIAAgAAAAI
 tile_set = ExtResource("3_qydam")
 
 [node name="Player" parent="." instance=ExtResource("2_a2m15")]
-z_index = 0
 y_sort_enabled = true
 position = Vector2(23, 106)
 
@@ -94,6 +94,8 @@ offset = Vector2(0, -8)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Vent/SingleBarrel"]
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_3k6kh")
+
+[node name="VentToggleSFX" parent="Objects/Vent" instance=ExtResource("8_vbagt")]
 
 [node name="Locker" type="StaticBody2D" parent="Objects"]
 y_sort_enabled = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://booev6fjsuiga"]
+[gd_scene load_steps=43 format=4 uid="uid://booev6fjsuiga"]
 
 [ext_resource type="Script" uid="uid://blydscraa7u45" path="res://Scenes/Game Scenes/guards_room.gd" id="1_redmu"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_n62ao"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bxk44jjbp44h5" path="res://Characters/pig.tscn" id="8_7tbde"]
 [ext_resource type="Script" uid="uid://d1721qb0m2ipu" path="res://Objects/guard/keys_and_badge.gd" id="9_d34yw"]
 [ext_resource type="Script" uid="uid://bybymvmtvg1bk" path="res://Objects/guard/water.gd" id="10_u21er"]
+[ext_resource type="PackedScene" uid="uid://c4yl87q4ji54l" path="res://Prefabs/vent_toggle_sfx.tscn" id="11_4lic1"]
 [ext_resource type="Texture2D" uid="uid://doix4jovn8oc6" path="res://Assets/Objects/Vent_room.png" id="11_mx0eg"]
 [ext_resource type="Script" uid="uid://cdqr7kwdinhu5" path="res://Objects/guard/dynamite.gd" id="11_nh1wq"]
 [ext_resource type="Script" uid="uid://cxov0ih41yon" path="res://Objects/guard/oil_bottle.gd" id="12_csxwp"]
@@ -151,6 +152,8 @@ texture = ExtResource("11_mx0eg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Vent/Interact Area"]
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_55jq6")
+
+[node name="VentToggleSFX" parent="Objects/Vent" instance=ExtResource("11_4lic1")]
 
 [node name="PoppyCage" type="StaticBody2D" parent="Objects"]
 position = Vector2(36, 157)

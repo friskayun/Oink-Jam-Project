@@ -22,6 +22,10 @@ var curr_player_row: int = 7
 
 var on_vent: bool = false
 
+@onready var step_sfx = $StepSFX
+@onready var vent_toggle_sfx = $VentToggleSFX
+
+
 var vent_rooms: Dictionary = {
 	VENT_STORAGE: {"scene_id": "storage_scene", "destination_id": "V_Up", "x": 5, "y": 8},
 	VENT_SECURITY: {"scene_id": "security_room", "destination_id": "V_Up", "x": 0, "y": 6},
@@ -46,8 +50,8 @@ func _ready():
 	if NavigationManager.spawn_door_tag != null:
 		switch_to_vent(int(NavigationManager.spawn_door_tag))
 	
-	clear_tiles()
-	draw_vent_maze()
+	#clear_tiles()
+	#draw_vent_maze()
 
 func _input(event):
 	if event.is_action_pressed("interact") and on_vent:
@@ -101,6 +105,7 @@ func move_player(row: int, col: int):
 	curr_player_row = next_row
 	curr_player_col = next_col
 	
+	step_sfx.play()
 	%PlayerSprite.global_position = Vector2(curr_player_col * TILE_GAP + OFFSET, curr_player_row * TILE_GAP + OFFSET)
 
 
@@ -120,4 +125,5 @@ func switch_to_room():
 	var index = grid[curr_player_row][curr_player_col]
 	var scene_id = vent_rooms[index]["scene_id"]
 	var destination_id = vent_rooms[index]["destination_id"]
+	vent_toggle_sfx.play()
 	NavigationManager.go_to_level(scene_id, destination_id)

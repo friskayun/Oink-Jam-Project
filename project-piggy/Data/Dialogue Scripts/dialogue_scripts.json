@@ -340,6 +340,11 @@
 			{"speaker": "Penny", "text": "I need to save them before he wakes up.", "sprite_id": "determined"}
 		]
 	},
+	"vent_guard_last_chase": {
+		"lines":[
+			{"speaker": "Penny", "text": "It's not save, they can wait for us in every room. ", "sprite_id": "determined"}
+		]
+	},
 	
 	
 	"locker_storage_idle": {

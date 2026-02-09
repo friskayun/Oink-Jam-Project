@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=4 uid="uid://cxvigbgixpw6q"]
+[gd_scene load_steps=12 format=4 uid="uid://cxvigbgixpw6q"]
 
 [ext_resource type="Script" uid="uid://carnx8hrgtu4j" path="res://Scenes/Game Scenes/hallway_last_chase.gd" id="1_3rbc4"]
 [ext_resource type="TileSet" uid="uid://dlnvr10pdnuph" path="res://Prefabs/prototyle_tiles.tres" id="1_t1lcs"]
 [ext_resource type="PackedScene" uid="uid://dgfvddl5tq6wl" path="res://Prefabs/door.tscn" id="2_0k8iw"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_c3muq"]
 [ext_resource type="TileSet" uid="uid://bgwjytyn03a08" path="res://Prefabs/tileset_hallway_corn_factory.tres" id="3_mmpcm"]
-[ext_resource type="Script" uid="uid://cxqwdokgth3ip" path="res://Prefabs/camera.gd" id="4_5xb27"]
 [ext_resource type="PackedScene" uid="uid://cojrbw6f6mfb6" path="res://Characters/poppy.tscn" id="4_r8g1t"]
 [ext_resource type="Script" uid="uid://deoxc4ctts4mr" path="res://Objects/end_door.gd" id="5_cy4xc"]
 [ext_resource type="PackedScene" uid="uid://8ycaml5aijon" path="res://Characters/meat_worker.tscn" id="5_w3toh"]
@@ -42,7 +41,6 @@ limit_left = 8
 limit_top = -100
 limit_right = 998
 limit_bottom = 280
-script = ExtResource("4_5xb27")
 
 [node name="NPC" type="Node2D" parent="."]
 
@@ -88,9 +86,6 @@ position = Vector2(54, 82)
 direction_spawn = "right"
 is_active = false
 
-[node name="Spawn" parent="Doors/Door_Guard" index="1"]
-position = Vector2(84, 0)
-
 [node name="Door_End" type="Node2D" parent="Doors"]
 position = Vector2(981, 239)
 script = ExtResource("5_cy4xc")
@@ -107,7 +102,6 @@ position = Vector2(-3, -6.5)
 shape = SubResource("RectangleShape2D_cy4xc")
 
 [node name="Level UI Elements" parent="." instance=ExtResource("6_4vbi1")]
-visible = false
 
 [connection signal="body_entered" from="Doors/Door_End/Area2D" to="Doors/Door_End" method="_on_area_body_entered"]
 

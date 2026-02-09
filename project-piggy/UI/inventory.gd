@@ -173,7 +173,8 @@ func use_item():
 		print("   - Item used: " + curr_slot.item.item_name)
 		#curr_slot.remove_item()
 		#set_item_details()
-		call_deferred("close_inventory")
+		#call_deferred("close_inventory")
+		close_inventory()
 	else:
 		wrong_sfx.play()
 		print(" Item cannot be used here")

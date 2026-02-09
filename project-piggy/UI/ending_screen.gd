@@ -34,6 +34,7 @@ func _input(event):
 		next()
 
 func cutscene():
+	Global.play_track(null)
 	rect.texture = end_id[ending_id]["BG"]
 	
 	await get_tree().create_timer(2).timeout

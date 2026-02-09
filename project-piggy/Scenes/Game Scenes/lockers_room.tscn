@@ -288,9 +288,9 @@ position = Vector2(24, 93)
 script = ExtResource("8_5f7kn")
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/FireAlarm"]
-position = Vector2(0, 1)
+position = Vector2(0, 2)
 texture = ExtResource("14_ol1nx")
-offset = Vector2(0, -2)
+offset = Vector2(0, -5)
 
 [node name="Interact Area" parent="Objects/FireAlarm" instance=ExtResource("4_pa5j2")]
 

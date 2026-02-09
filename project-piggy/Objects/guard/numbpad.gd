@@ -9,6 +9,7 @@ func _on_interact():
 	await DialogueManager.dialogue_ended
 
 func use_item_action():
+	Global.play_cutscene()
 	if GameState.curr_state < GameState.STATE.FINAL_CHASE:
 		GameState.curr_state = GameState.STATE.FINAL_CHASE
 		GameState.emit_signal("start_final_chase")
@@ -16,4 +17,4 @@ func use_item_action():
 	DialogueManager.play_dialogue("guard_numbpad_active")
 	await DialogueManager.dialogue_ended
 	
-	# everyone run animation
+	Global.end_cutscene()

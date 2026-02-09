@@ -14,6 +14,9 @@ func _ready():
 		_guard_put_to_sleep_cutscene()
 
 func _on_interact():
+	if Global.in_cutscene:
+		return
+	
 	if GameState.curr_state == GameState.STATE.UNLOCK_CAGES:
 		DialogueManager.play_dialogue("vent_guard_sleep_down")
 		await DialogueManager.dialogue_ended

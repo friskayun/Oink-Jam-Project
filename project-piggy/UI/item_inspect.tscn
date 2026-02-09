@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dt3i1jpnbrmw5"]
 
 [ext_resource type="Script" uid="uid://dykqrctpwnsr7" path="res://UI/item_inspect.gd" id="1_ddbd2"]
-[ext_resource type="Texture2D" uid="uid://dyvfbs4mduuu0" path="res://Assets/Prototype assets/items/vent_map.png" id="2_y02pf"]
+[ext_resource type="Texture2D" uid="uid://7u8xom486k7c" path="res://Assets/Items/vent_map.png" id="2_x462r"]
 [ext_resource type="AudioStream" uid="uid://bk60hvl6acc6p" path="res://Assets/SFX/paper_files.mp3" id="3_x462r"]
 
 [sub_resource type="Animation" id="Animation_p6lnl"]
@@ -76,23 +76,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.16862746, 0.12941177, 0.26666668, 0.5019608)
+color = Color(0, 0, 0, 0.8235294)
 
-[node name="TextureRect" type="TextureRect" parent="Visual"]
+[node name="MarginContainer" type="MarginContainer" parent="Visual"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -329.06143
-offset_top = -214.125
-offset_right = 329.0614
-offset_bottom = 214.125
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_y02pf")
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="TextureRect" type="TextureRect" parent="Visual/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_x462r")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

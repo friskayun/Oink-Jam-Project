@@ -2,7 +2,6 @@ extends Level
 
 const OIL_AREA = preload("uid://dtcsgcx4pe1eq")
 const DURING_CHASE = preload("uid://cftrpcpj6602n")
-@onready var player = $Player
 @onready var objects = $Objects
 
 func _ready():

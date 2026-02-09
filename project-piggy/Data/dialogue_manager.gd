@@ -16,9 +16,8 @@ var vn_characters: Dictionary = {
 	"Worker": preload("uid://br5lg7w7huk0")
 }
 
-@warning_ignore("unused_signal")
 signal show_dialogue_panel(id: String)
-@warning_ignore("unused_signal")
+signal show_desctiption(text: String)
 signal show_choice_panel(id: String)
 @warning_ignore("unused_signal")
 signal dialogue_ended
@@ -40,6 +39,9 @@ func get_vnc_resource(_character_name: String) -> VisualNovelCharacter:
 
 func play_dialogue(dialogue_id: String):
 	show_dialogue_panel.emit(dialogue_id)
+
+func play_description(description: String):
+	show_desctiption.emit(description)
 
 func play_choice(choice_id: String, _callable: Callable):
 	_on_choice = _callable

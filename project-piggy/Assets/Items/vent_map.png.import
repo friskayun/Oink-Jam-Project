@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbw3ravwsidd6"
-path="res://.godot/imported/emails.png-fc264fb336cef022e84ab0a979bba5ce.ctex"
+uid="uid://7u8xom486k7c"
+path="res://.godot/imported/vent_map.png-ac4095dad50c36e24439f310b3b0eda1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Items/emails.png"
-dest_files=["res://.godot/imported/emails.png-fc264fb336cef022e84ab0a979bba5ce.ctex"]
+source_file="res://Assets/Items/vent_map.png"
+dest_files=["res://.godot/imported/vent_map.png-ac4095dad50c36e24439f310b3b0eda1.ctex"]
 
 [params]
 

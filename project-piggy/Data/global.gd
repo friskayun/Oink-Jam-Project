@@ -19,7 +19,7 @@ var curr_track: AudioStream = null
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	add_child(music_player)
-	#bg_music_player.bus = "Music"
+	music_player.bus = "Music"
 
 func _input(event):
 	if event.is_action_pressed("screenshot"):

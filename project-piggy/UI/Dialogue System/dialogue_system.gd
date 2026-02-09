@@ -23,6 +23,7 @@ var printing_prompt: bool = false
 
 func _ready():
 	DialogueManager.connect("show_dialogue_panel", start_dialogue)
+	DialogueManager.connect("show_desctiption", start_description)
 	hide_dialogue_panel()
 	timer.wait_time = CHAR_WAIT_TIME
 
@@ -144,7 +145,7 @@ func show_next_line():
 	if printing_prompt:
 		reset_print_anim()
 	
-	if curr_dialogue["lines"].size() > line_index:
+	if curr_dialogue and curr_dialogue["lines"].size() > line_index:
 		var line = curr_dialogue["lines"][line_index]
 		
 		var text = line["text"]
@@ -165,3 +166,29 @@ func end_dialogue():
 	active_dialogue = false
 	Global.freeze_input = false
 	Global.dialogue_run = false
+
+func start_description(text: String):
+	if active_dialogue:
+		return
+	
+	curr_dialogue = null
+	active_dialogue = true
+	Global.dialogue_run = true
+	Global.freeze_input = true
+	show_description(text)
+	show_dialogue_panel()
+
+func show_description(description: String):
+	if printing_prompt:
+		reset_print_anim()
+	
+	if description != "":
+		var text = description
+		var speaker = ""
+		var sprite_id = ""
+		
+		change_panel_contents(text, speaker, sprite_id)
+		
+		sfx_print.play()
+	else:
+		end_dialogue()

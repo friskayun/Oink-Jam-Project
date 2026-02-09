@@ -3,7 +3,6 @@ extends Level
 const MEAT_WORKER = preload("uid://8ycaml5aijon")
 
 @onready var door_sfx = $door_sfx
-@onready var player = $Player
 
 func _ready():
 	super()
@@ -14,6 +13,9 @@ func _ready():
 
 
 func _first_visit():
+	if !player:
+		player = get_tree().get_first_node_in_group("Player")
+	
 	Global.play_cutscene()
 	
 	await get_tree().create_timer(2).timeout

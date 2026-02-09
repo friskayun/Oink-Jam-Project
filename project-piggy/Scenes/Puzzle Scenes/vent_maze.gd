@@ -14,8 +14,8 @@ const VENT_LOCKER_R = 4
 const VENT_LOCKER_W = 5
 const VENT_GUARD = 6
 
-const TILE_GAP = 36                #32px  tile size + 4px gap
-const OFFSET = 18
+const TILE_GAP = 32                #32px  tile size + 4px gap
+const OFFSET = 16
 
 var curr_player_col: int = 5
 var curr_player_row: int = 7

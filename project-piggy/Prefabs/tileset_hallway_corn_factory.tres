@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://bgwjytyn03a08"]
+[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://bgwjytyn03a08"]
 
 [ext_resource type="Texture2D" uid="uid://bd2sqko4bne28" path="res://Assets/Spritesheets/tileset/tile_set_cornfactory.png" id="1_nc45p"]
 [ext_resource type="Texture2D" uid="uid://b4pa16cgtj6e1" path="res://Assets/Spritesheets/tileset/tile_set_meat_hallway.png" id="2_k577s"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c21wc4wf85hwp" path="res://Assets/Spritesheets/tileset/tile_set_security.png" id="4_mlaag"]
 [ext_resource type="Texture2D" uid="uid://ce1t383jhwnx8" path="res://Assets/Spritesheets/tileset/tile_set_lockers.png" id="5_05ww0"]
 [ext_resource type="Texture2D" uid="uid://5wpv5thsoakc" path="res://Assets/Spritesheets/tileset/tile_set_guard.png" id="6_grrhl"]
+[ext_resource type="Texture2D" uid="uid://d3r86bh3d21eg" path="res://Assets/Spritesheets/tileset/vent_sprite.png" id="7_mlaag"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xyfa"]
 texture = ExtResource("1_nc45p")
@@ -1144,6 +1145,13 @@ texture = ExtResource("6_grrhl")
 16:11/0 = 0
 16:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05ww0"]
+texture = ExtResource("7_mlaag")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3xyfa")
@@ -1152,3 +1160,4 @@ sources/2 = SubResource("TileSetAtlasSource_5ujpj")
 sources/3 = SubResource("TileSetAtlasSource_2nxgs")
 sources/4 = SubResource("TileSetAtlasSource_yvsq2")
 sources/5 = SubResource("TileSetAtlasSource_hraay")
+sources/6 = SubResource("TileSetAtlasSource_05ww0")

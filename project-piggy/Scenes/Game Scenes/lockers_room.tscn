@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bn2c0ejqk5bj5"]
+[gd_scene load_steps=24 format=4 uid="uid://bn2c0ejqk5bj5"]
 
 [ext_resource type="Script" uid="uid://jlwjn2u8hip3" path="res://Prefabs/level.gd" id="1_qg5xs"]
 [ext_resource type="PackedScene" uid="uid://c6yui6ubp7sq" path="res://Characters/Player/player.tscn" id="2_1tnp7"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dpr25c5lba6xm" path="res://Assets/Objects/Lockers/bench_right.png" id="11_3cvlv"]
 [ext_resource type="Texture2D" uid="uid://qov6brxtjop8" path="res://Assets/Objects/Lockers/bench_left.png" id="12_qqnn0"]
 [ext_resource type="Texture2D" uid="uid://2vx3jofoai4d" path="res://Assets/Objects/Lockers/fire_alarm.png" id="14_ol1nx"]
+[ext_resource type="AudioStream" uid="uid://6xyxm4ex7pw7" path="res://Assets/SFX/fire_alarm.mp3" id="14_onnsf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4k14m"]
 size = Vector2(16, 41)
@@ -291,6 +292,12 @@ offset = Vector2(0, -2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/FireAlarm/Interact Area"]
 position = Vector2(-5, 0)
 shape = SubResource("RectangleShape2D_y0lc8")
+
+[node name="alarm_sfx" type="AudioStreamPlayer2D" parent="Objects/FireAlarm"]
+stream = ExtResource("14_onnsf")
+volume_db = -10.0
+max_distance = 500.0
+bus = &"SFX"
 
 [node name="Doors" type="Node" parent="."]
 

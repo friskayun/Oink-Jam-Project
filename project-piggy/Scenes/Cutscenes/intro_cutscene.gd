@@ -2,6 +2,7 @@ extends Control
 
 const BACKGROUND_MUSIC_CAMRYN_01 = preload("uid://ygyopyamotkl")
 const BACKGROUND_MUSIC_CAMRYN_02 = preload("uid://cbphmhwmqlomw")
+const BACKGROUND_MUSIC_CAMRYN_CUTSCENES = preload("uid://cnfouutx70ah3")
 
 const NEXT_SCENE = "hallway_corn_factory"
 
@@ -33,7 +34,7 @@ var factory_dialogues: Array = [
 
 func _ready():
 	Global.play_cutscene()
-	Global.play_track(BACKGROUND_MUSIC_CAMRYN_02)
+	Global.play_track(BACKGROUND_MUSIC_CAMRYN_CUTSCENES)
 	bus()
 
 func _input(event):

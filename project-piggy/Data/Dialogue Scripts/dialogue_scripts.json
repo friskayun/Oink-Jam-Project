@@ -47,7 +47,7 @@
 			{"speaker": "Tour Guide", "text": "Uh hi, welcome to Corny Cans Canned Corn.",  "sprite_id": "idle_2"},
 			{"speaker": "Tour Guide", "text": "We will be giving you a tour of the facility.",  "sprite_id": "idle_1"},
 			{"speaker": "Tour Guide", "text": "Yeah, Uh... follow me.",  "sprite_id": "idle_1"},
-			{"speaker": "Mr. Horns", "text": "Alright kids, listen carefully to the worker, he is going to teach you all about how a factory works! Bestow your knowledge to us!", "sprite_id": "happy"},
+			{"speaker": "Mr. Horns", "text": "Alright kids, listen carefully to the worker, she is going to teach you all about how a factory works! Bestow your knowledge to us!", "sprite_id": "happy"},
 			{"speaker": "Tour Guide", "text": "Uh... right... I guess we can start where we wash the corn.",  "sprite_id": "idle_2"},
 			{"speaker": "Wendy", "text": "Well, When do we get the free shirts?", "sprite_id": "idle"},
 			{"speaker": "Ryan", "text": "Where are the robots with guns on them?",  "sprite_id": "annoyed"},
@@ -61,7 +61,7 @@
 	},
 	"intro_factory_3": {
 		"lines": [
-			{"speaker": "Penny", "text": "Why do you wash the corn Mr. Worker?", "sprite_id": "idle_1"},
+			{"speaker": "Penny", "text": "Why do you wash the corn Mrs. Worker?", "sprite_id": "idle_1"},
 			{"speaker": "Mr. Horns", "text": "Great question Penny!", "sprite_id": "happy"},
 			{"speaker": "Tour Guide", "text": "Because it’s dirty if not.",  "sprite_id": "idle_2"},
 			{"speaker": "Penny", "text": "...", "sprite_id": "idle_2"},
